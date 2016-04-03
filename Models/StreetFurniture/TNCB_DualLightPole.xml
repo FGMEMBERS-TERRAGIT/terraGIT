@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Texture select and light -->
+
+<PropertyList>
+
+ <path>TNCB_DualLightPole.ac</path>
+
+ <animation>
+  <type>material</type>
+  <object-name>LightBulp</object-name>
+  <condition>	
+    <greater-than>
+      <property>/sim/time/sun-angle-rad</property>
+      <value>1.47</value>
+   </greater-than>
+  </condition>
+  <emission>
+   <red>1</red>	
+   <green>1</green>	
+   <blue>1</blue>	
+  </emission>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>LightShine</object-name>
+      <condition>
+       <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.47</value>
+       </greater-than>
+     </condition>
+ </animation>
+
+</PropertyList>

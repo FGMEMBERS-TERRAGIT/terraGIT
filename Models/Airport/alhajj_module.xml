@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+<path>alhajj_module.ac</path>
+  <effect>
+   <inherits-from>Effects/model-combined-deferred</inherits-from>
+   <object-name>higher_face</object-name>
+   <object-name>columns</object-name>
+   <parameters>
+    <lightmap-enabled type="int">1</lightmap-enabled>
+    <texture n="3">
+     <image>./alhajj_module2.png</image>
+    </texture>
+    <ambient-correction type="float">0.37</ambient-correction>
+    <reflection-correction type="float">-1.0</reflection-correction>
+    <lightmap-factor type="float" n="0">
+    <use>/sim/time/sun-angle-rad</use>
+    </lightmap-factor>
+   </parameters>
+  </effect>
+
+</PropertyList>

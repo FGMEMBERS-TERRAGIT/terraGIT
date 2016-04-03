@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+	<path>SPAF_Tower.ac</path>
+
+<animation>
+	<type>material</type> 
+	<object-name>TWR.Windows</object-name>
+	<condition>		
+		<greater-than>		
+		<property>/sim/time/sun-angle-rad</property>
+		<value>1.57</value>
+		</greater-than>
+	</condition>
+	<emission>	
+		<red>0.8</red>	
+		<green>0.8</green>	
+		<blue>0.6</blue>
+	</emission>
+</animation>
+<animation>
+	<type>material</type> 
+	<object-name>Building</object-name>
+	<condition>		
+		<greater-than>		
+		<property>/sim/time/sun-angle-rad</property>
+		<value>1.57</value>
+		</greater-than>
+	</condition>
+	<emission>	
+		<red>0.2</red>	
+		<green>0.2</green>	
+		<blue>0.2</blue>
+	</emission>
+</animation>
+
+
+</PropertyList>

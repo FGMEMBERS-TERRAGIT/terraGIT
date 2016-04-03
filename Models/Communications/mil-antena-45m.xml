@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>mil-antena-45m.ac</path>
+
+	<animation>
+		<type>select</type>
+		<object-name>red-light</object-name>
+		<condition>
+			<greater-than>
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.57</value>
+			</greater-than>
+		</condition>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>red-light</object-name>
+		<offset-m>46</offset-m>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>46</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>billboard</type>
+		<object-name>red-light</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+	<animation>
+		<type>dist-scale</type>
+		<object-name>red-light</object-name>
+		<interpolation>
+			<entry><ind>0</ind><dep>0.1</dep></entry>
+			<entry><ind>500</ind><dep>0.2</dep></entry>
+			<entry><ind>16000</ind><dep>3</dep></entry>
+		</interpolation>
+	</animation>
+
+	<animation>
+		<type>range</type>
+		<object-name>antena</object-name>
+		<min-m>0</min-m>
+		<max-m>26000</max-m>
+	</animation>
+</PropertyList>

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>OliverPerryFFG.ac</path>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>SPS-49-Antenna</object-name>
+		<property>/sim/time/elapsed-sec</property>
+		<factor>50</factor>
+		<center><x-m>-14.7</x-m></center>
+		<axis><z>1</z></axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>radar-1b</object-name>
+		<property>/sim/time/elapsed-sec</property>
+		<factor>65</factor>
+		<center><x-m>-7.48</x-m></center>
+		<axis><z>1</z></axis>
+	</animation>
+
+	<!-- *** LoD *** -->
+	<animation>
+		<type>range</type>
+		<max-m>50000</max-m>
+	</animation>
+
+	<animation>
+		<type>range</type>
+		<object-name>4000m</object-name>
+		<object-name>SPS-49-Antenna</object-name>
+		<max-m>1000m</max-m>
+	</animation>
+	<animation>
+		<type>range</type>
+		<object-name>1000m</object-name>
+		<max-m>1000</max-m>
+	</animation>
+	<animation>
+		<type>range</type>
+		<object-name>railing</object-name>
+		<object-name>nets</object-name>
+		<max-m>400</max-m>
+	</animation>
+
+
+</PropertyList>

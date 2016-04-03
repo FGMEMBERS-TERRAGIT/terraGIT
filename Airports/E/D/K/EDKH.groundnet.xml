@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<groundnet>
+  <version>1</version>
+  <parkingList>
+        <Parking index="0" type="ga" name="Gras_start_1" lat="N50 55.661076" lon="E7 53.639639" heading="28.44"  radius="10" pushBackRoute="4" airlineCodes="" />
+        <Parking index="1" type="ga" name="Gras_start_2" lat="N50 55.667009" lon="E7 53.624688" heading="32.28"  radius="10" pushBackRoute="5" airlineCodes="" />
+        <Parking index="2" type="ga" name="Gras_start_3" lat="N50 55.673117" lon="E7 53.609737" heading="39.8"  radius="10" pushBackRoute="6" airlineCodes="" />
+ </parkingList>
+ <TaxiNodes>
+        <node index="3" lat="N50 55.700681" lon="E7 53.764321" isOnRunway="0" holdPointType="none"  />
+        <node index="4" lat="N50 55.668770" lon="E7 53.646551" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="5" lat="N50 55.673896" lon="E7 53.631233" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="6" lat="N50 55.682597" lon="E7 53.616293" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="7" lat="N50 55.699244" lon="E7 53.635101" isOnRunway="0" holdPointType="none"  />
+        <node index="8" lat="N50 55.719580" lon="E7 54.270868" isOnRunway="0" holdPointType="none"  />
+        <node index="9" lat="N50 55.732851" lon="E7 54.270739" isOnRunway="1" holdPointType="none"  />
+        <node index="10" lat="N50 55.713196" lon="E7 53.634536" isOnRunway="1" holdPointType="none"  />
+        <node index="11" lat="N50 55.637225" lon="E7 53.626722" isOnRunway="0" holdPointType="none"  />
+        <node index="12" lat="N50 55.644077" lon="E7 53.610202" isOnRunway="0" holdPointType="none"  />
+        <node index="13" lat="N50 55.652278" lon="E7 53.592374" isOnRunway="0" holdPointType="none"  />
+ </TaxiNodes>
+ <TaxiWaySegments>
+        <arc begin="3" end="8" isPushBackRoute="0" name=""  />
+        <arc begin="8" end="3" isPushBackRoute="0" name=""  />
+        <arc begin="4" end="3" isPushBackRoute="0" name=""  />
+        <arc begin="3" end="4" isPushBackRoute="0" name=""  />
+        <arc begin="5" end="4" isPushBackRoute="0" name=""  />
+        <arc begin="4" end="5" isPushBackRoute="0" name=""  />
+        <arc begin="6" end="5" isPushBackRoute="0" name=""  />
+        <arc begin="5" end="6" isPushBackRoute="0" name=""  />
+        <arc begin="7" end="6" isPushBackRoute="0" name=""  />
+        <arc begin="6" end="7" isPushBackRoute="0" name=""  />
+        <arc begin="10" end="7" isPushBackRoute="0" name=""  />
+        <arc begin="7" end="10" isPushBackRoute="0" name=""  />
+        <arc begin="9" end="8" isPushBackRoute="0" name=""  />
+        <arc begin="8" end="9" isPushBackRoute="0" name=""  />
+        <arc begin="0" end="11" isPushBackRoute="1" name="Gras_start_1"  />
+        <arc begin="11" end="0" isPushBackRoute="1" name="Gras_start_1"  />
+        <arc begin="11" end="5" isPushBackRoute="1" name="Gras_start_1"  />
+        <arc begin="5" end="11" isPushBackRoute="1" name="Gras_start_1"  />
+        <arc begin="1" end="12" isPushBackRoute="1" name="Gras_start_2"  />
+        <arc begin="12" end="1" isPushBackRoute="1" name="Gras_start_2"  />
+        <arc begin="12" end="6" isPushBackRoute="1" name="Gras_start_2"  />
+        <arc begin="6" end="12" isPushBackRoute="1" name="Gras_start_2"  />
+        <arc begin="2" end="13" isPushBackRoute="1" name="Gras_start_3"  />
+        <arc begin="13" end="2" isPushBackRoute="1" name="Gras_start_3"  />
+        <arc begin="13" end="6" isPushBackRoute="1" name="Gras_start_3"  />
+        <arc begin="6" end="13" isPushBackRoute="1" name="Gras_start_3"  />
+        <arc begin="0" end="4" isPushBackRoute="1" name="Gras_start_1"  />
+        <arc begin="4" end="0" isPushBackRoute="1" name="Gras_start_1"  />
+        <arc begin="1" end="5" isPushBackRoute="1" name="Gras_start_2"  />
+        <arc begin="5" end="1" isPushBackRoute="1" name="Gras_start_2"  />
+        <arc begin="2" end="6" isPushBackRoute="1" name="Gras_start_3"  />
+        <arc begin="6" end="2" isPushBackRoute="1" name="Gras_start_3"  />
+ </TaxiWaySegments>
+</groundnet>

@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>cell-monopole1-75m.ac</path>
+
+ <animation>
+  <type>range</type>
+  <object-name>Pole</object-name>
+  <min-m>0</min-m>
+  <max-property>/sim/rendering/static-lod/rough</max-property>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <object-name>Platforms</object-name>
+  <min-m>0</min-m>
+  <max-property>/sim/rendering/static-lod/rough</max-property>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <object-name>Antennas</object-name>
+  <min-m>0</min-m>
+  <max-property>/sim/rendering/static-lod/rough</max-property>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <object-name>Bare</object-name>
+  <min-property>/sim/rendering/static-lod/rough</min-property>
+  <max-property>/sim/rendering/static-lod/bare</max-property>
+ </animation>
+
+ <LightXparams>
+  <light-near>0.4</light-near>
+  <light-med>0.8</light-med>
+  <light-far>10</light-far>
+ </LightXparams>
+
+ <animation>
+  <type>select</type>
+  <name>LightXNight</name>
+  <object-name>LightX</object-name>
+  <condition>
+   <greater-than>
+    <property>/sim/time/sun-angle-rad</property>
+    <value>1.57</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>alpha-test</type>
+  <object-name>LightX</object-name>
+  <alpha-factor>0.001</alpha-factor>
+ </animation>
+
+ <animation>
+  <type>translate</type>
+  <object-name>LightX</object-name>
+  <offset-m>76.999649</offset-m>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>76.999649</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>billboard</type>
+  <object-name>LightX</object-name>
+  <spherical type="bool">true</spherical>
+ </animation>
+
+ <animation>
+  <type>dist-scale</type>
+  <object-name>LightX</object-name>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep alias="../../../../LightXparams/light-near"/>
+   </entry>
+   <entry>
+    <ind>500</ind>
+    <dep alias="../../../../LightXparams/light-med"/>
+   </entry>
+   <entry>
+    <ind>16000</ind>
+    <dep alias="../../../../LightXparams/light-far"/>
+   </entry>
+  </interpolation>
+ </animation>
+
+</PropertyList>
+

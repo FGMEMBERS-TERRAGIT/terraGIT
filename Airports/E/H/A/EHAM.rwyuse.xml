@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<rwyuse> <!-- Times are in UTC -->
+  <com>  <!-- Commercial Traffic-->
+    <wind tail="7"
+          cross="20" />
+    <time start = "00:00"
+          end   = "05:00"
+          schedule = "night"/>
+    <time start = "05:00"
+          end   = "06:20"
+          schedule = "offpeak"/>
+    <time start = "06:20"
+          end   = "08:30"
+          schedule = "inbound"/> 
+   <time start = "08:30"
+          end   = "10:20"
+          schedule = "outbound"/>
+    <time start = "10:20"
+          end   = "12:20"
+          schedule = "inbound"/>
+    <time start = "12:20"
+          end   = "13:40"
+          schedule = "outbound"/>
+   <time start = "13:40"
+          end   = "14:40"
+          schedule = "inbound"/> 
+   <time start = "14:40"
+          end   = "16:00"
+          schedule = "outbound"/>
+    <time start = "16:00"
+          end   = "17:40"
+          schedule = "inbound"/>
+    <time start = "17:40"
+          end   = "19:30"
+          schedule = "outbound"/>
+    <time start = "19:30"
+          end   = "22:00"
+          schedule = "offpeak"/>
+   <time start = "22:00"
+          end   = "24:00"
+          schedule = "night"/>
+  </com> 
+  <gen> <!-- General Aviation --> 
+    <wind tail="7"
+          cross="20"/>
+    <time start="7:00"
+          end  = "19:00"
+          schedule = "general"/>
+
+  </gen>
+<!-- commercial schedule -->
+<schedule name="inbound">
+  <takeoff>36L, 24, 18L, 36L, 24, 24, 18L, 09</takeoff>
+  <landing>06,  18R,18R, 36R, 27, 18R,18R, 06</landing>
+  <landing>36R, 18C,18C, 36C, 18R,22, 22,  09</landing>
+</schedule>
+
+<schedule name="outbound">
+  <landing>18R,  27,  06,  18R, 36R, 06,  27</landing>
+  <takeoff>24,   24,  36L, 18L, 36L, 36L, 24</takeoff>
+  <takeoff>18L, 36L,  36C, 18C, 36C, 09,  27</takeoff>
+</schedule>
+
+<schedule name="offpeak">
+   <landing>06, 18R, 18R, 36R, 18R, 06, 27, 27, 24, 22</landing>
+   <takeoff>36L, 24, 18L, 36L, 09, 09, 24, 36L, 24, 24</takeoff>
+</schedule>
+
+<schedule name="night">
+   <landing>06, 18R, 18R, 36C, 06, 18C, 27, 27, 24</landing>
+   <takeoff>36L, 24, 18C, 36L, 06, 24, 24, 36L, 24</takeoff>
+</schedule>
+ <!-- general aviation schedule -->
+<schedule name = "general">
+  <landing>04, 22</landing>
+  <takeoff>04, 22</takeoff>
+</schedule>
+</rwyuse>

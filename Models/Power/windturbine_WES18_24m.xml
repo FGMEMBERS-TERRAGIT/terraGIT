@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+	
+	<!-- WES18 windturbine        -->
+	<!-- Rotor hub height 24m     -->
+	<!-- NO obstruction lights    -->
+	
+	<path>windturbine_WES18_24m.ac</path>
+	
+	<!-- winturbine animation -->
+	<animation>
+		<type>rotate</type>
+		<object-name>nacelle_24m</object-name>
+		<object-name>rotor_24m</object-name>
+		<property>/environment/wind-from-heading-deg</property>
+		<offset-deg>-90</offset-deg>
+		<factor>-1</factor>
+		<center>
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>spin</type>
+		<object-name>rotor_24m</object-name>
+		<use-personality type="bool">true</use-personality>
+		<property>/environment/wind-speed-kt</property>
+		<!--
+		<factor>
+			<random>
+				<min>0.4</min>
+				<max>0.6</max>
+			</random>
+		</factor>
+		-->
+		<interpolation>
+			<entry><ind>  0.0 </ind><dep>  0.0 </dep></entry>
+			<entry><ind> 24.2 </ind><dep> 60.0 </dep></entry>
+			<entry><ind> 48.0 </ind><dep>120.0 </dep></entry>
+			<entry><ind>100.0 </ind><dep>120.0 </dep></entry>
+		</interpolation>
+		<starting-pos-deg>
+			<random>
+				<min>0</min>
+				<max>360</max>
+			</random>
+		</starting-pos-deg>
+		<axis>
+			<x1-m> 0.000</x1-m>
+			<y1-m>-2.592</y1-m>
+			<z1-m>24.018</z1-m>
+			<x2-m> 0.000</x2-m>
+			<y2-m>-1.784</y2-m>
+			<z2-m>23.919</z2-m>
+		</axis>
+	</animation>
+	
+<!-- LOD -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>20000</max-m>
+	</animation>
+
+</PropertyList>

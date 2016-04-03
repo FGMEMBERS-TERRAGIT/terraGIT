@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PropertyList>
+
+ <path>hw-hangar-movable-b.ac</path>
+ 
+ <nasal>
+     <load>
+     if (!contains(globals, "scenery")) globals["scenery"] = {};
+     if (!contains(scenery, "HWB")) scenery["HWB"] = {};
+     if (!contains(scenery.HWB, "hangar")) scenery.HWB["hangar"] = {};
+     if (contains(scenery, "sharedDoor")) {
+       scenery.HWB.hangar =
+         { door :
+           [scenery.sharedDoor.new("/scenery/HWB/hangar/door[0]", 30)]
+         };
+     } else {
+       scenery.HWB.hangar =
+         { door :
+           [aircraft.door.new("/scenery/HWB/hangar/door[0]", 30)]
+         };
+     }
+    </load>
+    <unload>
+     if (contains(scenery, "sharedDoor")) 
+     {scenery.HWB.hangar.door[0].destroy();}
+    </unload>
+  </nasal>
+	 
+ <animation>  
+  <enable-hot type="bool">false</enable-hot>
+ </animation>
+  
+<animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-property>sim/rendering/static-lod/bare</max-property>
+  </animation>
+  
+ <animation>
+  <type>pick</type>
+   <object-name>door1</object-name>
+	<object-name>door2</object-name>
+	<object-name>door3</object-name>
+	<object-name>door4</object-name>
+	<object-name>door5</object-name>
+	<object-name>door6</object-name>
+	<object-name>door7</object-name>
+	<object-name>door8</object-name>
+	<object-name>door9</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <interval-sec>2</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>scenery.HWB.hangar.door[0].toggle();</script>
+     </binding>
+   </action>
+ </animation>
+
+ <animation>
+  <type>translate</type>
+  <object-name>door1</object-name>
+  <property>/scenery/HWB/hangar/door[0]/position-norm</property>
+   <interpolation> 
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.1</ind>
+    <dep>-1.16</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>door2</object-name>
+  <property>/scenery/HWB/hangar/door[0]/position-norm</property>
+   <interpolation> 
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.25</ind>
+    <dep>-7.254</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>door3</object-name>
+  <property>/scenery/HWB/hangar/door[0]/position-norm</property>
+   <interpolation> 
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.5</ind>
+    <dep>-7.254</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>door4</object-name>
+  <property>/scenery/HWB/hangar/door[0]/position-norm</property>
+   <interpolation> 
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.75</ind>
+    <dep>-13.348</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>door5</object-name>
+  <property>/scenery/HWB/hangar/door[0]/position-norm</property>
+   <interpolation> 
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>1.0</ind>
+    <dep>-19.442</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>door6</object-name>
+  <property>/scenery/HWB/hangar/door[0]/position-norm</property>
+   <interpolation> 
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>1.0</ind>
+    <dep>13.348</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>door7</object-name>
+  <property>/scenery/HWB/hangar/door[0]/position-norm</property>
+   <interpolation> 
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.75</ind>
+    <dep>7.254</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+  
+ <animation>
+  <type>translate</type>
+  <object-name>door8</object-name>
+  <property>/scenery/HWB/hangar/door[0]/position-norm</property>
+   <interpolation> 
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.5</ind>
+    <dep>7.254</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation> 
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>door9</object-name>
+  <property>/scenery/HWB/hangar/door[0]/position-norm</property>
+   <interpolation> 
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.25</ind>
+    <dep>1.16</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>scale</type>
+   <x-offset>1.6</x-offset>
+   <y-offset>1.6</y-offset>
+   <z-offset>1.6</z-offset>
+</animation>
+
+</PropertyList>

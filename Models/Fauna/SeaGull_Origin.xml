@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>SeaGull_Origin.ac</path>
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>56000</max-m>
+ </animation>
+
+ <animation>
+  <enable-hot type="bool">false</enable-hot>
+ </animation>
+
+ <animation>
+  <type>alpha-test</type>
+  <alpha-factor>0.01</alpha-factor>
+ </animation>
+
+<animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>56000</max-m>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <property>/sim/time/elapsed-sec</property>
+  <factor>10</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0.1</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+<model>
+  <path>Models/Fauna/Seagull_Flying_5.xml</path>
+  <offsets>
+  <x-m>0</x-m>
+  <y-m>25.0</y-m>
+  <z-m>10.0</z-m>
+  </offsets>
+</model>
+
+<model>
+  <path>Models/Fauna/Seagull_Flying_5Half.xml</path>
+  <offsets>
+  <x-m>5</x-m>
+  <y-m>20.0</y-m>
+  <z-m>8.0</z-m>
+  </offsets>
+</model>
+
+<model>
+  <path>Models/Fauna//Seagull_Flying_6.xml</path>
+  <offsets>
+  <x-m>8</x-m>
+  <y-m>18.0</y-m>
+  <z-m>12.0</z-m>
+  </offsets>
+</model>
+
+<model>
+  <path>Models/Fauna/Seagull_Flying_10.xml</path>
+  <offsets>
+  <x-m>12</x-m>
+  <y-m>16.0</y-m>
+  <z-m>11.0</z-m>
+  </offsets>
+</model>
+
+ </PropertyList>

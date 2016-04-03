@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<!-- Cube test		-->
+
+	<path>ModuleSon.ac</path>
+
+
+	
+	<!-- Eclairage léger sur barrière -->
+	  <animation>
+    	<type>material</type>
+    	<object-name>ModulSon</object-name>
+    	<condition>
+      		<greater-than>
+        		<property>/sim/time/sun-angle-rad</property>
+       			 <value>1.57</value>
+      		</greater-than>
+    	</condition>
+ 		<emission>
+      		<red>   0.08 </red> <!-- 0.05 -->
+ 			<green> 0.08 </green>
+      		<blue>  0.08 </blue>
+    	</emission>
+  	</animation>
+	
+		<animation>
+    	<type>material</type>
+    	<object-name>ModulSon</object-name>
+    	<condition>
+      		<less-than-equals>
+        		<property>/sim/time/sun-angle-rad</property>
+       			 <value>1.57</value>
+      		</less-than-equals>
+    	</condition>
+ 		<emission>
+      		<red>   0.2 </red>
+ 			<green> 0.2 </green>
+      		<blue>  0.2 </blue>
+    	</emission>
+  	</animation>
+	<!-- Fin éclairage léger sur barrière -->
+	
+
+	<animation>
+	
+    	<type>range</type>
+    	<min-m>0</min-m>
+    	<max-property>sim/rendering/static-lod/bare</max-property>
+		
+	</animation>
+
+</PropertyList>

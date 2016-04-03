@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+<!-- Generic green helipad light with 2 stage light -->
+<!-- with switch based on environment visibility    -->
+<!-- v1.1 - 2011.02.21                              -->
+
+	<path>helipad_light_green_2st.ac</path>
+	
+	<animation>
+		<name>Hpad_GreenLight</name>
+		<object-name>Hpad_GreenLight_01</object-name>
+		<object-name>Hpad_GreenLight_02</object-name>
+	</animation>
+	
+	<animation>
+		<object-name>Hpad_GreenLight</object-name>
+		<enable-hot type="bool">false</enable-hot>
+	</animation>
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>Hpad_GreenLight</object-name>
+	</animation>
+
+	<animation>
+		<type>alpha-test</type>
+		<alpha-factor>0.01</alpha-factor>
+	</animation>
+	
+	<animation>
+		<type>billboard</type>
+		<object-name>Hpad_GreenLight</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+	
+	<!-- green helipad lights for NORMAL environment visibility -->
+	<animation>
+		<type>select</type>
+		<object-name>Hpad_GreenLight_01</object-name>
+		<condition>
+			<or>
+				<and>
+					<greater-than>
+						<property>sim/time/sun-angle-rad</property>
+						<value>1.57</value>
+					</greater-than>
+					<greater-than>
+						<property>environment/visibility-m</property>
+						<value>1300.00</value>
+					</greater-than>
+				</and>
+				<and>
+					<less-than>
+						<property>environment/visibility-m</property>
+						<value>4500.00</value>
+					</less-than>
+					<greater-than>
+						<property>environment/visibility-m</property>
+						<value>1300.00</value>
+					</greater-than>
+				</and>
+			</or>
+		</condition>
+	</animation>
+	
+	<!-- green helipad lights forh LOW environment visibility - CAT-I minimum -->
+	<animation>
+		<type>select</type>
+		<object-name>Hpad_GreenLight_02</object-name>
+		<condition>
+			<or>
+				<and>
+					<greater-than>
+						<property>sim/time/sun-angle-rad</property>
+						<value>1.57</value>
+					</greater-than>
+					<less-than>
+						<property>environment/visibility-m</property>
+						<value>1300.00</value>
+					</less-than>
+				</and>
+				<less-than>
+					<property>environment/visibility-m</property>
+					<value>1300.00</value>
+				</less-than>
+			</or>
+		</condition>
+	</animation>
+	
+	<!-- dist scale for lights with NORMAL environment visibility -->
+	<animation>
+		<type>dist-scale</type>
+		<object-name>Hpad_GreenLight_01</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0.025</dep>
+			</entry>
+			<entry>
+				<ind>300</ind>
+				<dep>0.07</dep>
+			</entry>
+			<entry>
+				<ind>1500</ind>
+				<dep>0.14</dep>
+			</entry>
+			<entry>
+				<ind>6000</ind>
+				<dep>0.4</dep>
+			</entry>
+			<entry>
+				<ind>10000</ind>
+				<dep>0.05</dep>
+			</entry>
+		</interpolation>
+	</animation>
+	
+	<!-- dist scale for lights with LOW environment visibility - CAT-I minimum -->
+	<animation>
+		<type>dist-scale</type>
+		<object-name>Hpad_GreenLight_02</object-name>	
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0.025</dep>
+			</entry>
+			<entry>
+				<ind>300</ind>
+				<dep>0.15</dep>
+			</entry>
+			<entry>
+				<ind>1500</ind>
+				<dep>0.45</dep>
+			</entry>
+			<entry>
+				<ind>6000</ind>
+				<dep>0.75</dep>
+			</entry>
+			<entry>
+				<ind>10000</ind>
+				<dep>0.05</dep>
+			</entry>
+		</interpolation>
+	</animation>
+	
+	<!-- HARD LOD -->
+	<animation>
+		<type>range</type>
+		<object-name>Hpad_GreenLight</object-name>
+		<min-m>0</min-m>
+		<max-m>10000</max-m>
+	</animation>
+       
+</PropertyList>

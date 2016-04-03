@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<groundnet>
+  <version>1</version>
+  <parkingList>
+        <Parking index="0" type="gate" name="Terminal_Start_1" lat="S42 54.400730" lon="W71 8.776866" heading="143.71"  radius="44" pushBackRoute="6" airlineCodes="" />
+        <Parking index="1" type="ga" name="Start_Apron_08" lat="S42 54.708070" lon="W71 9.041441" heading="117.66"  radius="10" pushBackRoute="23" airlineCodes="" />
+        <Parking index="2" type="gate" name="Terminal_Start_2" lat="S42 54.380937" lon="W71 8.730897" heading="146.54"  radius="44" pushBackRoute="16" airlineCodes="" />
+        <Parking index="3" type="ga" name="Aeroclub_Apron" lat="S42 54.341614" lon="W71 8.645577" heading="262.87"  radius="10" pushBackRoute="25" airlineCodes="" />
+        <Parking index="4" type="gate" name="Terminal_Start_3" lat="S42 54.397984" lon="W71 8.695674" heading="231.34"  radius="44" pushBackRoute="16" airlineCodes="" />
+        <Parking index="5" type="gate" name="Terminal_Start_4" lat="S42 54.428138" lon="W71 8.754673" heading="58.13"  radius="44" pushBackRoute="6" airlineCodes="" />
+ </parkingList>
+ <TaxiNodes>
+        <node index="6" lat="S42 54.410805" lon="W71 8.772814" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="7" lat="S42 54.664759" lon="W71 8.906816" isOnRunway="0" holdPointType="none"  />
+        <node index="8" lat="S42 54.630703" lon="W71 8.878645" isOnRunway="0" holdPointType="none"  />
+        <node index="9" lat="S42 54.720780" lon="W71 8.067014" isOnRunway="1" holdPointType="none"  />
+        <node index="10" lat="S42 54.720780" lon="W71 9.016197" isOnRunway="1" holdPointType="PushBack"  />
+        <node index="11" lat="S42 54.720919" lon="W71 8.888951" isOnRunway="1" holdPointType="none"  />
+        <node index="12" lat="S42 53.888849" lon="W71 7.389556" isOnRunway="0" holdPointType="none"  />
+        <node index="13" lat="S42 53.896330" lon="W71 7.413990" isOnRunway="0" holdPointType="none"  />
+        <node index="14" lat="S42 54.459825" lon="W71 8.690539" isOnRunway="0" holdPointType="none"  />
+        <node index="15" lat="S42 54.419927" lon="W71 8.720554" isOnRunway="0" holdPointType="none"  />
+        <node index="16" lat="S42 54.381628" lon="W71 8.710759" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="17" lat="S42 53.893898" lon="W71 7.362148" isOnRunway="1" holdPointType="none"  />
+        <node index="18" lat="S42 54.591808" lon="W71 8.829122" isOnRunway="1" holdPointType="none"  />
+        <node index="19" lat="S42 54.550909" lon="W71 8.743163" isOnRunway="1" holdPointType="none"  />
+        <node index="20" lat="S42 54.446114" lon="W71 8.522776" isOnRunway="1" holdPointType="none"  />
+        <node index="21" lat="S42 53.934134" lon="W71 7.446631" isOnRunway="1" holdPointType="none"  />
+        <node index="22" lat="S42 54.378866" lon="W71 8.792920" isOnRunway="0" holdPointType="none"  />
+        <node index="23" lat="S42 54.695478" lon="W71 9.065466" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="24" lat="S42 54.358308" lon="W71 8.745852" isOnRunway="0" holdPointType="none"  />
+        <node index="25" lat="S42 54.338247" lon="W71 8.618662" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="26" lat="S42 54.381039" lon="W71 8.674493" isOnRunway="0" holdPointType="none"  />
+        <node index="27" lat="S42 54.442460" lon="W71 8.777709" isOnRunway="0" holdPointType="none"  />
+ </TaxiNodes>
+ <TaxiWaySegments>
+        <arc begin="6" end="15" isPushBackRoute="0" name="twyApron"  />
+        <arc begin="15" end="6" isPushBackRoute="0" name="twyApron"  />
+        <arc begin="14" end="19" isPushBackRoute="0" name="twyApron"  />
+        <arc begin="19" end="14" isPushBackRoute="0" name="twyApron"  />
+        <arc begin="15" end="14" isPushBackRoute="0" name="twyApron"  />
+        <arc begin="14" end="15" isPushBackRoute="0" name="twyApron"  />
+        <arc begin="7" end="11" isPushBackRoute="0" name="twyConnect"  />
+        <arc begin="11" end="7" isPushBackRoute="0" name="twyConnect"  />
+        <arc begin="8" end="7" isPushBackRoute="0" name="twyConnect"  />
+        <arc begin="7" end="8" isPushBackRoute="0" name="twyConnect"  />
+        <arc begin="18" end="8" isPushBackRoute="0" name="twyConnect"  />
+        <arc begin="8" end="18" isPushBackRoute="0" name="twyConnect"  />
+        <arc begin="19" end="18" isPushBackRoute="0" name="twyConnect"  />
+        <arc begin="18" end="19" isPushBackRoute="0" name="twyConnect"  />
+        <arc begin="12" end="17" isPushBackRoute="0" name="dep 23"  />
+        <arc begin="13" end="12" isPushBackRoute="0" name="dep 23"  />
+        <arc begin="21" end="13" isPushBackRoute="0" name="dep 23"  />
+        <arc begin="14" end="20" isPushBackRoute="0" name="twyApron"  />
+        <arc begin="20" end="14" isPushBackRoute="0" name="twyApron"  />
+        <arc begin="16" end="15" isPushBackRoute="0" name="twyApron"  />
+        <arc begin="15" end="16" isPushBackRoute="0" name="twyApron"  />
+        <arc begin="0" end="22" isPushBackRoute="1" name="Terminal_Start_1"  />
+        <arc begin="22" end="0" isPushBackRoute="1" name="Terminal_Start_1"  />
+        <arc begin="22" end="6" isPushBackRoute="1" name="Terminal_Start_1"  />
+        <arc begin="6" end="22" isPushBackRoute="1" name="Terminal_Start_1"  />
+        <arc begin="1" end="23" isPushBackRoute="1" name="Start_Apron_08"  />
+        <arc begin="23" end="1" isPushBackRoute="1" name="Start_Apron_08"  />
+        <arc begin="23" end="10" isPushBackRoute="1" name="Start_Apron_08"  />
+        <arc begin="10" end="23" isPushBackRoute="1" name="Start_Apron_08"  />
+        <arc begin="2" end="24" isPushBackRoute="1" name="Terminal_Start_2"  />
+        <arc begin="24" end="2" isPushBackRoute="1" name="Terminal_Start_2"  />
+        <arc begin="24" end="16" isPushBackRoute="1" name="Terminal_Start_2"  />
+        <arc begin="16" end="24" isPushBackRoute="1" name="Terminal_Start_2"  />
+        <arc begin="3" end="25" isPushBackRoute="1" name="Aeroclub_Apron"  />
+        <arc begin="25" end="3" isPushBackRoute="1" name="Aeroclub_Apron"  />
+        <arc begin="25" end="16" isPushBackRoute="1" name="Aeroclub_Apron"  />
+        <arc begin="16" end="25" isPushBackRoute="1" name="Aeroclub_Apron"  />
+        <arc begin="4" end="26" isPushBackRoute="1" name="Terminal_Start_3"  />
+        <arc begin="26" end="4" isPushBackRoute="1" name="Terminal_Start_3"  />
+        <arc begin="26" end="16" isPushBackRoute="1" name="Terminal_Start_3"  />
+        <arc begin="16" end="26" isPushBackRoute="1" name="Terminal_Start_3"  />
+        <arc begin="5" end="27" isPushBackRoute="1" name="Terminal_Start_4"  />
+        <arc begin="27" end="5" isPushBackRoute="1" name="Terminal_Start_4"  />
+        <arc begin="27" end="6" isPushBackRoute="1" name="Terminal_Start_4"  />
+        <arc begin="6" end="27" isPushBackRoute="1" name="Terminal_Start_4"  />
+        <arc begin="0" end="6" isPushBackRoute="1" name="Terminal_Start_1"  />
+        <arc begin="6" end="0" isPushBackRoute="1" name="Terminal_Start_1"  />
+        <arc begin="1" end="23" isPushBackRoute="1" name="Start_Apron_08"  />
+        <arc begin="23" end="1" isPushBackRoute="1" name="Start_Apron_08"  />
+        <arc begin="2" end="16" isPushBackRoute="1" name="Terminal_Start_2"  />
+        <arc begin="16" end="2" isPushBackRoute="1" name="Terminal_Start_2"  />
+        <arc begin="3" end="25" isPushBackRoute="1" name="Aeroclub_Apron"  />
+        <arc begin="25" end="3" isPushBackRoute="1" name="Aeroclub_Apron"  />
+        <arc begin="4" end="16" isPushBackRoute="1" name="Terminal_Start_3"  />
+        <arc begin="16" end="4" isPushBackRoute="1" name="Terminal_Start_3"  />
+        <arc begin="5" end="6" isPushBackRoute="1" name="Terminal_Start_4"  />
+        <arc begin="6" end="5" isPushBackRoute="1" name="Terminal_Start_4"  />
+ </TaxiWaySegments>
+</groundnet>

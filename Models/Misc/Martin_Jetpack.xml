@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+ <path>Martin_Jetpack.ac</path>
+
+
+<animation>
+  <type>spin</type>
+  <object-name>rotor1</object-name> <!-- Right Hand Prop-->
+    <property>/sim/time/elapsed-sec</property>
+  <factor>10.0</factor>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>1.70</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>spin</type>
+  <object-name>rotor2</object-name> <!-- Left Hand Prop -->
+    <property>/sim/time/elapsed-sec</property>
+  <factor>10.0</factor>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>-0.8</y-m>
+   <z-m>1.70</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+    <property>/sim/time/elapsed-sec</property>
+  <factor>6.0</factor>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>40.0</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>-1</z>
+  </axis>
+</animation>
+
+</PropertyList>

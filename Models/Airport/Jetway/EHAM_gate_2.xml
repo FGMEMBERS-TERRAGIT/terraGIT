@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>EHAM_gate_2.ac</path>
+
+	<!-- Required -->
+	<is-animated-jetway type="bool">true</is-animated-jetway>
+
+	<!-- Parameters read by the script -->
+	<rotunda>
+		<x-m>15.257</x-m>
+		<y-m>-0.06</y-m>
+		<z-m>7.675</z-m>
+	</rotunda>
+	<extend-offset-m>19</extend-offset-m>
+	<entrance-offset-m>1.85</entrance-offset-m>
+	<min-extend-m>-0.5</min-extend-m>
+	<max-extend-m>9.4</max-extend-m>
+
+	<!-- Parameters set by the script -->
+	<toggle-action-script type="string" />
+	<extend-m type="string" />
+	<pitch-deg type="string" />
+	<heading-deg type="string" />
+	<entrance-heading-deg type="string" />
+	<hood-deg type="string" />
+	<gate type="string" />
+	<airline-code type="string" />
+
+	<!-- Animations -->
+	<!-- Click action -->
+	<animation>
+		<type>pick</type>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script alias="../../../../toggle-action-script" />
+			</binding>
+		</action>
+	</animation>
+
+	<!-- Day/night lighting -->
+	<animation>
+		<type>material</type>
+		<object-name>Jetway</object-name>
+		<object-name>Support</object-name>
+		<object-name>SupportGirder</object-name>
+		<object-name>Tunnel1</object-name>
+		<object-name>Tunnel2</object-name>
+		<object-name>Rotunda</object-name>
+		<object-name>Entrance</object-name>
+		<emission>
+			<red>0.3</red>
+			<green>0.3</green>
+			<blue>0.3</blue>
+		</emission>
+	</animation>
+
+	<!-- Don't let the entrance rotunda interact with the aircraft -->
+	<animation>
+		<object-name>Entrance</object-name>
+		<object-name>Rotunda</object-name>
+		<enable-hot type="bool">false</enable-hot>
+	</animation>
+
+	<!-- Jetway movement -->
+	<animation>
+		<type>translate</type>
+		<object-name>SupportGirder</object-name>
+		<expression>
+			<product>
+				<tan>
+					<deg2rad>
+						<property alias="../../../../../../pitch-deg" />
+					</deg2rad>
+				</tan>
+				<value>15.3</value>
+			</product>
+		</expression>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Support</object-name>
+		<object-name>SupportGirder</object-name>
+		<object-name>Tunnel1</object-name>
+		<object-name>Tunnel2</object-name>
+		<object-name>Support</object-name>
+		<object-name>Rotunda</object-name>
+		<object-name>Entrance</object-name>
+		<property alias="../../heading-deg" />
+		<center>
+			<x-m>15.257</x-m>
+			<y-m>-0.06</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>-1</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Tunnel1</object-name>
+		<object-name>Tunnel2</object-name>
+		<object-name>Rotunda</object-name>
+		<object-name>Entrance</object-name>
+		<property alias="../../pitch-deg" />
+		<center>
+			<x-m>15.255</x-m>
+			<y-m>0</y-m>
+			<z-m>7.675</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>Tunnel2</object-name>
+		<object-name>Rotunda</object-name>
+		<object-name>Entrance</object-name>
+		<property alias="../../extend-m" />
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Entrance</object-name>
+		<property alias="../../entrance-heading-deg" />
+		<center>
+			<x-m>34.427</x-m>
+			<y-m>-0.06</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>-1</z>
+		</axis>
+	</animation>
+
+</PropertyList>

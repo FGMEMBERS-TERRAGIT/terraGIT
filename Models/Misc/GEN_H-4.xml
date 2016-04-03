@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+ <path>GEN_H-4.ac</path>
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>16000</max-m>
+ </animation>
+ 
+ <animation>
+  <type>alpha-test</type>
+  <alpha-factor>0.01</alpha-factor>
+ </animation>
+
+<animation>
+  <type>rotate</type>
+    <property>/sim/time/elapsed-sec</property>
+  <factor>6.0</factor>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>100.0</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>-1</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>upper</object-name>
+  <property>/sim/time/elapsed-sec</property>
+  <factor>890.0</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m></y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>-1</z>
+  </axis>
+ </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>lower</object-name>
+  <property>/sim/time/elapsed-sec</property>
+  <factor>890.0</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+</PropertyList>

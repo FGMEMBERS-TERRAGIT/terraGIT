@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+************************************************************************
+Tupolev 154B-2 model/animation config.
+
+2004-03-25 Ilja Moderau iljamod@web.de http://www.flighgear.de.vu
+
+2004-06-24 Ilia Pavlenko ip@globe.net.nz - correction of aileron animations & lowered shadow
+************************************************************************
+
+Modified by Yurik V. Nikiforoff for Tu-154B project, mar 2009.
+
+This file is under GPL licensy.
+
+modified by HerbyW for static objects with samara livery
+-->
+
+<PropertyList>
+ <path>tu154b.ac</path>
+ 
+<offsets>
+   <x-m>0.0</x-m>
+   <z-m>0.0</z-m>
+   <pitch-deg>0.8</pitch-deg>
+ </offsets>
+ 
+ <animation>
+    <type>material</type>    
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red>   0.15 </red>
+      <green> 0.15 </green>
+      <blue>  0.15 </blue>
+    </emission>
+  </animation>
+ 
+<animation>
+  <type>scale</type>
+   <x-offset>0.94</x-offset>
+   <y-offset>0.95</y-offset>
+   <z-offset>0.95</z-offset>
+</animation>
+ 
+</PropertyList>

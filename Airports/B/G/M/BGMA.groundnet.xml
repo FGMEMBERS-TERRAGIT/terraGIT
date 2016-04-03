@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<groundnet>
+  <version>1</version>
+  <parkingList>
+        <Parking index="0" type="gate" name="Gate" lat="N65 24.706246" lon="W52 56.384092" heading="-53.91"  radius="19" pushBackRoute="2" airlineCodes="" />
+        <Parking index="1" type="gate" name="Custom_Startup_Location" lat="N65 24.725124" lon="W52 56.424109" heading="177.19"  radius="19" pushBackRoute="3" airlineCodes="" />
+ </parkingList>
+ <TaxiNodes>
+        <node index="2" lat="N65 24.709003" lon="W52 56.393715" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="3" lat="N65 24.720604" lon="W52 56.428052" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="4" lat="N65 24.714696" lon="W52 56.410238" isOnRunway="0" holdPointType="none"  />
+        <node index="5" lat="N65 24.890840" lon="W52 57.128520" isOnRunway="0" holdPointType="none"  />
+        <node index="6" lat="N65 24.691373" lon="W52 56.495205" isOnRunway="0" holdPointType="none"  />
+        <node index="7" lat="N65 24.704017" lon="W52 56.431026" isOnRunway="0" holdPointType="none"  />
+        <node index="8" lat="N65 24.687710" lon="W52 56.460275" isOnRunway="0" holdPointType="none"  />
+        <node index="9" lat="N65 24.678020" lon="W52 56.452040" isOnRunway="0" holdPointType="none"  />
+        <node index="10" lat="N65 24.661949" lon="W52 56.399788" isOnRunway="0" holdPointType="none"  />
+        <node index="11" lat="N65 24.653914" lon="W52 56.370539" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="12" lat="N65 24.648994" lon="W52 56.376245" isOnRunway="1" holdPointType="none"  />
+        <node index="13" lat="N65 24.887099" lon="W52 57.136618" isOnRunway="1" holdPointType="none"  />
+        <node index="14" lat="N65 24.690268" lon="W52 56.362173" isOnRunway="0" holdPointType="none"  />
+        <node index="15" lat="N65 24.752216" lon="W52 56.425439" isOnRunway="0" holdPointType="none"  />
+ </TaxiNodes>
+ <TaxiWaySegments>
+        <arc begin="7" end="4" isPushBackRoute="0" name=""  />
+        <arc begin="4" end="7" isPushBackRoute="0" name=""  />
+        <arc begin="3" end="4" isPushBackRoute="0" name=""  />
+        <arc begin="4" end="3" isPushBackRoute="0" name=""  />
+        <arc begin="4" end="2" isPushBackRoute="0" name=""  />
+        <arc begin="2" end="4" isPushBackRoute="0" name=""  />
+        <arc begin="5" end="13" isPushBackRoute="0" name=""  />
+        <arc begin="13" end="5" isPushBackRoute="0" name=""  />
+        <arc begin="6" end="5" isPushBackRoute="0" name=""  />
+        <arc begin="5" end="6" isPushBackRoute="0" name=""  />
+        <arc begin="8" end="6" isPushBackRoute="0" name=""  />
+        <arc begin="6" end="8" isPushBackRoute="0" name=""  />
+        <arc begin="8" end="7" isPushBackRoute="0" name=""  />
+        <arc begin="7" end="8" isPushBackRoute="0" name=""  />
+        <arc begin="9" end="8" isPushBackRoute="0" name=""  />
+        <arc begin="8" end="9" isPushBackRoute="0" name=""  />
+        <arc begin="10" end="9" isPushBackRoute="0" name=""  />
+        <arc begin="9" end="10" isPushBackRoute="0" name=""  />
+        <arc begin="11" end="10" isPushBackRoute="0" name=""  />
+        <arc begin="10" end="11" isPushBackRoute="0" name=""  />
+        <arc begin="12" end="11" isPushBackRoute="0" name=""  />
+        <arc begin="11" end="12" isPushBackRoute="0" name=""  />
+        <arc begin="0" end="14" isPushBackRoute="1" name="Gate"  />
+        <arc begin="14" end="0" isPushBackRoute="1" name="Gate"  />
+        <arc begin="14" end="11" isPushBackRoute="1" name="Gate"  />
+        <arc begin="11" end="14" isPushBackRoute="1" name="Gate"  />
+        <arc begin="1" end="15" isPushBackRoute="1" name="Custom_Startup_Location"  />
+        <arc begin="15" end="1" isPushBackRoute="1" name="Custom_Startup_Location"  />
+        <arc begin="15" end="3" isPushBackRoute="1" name="Custom_Startup_Location"  />
+        <arc begin="3" end="15" isPushBackRoute="1" name="Custom_Startup_Location"  />
+        <arc begin="0" end="2" isPushBackRoute="1" name="Gate"  />
+        <arc begin="2" end="0" isPushBackRoute="1" name="Gate"  />
+        <arc begin="1" end="3" isPushBackRoute="1" name="Custom_Startup_Location"  />
+        <arc begin="3" end="1" isPushBackRoute="1" name="Custom_Startup_Location"  />
+ </TaxiWaySegments>
+</groundnet>

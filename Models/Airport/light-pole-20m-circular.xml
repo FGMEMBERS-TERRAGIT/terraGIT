@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>light-pole-20m-circular.ac</path>
+
+	<animation>
+		<type>select</type>
+		<object-name>red-light</object-name>
+		<condition>
+			<greater-than>
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.57</value>
+			</greater-than>
+		</condition>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>red-light</object-name>
+		<offset-m>20.9</offset-m>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>20.9</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>billboard</type>
+		<object-name>red-light</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+	<animation>
+		<type>dist-scale</type>
+		<object-name>red-light</object-name>
+		<interpolation>
+			<entry><ind>0</ind><dep>0.075</dep></entry>
+			<entry><ind>500</ind><dep>0.2</dep></entry>
+			<entry><ind>16000</ind><dep>1.5</dep></entry>
+		</interpolation>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>light-faces-lit</object-name>
+		<condition>
+			<greater-than>
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.57</value>
+			</greater-than>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>light-faces</object-name>
+		<condition>
+			<less-than>
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.57</value>
+			</less-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>range</type>
+		<object-name>light-pole</object-name>
+		<min-m>0</min-m>
+		<max-m>8000</max-m>
+	</animation>
+</PropertyList>

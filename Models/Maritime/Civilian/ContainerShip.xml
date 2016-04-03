@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>ContainerShip.ac</path>
+
+	<animation>
+		<type>select</type>
+		<object-name>StbdLight</object-name>
+		<object-name>PortLight</object-name>
+		<object-name>LwrSteamingLight</object-name>
+		<object-name>UprSteamingLight</object-name>
+		<object-name>SternLight</object-name>
+		<object-name>Light1S</object-name>
+		<object-name>Light2S</object-name>
+		<object-name>Light3S</object-name>
+		<object-name>Light1P</object-name>
+		<object-name>Light2P</object-name>
+		<object-name>Light3P</object-name>
+		<condition>
+			<greater-than>
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.57</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+
+	<animation>
+		<type>alpha-test</type>
+		<object-name>StbdLight</object-name>
+		<alpha-factor>0.01</alpha-factor>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>StbdLight</object-name>
+		<offset-m>69.09</offset-m>
+		<axis>
+			<x>63.662</x>
+			<y>13.489</y>
+			<z>23.197</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<spherical>false</spherical>
+		<object-name>StbdLight</object-name>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>StbdLight</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>4</dep>
+			</entry>
+			<entry>
+				<ind>60000</ind>
+				<dep>400</dep>
+			</entry>
+		</interpolation>
+		<!--<center>
+			<x-m>63.662</x-m>
+			<y-m>13.489</y-m>
+			<z-m>23.197</z-m>
+		</center>-->
+	</animation>
+
+
+	<animation>
+		<type>alpha-test</type>
+		<object-name>PortLight</object-name>
+		<alpha-factor>0.01</alpha-factor>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>PortLight</object-name>
+		<offset-m>69.09</offset-m>
+		<axis>
+			<x>63.662</x>
+			<y>-13.489</y>
+			<z>23.197</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<spherical>false</spherical>
+		<object-name>PortLight</object-name>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>PortLight</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>4</dep>
+			</entry>
+			<entry>
+				<ind>60000</ind>
+				<dep>400</dep>
+			</entry>
+		</interpolation>
+		<!--<center>
+			<x-m>63.662</x-m>
+			<y-m>-13.489</y-m>
+			<z-m>23.197</z-m>
+		</center>-->
+	</animation>
+
+
+	<animation>
+		<type>alpha-test</type>
+		<object-name>LwrSteamingLight</object-name>
+		<alpha-factor>0.01</alpha-factor>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>LwrSteamingLight</object-name>
+		<offset-m>115.4722</offset-m>
+		<axis>
+			<x>-113.408</x>
+			<y>0.0</y>
+			<z>21.736</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<spherical>false</spherical>
+		<object-name>LwrSteamingLight</object-name>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>LwrSteamingLight</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>4</dep>
+			</entry>
+			<entry>
+				<ind>60000</ind>
+				<dep>400</dep>
+			</entry>
+		</interpolation>
+		<!--<center>
+			<x-m>-113.408</x-m>
+			<y-m>0.0</y-m>
+			<z-m>21.736</z-m>
+		</center>-->
+	</animation>
+
+
+	<animation>
+		<type>alpha-test</type>
+		<object-name>UprSteamingLight</object-name>
+		<alpha-factor>0.01</alpha-factor>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>UprSteamingLight</object-name>
+		<offset-m>71.4263</offset-m>
+		<axis>
+			<x>62.2411</x>
+			<y>0.0</y>
+			<z>35.0394</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<spherical>false</spherical>
+		<object-name>UprSteamingLight</object-name>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>UprSteamingLight</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>4</dep>
+			</entry>
+			<entry>
+				<ind>60000</ind>
+				<dep>400</dep>
+			</entry>
+		</interpolation>
+		<!--<center>
+			<x-m>62.2411</x-m>
+			<y-m>0.0</y-m>
+			<z-m>35.0394</z-m>
+		</center>-->
+	</animation>
+
+
+	<animation>
+		<type>alpha-test</type>
+		<object-name>SternLight</object-name>
+		<alpha-factor>0.01</alpha-factor>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>SternLight</object-name>
+		<offset-m>120.0525</offset-m>
+		<axis>
+			<x>119.904</x>
+			<y>0</y>
+			<z>5.96979</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<spherical>false</spherical>
+		<object-name>SternLight</object-name>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>SternLight</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>4</dep>
+			</entry>
+			<entry>
+				<ind>60000</ind>
+				<dep>400</dep>
+			</entry>
+		</interpolation>
+		<!--<center>
+			<x-m>119.904</x-m>
+			<y-m>0</y-m>
+			<z-m>5.96979</z-m>
+		</center>-->
+	</animation>
+
+	
+<animation>
+		<type>dist-scale</type>
+		<object-name>Light1P</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>1</dep>
+			</entry>
+			<entry>
+				<ind>40000</ind>
+				<dep>60</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>60.7323</x-m>
+			<y-m>-12.5635</y-m>
+			<z-m>9.84396</z-m>
+		</center>
+	</animation>
+	
+	<animation>
+		<type>dist-scale</type>
+		<object-name>Light2P</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>1</dep>
+			</entry>
+			<entry>
+				<ind>40000</ind>
+				<dep>60</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>63.9834</x-m>
+			<y-m>-12.5635</y-m>
+			<z-m>9.84396</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>Light3P</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>1</dep>
+			</entry>
+			<entry>
+				<ind>40000</ind>
+				<dep>60</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>66.9911</x-m>
+			<y-m>-12.5635</y-m>
+			<z-m>9.84396</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>Light1S</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>1</dep>
+			</entry>
+			<entry>
+				<ind>40000</ind>
+				<dep>60</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>60.7323</x-m>
+			<y-m>12.5635</y-m>
+			<z-m>9.84396</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>Light2S</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>1</dep>
+			</entry>
+			<entry>
+				<ind>40000</ind>
+				<dep>60</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>63.9834</x-m>
+			<y-m>12.5635</y-m>
+			<z-m>9.84396</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>Light3S</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>1</dep>
+			</entry>
+			<entry>
+				<ind>40000</ind>
+				<dep>60</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>66.9911</x-m>
+			<y-m>12.5635</y-m>
+			<z-m>9.84396</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>60000</max-m>
+	</animation>
+
+	<!--<animation>
+		<object-name>ContainerShip</object-name>
+		<enable-hot>true</enable-hot>
+	</animation>-->
+
+</PropertyList>

@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PropertyList>
+       
+<path>Amphibious_assault_ship.ac</path>     
+<particlesystem>
+  <name>Steam</name>
+  <texture>Amphibious_assault_ship1.png</texture>
+  <emissive>false</emissive>
+  <lighting>true</lighting>
+       
+  <offsets>
+    <x-m>87.04</x-m>
+    <y-m>-0.5</y-m>
+    <z-m>26.5</z-m>
+  </offsets>
+         
+  <attach>world</attach>
+ <animation>
+  <enable-hot type="bool">true</enable-hot>
+ </animation>      
+ 
+		<placer>
+			<type>sector</type>
+			<radius-min-m>0</radius-min-m> <!--= only for sector, inner radius at which particles appear-->
+			<radius-max-m>0.20</radius-max-m> <!--= only for sector, outer radius at which particles appear-->
+			<phi-min-deg>0</phi-min-deg> <!--= only for sector, starting angle of the slide at which particles appear-->
+			<phi-max-deg>359.5</phi-max-deg> <!--= only for sector, ending angle of the slide at which particles appear-->
+		</placer>
+
+		<shooter>
+			<theta-min-deg>-2.0</theta-min-deg>
+			<theta-max-deg>2.0</theta-max-deg>
+			<phi-min-deg>-2.0</phi-min-deg>
+			<phi-max-deg>2.0</phi-max-deg>
+			<speed-mps>
+				<value>750</value>
+				<!--<property>velocities/true-air-speed-kt</property>
+				<property>/velocities/groundspeed-kt</property>
+				<factor>0.8333</factor>
+				<offset>10</offset>-->
+				<spread>250</spread>
+			</speed-mps>
+			<rotation-speed>
+				<x-max-deg-sec>10</x-max-deg-sec>
+				<x-min-deg-sec>-10</x-min-deg-sec>
+				<y-max-deg-sec>10</y-max-deg-sec>
+				<y-min-deg-sec>-10</y-min-deg-sec>
+				<z-max-deg-sec>10</z-max-deg-sec>
+				<z-min-deg-sec>-10</z-min-deg-sec>
+			</rotation-speed>
+		</shooter>
+
+		<counter>
+			<particles-per-sec>
+				<value>5</value>
+				<!--<property>velocities/true-air-speed-kt</property>
+				<factor>0.8333</factor>
+				<offset>50</offset>-->
+				<spread>30</spread>
+			</particles-per-sec>
+		</counter>
+
+		<align>billboard</align>
+
+		<particle>
+			<start>
+				<color>
+					<red>
+						<value>1</value>
+					</red>
+					<green>
+						<value>1</value>
+					</green>
+					<blue>
+						<value>1</value>
+					</blue>
+					<alpha>
+						<value>0.25</value>
+					</alpha>
+				</color>
+				<size>
+					<value>0.5</value>
+				</size>
+			</start>
+			<end>
+				<color>
+					<red>
+						<value>1</value>
+					</red>
+					<green>
+						<value>1</value>
+					</green>
+					<blue>
+						<value>1</value>
+					</blue>
+					<alpha>
+						<value>0.15</value>
+					</alpha>
+				</color>
+				<size>
+					<value>10</value>
+				</size>
+			</end>
+			<life-sec>
+				<value>10</value>
+			</life-sec>
+			<mass-kg>0.0270</mass-kg>
+			<radius-m>0.175</radius-m>
+		</particle>
+
+		<program>
+			<fluid>air</fluid>
+			<gravity>true</gravity>
+			<wind>true</wind>
+		</program>
+	</particlesystem>
+	
+	
+<particlesystem>
+  <name>Steam1</name>
+  <texture>Amphibious_assault_ship1.png</texture>
+  <emissive>false</emissive>
+  <lighting>true</lighting>
+       
+  <offsets>
+    <x-m>106.27</x-m>
+    <y-m>4.18</y-m>
+    <z-m>28.0</z-m>
+  </offsets>
+         
+  <attach>world</attach>
+ <animation>
+  <enable-hot type="bool">true</enable-hot>
+ </animation>      
+ 
+		<placer>
+			<type>sector</type>
+			<radius-min-m>0</radius-min-m> <!--= only for sector, inner radius at which particles appear-->
+			<radius-max-m>0.20</radius-max-m> <!--= only for sector, outer radius at which particles appear-->
+			<phi-min-deg>0</phi-min-deg> <!--= only for sector, starting angle of the slide at which particles appear-->
+			<phi-max-deg>359.5</phi-max-deg> <!--= only for sector, ending angle of the slide at which particles appear-->
+		</placer>
+
+		<shooter>
+			<theta-min-deg>-2.0</theta-min-deg>
+			<theta-max-deg>2.0</theta-max-deg>
+			<phi-min-deg>-2.0</phi-min-deg>
+			<phi-max-deg>2.0</phi-max-deg>
+			<speed-mps>
+				<value>750</value>
+				<!--<property>velocities/true-air-speed-kt</property>
+				<property>/velocities/groundspeed-kt</property>
+				<factor>0.8333</factor>
+				<offset>10</offset>-->
+				<spread>250</spread>
+			</speed-mps>
+			<rotation-speed>
+				<x-max-deg-sec>10</x-max-deg-sec>
+				<x-min-deg-sec>-10</x-min-deg-sec>
+				<y-max-deg-sec>10</y-max-deg-sec>
+				<y-min-deg-sec>-10</y-min-deg-sec>
+				<z-max-deg-sec>10</z-max-deg-sec>
+				<z-min-deg-sec>-10</z-min-deg-sec>
+			</rotation-speed>
+		</shooter>
+
+		<counter>
+			<particles-per-sec>
+				<value>5</value>
+				<!--<property>velocities/true-air-speed-kt</property>
+				<factor>0.8333</factor>
+				<offset>50</offset>-->
+				<spread>30</spread>
+			</particles-per-sec>
+		</counter>
+
+		<align>billboard</align>
+
+		<particle>
+			<start>
+				<color>
+					<red>
+						<value>1</value>
+					</red>
+					<green>
+						<value>1</value>
+					</green>
+					<blue>
+						<value>1</value>
+					</blue>
+					<alpha>
+						<value>0.25</value>
+					</alpha>
+				</color>
+				<size>
+					<value>0.5</value>
+				</size>
+			</start>
+			<end>
+				<color>
+					<red>
+						<value>1</value>
+					</red>
+					<green>
+						<value>1</value>
+					</green>
+					<blue>
+						<value>1</value>
+					</blue>
+					<alpha>
+						<value>0.15</value>
+					</alpha>
+				</color>
+				<size>
+					<value>10</value>
+				</size>
+			</end>
+			<life-sec>
+				<value>10</value>
+			</life-sec>
+			<mass-kg>0.0270</mass-kg>
+			<radius-m>0.175</radius-m>
+		</particle>
+
+		<program>
+			<fluid>air</fluid>
+			<gravity>true</gravity>
+			<wind>true</wind>
+		</program>
+	</particlesystem>	
+
+<particlesystem>
+  <name>Steam2</name> 
+  <texture>Amphibious_assault_ship1.png</texture>
+  <emissive>false</emissive>
+  <lighting>true</lighting>
+       
+  <offsets>
+    <x-m>108.82</x-m>
+    <y-m>4.21</y-m>
+    <z-m>28.0</z-m>
+  </offsets>
+         
+  <attach>world</attach>
+ <animation>
+  <enable-hot type="bool">true</enable-hot>
+ </animation>      
+ 
+		<placer>
+			<type>sector</type>
+			<radius-min-m>0</radius-min-m> <!--= only for sector, inner radius at which particles appear-->
+			<radius-max-m>0.20</radius-max-m> <!--= only for sector, outer radius at which particles appear-->
+			<phi-min-deg>0</phi-min-deg> <!--= only for sector, starting angle of the slide at which particles appear-->
+			<phi-max-deg>359.5</phi-max-deg> <!--= only for sector, ending angle of the slide at which particles appear-->
+		</placer>
+
+		<shooter>
+			<theta-min-deg>-2.0</theta-min-deg>
+			<theta-max-deg>2.0</theta-max-deg>
+			<phi-min-deg>-2.0</phi-min-deg>
+			<phi-max-deg>2.0</phi-max-deg>
+			<speed-mps>
+				<value>750</value>
+				<!--<property>velocities/true-air-speed-kt</property>
+				<property>/velocities/groundspeed-kt</property>
+				<factor>0.8333</factor>
+				<offset>10</offset>-->
+				<spread>250</spread>
+			</speed-mps>
+			<rotation-speed>
+				<x-max-deg-sec>10</x-max-deg-sec>
+				<x-min-deg-sec>-10</x-min-deg-sec>
+				<y-max-deg-sec>10</y-max-deg-sec>
+				<y-min-deg-sec>-10</y-min-deg-sec>
+				<z-max-deg-sec>10</z-max-deg-sec>
+				<z-min-deg-sec>-10</z-min-deg-sec>
+			</rotation-speed>
+		</shooter>
+
+		<counter>
+			<particles-per-sec>
+				<value>5</value>
+				<!--<property>velocities/true-air-speed-kt</property>
+				<factor>0.8333</factor>
+				<offset>50</offset>-->
+				<spread>30</spread>
+			</particles-per-sec>
+		</counter>
+
+		<align>billboard</align>
+
+		<particle>
+			<start>
+				<color>
+					<red>
+						<value>1</value>
+					</red>
+					<green>
+						<value>1</value>
+					</green>
+					<blue>
+						<value>1</value>
+					</blue>
+					<alpha>
+						<value>0.25</value>
+					</alpha>
+				</color>
+				<size>
+					<value>0.5</value>
+				</size>
+			</start>
+			<end>
+				<color>
+					<red>
+						<value>1</value>
+					</red>
+					<green>
+						<value>1</value>
+					</green>
+					<blue>
+						<value>1</value>
+					</blue>
+					<alpha>
+						<value>0.15</value>
+					</alpha>
+				</color>
+				<size>
+					<value>10</value>
+				</size>
+			</end>
+			<life-sec>
+				<value>10</value>
+			</life-sec>
+			<mass-kg>0.0270</mass-kg>
+			<radius-m>0.175</radius-m>
+		</particle>
+
+		<program>
+			<fluid>air</fluid>
+			<gravity>true</gravity>
+			<wind>true</wind>
+		</program>
+	</particlesystem>	
+	
+<animation>
+<type>alpha-test</type>
+<alpha-factor>0.01</alpha-factor>
+</animation>
+
+<animation>
+<type>rotate</type>
+<texture>Amphibious_assault_ship2.png</texture>
+<object-name>Radar</object-name>
+<property>/sim/time/elapsed-sec</property>
+<factor>60.0</factor>
+<center>
+<x-m>128.20</x-m>
+<y-m>9.50</y-m>
+<z-m>30.54</z-m>
+</center>
+
+<axis>
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation>
+<type>alpha-test</type>
+<alpha-factor>0.01</alpha-factor>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>Radar1</object-name>
+<texture>Amphibious_assault_ship2.png</texture>
+<property>/sim/time/elapsed-sec</property>
+<factor>60.0</factor>
+<center>
+<x-m>124.61</x-m>
+<y-m>3.76</y-m>
+<z-m>28.96</z-m>
+</center>
+
+<axis>
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation>
+<type>alpha-test</type>
+<alpha-factor>0.01</alpha-factor>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>Radar2</object-name>
+<texture>Amphibious_assault_ship2.png</texture>
+<property>/sim/time/elapsed-sec</property>
+<factor>60.0</factor>
+<center>
+<x-m>87.24</x-m>
+<y-m>3.68</y-m>
+<z-m>32.34</z-m>
+</center>
+
+<axis>
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation>
+<type>alpha-test</type>
+<alpha-factor>0.01</alpha-factor>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>Radar3</object-name>
+<texture>Amphibious_assault_ship2.png</texture>
+<property>/sim/time/elapsed-sec</property>
+<factor>60.0</factor>
+<center>
+<x-m>85.35</x-m>
+<y-m>7.35</y-m>
+<z-m>25.80</z-m>
+</center>
+
+<axis>
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+    <property>/sim/time/elapsed-sec</property>
+  <factor>0.1</factor>
+  <center>
+   <x-m>0.1</x-m>
+   <y-m>8000.0</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+</animation>
+
+<particlesystem>
+    <name>propeller</name>
+
+    <texture>Amphibious_assault_ship1.png</texture>
+    <emissive>false</emissive>
+    <lighting>true</lighting>
+
+ <offsets>
+    <x-m>4.15</x-m>
+    <y-m>17.69</y-m>
+    <z-m>0.00</z-m>
+ </offsets>
+    <attach>world</attach>
+        
+    <align>billboard</align>
+
+    <counter>
+      <particles-per-sec>
+        <value>100</value>
+        <spread>20</spread>
+      </particles-per-sec>
+    </counter>
+        
+    <particle>
+      <start>
+        <color>
+          <red>
+            <value>1.0</value>
+          </red>
+          <green>
+            <value>1.0</value>
+          </green>
+          <blue>
+            <value>1.0</value>
+          </blue>
+          <alpha>
+            <value>0.5</value>
+          </alpha>
+        </color>
+        <size>
+          <value>1</value>
+        </size>
+      </start>
+
+      <end>
+        <color>
+          <red>
+            <value>1.0</value>
+          </red>
+          <green>
+            <value>1.0</value>
+          </green>
+          <blue>
+            <value>1.0</value>
+          </blue>
+          <alpha>
+            <value>0.5</value>
+          </alpha>
+        </color>
+        <size>
+          <value>1</value>
+        </size>
+      </end>
+
+      <life-sec>
+        <value>5.0</value>
+      </life-sec>
+
+      <mass-kg>6</mass-kg>
+      <radius-m>6</radius-m>
+    </particle>
+        
+    <program>
+      <fluid>water</fluid>
+      <gravity>false</gravity>
+      <wind>false</wind>
+    </program>	
+  </particlesystem>
+<animation>
+        <type>range</type>
+        <min-m>0</min-m>
+	<max-m>16000</max-m>
+    </animation>
+    <animation>
+		 <object-name>Light</object-name>	
+        <enable-hot type="bool">false</enable-hot>
+    </animation>
+    <animation>
+        <type>alpha-test</type>
+        <alpha-factor>0.01</alpha-factor>
+    </animation>
+    <animation>
+        <type>select</type>
+		  <object-name>Light</object-name>		 
+        <condition><greater-than>
+            <property>/sim/time/sun-angle-rad</property>
+            <value>1.57</value>
+            </greater-than>
+        </condition>
+    </animation>
+    <animation>
+        <type>timed</type>     
+		 <object-name>Light</object-name>	
+        <use-personality type="bool">true</use-personality>
+        <branch-duration-sec>
+        <random>
+            <min>43200.0</min>
+            <max>43200.0</max>
+        </random>
+        </branch-duration-sec>
+        <branch-duration-sec>
+        <random>
+            <min>43200.0</min>
+            <max>43200.0</max>
+        </random>
+        </branch-duration-sec>
+        </animation>
+<animation>
+        <type>range</type>
+        <min-m>0</min-m>
+	<max-m>16000</max-m>
+    </animation>
+    <animation>
+		 <object-name>Light1</object-name>	
+        <enable-hot type="bool">false</enable-hot>
+    </animation>
+    <animation>
+        <type>alpha-test</type>
+        <alpha-factor>0.01</alpha-factor>
+    </animation>
+    <animation>
+        <type>select</type>
+		  <object-name>Light1</object-name>		 
+        <condition><greater-than>
+            <property>/sim/time/sun-angle-rad</property>
+            <value>1.57</value>
+            </greater-than>
+        </condition>
+    </animation>
+    <animation>
+        <type>timed</type>     
+		 <object-name>Light1</object-name>	
+        <use-personality type="bool">true</use-personality>
+        <branch-duration-sec>
+        <random>
+            <min>43200.0</min>
+            <max>43200.0</max>
+        </random>
+        </branch-duration-sec>
+        <branch-duration-sec>
+        <random>
+            <min>43200.0</min>
+            <max>43200.0</max>
+        </random>
+        </branch-duration-sec>
+        </animation>
+<animation>
+        <type>range</type>
+        <min-m>0</min-m>
+	<max-m>16000</max-m>
+    </animation>
+    <animation>
+		 <object-name>Light2</object-name>	
+        <enable-hot type="bool">false</enable-hot>
+    </animation>
+    <animation>
+        <type>alpha-test</type>
+        <alpha-factor>0.01</alpha-factor>
+    </animation>
+    <animation>
+        <type>select</type>
+		  <object-name>Light2</object-name>		 
+        <condition><greater-than>
+            <property>/sim/time/sun-angle-rad</property>
+            <value>1.57</value>
+            </greater-than>
+        </condition>
+    </animation>
+    <animation>
+        <type>timed</type>     
+		 <object-name>Light2</object-name>	
+        <use-personality type="bool">true</use-personality>
+        <branch-duration-sec>
+        <random>
+            <min>43200.0</min>
+            <max>43200.0</max>
+        </random>
+        </branch-duration-sec>
+        <branch-duration-sec>
+        <random>
+            <min>43200.0</min>
+            <max>43200.0</max>
+        </random>
+        </branch-duration-sec>
+        </animation>
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>20000</max-m>
+ </animation>
+ <model>
+<path>Models/Aircraft/dauphin.ac</path>
+<offsets>
+<x-m>19.76</x-m>
+<y-m>6.90</y-m>
+<z-m>14.95</z-m>
+<heading-deg>270</heading-deg>
+</offsets>
+</model>
+<model>
+<path>Models/Aircraft/superfrelon.ac</path>
+<offsets>
+<x-m>173</x-m>
+<y-m>28</y-m>
+<z-m>14.95</z-m>
+<heading-deg>90</heading-deg>
+</offsets>
+</model>  
+</PropertyList>

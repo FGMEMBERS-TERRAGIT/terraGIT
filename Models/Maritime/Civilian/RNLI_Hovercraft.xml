@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+ <path>RNLI_Hovercraft.ac</path>
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>16000</max-m>
+ </animation>
+
+<animation>
+  <type>rotate</type>
+    <property>/sim/time/elapsed-sec</property>
+  <factor>6.0</factor>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>100.0</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>-1</z>
+  </axis>
+</animation>
+
+<particlesystem>
+    <name>bowwave</name>
+
+    <texture>RNLI_Hovercraft5.png</texture>
+    <emissive>false</emissive>
+    <lighting>true</lighting>
+
+    <attach>world</attach>
+        
+    <align>billboard</align>
+
+    <placer>
+<type>sector</type>
+ 
+</placer>
+
+    <counter>
+      <particles-per-sec>
+        <value>100</value>
+        <spread>25</spread>
+      </particles-per-sec>
+    </counter>
+        
+    <particle>
+      <start>
+        <color>
+          <red>
+            <value>1.0</value>
+          </red>
+          <green>
+            <value>1.0</value>
+          </green>
+          <blue>
+            <value>1.0</value>
+          </blue>
+          <alpha>
+            <value>0.5</value>
+          </alpha>
+        </color>
+        <size>
+          <value>0.1</value>
+        </size>
+      </start>
+
+      <end>
+        <color>
+          <red>
+            <value>1.0</value>
+          </red>
+          <green>
+            <value>1.0</value>
+          </green>
+          <blue>
+            <value>1.0</value>
+          </blue>
+          <alpha>
+            <value>1.0</value>
+          </alpha>
+        </color>
+        <size>
+          <value>0.4</value>
+        </size>
+      </end>
+
+      <life-sec>
+        <value>3.0</value>
+      </life-sec>
+
+      <mass-kg>6</mass-kg>
+      <radius-m>6</radius-m>
+    </particle>
+        
+    <program>
+      <fluid>water</fluid>
+      <gravity>false</gravity>
+      <wind>false</wind>
+    </program>
+   
+
+  </particlesystem>
+
+
+</PropertyList>

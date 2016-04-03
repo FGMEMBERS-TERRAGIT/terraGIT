@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>hochhaus_asemwald.ac</path>
+
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>25000</max-m>
+	</animation>
+
+<animation>
+    <type>material</type>
+    <object-name>fenster1</object-name>
+    <condition>
+        <greater-than>
+          <property>/sim/time/sun-angle-rad</property>
+          <value>1.37</value>
+        </greater-than>
+    </condition>
+    <emission>	
+	<red>0.25</red>	
+	<green>0.25</green>	
+	<blue>0.20</blue>
+    </emission>
+</animation>
+
+<animation>
+    <type>material</type>
+    <object-name>fenster2</object-name>
+    <condition>
+        <greater-than>
+          <property>/sim/time/sun-angle-rad</property>
+          <value>1.47</value>
+        </greater-than>
+    </condition>
+    <emission>	
+	<red>0.3</red>	
+	<green>0.3</green>	
+	<blue>0.3</blue>
+    </emission>
+</animation>
+
+<animation>
+    <type>material</type>
+    <object-name>fenster3</object-name>
+    <condition>
+        <greater-than>
+          <property>/sim/time/sun-angle-rad</property>
+          <value>1.57</value>
+        </greater-than>
+    </condition>
+    <emission>	
+	<red>0.4</red>	
+	<green>0.4</green>	
+	<blue>0.35</blue>
+    </emission>
+</animation>
+
+<animation>
+    <type>material</type>
+    <object-name>fenster4</object-name>
+    <condition>
+        <greater-than>
+          <property>/sim/time/sun-angle-rad</property>
+          <value>1.67</value>
+        </greater-than>
+    </condition>
+    <emission>	
+	<red>0.2</red>	
+	<green>0.2</green>	
+	<blue>0.2</blue>
+    </emission>
+</animation>
+
+</PropertyList>

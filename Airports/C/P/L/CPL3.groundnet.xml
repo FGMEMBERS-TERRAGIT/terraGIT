@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<groundnet>
+  <version>1</version>
+  <parkingList>
+        <Parking index="0" type="ga" name="New_Ramp_Start_1" lat="N45 6.289788" lon="W75 37.466057" heading="153.43"  radius="10" pushBackRoute="3" airlineCodes="" />
+ </parkingList>
+ <TaxiNodes>
+        <node index="1" lat="N45 6.257082" lon="W75 37.545837" isOnRunway="0" holdPointType="none"  />
+        <node index="2" lat="N45 6.295142" lon="W75 37.434356" isOnRunway="0" holdPointType="none"  />
+        <node index="3" lat="N45 6.283254" lon="W75 37.468891" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="4" lat="N45 6.273078" lon="W75 37.462097" isOnRunway="1" holdPointType="none"  />
+        <node index="5" lat="N45 6.308730" lon="W75 37.306402" isOnRunway="1" holdPointType="none"  />
+        <node index="6" lat="N45 6.063047" lon="W75 38.064630" isOnRunway="1" holdPointType="none"  />
+        <node index="7" lat="N45 6.261323" lon="W75 37.453867" isOnRunway="1" holdPointType="none"  />
+        <node index="8" lat="N45 6.314048" lon="W75 37.478189" isOnRunway="0" holdPointType="none"  />
+ </TaxiNodes>
+ <TaxiWaySegments>
+        <arc begin="3" end="1" isPushBackRoute="0" name="A"  />
+        <arc begin="1" end="3" isPushBackRoute="0" name="A"  />
+        <arc begin="3" end="2" isPushBackRoute="0" name="A"  />
+        <arc begin="2" end="3" isPushBackRoute="0" name="A"  />
+        <arc begin="4" end="3" isPushBackRoute="0" name="A"  />
+        <arc begin="3" end="4" isPushBackRoute="0" name="A"  />
+        <arc begin="0" end="8" isPushBackRoute="1" name="New_Ramp_Start_1"  />
+        <arc begin="8" end="0" isPushBackRoute="1" name="New_Ramp_Start_1"  />
+        <arc begin="8" end="3" isPushBackRoute="1" name="New_Ramp_Start_1"  />
+        <arc begin="3" end="8" isPushBackRoute="1" name="New_Ramp_Start_1"  />
+        <arc begin="0" end="3" isPushBackRoute="1" name="New_Ramp_Start_1"  />
+        <arc begin="3" end="0" isPushBackRoute="1" name="New_Ramp_Start_1"  />
+ </TaxiWaySegments>
+</groundnet>

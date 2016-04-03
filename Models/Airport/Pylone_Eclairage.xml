@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>Pylone_Eclairage.ac</path>
+
+	<animation>
+		<type>select</type>
+		<object-name>Faces_Spots_Ecl</object-name>
+		<condition>
+			<greater-than>
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.57</value>
+			</greater-than>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>Faces_Spots</object-name>
+		<condition>
+			<less-than>
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.57</value>
+			</less-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>range</type>
+		<object-name>Pylone_Eclairage</object-name>
+		<min-m>0</min-m>
+		<max-m>8000</max-m>
+	</animation>
+</PropertyList>

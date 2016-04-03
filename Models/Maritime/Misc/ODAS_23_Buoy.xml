@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>ODAS_23_Buoy.ac</path>
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>16000</max-m>
+ </animation>
+
+ <animation>
+  <object-name>Flash</object-name>
+  <object-name>Blank</object-name>
+  <enable-hot type="bool">false</enable-hot>
+ </animation>
+ 
+ <animation>
+  <type>alpha-test</type>
+  <alpha-factor>0.01</alpha-factor>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>Flash</object-name>
+  <object-name>Blank</object-name>
+  <condition>
+   <greater-than>
+    <property>/sim/time/sun-angle-rad</property>
+    <value>1.57</value>
+   </greater-than>
+  </condition>
+ </animation>
+ 
+ <animation>
+ <type>timed</type>
+ <object-name>Flash</object-name>
+ <object-name>Blank</object-name>
+ <use-personality type="bool">true</use-personality>
+<branch-duration-sec>
+  <random>
+   <min>0.1</min>
+   <max>0.1</max>
+  </random>
+ </branch-duration-sec>
+ <branch-duration-sec>
+  <random>
+   <min>2.9</min>
+   <max>2.9</max>
+  </random>
+ </branch-duration-sec>
+</animation>
+
+</PropertyList>

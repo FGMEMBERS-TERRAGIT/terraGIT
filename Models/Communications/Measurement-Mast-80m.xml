@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+ <path>Measurement-Mast-80m.ac</path>
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>20000</max-m>
+ </animation>
+ 
+ <animation>
+  <name>Girouette</name> 
+  <object-name>Queue</object-name>
+  <object-name>Bras2</object-name>
+ </animation>
+ 
+ <animation>
+  <name>Anemometre</name>
+  <object-name>Mobile</object-name>
+  <object-name>Bras1</object-name>
+  <object-name>Bras1.001</object-name>
+  <object-name>Bras1.002</object-name>
+  <object-name>Bras1.003</object-name>
+  <object-name>Sphere</object-name>
+  <object-name>Sphere.001</object-name>
+  <object-name>Sphere.002</object-name>
+  <object-name>Sphere.003</object-name>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>Anemometre</object-name>
+  <use-personality type="bool">true</use-personality>
+  <property>/environment/wind-speed-kt</property>
+  <factor>10</factor>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+  <center>
+   <x-m>0.01</x-m>
+   <y-m>-1.127</y-m>
+   <z-m>0</z-m>
+  </center>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Girouette</object-name>
+  <property>/environment/wind-from-heading-deg</property>
+  <offset-deg>0</offset-deg>
+  <factor>-1</factor>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+  <center>
+   <x-m>0.01</x-m>
+   <y-m>-1.12</y-m>
+   <z-m>0.0</z-m>
+  </center>
+ </animation>
+ 
+ <!--LIGHT-->
+
+<animation>
+  <type>alpha-test</type>
+  <alpha-factor>0.01</alpha-factor>
+ </animation>
+
+ <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>light-plate</object-name>
+  </effect>
+
+ <animation>
+ <type>timed</type>
+ <object-name>light-plate</object-name>
+<object-name>Pos2</object-name>
+ <use-personality type="bool">true</use-personality>
+<branch-duration-sec>
+  <random>
+   <min>1.5</min>
+   <max>1.5</max>
+  </random>
+ </branch-duration-sec>
+ <branch-duration-sec>
+  <random>
+   <min>0.025</min>
+   <max>0.025</max>
+  </random>
+ </branch-duration-sec>
+  </animation>
+
+ <animation>
+    <type>material</type>
+    <object-name>light-plate</object-name>
+    <emission>
+      <red>0.027 </red>
+      <green>0.027 </green>
+      <blue>0.027 </blue>
+      <factor>150</factor>
+    </emission>
+  </animation>
+
+ <animation>
+  <object-name>light-plate</object-name>
+  <enable-hot type="bool">false</enable-hot>
+ </animation>
+
+</PropertyList>

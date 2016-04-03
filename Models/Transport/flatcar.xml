@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>flatcar.ac</path>
+
+	<offsets>
+		<x-m>0</x-m>
+		<y-m>0</y-m>
+		<z-m>0</z-m>
+	</offsets>
+
+	<model>
+		<name>container-front</name>
+		<path>Models/Transport/container.xml</path>
+		<offsets>
+			<x-m>-6.26438</x-m>
+			<y-m>0</y-m>
+			<z-m>1.2245</z-m>
+		</offsets>
+		<overlay>
+			<animation>
+				<type>material</type>
+				<object-name>container</object-name>
+				<ambient>
+					<red>   0.071 </red>
+					<green> 0.325 </green>
+					<blue>  0.6 </blue>
+				</ambient>
+				<diffuse>
+					<red>   0.071 </red>
+					<green> 0.325 </green>
+					<blue>  0.6 </blue>
+				</diffuse>
+			</animation>
+
+			<animation>
+				<type>material</type>
+				<object-name>decal-l</object-name>
+				<ambient>
+					<red>   1.0 </red>
+					<green> 1.0 </green>
+					<blue>  1.0 </blue>
+				</ambient>
+				<diffuse>
+					<red>   1.0 </red>
+					<green> 1.0 </green>
+					<blue>  1.0 </blue>
+				</diffuse>
+				<transparency>
+					<alpha>1.0</alpha>
+				</transparency>
+				<texture>decal-lloyd.png</texture>
+			</animation>
+
+			<animation>
+				<type>material</type>
+				<object-name>decal-r</object-name>
+				<ambient>
+					<red>   1.0 </red>
+					<green> 1.0 </green>
+					<blue>  1.0 </blue>
+				</ambient>
+				<diffuse>
+					<red>   1.0 </red>
+					<green> 1.0 </green>
+					<blue>  1.0 </blue>
+				</diffuse>
+				<transparency>
+					<alpha>1.0</alpha>
+				</transparency>
+				<texture>decal-lloyd.png</texture>
+			</animation>
+		</overlay>
+	</model>
+
+	<model>
+		<name>container-rear</name>
+		<path>Models/Transport/container.xml</path>
+		<offsets>
+			<x-m>6.26438</x-m>
+			<y-m>0</y-m>
+			<z-m>1.2245</z-m>
+		</offsets>
+		<overlay>
+			<animation>
+				<type>material</type>
+				<object-name>container</object-name>
+				<ambient>
+					<red>   0.271 </red>
+					<green> 0.525 </green>
+					<blue>  0.455 </blue>
+				</ambient>
+				<diffuse>
+					<red>   0.271 </red>
+					<green> 0.525 </green>
+					<blue>  0.455 </blue>
+				</diffuse>
+			</animation>
+
+			<animation>
+				<type>material</type>
+				<object-name>decal-l</object-name>
+				<ambient>
+					<red>   1.0 </red>
+					<green> 1.0 </green>
+					<blue>  1.0 </blue>
+				</ambient>
+				<diffuse>
+					<red>   1.0 </red>
+					<green> 1.0 </green>
+					<blue>  1.0 </blue>
+				</diffuse>
+				<transparency>
+					<alpha>1.0</alpha>
+				</transparency>
+				<texture>decal-evergreen.png</texture>
+			</animation>
+
+			<animation>
+				<type>material</type>
+				<object-name>decal-r</object-name>
+				<ambient>
+					<red>   1.0 </red>
+					<green> 1.0 </green>
+					<blue>  1.0 </blue>
+				</ambient>
+				<diffuse>
+					<red>   1.0 </red>
+					<green> 1.0 </green>
+					<blue>  1.0 </blue>
+				</diffuse>
+				<transparency>
+					<alpha>1.0</alpha>
+				</transparency>
+				<texture>decal-evergreen.png</texture>
+			</animation>
+		</overlay>
+	</model>
+
+	<animation>
+		<enable-hot type="bool">false</enable-hot>
+	</animation>
+
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>10000</max-m>
+	</animation>
+
+</PropertyList>

@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>jetway-movable-2.ac</path>
+
+	<!-- JETWAY 1 -->
+	<animation>
+		<type>pick</type>
+		<object-name>Rotunda1</object-name>
+		<object-name>Tunnel1Rotunda</object-name>
+		<object-name>Tunnel1</object-name>
+		<object-name>Tunnel2</object-name>
+		<object-name>Tunnel3</object-name>
+		<object-name>Rotunda2</object-name>
+		<object-name>Entrance</object-name>
+		<object-name>Hood</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<!-- Nasal pick code for jetway 1 -->
+				<script><![CDATA[
+				 if (props.globals.getNode("/scenery/airport/jetway[0]/extended") == nil)
+				  {
+				  props.globals.initNode("/scenery/airport/jetway[0]/extended", 0, "BOOL");
+				  setprop("/scenery/airport/jetway[0]/position-norm", 0);
+				  }
+				 if (props.globals.getNode("/scenery/airport/jetway-movable-debug") == nil)
+				  {
+				  props.globals.initNode("/scenery/airport/jetway-movable-debug", 0, "BOOL");
+				  }
+
+				 # nasal interpolation function - returns a value based on a set interpolation table, like the <interpolate> feature of XML animations
+				 # takes an array with sub-arrays, like
+				 # [[<ind>, <dep>], [<ind>, <dep>]]
+				 var interpolateTable = func(table, value)
+				  {
+				  var newValue = 0;
+
+				  forindex (i; table)
+				   {
+				   if (value >= table[i][0])
+				    {
+				    if (i + 1 < size(table))
+				     {
+				     newValue = (value - table[i][0]) / (table[i + 1][0] - table[i][0]) * (table[i + 1][1] - table[i][1]) + table[i][1];
+				     }
+				    else
+				     {
+				     newValue = table[i][1];
+				     }
+				    }
+				   }
+
+				  return newValue;
+				  };
+
+				 var xtranslate = nil;
+				 var yrotate = nil;
+				 var zrotate = nil;
+				 var hoodrotate = nil;
+
+				 if (props.globals.getNode("/aircraft/door[0]/x-m") != nil and props.globals.getNode("/aircraft/door[0]/y-m") != nil and props.globals.getNode("/aircraft/door[0]/z-m") != nil)
+				  {
+				  var xm = getprop("/aircraft/door[0]/x-m");
+				  var ym = getprop("/aircraft/door[0]/y-m") - 2.65;
+				  var zm = getprop("/aircraft/door[0]/z-m") - 3.752;
+
+				  # calculate the extension length using the Pythagorean Theorem (c = sqrt(a^2 + b^2))
+				  xtranslate = math.sqrt(xm * xm + ym * ym) - 19.536;
+				  # calculate the rotation angle along the Y axis
+				  yrotate = math.atan2(zm / xm, 1) * R2D;
+				  # calculate the rotation angle along the Z axis
+				  zrotate = math.atan2(ym / xm, 1) * R2D;
+				  # hood rotation angle is predefined
+				  hoodrotate = getprop("/aircraft/jetway-hood-deg");
+				  }
+				 # old system (legacy support)
+				 elsif (props.globals.getNode("/aircraft/jetway-pos/x-tra") != nil and props.globals.getNode("/aircraft/jetway-pos/y-rot") != nil and props.globals.getNode("/aircraft/jetway-pos/z-rot") != nil and props.globals.getNode("/aircraft/jetway-pos/hood-rot") != nil)
+				  {
+				  # rotation angles and extension lengths are predefined
+				  xtranslate = getprop("/aircraft/jetway-pos/x-tra");
+				  yrotate = getprop("/aircraft/jetway-pos/y-rot");
+				  zrotate = getprop("/aircraft/jetway-pos/z-rot");
+				  hoodrotate = getprop("/aircraft/jetway-pos/hood-rot");
+				  }
+				 var xtranslaterate = 0.5;
+				 var xtranslatetable = [
+				   [0.0, 0.0],
+				   [0.2, 0.5],
+				   [0.6, 0.5],
+				   [0.8, 1.0],
+				   [1.0, 1.0]
+				  ];
+
+				 var yrotaterate = 1;
+				 var yrotatetable = [
+				   [0.0, 0.0],
+				   [0.4, 0.7],
+				   [0.7, 1.0],
+				   [1.0, 1.0]
+				  ];
+
+				 var zrotaterate = 1;
+				 var zrotatetable = [
+				   [0.0, 0.0],
+				   [0.2, 0.0],
+				   [0.6, 0.7],
+				   [0.8, 0.7],
+				   [0.9, 1.0],
+				   [1.0, 1.0]
+				  ];
+
+				 var zentrancerotaterate = 5;
+				 var zentrancerotatetable = [
+				   [0.0, 0.0],
+				   [0.5, 0.0],
+				   [0.6, 0.7],
+				   [0.8, 0.7],
+				   [0.9, 1.0],
+				   [1.0, 1.0]
+				  ];
+
+				 var hoodrotaterate = 1;
+				 var hoodrotatetable = [
+				   [0.0, 0.0],
+				   [0.9, 0.0],
+				   [1,0, 1.0]
+				  ];
+
+				 if (xtranslate != nil and yrotate != nil and zrotate != nil and hoodrotate != nil)
+				  {
+				  var length = math.abs(xtranslate / xtranslaterate) + math.abs(yrotate / yrotaterate) + math.abs(zrotate / zrotaterate) + math.abs(zrotate / zentrancerotaterate) + math.abs(hoodrotate / hoodrotaterate);
+
+				  if (props.globals.getNode("/scenery/airport/jetway-movable-debug").getBoolValue())
+				   {
+				   print("Animated jetway debug information:");
+				   print("----------------------------------");
+				   print("x-translation-m: " ~ xtranslate);
+				   print("y-rotation-deg: " ~ yrotate);
+				   print("z-rotation-deg: " ~ zrotate);
+				   print("hood-x-rotation-deg: " ~ hoodrotate);
+				   print("");
+				   print("Total animation time: " ~ length ~ " seconds");
+				   }
+				  if (!props.globals.getNode("/scenery/airport/jetway[0]/extended").getBoolValue())
+				   {
+				   props.globals.getNode("/scenery/airport/jetway[0]/extended").setBoolValue(1);
+				   interpolate("/scenery/airport/jetway[0]/position-norm",
+				     1, -getprop("/scenery/airport/jetway[0]/position-norm") + 1 * length
+				   );
+				   gui.popupTip("Extending jetway.");
+
+				   var loop = func
+				    {
+				    var position = getprop("/scenery/airport/jetway[0]/position-norm");
+				    setprop("/scenery/airport/jetway[0]/x-translation-m", interpolateTable(xtranslatetable, position) * xtranslate);
+				    setprop("/scenery/airport/jetway[0]/y-rotation-deg", interpolateTable(yrotatetable, position) * yrotate);
+				    setprop("/scenery/airport/jetway[0]/z-rotation-deg", interpolateTable(zrotatetable, position) * zrotate);
+				    setprop("/scenery/airport/jetway[0]/z-entrance-rotation-deg", interpolateTable(zentrancerotatetable, position) * zrotate) ;
+				    setprop("/scenery/airport/jetway[0]/hood-x-rotation-deg", interpolateTable(hoodrotatetable, position) * hoodrotate);
+
+				    if (position < 1 and props.globals.getNode("/scenery/airport/jetway[0]/extended").getBoolValue())
+				     {
+				     settimer(loop, 0);
+				     }
+				    };
+				   loop();
+				   }
+				  elsif (props.globals.getNode("/scenery/airport/jetway[0]/extended").getBoolValue())
+				   {
+				   props.globals.getNode("/scenery/airport/jetway[0]/extended").setBoolValue(0);
+				   interpolate("/scenery/airport/jetway[0]/position-norm",
+				     0, getprop("/scenery/airport/jetway[0]/position-norm") * length
+				    );
+				   gui.popupTip("Retracting jetway.");
+
+				   var loop = func
+				    {
+				    var position = getprop("/scenery/airport/jetway[0]/position-norm");
+				    setprop("/scenery/airport/jetway[0]/x-translation-m", interpolateTable(xtranslatetable, position) * xtranslate);
+				    setprop("/scenery/airport/jetway[0]/y-rotation-deg", interpolateTable(yrotatetable, position) * yrotate);
+				    setprop("/scenery/airport/jetway[0]/z-rotation-deg", interpolateTable(zrotatetable, position) * zrotate);
+				    setprop("/scenery/airport/jetway[0]/z-entrance-rotation-deg", interpolateTable(zentrancerotatetable, position) * zrotate);
+				    setprop("/scenery/airport/jetway[0]/hood-x-rotation-deg", interpolateTable(hoodrotatetable, position) * hoodrotate);
+
+				    if (position > 0 and !props.globals.getNode("/scenery/airport/jetway[0]/extended").getBoolValue())
+				     {
+				     settimer(loop, 0);
+				     }
+				    };
+				   loop();
+				   }
+				  }
+				 else
+				  {
+				  gui.popupTip("Cannot extend jetway: Your aircraft does not define the required positioning information.");
+				  }
+				]]></script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Tunnel1Rotunda</object-name>
+		<object-name>Tunnel1</object-name>
+		<object-name>Tunnel2</object-name>
+		<object-name>Tunnel3</object-name>
+		<object-name>Rotunda2</object-name>
+		<object-name>Entrance</object-name>
+		<object-name>Hood</object-name>
+		<property>/scenery/airport/jetway[0]/z-rotation-deg</property>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>Tunnel2</object-name>
+		<object-name>Tunnel3</object-name>
+		<object-name>Rotunda2</object-name>
+		<object-name>Entrance</object-name>
+		<object-name>Hood</object-name>
+		<property>/scenery/airport/jetway[0]/x-translation-m</property>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Entrance</object-name>
+		<object-name>Hood</object-name>
+		<property>/scenery/airport/jetway[0]/z-entrance-rotation-deg</property>
+		<center>
+			<x-m>19.536</x-m>
+			<y-m>0.081</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>-1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Tunnel1</object-name>
+		<object-name>Tunnel2</object-name>
+		<object-name>Rotunda2</object-name>
+		<object-name>Entrance</object-name>
+		<object-name>Hood</object-name>
+		<property>/scenery/airport/jetway[0]/y-rotation-deg</property>
+		<center>
+			<x-m>1.5</x-m>
+			<y-m>0</y-m>
+			<z-m>4</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Hood</object-name>
+		<property>/scenery/airport/jetway[0]/hood-x-rotation-deg</property>
+		<center>
+			<x-m>0</x-m>
+			<y-m>2.019</y-m>
+			<z-m>3.852</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!-- JETWAY 2 -->
+	<animation>
+		<type>pick</type>
+		<object-name>Rotunda1.001</object-name>
+		<object-name>Tunnel1Rotunda.001</object-name>
+		<object-name>Tunnel1.001</object-name>
+		<object-name>Tunnel2.001</object-name>
+		<object-name>Tunnel3.001</object-name>
+		<object-name>Rotunda2.001</object-name>
+		<object-name>Entrance.001</object-name>
+		<object-name>Hood.001</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<!-- Nasal pick code for jetway 2 -->
+				<script><![CDATA[
+				 if (props.globals.getNode("/scenery/airport/jetway[1]/extended") == nil)
+				  {
+				  props.globals.initNode("/scenery/airport/jetway[1]/extended", 0, "BOOL");
+				  setprop("/scenery/airport/jetway[1]/position-norm", 0);
+				  }
+				 if (props.globals.getNode("/scenery/airport/jetway-movable-debug") == nil)
+				  {
+				  props.globals.initNode("/scenery/airport/jetway-movable-debug", 0, "BOOL");
+				  }
+
+				 # nasal interpolation function - returns a value based on a set interpolation table, like the <interpolate> feature of XML animations
+				 # takes an array with sub-arrays, like
+				 # [[<ind>, <dep>], [<ind>, <dep>]]
+				 var interpolateTable = func(table, value)
+				  {
+				  var newValue = 0;
+
+				  forindex (i; table)
+				   {
+				   if (value >= table[i][0])
+				    {
+				    if (i + 1 < size(table))
+				     {
+				     newValue = (value - table[i][0]) / (table[i + 1][0] - table[i][0]) * (table[i + 1][1] - table[i][1]) + table[i][1];
+				     }
+				    else
+				     {
+				     newValue = table[i][1];
+				     }
+				    }
+				   }
+
+				  return newValue;
+				  };
+
+				 var xtranslate = nil;
+				 var yrotate = nil;
+				 var zrotate = nil;
+				 var hoodrotate = nil;
+
+				 if (props.globals.getNode("/aircraft/door[1]/x-m") != nil and props.globals.getNode("/aircraft/door[1]/y-m") != nil and props.globals.getNode("/aircraft/door[1]/z-m") != nil)
+				  {
+				  var xm = getprop("/aircraft/door[1]/x-m") - 18;
+				  var ym = getprop("/aircraft/door[1]/y-m") + 2.35;
+				  var zm = getprop("/aircraft/door[1]/z-m") - 3.752;
+
+				  # calculate the extension length using the Pythagorean Theorem (c = sqrt(a^2 + b^2))
+				  xtranslate = math.sqrt(xm * xm + ym * ym) - 11.536;
+				  # calculate the rotation angle along the Y axis
+				  yrotate = math.atan2(zm / xm, 1) * R2D;
+				  # calculate the rotation angle along the Z axis
+				  zrotate = math.atan2(ym / xm, 1) * R2D;
+				  # hood rotation angle is predefined
+				  hoodrotate = getprop("/aircraft/jetway-hood-deg");
+				  }
+				 # old system (legacy support)
+				 elsif (props.globals.getNode("/aircraft/jetway2-pos/x-tra") != nil and props.globals.getNode("/aircraft/jetway2-pos/y-rot") != nil and props.globals.getNode("/aircraft/jetway2-pos/z-rot") != nil and props.globals.getNode("/aircraft/jetway2-pos/hood-rot") != nil)
+				  {
+				  # rotation angles and extension lengths are predefined
+				  xtranslate = getprop("/aircraft/jetway2-pos/x-tra");
+				  yrotate = getprop("/aircraft/jetway2-pos/y-rot");
+				  zrotate = getprop("/aircraft/jetway2-pos/z-rot");
+				  hoodrotate = getprop("/aircraft/jetway2-pos/hood-rot");
+				  }
+				 var xtranslaterate = 0.5;
+				 var xtranslatetable = [
+				   [0.0, 0.0],
+				   [0.6, 0.0],
+				   [0.8, 1.0],
+				   [1.0, 1.0]
+				  ];
+
+				 var yrotaterate = 1;
+				 var yrotatetable = [
+				   [0.0, 0.0],
+				   [0.6, 0.0],
+				   [0.7, 1.0],
+				   [1.0, 1.0]
+				  ];
+
+				 var zrotaterate = 1;
+				 var zrotatetable = [
+				   [0.0, 0.0],
+				   [0.4, 0.7],
+				   [0.6, 1.0],
+				   [1.0, 1.0]
+				  ];
+
+				 var zentrancerotaterate = 5;
+				 var zentrancerotatetable = [
+				   [0.0, 0.0],
+				   [0.5, 0.0],
+				   [0.6, 0.7],
+				   [0.7, 1.0],
+				   [1.0, 1.0]
+				  ];
+
+				 var hoodrotaterate = 1;
+				 var hoodrotatetable = [
+				   [0.0, 0.0],
+				   [0.9, 0.0],
+				   [1,0, 1.0]
+				  ];
+
+				 if (xtranslate != nil and yrotate != nil and zrotate != nil and hoodrotate != nil)
+				  {
+				  var length = math.abs(xtranslate / xtranslaterate) + math.abs(yrotate / yrotaterate) + math.abs(zrotate / zrotaterate) + math.abs(zrotate / zentrancerotaterate) + math.abs(hoodrotate / hoodrotaterate);
+
+				  if (props.globals.getNode("/scenery/airport/jetway-movable-debug").getBoolValue())
+				   {
+				   print("Animated jetway debug information:");
+				   print("----------------------------------");
+				   print("x-translation-m: " ~ xtranslate);
+				   print("y-rotation-deg: " ~ yrotate);
+				   print("z-rotation-deg: " ~ zrotate);
+				   print("hood-x-rotation-deg: " ~ hoodrotate);
+				   print("");
+				   print("Total animation time: " ~ length ~ " seconds");
+				   }
+				  if (!props.globals.getNode("/scenery/airport/jetway[1]/extended").getBoolValue())
+				   {
+				   props.globals.getNode("/scenery/airport/jetway[1]/extended").setBoolValue(1);
+				   interpolate("/scenery/airport/jetway[1]/position-norm",
+				     1, -getprop("/scenery/airport/jetway[1]/position-norm") + 1 * length
+				   );
+				   gui.popupTip("Extending jetway.");
+
+				   var loop = func
+				    {
+				    var position = getprop("/scenery/airport/jetway[1]/position-norm");
+				    setprop("/scenery/airport/jetway[1]/x-translation-m", interpolateTable(xtranslatetable, position) * xtranslate);
+				    setprop("/scenery/airport/jetway[1]/y-rotation-deg", interpolateTable(yrotatetable, position) * yrotate);
+				    setprop("/scenery/airport/jetway[1]/z-rotation-deg", interpolateTable(zrotatetable, position) * zrotate);
+				    setprop("/scenery/airport/jetway[1]/z-entrance-rotation-deg", interpolateTable(zentrancerotatetable, position) * zrotate) ;
+				    setprop("/scenery/airport/jetway[1]/hood-x-rotation-deg", interpolateTable(hoodrotatetable, position) * hoodrotate);
+
+				    if (position < 1 and props.globals.getNode("/scenery/airport/jetway[1]/extended").getBoolValue())
+				     {
+				     settimer(loop, 0);
+				     }
+				    };
+				   loop();
+				   }
+				  elsif (props.globals.getNode("/scenery/airport/jetway[1]/extended").getBoolValue())
+				   {
+				   props.globals.getNode("/scenery/airport/jetway[1]/extended").setBoolValue(0);
+				   interpolate("/scenery/airport/jetway[1]/position-norm",
+				     0, getprop("/scenery/airport/jetway[1]/position-norm") * length
+				    );
+				   gui.popupTip("Retracting jetway.");
+
+				   var loop = func
+				    {
+				    var position = getprop("/scenery/airport/jetway[1]/position-norm");
+				    setprop("/scenery/airport/jetway[1]/x-translation-m", interpolateTable(xtranslatetable, position) * xtranslate);
+				    setprop("/scenery/airport/jetway[1]/y-rotation-deg", interpolateTable(yrotatetable, position) * yrotate);
+				    setprop("/scenery/airport/jetway[1]/z-rotation-deg", interpolateTable(zrotatetable, position) * zrotate);
+				    setprop("/scenery/airport/jetway[1]/z-entrance-rotation-deg", interpolateTable(zentrancerotatetable, position) * zrotate);
+				    setprop("/scenery/airport/jetway[1]/hood-x-rotation-deg", interpolateTable(hoodrotatetable, position) * hoodrotate);
+
+				    if (position > 0 and !props.globals.getNode("/scenery/airport/jetway[1]/extended").getBoolValue())
+				     {
+				     settimer(loop, 0);
+				     }
+				    };
+				   loop();
+				   }
+				  }
+				 else
+				  {
+				  gui.popupTip("Cannot extend jetway: Your aircraft does not define the required positioning information.");
+				  }
+				]]></script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Tunnel1Rotunda.001</object-name>
+		<object-name>Tunnel1.001</object-name>
+		<object-name>Tunnel2.001</object-name>
+		<object-name>Tunnel3.001</object-name>
+		<object-name>Rotunda2.001</object-name>
+		<object-name>Entrance.001</object-name>
+		<object-name>Hood.001</object-name>
+		<property>/scenery/airport/jetway[1]/z-rotation-deg</property>
+		<center>
+			<x-m>18</x-m>
+			<y-m>-5</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>Tunnel2.001</object-name>
+		<object-name>Tunnel3.001</object-name>
+		<object-name>Rotunda2.001</object-name>
+		<object-name>Entrance.001</object-name>
+		<object-name>Hood.001</object-name>
+		<property>/scenery/airport/jetway[1]/x-translation-m</property>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Entrance.001</object-name>
+		<object-name>Hood.001</object-name>
+		<property>/scenery/airport/jetway[1]/z-entrance-rotation-deg</property>
+		<center>
+			<x-m>29.536</x-m>
+			<y-m>-5.081</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>-1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Tunnel1.001</object-name>
+		<object-name>Tunnel2.001</object-name>
+		<object-name>Rotunda2.001</object-name>
+		<object-name>Entrance.001</object-name>
+		<object-name>Hood.001</object-name>
+		<property>/scenery/airport/jetway[1]/y-rotation-deg</property>
+		<center>
+			<x-m>19.5</x-m>
+			<y-m>0</y-m>
+			<z-m>4</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Hood.001</object-name>
+		<property>/scenery/airport/jetway[1]/hood-x-rotation-deg</property>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-2.982</y-m>
+			<z-m>3.852</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!-- Night/day lighting -->
+	<animation>
+		<type>textranslate</type>
+		<object-name>Rotunda1</object-name>
+		<object-name>Rotunda1.001</object-name>
+		<object-name>Tunnel1Rotunda</object-name>
+		<object-name>Tunnel1Rotunda.001</object-name>
+		<object-name>Tunnel1</object-name>
+		<object-name>Tunnel1.001</object-name>
+		<object-name>Tunnel2</object-name>
+		<object-name>Tunnel2.001</object-name>
+		<object-name>Tunnel3</object-name>
+		<object-name>Tunnel3.001</object-name>
+		<object-name>Rotunda2</object-name>
+		<object-name>Rotunda2.001</object-name>
+		<object-name>Entrance</object-name>
+		<object-name>Entrance.001</object-name>
+		<object-name>Hood</object-name>
+		<object-name>Hood.001</object-name>
+		<property>/sim/time/sun-angle-rad</property>
+		<factor>0.3125</factor>
+		<step>1.6</step>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+		</axis>
+	</animation>
+
+	<!-- Make the ground marker and jetway entrances "non-solid" so that the aircraft does not collide with them -->
+	<animation>
+		<object-name>Marker</object-name>
+		<object-name>Entrance</object-name>
+		<object-name>Entrance.001</object-name>
+		<object-name>Hood</object-name>
+		<object-name>Hood.001</object-name>
+		<enable-hot type="bool">false</enable-hot>
+	</animation>
+
+</PropertyList>

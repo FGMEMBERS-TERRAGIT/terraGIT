@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<groundnet>
+  <version>1</version>
+  <parkingList>
+        <Parking index="0" type="ga" name="New_Ramp_Start_7" lat="N29 36.408187" lon="W97 59.459231" heading="90"  radius="10" pushBackRoute="5" airlineCodes="" />
+        <Parking index="1" type="ga" name="Veracity_Aviation_Pad" lat="N29 36.367780" lon="W97 59.442238" heading="178.84"  radius="10" pushBackRoute="4" airlineCodes="" />
+        <Parking index="2" type="ga" name="Veracity_Aviation_Hangar_(inside)" lat="N29 36.374743" lon="W97 59.460424" heading="90"  radius="10" pushBackRoute="3" airlineCodes="" />
+ </parkingList>
+ <TaxiNodes>
+        <node index="3" lat="N29 36.374743" lon="W97 59.460424" isOnRunway="1" holdPointType="PushBack"  />
+        <node index="4" lat="N29 36.367780" lon="W97 59.442238" isOnRunway="1" holdPointType="PushBack"  />
+        <node index="5" lat="N29 36.408187" lon="W97 59.459231" isOnRunway="1" holdPointType="PushBack"  />
+        <node index="6" lat="N29 36.407983" lon="W97 59.435408" isOnRunway="1" holdPointType="PushBack"  />
+        <node index="7" lat="N29 36.407983" lon="W97 59.427869" isOnRunway="1" holdPointType="none"  />
+        <node index="8" lat="N29 36.422549" lon="W97 59.428427" isOnRunway="1" holdPointType="none"  />
+        <node index="9" lat="N29 36.375453" lon="W97 59.433454" isOnRunway="1" holdPointType="none"  />
+        <node index="10" lat="N29 36.375453" lon="W97 59.427311" isOnRunway="1" holdPointType="none"  />
+        <node index="11" lat="N29 36.356915" lon="W97 59.441982" isOnRunway="1" holdPointType="none"  />
+        <node index="12" lat="N29 36.356915" lon="W97 59.432590" isOnRunway="1" holdPointType="none"  />
+        <node index="13" lat="N29 36.356694" lon="W97 59.427006" isOnRunway="1" holdPointType="none"  />
+        <node index="14" lat="N29 35.866816" lon="W97 59.415428" isOnRunway="1" holdPointType="none"  />
+        <node index="15" lat="N29 36.408187" lon="W97 59.486356" isOnRunway="0" holdPointType="none"  />
+        <node index="16" lat="N29 36.394899" lon="W97 59.442787" isOnRunway="0" holdPointType="none"  />
+        <node index="17" lat="N29 36.374743" lon="W97 59.487548" isOnRunway="0" holdPointType="none"  />
+ </TaxiNodes>
+ <TaxiWaySegments>
+        <arc begin="0" end="15" isPushBackRoute="1" name="New_Ramp_Start_7"  />
+        <arc begin="15" end="0" isPushBackRoute="1" name="New_Ramp_Start_7"  />
+        <arc begin="15" end="5" isPushBackRoute="1" name="New_Ramp_Start_7"  />
+        <arc begin="5" end="15" isPushBackRoute="1" name="New_Ramp_Start_7"  />
+        <arc begin="1" end="16" isPushBackRoute="1" name="Veracity_Aviation_Pad"  />
+        <arc begin="16" end="1" isPushBackRoute="1" name="Veracity_Aviation_Pad"  />
+        <arc begin="16" end="6" isPushBackRoute="1" name="Veracity_Aviation_Pad"  />
+        <arc begin="6" end="16" isPushBackRoute="1" name="Veracity_Aviation_Pad"  />
+        <arc begin="2" end="17" isPushBackRoute="1" name="Veracity_Aviation_Hangar_(inside)"  />
+        <arc begin="17" end="2" isPushBackRoute="1" name="Veracity_Aviation_Hangar_(inside)"  />
+        <arc begin="17" end="3" isPushBackRoute="1" name="Veracity_Aviation_Hangar_(inside)"  />
+        <arc begin="3" end="17" isPushBackRoute="1" name="Veracity_Aviation_Hangar_(inside)"  />
+        <arc begin="0" end="5" isPushBackRoute="1" name="New_Ramp_Start_7"  />
+        <arc begin="5" end="0" isPushBackRoute="1" name="New_Ramp_Start_7"  />
+        <arc begin="1" end="4" isPushBackRoute="1" name="Veracity_Aviation_Pad"  />
+        <arc begin="4" end="1" isPushBackRoute="1" name="Veracity_Aviation_Pad"  />
+        <arc begin="2" end="3" isPushBackRoute="1" name="Veracity_Aviation_Hangar_(inside)"  />
+        <arc begin="3" end="2" isPushBackRoute="1" name="Veracity_Aviation_Hangar_(inside)"  />
+ </TaxiWaySegments>
+</groundnet>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+<path>EHVK_shelter.ac</path>
+
+ <nasal>
+  <load>
+   if (!contains(globals, "scenery")) globals["scenery"] = {};
+   if (!contains(scenery, "EHVK")) scenery["EHVK"] = {};
+   if (!contains(scenery.EHVK, "shelter")) scenery.EHVK["shelter"] = [nil];
+   scenery.EHVK.shelter[0] =
+     { door :
+       [aircraft.door.new("/scenery/EHVK/shelter[0]/door[0]", 60)
+       ]
+     };
+  </load>
+ </nasal>
+
+<animation>
+ <type>range</type>
+ <min-m>0</min-m>
+ <max-m>25000</max-m>
+</animation>
+
+<animation>
+ <type>rotate</type>
+ <object-name>door</object-name>
+ <property>/scenery/EHVK/shelter[0]/door[0]/position-norm</property>
+ <factor>90</factor>
+ <center>
+  <x-m>-1.250</x-m>
+  <y-m> 0.000</y-m>
+  <z-m> 0.000</z-m>
+ </center>
+ <axis>
+  <x>0</x>
+  <y>1</y>
+  <z>0</z>
+ </axis>
+</animation>
+
+<animation>
+ <type>pick</type>
+ <object-name>door</object-name>
+ <visible>true</visible>
+ <action>
+  <name>click</name>
+  <button>0</button>
+  <repeatable>false</repeatable>
+  <binding>
+   <command>nasal</command>
+   <script>scenery.EHVK.shelter[0].door[0].toggle();</script>
+  </binding>
+ </action>
+</animation>
+
+</PropertyList>

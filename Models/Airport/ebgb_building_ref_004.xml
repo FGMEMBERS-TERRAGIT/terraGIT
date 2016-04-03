@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+    <path>ebgb_building_ref_004.ac</path>
+
+     <nasal>
+          <load>
+               if (!contains(globals, "scenery")) globals["scenery"] = {};
+               if (!contains(scenery, "EBGB")) scenery["EBGB"] = {};
+               if (!contains(scenery.EBGB, "hangar")) scenery.EBGB["hangar"] =
+	       [nil,nil,nil,nil,nil,nil];
+	       scenery.EBGB.hangar[1] =
+	       { door :
+		[
+		aircraft.door.new("/scenery/EBGB/hangar[1]/door[0]", 75),
+		aircraft.door.new("/scenery/EBGB/hangar[1]/door[1]", 75)
+	       ]
+		 };
+	   </load>
+     </nasal>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>DoorL1</object-name>
+        <property>/scenery/EBGB/hangar[1]/door[0]/position-norm</property>
+	<interpolation>
+			<entry>		<ind>0</ind>	<dep>  0</dep>	</entry>
+			<entry>		<ind>0.1</ind>	<dep> -1</dep>	</entry>
+			<entry>		<ind>0.4</ind>	<dep> -10</dep>	</entry>
+			<entry>		<ind>0.5</ind>	<dep>-11.28</dep>	</entry>
+	</interpolation>
+	<center>
+	  <x-m>  0.0 </x-m>
+	  <y-m>  0.0 </y-m>
+	  <z-m>  0.0 </z-m>
+	</center>
+	<axis>
+	  <x>0</x>
+	  <y>0</y>
+	  <z>1</z>
+	</axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>DoorL2</object-name>
+        <property>/scenery/EBGB/hangar[1]/door[0]/position-norm</property>
+	<interpolation>
+			<entry>		<ind>0</ind>	<dep>  0</dep>	</entry>
+			<entry>		<ind>0.1</ind>	<dep>  1</dep>	</entry>
+			<entry>		<ind>0.4</ind>	<dep>  10</dep>	</entry>
+			<entry>		<ind>0.5</ind>	<dep> 11.28</dep>	</entry>
+			<entry>		<ind>0.6</ind>	<dep> 12.28</dep>	</entry>
+			<entry>		<ind>0.9</ind>	<dep> 21.28</dep>	</entry>
+			<entry>		<ind>0.99</ind>	<dep> 22.56</dep>	</entry>
+	</interpolation>
+	<center>
+	  <x-m>  0.0 </x-m>
+	  <y-m>  0.0 </y-m>
+	  <z-m>  0.0 </z-m>
+	</center>
+	<axis>
+	  <x>0</x>
+	  <y>0</y>
+	  <z>1</z>
+	</axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>DoorL3</object-name>
+	<object-name>DoorL4</object-name>
+        <property>/scenery/EBGB/hangar[1]/door[0]/position-norm</property>
+	<interpolation>
+			<entry>		<ind>0</ind>	<dep>  0</dep>	</entry>
+			<entry>		<ind>0.5</ind>	<dep>  0</dep>	</entry>
+			<entry>		<ind>0.6</ind>	<dep>  1</dep>	</entry>
+			<entry>		<ind>0.9</ind>	<dep>  10</dep>	</entry>
+			<entry>		<ind>0.99</ind>	<dep> 11.28</dep> </entry>
+	</interpolation>
+	<center>
+	  <x-m>  0.0 </x-m>
+	  <y-m>  0.0 </y-m>
+	  <z-m>  0.0 </z-m>
+	</center>
+	<axis>
+	  <x>0</x>
+	  <y>0</y>
+	  <z>1</z>
+	</axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>DoorR5</object-name>
+        <property>/scenery/EBGB/hangar[1]/door[1]/position-norm</property>
+	<interpolation>
+			<entry>		<ind>0</ind>	<dep>  0</dep>	</entry>
+			<entry>		<ind>0.1</ind>	<dep> -1</dep>	</entry>
+			<entry>		<ind>0.4</ind>	<dep> -10</dep>	</entry>
+			<entry>		<ind>0.5</ind>	<dep>-11.28</dep>	</entry>
+	</interpolation>
+	<center>
+	  <x-m>  0.0 </x-m>
+	  <y-m>  0.0 </y-m>
+	  <z-m>  0.0 </z-m>
+	</center>
+	<axis>
+	  <x>0</x>
+	  <y>0</y>
+	  <z>1</z>
+	</axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>DoorR6</object-name>
+        <property>/scenery/EBGB/hangar[1]/door[1]/position-norm</property>
+	<interpolation>
+			<entry>		<ind>0</ind>	<dep>  0</dep>	</entry>
+			<entry>		<ind>0.1</ind>	<dep>  1</dep>	</entry>
+			<entry>		<ind>0.4</ind>	<dep>  10</dep>	</entry>
+			<entry>		<ind>0.5</ind>	<dep> 11.28</dep>	</entry>
+			<entry>		<ind>0.6</ind>	<dep> 12.28</dep>	</entry>
+			<entry>		<ind>0.9</ind>	<dep> 21.28</dep>	</entry>
+			<entry>		<ind>0.99</ind>	<dep> 22.56</dep>	</entry>
+	</interpolation>
+	<center>
+	  <x-m>  0.0 </x-m>
+	  <y-m>  0.0 </y-m>
+	  <z-m>  0.0 </z-m>
+	</center>
+	<axis>
+	  <x>0</x>
+	  <y>0</y>
+	  <z>1</z>
+	</axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>DoorR7</object-name>
+	<object-name>DoorR8</object-name>
+        <property>/scenery/EBGB/hangar[1]/door[1]/position-norm</property>
+	<interpolation>
+			<entry>		<ind>0</ind>	<dep>  0</dep>	</entry>
+			<entry>		<ind>0.5</ind>	<dep>  0</dep>	</entry>
+			<entry>		<ind>0.6</ind>	<dep>  1</dep>	</entry>
+			<entry>		<ind>0.9</ind>	<dep>  10</dep>	</entry>
+			<entry>		<ind>0.99</ind>	<dep> 11.28</dep> </entry>
+	</interpolation>
+	<center>
+	  <x-m>  0.0 </x-m>
+	  <y-m>  0.0 </y-m>
+	  <z-m>  0.0 </z-m>
+	</center>
+	<axis>
+	  <x>0</x>
+	  <y>0</y>
+	  <z>1</z>
+	</axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>DoorL1</object-name>
+	<object-name>DoorL2</object-name>
+	<object-name>DoorL3</object-name>
+	<object-name>DoorL4</object-name>
+        <visible>true</visible>
+        <action>
+            <name>click</name>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>scenery.EBGB.hangar[1].door[0].toggle();</script>
+            </binding>
+        </action>
+    </animation>
+    <animation>
+        <type>pick</type>
+        <object-name>DoorR5</object-name>
+	<object-name>DoorR6</object-name>
+	<object-name>DoorR7</object-name>
+	<object-name>DoorR8</object-name>
+        <visible>true</visible>
+        <action>
+            <name>click</name>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>scenery.EBGB.hangar[1].door[1].toggle();</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>10000</max-m>
+    </animation>
+
+</PropertyList>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PropertyList>
+
+ <path>FGRefuel02.ac</path>
+
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-property>sim/rendering/static-lod/bare</max-property>
+  </animation>
+ 
+  <animation>
+    <type>material</type>
+    <object-name>Cube.022</object-name>
+    <object-name>Cube.023</object-name> 
+    <object-name>Cube.024</object-name>
+    <object-name>Cube.025</object-name>
+    <object-name>Cube.026</object-name>
+    <object-name>Cube.029_1</object-name>
+    <object-name>Cube.018</object-name>
+    <object-name>Cube.013</object-name>		
+    <object-name>Cube.014</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red>   0.3 </red>
+      <green> 0.3 </green>
+      <blue>  0.3 </blue>
+    </emission>
+    <spec>
+      <red>   0.5 </red>
+      <green> 0.5 </green>
+      <blue>  0.5 </blue>
+    </spec>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Cube.022</object-name>
+    <object-name>Cube.023</object-name> 
+    <object-name>Cube.024</object-name>
+    <object-name>Cube.025</object-name>
+    <object-name>Cube.026</object-name>
+    <object-name>Cube.029_1</object-name>
+    <object-name>Cube.018</object-name>
+    <object-name>Cube.013</object-name>	
+    <object-name>Cube.014</object-name>	
+    <condition>
+      <less-than-equals>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </less-than-equals>
+    </condition>
+    <emission>
+      <red>   0.1 </red>
+      <green> 0.1 </green>
+      <blue>  0.1 </blue>
+    </emission>
+  </animation>	
+
+
+</PropertyList>

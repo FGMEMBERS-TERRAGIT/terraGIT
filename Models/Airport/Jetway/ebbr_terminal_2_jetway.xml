@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PropertyList>
+    <path>ebbr_terminal_2_jetway.ac</path>
+
+    <animation>
+        <object-name>LightCone</object-name>
+        <type>select</type>
+        <condition>
+            <greater-than>
+                <property>/sim/time/sun-angle-rad</property>
+                <value>1.57</value>
+            </greater-than>
+        </condition>
+    </animation>
+
+    <animation>
+        <object-name>LightCone</object-name>
+        <enable-hot type="bool">false</enable-hot>
+    </animation>
+
+</PropertyList>

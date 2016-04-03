@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+ <path>StuntBike.ac</path>
+
+<animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>16000</max-m>
+ </animation>
+
+<animation>
+  <type>rotate</type>
+    <property>/sim/time/elapsed-sec</property>
+  <factor>8.0</factor>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>90.0</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>-1</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>spin</type>
+  <object-name>wheel1</object-name> <!-- Front wheel-->
+    <property>/sim/time/elapsed-sec</property>
+  <factor>10.0</factor>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.36</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+</animation>
+
+
+<animation>
+  <type>spin</type>
+  <object-name>wheel2</object-name> <!-- Rear wheel -->
+    <property>/sim/time/elapsed-sec</property>
+  <factor>10.0</factor>
+  <center>
+   <x-m>1.33</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.36</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+</animation>
+
+
+</PropertyList>

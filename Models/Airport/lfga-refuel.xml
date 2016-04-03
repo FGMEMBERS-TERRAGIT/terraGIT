@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>lfga-refuel.ac</path>
+
+	<animation>
+		<type>pick</type>
+		<object-name>p1</object-name>
+		<object-name>p2</object-name>
+		<object-name>p3</object-name>
+		<object-name>p4</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<!-- Nasal pick code, based on jetway-movable.xml -->
+				<script><![CDATA[
+if (props.globals.getNode ("/scenery/airport/lfga-refuel") == nil)  {
+    props.globals.initNode ("/scenery/airport/lfga-refuel", 0, "BOOL");
+    setprop ("/scenery/airport/lfga-refuel-p", 0);
+}
+
+#nasal interpolation function - returns a value based on a set interpolation table, like the <interpolate> feature of XML animations
+#takes an array with sub-arrays, like
+#[[<ind>, <dep>], [<ind>, <dep>]]
+var interpolateTable = func (table, value) {
+  var newValue = 0;
+
+  forindex (i; table) {
+    if (value >= table[i][0]) {
+	if (i + 1 < size (table)) {
+	    newValue = (value - table[i][0]) / (table[i + 1][0] - table[i][0]) * (table[i + 1][1] - table[i][1]) + table[i][1];
+	} else {
+	    newValue = table[i][1];
+	  }
+      }
+  }
+
+  return newValue;
+};
+
+var xtranslate = 1.0;
+var xtranslaterate = 0.2;
+var xtranslatetable =[[0.0, 0.0],
+		      [0.2, 0.2],
+		      [0.6, 0.6],
+		      [0.7, 0.7]
+			];
+
+var length = math.abs (xtranslate / xtranslaterate);
+
+var setpos = func(p) {
+	setprop ("/scenery/airport/lfga-refuel-p1-m", interpolateTable (xtranslatetable, p) * xtranslate);
+	setprop ("/scenery/airport/lfga-refuel-p2-m", interpolateTable (xtranslatetable, p+0.2) * xtranslate);
+	setprop ("/scenery/airport/lfga-refuel-p3-m", interpolateTable (xtranslatetable, p+0.4) * xtranslate);
+	setprop ("/scenery/airport/lfga-refuel-p4-m", interpolateTable (xtranslatetable, p+0.6) * xtranslate);
+};
+
+
+if (!props.globals.getNode ("/scenery/airport/lfga-refuel").getBoolValue ()) {
+  props.globals.getNode ("/scenery/airport/lfga-refuel").setBoolValue (1);
+  interpolate ("/scenery/airport/lfga-refuel-p", 1, -getprop ("/scenery/airport/lfga-refuel-p") + 1 * length);
+
+  var loop = func {
+    var position = getprop ("/scenery/airport/lfga-refuel-p");
+	setpos(position);
+
+    if (position < 1 and props.globals.getNode ("/scenery/airport/lfga-refuel").getBoolValue ()) {
+      settimer (loop, 0);
+    }
+  };
+#  if( !gui.dialog["WeightAndFuel"].is_open())
+	gui.showWeightDialog();
+  loop ();
+} else {
+  props.globals.getNode ("/scenery/airport/lfga-refuel").setBoolValue (0);
+  interpolate ("/scenery/airport/lfga-refuel-p", 0, getprop ("/scenery/airport/lfga-refuel-p") * length);
+
+  var loop = func {
+    var position = getprop ("/scenery/airport/lfga-refuel-p");
+	setpos(position);
+
+    if (position > 0 and ! props.globals.getNode ("/scenery/airport/lfga-refuel").getBoolValue ()) {
+      settimer (loop, 0);
+    }
+  };
+  loop ();
+}
+				]]></script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>p1</object-name>
+		<property>/scenery/airport/lfga-refuel-p1-m</property>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>p2</object-name>
+		<property>/scenery/airport/lfga-refuel-p2-m</property>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>p3</object-name>
+		<property>/scenery/airport/lfga-refuel-p3-m</property>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>p4</object-name>
+		<property>/scenery/airport/lfga-refuel-p4-m</property>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	
+    <nasal>
+        <load>
+	setprop ("/scenery/airport/lfga-refuel-p1-m", 0.0);
+	setprop ("/scenery/airport/lfga-refuel-p2-m", 0.2);
+	setprop ("/scenery/airport/lfga-refuel-p3-m", 0.4);
+	setprop ("/scenery/airport/lfga-refuel-p4-m", 0.6);
+        </load>
+    </nasal>
+	
+</PropertyList>

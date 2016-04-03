@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<PropertyList>
+<path>dc-metro-train.ac</path>
+
+<animation>
+  <type>translate</type>
+  <property>/ai/models/kcgs-metrorail/move</property>
+  <factor>1.0</factor>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+</animation>
+
+<nasal>
+    <load>
+        var time_node = props.globals.getNode("/sim/time/elapsed-sec");
+        var move_node = props.globals.getNode("/ai/models/kcgs-metrorail/move");
+
+        var loopid = 1;
+        var loop = func(id) {
+            if (id != loopid) return;
+
+            var movecyclesec = 120.0;
+            var movedistance = 650.0;
+
+            var movetimer = time_node.getValue()/movecyclesec - int(time_node.getValue()/movecyclesec);
+            var movewave = math.sin(2*math.pi*movetimer);
+            move_node.setValue(movewave*movedistance);
+            
+            settimer(func { loop(id); }, 0);
+        }
+        settimer(func { loop(loopid); }, 0);
+    </load>
+    <unload>
+       loopid += 1;
+    </unload>
+</nasal>
+
+</PropertyList>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+  <path>EDGS_Apron_lamp.ac</path>
+<animation>
+		<type>material</type>
+		<object-name>groundlight</object-name>
+		<transparency>
+			<alpha-prop>environment/visibility-m</alpha-prop>
+			<factor>1</factor>
+			<offset>0</offset>
+			</transparency>
+		<threshold>0.001</threshold>
+	</animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>groundlight</object-name>
+    <object-name>redlight</object-name>	
+    <enable-hot type="bool">false</enable-hot>
+    <condition>
+        <greater-than>
+          <property>/sim/time/sun-angle-rad</property>
+          <value>1.57</value>
+        </greater-than>
+    </condition>
+  </animation>
+
+</PropertyList>
+

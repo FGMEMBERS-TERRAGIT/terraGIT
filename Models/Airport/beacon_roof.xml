@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+<!--  green white airport beacon to use on rooftops        -->
+<!--  this model based on the model from Frederic Bouvier  -->
+<!--  use the elevation offset at the submission form      -->
+
+ <path>beacon_roof.ac</path>
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>16000</max-m>
+ </animation>
+
+<effect>
+ <inherits-from>Effects/model-transparent</inherits-from>
+ <condition><property>sim/rendering/rembrandt/enabled</property></condition>
+  <object-name>Flash1</object-name>
+  <object-name>Flash12</object-name>
+  <object-name>Flash2</object-name>
+  <object-name>Flash22</object-name>
+  <object-name>halo1</object-name>
+  <object-name>halo2</object-name>
+</effect>
+
+ <animation>
+  <name>Head</name>
+  <object-name>head_red</object-name>
+  <object-name>light1</object-name>
+  <object-name>light2</object-name>
+ </animation>
+
+ <animation>
+  <object-name>Head</object-name>
+  <object-name>Flash1</object-name>
+  <object-name>Flash12</object-name>
+  <object-name>Flash2</object-name>
+  <object-name>Flash22</object-name>
+  <object-name>halo1</object-name>
+  <object-name>halo2</object-name>
+  <enable-hot type="bool">false</enable-hot>
+ </animation>
+
+ <animation>
+  <type>alpha-test</type>
+  <alpha-factor>0.01</alpha-factor>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>Flash1</object-name>
+  <object-name>Flash12</object-name>
+  <object-name>Flash2</object-name>
+  <object-name>Flash22</object-name>
+  <object-name>halo1</object-name>
+  <object-name>halo2</object-name>
+  <condition>
+   <greater-than>
+    <property>/sim/time/sun-angle-rad</property>
+    <value>1.57</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <object-name>Head</object-name>
+  <min-m>0</min-m>
+  <max-m>1500</max-m>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Head</object-name>
+  <condition>
+   <greater-than>
+    <property>/sim/time/sun-angle-rad</property>
+    <value>1.57</value>
+   </greater-than>
+  </condition>
+  <property>/sim/time/elapsed-sec</property>
+  <factor>90.0</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>16.8</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>range</type>
+  <object-name>halo1</object-name>
+  <object-name>halo2</object-name>
+  <min-m>0</min-m>
+  <max-m>750</max-m>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>halo1</object-name>
+  <object-name>halo2</object-name>
+  <property>/sim/time/elapsed-sec</property>
+  <factor>90.0</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0.8</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <object-name>Flash1</object-name>
+  <min-m>0</min-m>
+  <max-m>1000</max-m>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Flash1</object-name>
+  <property>/sim/time/elapsed-sec</property>
+  <factor>90.0</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>16.8</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>flash</type>
+  <object-name>Flash1</object-name>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0.35</y-m>
+   <z-m>0.8</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0.1</z>
+  </axis>
+  <power>100</power>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <object-name>Flash12</object-name>
+  <min-m>1000</min-m>
+  <max-m>16000</max-m>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Flash12</object-name>
+  <property>/sim/time/elapsed-sec</property>
+  <factor>90.0</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>16.8</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>flash</type>
+  <object-name>Flash12</object-name>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0.35</y-m>
+   <z-m>0.8</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0.1</z>
+  </axis>
+  <power>100</power>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <object-name>Flash2</object-name>
+  <min-m>0</min-m>
+  <max-m>1000</max-m>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Flash2</object-name>
+  <property>/sim/time/elapsed-sec</property>
+  <factor>90.0</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>16.8</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>flash</type>
+  <object-name>Flash2</object-name>
+  <center>
+   <x-m>0</x-m>
+   <y-m>-0.35</y-m>
+   <z-m>0.8</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0.1</z>
+  </axis>
+  <power>100</power>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <object-name>Flash22</object-name>
+  <min-m>1000</min-m>
+  <max-m>16000</max-m>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Flash22</object-name>
+  <property>/sim/time/elapsed-sec</property>
+  <factor>90.0</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>16.8</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>flash</type>
+  <object-name>Flash22</object-name>
+  <center>
+   <x-m>0</x-m>
+   <y-m>-0.35</y-m>
+   <z-m>0.8</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0.1</z>
+  </axis>
+  <power>100</power>
+ </animation>
+
+</PropertyList>

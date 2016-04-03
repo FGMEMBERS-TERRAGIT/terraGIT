@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <path>taxilampgreen.ac</path>
+
+    <animation>
+        <type>noshadow</type>
+        <object-name>taxigreen</object-name>
+    </animation>
+
+    <animation>
+        <type>alpha-test</type>
+        <alpha-factor>0.01</alpha-factor>
+    </animation>
+
+<animation>
+    <type>select</type>
+    <object-name>taxigreen</object-name>
+    <condition>
+       <greater-than>
+          <property>sim/time/sun-angle-rad</property>
+          <value>1.48</value>
+       </greater-than>
+    </condition>
+</animation>
+
+    <animation>
+	  <type>range</type>
+	  <min-m>0</min-m>
+	  <max-m>3000</max-m>
+    </animation>
+
+    <animation>
+        <type>billboard</type>
+        <object-name>taxigreen</object-name>
+        <spherical type="bool">true</spherical>
+    </animation>
+
+  <animation>
+    <type>dist-scale</type>
+    <object-name>taxigreen</object-name>
+    <interpolation>
+      <entry>
+        <ind>0</ind>
+        <dep>0.1</dep>
+      </entry>
+      <entry>
+        <ind>150</ind>
+        <dep>0.2</dep>
+      </entry>
+      <entry>
+        <ind>300</ind>
+        <dep>0.5</dep>
+      </entry>
+      <entry>
+        <ind>600</ind>
+        <dep>0.8</dep>
+      </entry>
+      <entry>
+        <ind>1500</ind>
+        <dep>1</dep>
+      </entry>
+      <entry>
+        <ind>2000</ind>
+        <dep>0.5</dep>
+      </entry>
+      <entry>
+        <ind>3000</ind>
+        <dep>1</dep>
+      </entry>
+    </interpolation>
+  </animation>
+
+</PropertyList>

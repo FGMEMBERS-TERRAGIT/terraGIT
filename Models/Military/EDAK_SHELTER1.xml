@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<!-- 02.04.2013 - by Andre Burkert	--> 
+	<path>EDAK_SHELTER1.ac</path>
+
+<!-- Summer / Winter selection -->
+<animation>
+<type>material</type> 
+<object-name>EDAK_SHELTER12</object-name>
+	<condition>
+		<equals>
+			<property>sim/startup/season</property>
+			<value>winter</value>
+		</equals>
+	</condition>
+ <texture>EDAK_SHELTER13.png</texture>
+ <xsize>125</xsize>
+ <ysize>125</ysize>
+</animation>
+
+<animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-property>sim/rendering/static-lod/bare</max-property>
+</animation>
+
+</PropertyList>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!-- $Id: BAK12.xml,v 1.2 2009/07/17 12:55:34 vmmeazza Exp $ -->
+<!--
+  Bak-12 Runway arrester gear
+  Copyright (C) 2009  Vivian Meazza (vivian(dot)meazza(at)lineone(dot).net)
+	Copyright (C) 2009  David Culp (davidculp2 at comcast dot net)
+	
+  This file is released under the GPL license version 2 or later.
+-->
+
+<PropertyList>
+
+	<path>BAK-12-0.ac</path>
+
+	<offsets>
+   <roll-deg> 0.0 </roll-deg>
+ </offsets>
+
+	<animation>
+		<object-name>rect</object-name>
+		<enable-hot type="bool">false</enable-hot>
+	</animation>
+
+	<animation>
+		<type>interaction</type>
+		<interaction-type>carrier-wire</interaction-type>
+		<object-name>wire-1</object-name>
+	</animation>
+
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>10000</max-m>
+	</animation>
+
+</PropertyList>

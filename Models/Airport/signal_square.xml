@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+<path>signal_square.ac</path>
+
+<animation>
+  <type>rotate</type>
+  <object-name>blah</object-name>
+  <factor>1</factor>
+  
+   
+  <!-- Ok, so here's the rotation code; if you don't get it, look at the sum section and work outwards. -->
+  <expression>
+	<product>
+		<floor>
+			<div>
+				<mod>
+					<sum>
+						<!-- This adds 10 degrees to the current wind heading. The arbitary value of 10 degrees is the value of the anticlockwise rotation of my runway from due E/W. -->
+						<property>/environment/wind-from-heading-deg</property>
+						<value>10</value>
+					</sum>
+					<value>360</value>
+					<!-- Mod 360 means work out the remainder after dividing by 360. E.g. a heading of 380 degrees is meaningless, it should mean 20 degrees. -->
+				</mod>
+				<value>180</value>
+			</div>
+		<!-- After dividing by 180 above, the floor function rounds down to the nearest integer. -->
+		<!-- What we've just done is basically work out the wind direction relative to the perpendicular intersector of the runway. -->
+		<!-- If you then divide by 180 and floor it, you'll get 0 for headwinds and 1 for tailwinds, given the unchanged rotation of the actual model. -->
+		</floor>
+		<value>180</value>
+		<!-- That is, if there's a bad tailwind, rotate by 180 degrees, as 1x180=180. -->
+	</product>
+  
+  
+  </expression>
+  
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>
+ </animation>
+ 
+ </PropertyList>

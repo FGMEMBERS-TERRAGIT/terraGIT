@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <path>GreenLight6000.ac</path>
+
+    <animation>
+        <type>noshadow</type>
+        <object-name>GreenLight6000</object-name>
+    </animation>
+
+    <animation>
+        <type>alpha-test</type>
+        <alpha-factor>0.01</alpha-factor>
+    </animation>
+
+<animation>
+    <type>select</type>
+    <object-name>GreenLight6000</object-name>
+    <condition>
+       <greater-than>
+          <property>sim/time/sun-angle-rad</property>
+          <value>1.57</value>
+       </greater-than>
+    </condition>
+</animation>
+
+    <animation>
+	  <type>range</type>
+	  <min-m>0</min-m>
+	  <max-m>6000</max-m>
+    </animation>
+
+    <animation>
+        <type>billboard</type>
+        <object-name>GreenLight6000</object-name>
+        <spherical type="bool">true</spherical>
+    </animation>
+
+  <animation>
+    <type>dist-scale</type>
+    <object-name>GreenLight6000</object-name>
+    <interpolation>
+      <entry>
+        <ind>0</ind>
+        <dep>0.025</dep>
+      </entry>
+      <entry>
+        <ind>300</ind>
+        <dep>0.1</dep>
+      </entry>
+      <entry>
+        <ind>1500</ind>
+        <dep>0.2</dep>
+      </entry>
+      <entry>
+        <ind>6000</ind>
+        <dep>.3</dep>
+      </entry>
+    </interpolation>
+  </animation>
+
+</PropertyList>
+

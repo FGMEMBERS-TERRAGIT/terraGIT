@@ -1,0 +1,562 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<path>kw_altbach_chimney250.ac</path>
+
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>25000</max-m>
+	</animation>
+
+	<rotlichtXparams>
+		<light-near>0.4</light-near>
+		<light-med>0.8</light-med>
+		<light-far>10</light-far>
+	</rotlichtXparams>
+
+	<animation>
+		<name>rotlichtXGroup</name>
+		<object-name>rotlichtX00</object-name>
+		<object-name>rotlichtX01</object-name>
+		<object-name>rotlichtX02</object-name>
+		<object-name>rotlichtX03</object-name>
+		<object-name>rotlichtX04</object-name>
+		<object-name>rotlichtX05</object-name>
+		<object-name>rotlichtX06</object-name>
+		<object-name>rotlichtX07</object-name>
+		<object-name>rotlichtX08</object-name>
+		<object-name>rotlichtX09</object-name>
+		<object-name>rotlichtX10</object-name>
+		<object-name>rotlichtX11</object-name>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<name>rotlichtXGroupNight</name>
+		<object-name>rotlichtXGroup</object-name>
+		<condition>
+			<greater-than>
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.57</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>alpha-test</type>
+		<object-name>rotlichtXGroup</object-name>
+		<alpha-factor>0.001</alpha-factor>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>rotlichtX00</object-name>
+		<offset-m>169.673734</offset-m>
+		<axis>
+			<x>2e-05</x>
+			<y>4.559654</y>
+			<z>169.612457</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>rotlichtX01</object-name>
+		<offset-m>169.673735</offset-m>
+		<axis>
+			<x>4.559674</x>
+			<y>-7e-06</y>
+			<z>169.612457</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>rotlichtX02</object-name>
+		<offset-m>169.673735</offset-m>
+		<axis>
+			<x>2.7e-05</x>
+			<y>-4.559674</y>
+			<z>169.612457</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>rotlichtX03</object-name>
+		<offset-m>169.673734</offset-m>
+		<axis>
+			<x>-4.559654</x>
+			<y>-4.1e-05</y>
+			<z>169.612457</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>rotlichtX04</object-name>
+		<offset-m>110.173575</offset-m>
+		<axis>
+			<x>1.2e-05</x>
+			<y>6.274391</y>
+			<z>109.994766</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>rotlichtX05</object-name>
+		<offset-m>110.173576</offset-m>
+		<axis>
+			<x>6.274404</x>
+			<y>-6e-06</y>
+			<z>109.994766</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>rotlichtX06</object-name>
+		<offset-m>110.173576</offset-m>
+		<axis>
+			<x>1.3e-05</x>
+			<y>-6.274404</y>
+			<z>109.994766</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>rotlichtX07</object-name>
+		<offset-m>110.173575</offset-m>
+		<axis>
+			<x>-6.27439</x>
+			<y>-1.8e-05</y>
+			<z>109.994766</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>rotlichtX08</object-name>
+		<offset-m>250.058863</offset-m>
+		<axis>
+			<x>-4.559654</x>
+			<y>-4.1e-05</y>
+			<z>250.017288</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>rotlichtX09</object-name>
+		<offset-m>250.058863</offset-m>
+		<axis>
+			<x>2.7e-05</x>
+			<y>-4.559674</y>
+			<z>250.017288</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>rotlichtX10</object-name>
+		<offset-m>250.058863</offset-m>
+		<axis>
+			<x>4.559674</x>
+			<y>-7e-06</y>
+			<z>250.017288</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>rotlichtX11</object-name>
+		<offset-m>250.058863</offset-m>
+		<axis>
+			<x>2e-05</x>
+			<y>4.559654</y>
+			<z>250.017288</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>rotlichtX00</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>rotlichtX01</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>rotlichtX02</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>rotlichtX03</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>rotlichtX04</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>rotlichtX05</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>rotlichtX06</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>rotlichtX07</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>rotlichtX08</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>rotlichtX09</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>rotlichtX10</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>rotlichtX11</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>rotlichtX00</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../rotlichtXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../rotlichtXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../rotlichtXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>rotlichtX01</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../rotlichtXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../rotlichtXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../rotlichtXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>rotlichtX02</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../rotlichtXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../rotlichtXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../rotlichtXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>rotlichtX03</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../rotlichtXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../rotlichtXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../rotlichtXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>rotlichtX04</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../rotlichtXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../rotlichtXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../rotlichtXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>rotlichtX05</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../rotlichtXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../rotlichtXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../rotlichtXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>rotlichtX06</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../rotlichtXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../rotlichtXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../rotlichtXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>rotlichtX07</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../rotlichtXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../rotlichtXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../rotlichtXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>rotlichtX08</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../rotlichtXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../rotlichtXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../rotlichtXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>rotlichtX09</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../rotlichtXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../rotlichtXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../rotlichtXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>rotlichtX10</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../rotlichtXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../rotlichtXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../rotlichtXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>rotlichtX11</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../rotlichtXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../rotlichtXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../rotlichtXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+
+<particlesystem>
+  <name>schornstein</name>
+  
+  <texture>kw_altbach_chimney250_smoke.png</texture>
+  <emissive>false</emissive>
+  <lighting>false</lighting>
+       
+  <offsets>
+    <x-m>0</x-m>
+    <y-m>0</y-m>
+    <z-m>250</z-m>
+  </offsets>
+           
+  <attach>local</attach>
+           
+  <placer>
+    <type>point</type>
+  </placer>
+           
+  <shooter>
+    <speed-mps>
+    	<value>5</value>
+	<spread>3</spread>
+    </speed-mps>
+  </shooter>
+       
+  <counter>
+    <particles-per-sec>
+      <value>2</value>
+      <spread>3</spread>
+    </particles-per-sec>
+  </counter>
+           
+  <align>billboard</align>
+           
+  <particle>
+
+  <start>
+    <color>
+      <red><value>0.5</value></red>
+      <green><value>0.5</value></green>
+      <blue><value>0.5</value></blue>
+      <alpha><value>0.2</value></alpha>
+    </color>
+    <size>
+      <value>12</value>
+    </size>
+  </start>
+
+  <end>
+    <color>
+      <red><value>0.5</value></red>
+      <green><value>0.5</value></green>
+      <blue><value>0.5</value></blue>
+      <alpha><value>0.0</value></alpha>
+    </color>
+    <size>
+      <value>90</value>
+      <spread>15</spread>
+    </size>
+  </end>
+    
+  <life-sec>
+    <value>20</value>
+  </life-sec>
+
+  <mass-kg>510</mass-kg>
+  <radius-m>10</radius-m>
+  </particle>
+           
+  <program>
+    <fluid>air</fluid>
+    <gravity>true</gravity>
+    <wind>true</wind>
+  </program>
+           
+</particlesystem>
+
+</PropertyList>

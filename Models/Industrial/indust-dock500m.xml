@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+    <path>indust-dock500m.ac</path>
+
+    <animation>
+        <type>material</type> 
+        <object-name>dock</object-name>
+        <condition>		
+            <greater-than>		
+                <property>/sim/time/sun-angle-rad</property>
+                <value>1.57</value>
+            </greater-than>
+        </condition>
+        <emission>	
+            <red>0.17</red>	
+            <green>0.15</green>	
+            <blue>0.125</blue>
+        </emission>
+    </animation>
+
+</PropertyList>
+

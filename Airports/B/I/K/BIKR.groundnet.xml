@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<groundnet>
+  <version>1</version>
+  <parkingList>
+        <Parking index="0" type="gate" name="Ramp_Start_1" lat="N65 44.337158" lon="W19 34.804483" heading="358.07"  radius="19" pushBackRoute="8" airlineCodes="" />
+        <Parking index="1" type="gate" name="Ramp_Start_2" lat="N65 44.399726" lon="W19 34.834424" heading="173.24"  radius="19" pushBackRoute="7" airlineCodes="" />
+ </parkingList>
+ <TaxiNodes>
+        <node index="2" lat="N65 44.404831" lon="W19 34.566845" isOnRunway="1" holdPointType="none"  />
+        <node index="3" lat="N65 43.400881" lon="W19 34.178000" isOnRunway="1" holdPointType="none"  />
+        <node index="4" lat="N65 44.385296" lon="W19 34.558745" isOnRunway="1" holdPointType="none"  />
+        <node index="5" lat="N65 44.375445" lon="W19 34.806662" isOnRunway="0" holdPointType="none"  />
+        <node index="6" lat="N65 44.382162" lon="W19 34.621950" isOnRunway="0" holdPointType="none"  />
+        <node index="7" lat="N65 44.408013" lon="W19 34.849652" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="8" lat="N65 44.328531" lon="W19 34.811378" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="9" lat="N65 44.310049" lon="W19 34.803569" isOnRunway="0" holdPointType="none"  />
+        <node index="10" lat="N65 44.426663" lon="W19 34.837617" isOnRunway="0" holdPointType="none"  />
+ </TaxiNodes>
+ <TaxiWaySegments>
+        <arc begin="5" end="7" isPushBackRoute="0" name="taxiway"  />
+        <arc begin="7" end="5" isPushBackRoute="0" name="taxiway"  />
+        <arc begin="5" end="8" isPushBackRoute="0" name="taxiway"  />
+        <arc begin="8" end="5" isPushBackRoute="0" name="taxiway"  />
+        <arc begin="5" end="6" isPushBackRoute="0" name="taxiway"  />
+        <arc begin="6" end="5" isPushBackRoute="0" name="taxiway"  />
+        <arc begin="6" end="4" isPushBackRoute="0" name="taxiway"  />
+        <arc begin="4" end="6" isPushBackRoute="0" name="taxiway"  />
+        <arc begin="0" end="9" isPushBackRoute="1" name="Ramp_Start_1"  />
+        <arc begin="9" end="0" isPushBackRoute="1" name="Ramp_Start_1"  />
+        <arc begin="9" end="8" isPushBackRoute="1" name="Ramp_Start_1"  />
+        <arc begin="8" end="9" isPushBackRoute="1" name="Ramp_Start_1"  />
+        <arc begin="1" end="10" isPushBackRoute="1" name="Ramp_Start_2"  />
+        <arc begin="10" end="1" isPushBackRoute="1" name="Ramp_Start_2"  />
+        <arc begin="10" end="7" isPushBackRoute="1" name="Ramp_Start_2"  />
+        <arc begin="7" end="10" isPushBackRoute="1" name="Ramp_Start_2"  />
+        <arc begin="0" end="8" isPushBackRoute="1" name="Ramp_Start_1"  />
+        <arc begin="8" end="0" isPushBackRoute="1" name="Ramp_Start_1"  />
+        <arc begin="1" end="7" isPushBackRoute="1" name="Ramp_Start_2"  />
+        <arc begin="7" end="1" isPushBackRoute="1" name="Ramp_Start_2"  />
+ </TaxiWaySegments>
+</groundnet>

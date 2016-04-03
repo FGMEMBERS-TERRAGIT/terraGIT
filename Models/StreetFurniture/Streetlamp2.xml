@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>Streetlamp2.ac</path>
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>10000</max-m>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>Bulb</object-name>
+  <condition>
+   <greater-than>
+    <property>/sim/time/sun-angle-rad</property>
+    <value>1.57</value>
+   </greater-than>
+  </condition>
+  <emission>
+   <red>  1.0</red>
+   <green>0.8</green>
+   <blue> 0.1</blue>
+   </emission>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>Bulb</object-name>
+  <condition>
+   <less-than-equals>
+    <property>/sim/time/sun-angle-rad</property>
+    <value>1.57</value>
+   </less-than-equals>
+  </condition>
+  <emission>
+   <red>  0.0</red>
+   <green>0.0</green>
+   <blue> 0.0</blue>
+  </emission>
+ </animation>
+
+</PropertyList>

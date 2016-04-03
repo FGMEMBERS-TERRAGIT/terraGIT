@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<groundnet>
+  <version>1</version>
+  <parkingList>
+        <Parking index="0" type="ga" name="Ramp_Start" lat="N64 50.612812" lon="W16 2.225463" heading="61.09"  radius="10" pushBackRoute="2" airlineCodes="" />
+ </parkingList>
+ <TaxiNodes>
+        <node index="1" lat="N64 50.631130" lon="W16 2.233633" isOnRunway="0" holdPointType="none"  />
+        <node index="2" lat="N64 50.614105" lon="W16 2.221356" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="3" lat="N64 50.324910" lon="W16 1.995894" isOnRunway="1" holdPointType="none"  />
+        <node index="4" lat="N64 50.728247" lon="W16 2.251187" isOnRunway="1" holdPointType="none"  />
+        <node index="5" lat="N64 50.356829" lon="W16 1.924661" isOnRunway="1" holdPointType="none"  />
+        <node index="6" lat="N64 50.546774" lon="W16 2.682083" isOnRunway="1" holdPointType="none"  />
+        <node index="7" lat="N64 50.390530" lon="W16 1.903166" isOnRunway="1" holdPointType="none"  />
+        <node index="8" lat="N64 50.384932" lon="W16 2.034268" isOnRunway="1" holdPointType="none"  />
+        <node index="9" lat="N64 50.342031" lon="W16 3.116762" isOnRunway="1" holdPointType="none"  />
+        <node index="10" lat="N64 50.723974" lon="W16 1.879639" isOnRunway="1" holdPointType="none"  />
+        <node index="11" lat="N64 50.611083" lon="W16 2.177782" isOnRunway="1" holdPointType="none"  />
+        <node index="12" lat="N64 50.495592" lon="W16 2.477673" isOnRunway="1" holdPointType="none"  />
+        <node index="13" lat="N64 50.353115" lon="W16 2.854056" isOnRunway="1" holdPointType="none"  />
+        <node index="14" lat="N64 50.270896" lon="W16 3.067121" isOnRunway="1" holdPointType="none"  />
+        <node index="15" lat="N64 50.768699" lon="W16 1.954133" isOnRunway="1" holdPointType="none"  />
+        <node index="16" lat="N64 50.658281" lon="W16 2.051865" isOnRunway="1" holdPointType="none"  />
+        <node index="17" lat="N64 50.555600" lon="W16 2.141117" isOnRunway="1" holdPointType="none"  />
+        <node index="18" lat="N64 50.437069" lon="W16 2.245516" isOnRunway="1" holdPointType="none"  />
+        <node index="19" lat="N64 50.377267" lon="W16 2.297287" isOnRunway="1" holdPointType="none"  />
+        <node index="20" lat="N64 50.599699" lon="W16 2.249207" isOnRunway="0" holdPointType="none"  />
+ </TaxiNodes>
+ <TaxiWaySegments>
+        <arc begin="2" end="1" isPushBackRoute="0" name=""  />
+        <arc begin="1" end="2" isPushBackRoute="0" name=""  />
+        <arc begin="11" end="2" isPushBackRoute="0" name=""  />
+        <arc begin="2" end="11" isPushBackRoute="0" name=""  />
+        <arc begin="0" end="20" isPushBackRoute="1" name="Ramp_Start"  />
+        <arc begin="20" end="0" isPushBackRoute="1" name="Ramp_Start"  />
+        <arc begin="20" end="2" isPushBackRoute="1" name="Ramp_Start"  />
+        <arc begin="2" end="20" isPushBackRoute="1" name="Ramp_Start"  />
+        <arc begin="0" end="2" isPushBackRoute="1" name="Ramp_Start"  />
+        <arc begin="2" end="0" isPushBackRoute="1" name="Ramp_Start"  />
+ </TaxiWaySegments>
+</groundnet>

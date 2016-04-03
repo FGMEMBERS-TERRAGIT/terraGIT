@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <path>lamp_shine3000.ac</path>
+
+    <animation>
+        <type>noshadow</type>
+    <object-name>Light1</object-name>
+    <object-name>Light2</object-name>
+    <object-name>Light3</object-name>
+    </animation>
+
+<animation>
+    <type>select</type>
+    <object-name>Light1</object-name>
+    <object-name>Light2</object-name>
+    <object-name>Light3</object-name>
+    <condition>
+       <greater-than>
+          <property>sim/time/sun-angle-rad</property>
+          <value>1.57</value>
+       </greater-than>
+    </condition>
+</animation>
+
+    <animation>
+	  <type>range</type>
+	  <min-m>0</min-m>
+	  <max-m>3000</max-m>
+    </animation>
+
+</PropertyList>
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PropertyList>
+ <path>light_pole_sbrj.ac</path>
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>16000</max-m>
+ </animation>
+ <animation>
+  <object-name>light_pole_sbrj1</object-name>
+  <object-name>light_pole_sbrj2</object-name>
+  <enable-hot type="bool">false</enable-hot>
+ </animation>
+ <animation>
+  <type>alpha-test</type>
+  <alpha-factor>0.01</alpha-factor>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>light_pole_sbrj1</object-name>
+  <object-name>light_pole_sbrj2</object-name>
+  <condition>
+   <greater-than>
+    <property>/sim/time/sun-angle-rad</property>
+    <value>1.57</value>
+   </greater-than>
+  </condition>
+ </animation>
+</PropertyList>

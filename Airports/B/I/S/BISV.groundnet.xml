@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<groundnet>
+  <version>1</version>
+  <parkingList>
+        <Parking index="0" type="ga" name="Ramp_Start" lat="N64 6.823799" lon="W18 47.420471" heading="133.57"  radius="10" pushBackRoute="7" airlineCodes="" />
+ </parkingList>
+ <TaxiNodes>
+        <node index="1" lat="N64 6.830674" lon="W18 47.370602" isOnRunway="0" holdPointType="none"  />
+        <node index="2" lat="N64 6.804853" lon="W18 47.455688" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="3" lat="N64 6.778241" lon="W18 47.449050" isOnRunway="0" holdPointType="none"  />
+        <node index="4" lat="N64 7.014164" lon="W18 46.786256" isOnRunway="1" holdPointType="none"  />
+        <node index="5" lat="N64 6.828305" lon="W18 47.281291" isOnRunway="1" holdPointType="none"  />
+        <node index="6" lat="N64 6.785174" lon="W18 47.396800" isOnRunway="1" holdPointType="none"  />
+        <node index="7" lat="N64 6.842495" lon="W18 47.440124" isOnRunway="0" holdPointType="PushBack"  />
+ </TaxiNodes>
+ <TaxiWaySegments>
+        <arc begin="2" end="1" isPushBackRoute="0" name=""  />
+        <arc begin="1" end="2" isPushBackRoute="0" name=""  />
+        <arc begin="5" end="1" isPushBackRoute="0" name=""  />
+        <arc begin="1" end="5" isPushBackRoute="0" name=""  />
+        <arc begin="3" end="2" isPushBackRoute="0" name=""  />
+        <arc begin="2" end="3" isPushBackRoute="0" name=""  />
+        <arc begin="6" end="3" isPushBackRoute="0" name=""  />
+        <arc begin="3" end="6" isPushBackRoute="0" name=""  />
+        <arc begin="0" end="7" isPushBackRoute="1" name="Ramp_Start"  />
+        <arc begin="7" end="0" isPushBackRoute="1" name="Ramp_Start"  />
+        <arc begin="7" end="2" isPushBackRoute="1" name="Ramp_Start"  />
+        <arc begin="2" end="7" isPushBackRoute="1" name="Ramp_Start"  />
+        <arc begin="0" end="7" isPushBackRoute="1" name="Ramp_Start"  />
+        <arc begin="7" end="0" isPushBackRoute="1" name="Ramp_Start"  />
+ </TaxiWaySegments>
+</groundnet>

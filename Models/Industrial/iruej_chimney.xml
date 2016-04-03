@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>iruej_chimney.ac</path>
+
+ <!-- <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-property>sim/rendering/static-lod/bare</max-property>
+  </animation>-->
+
+
+  <animation>
+    <type>material</type>
+    <object-name>red_light</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.60</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red>   1 </red>
+      <green> 0 </green>
+      <blue>  0 </blue>
+    </emission>
+  </animation>
+  <animation>
+    <type>material</type>
+    <object-name>red_light</object-name>
+    <condition>
+      <less-than-equals>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.60</value>
+      </less-than-equals>
+    </condition>
+    <emission>
+      <red>   0 </red>
+      <green> 0 </green>
+      <blue>  0 </blue>
+    </emission>
+  </animation>
+
+<particlesystem>
+  <name>smoke</name>
+  
+  <texture>iruej_smoke.rgb</texture>
+  <emissive>false</emissive>
+  <lighting>false</lighting>
+       
+  <offsets>
+    <x-m>12</x-m>
+    <y-m>12</y-m>
+    <z-m>210</z-m>
+  </offsets>
+           
+  <attach>local</attach>
+           
+  <placer>
+    <type>point</type>
+  </placer>
+           
+  <shooter>
+    <speed-mps>
+    	<value>5</value>
+	<spread>3</spread>
+    </speed-mps>
+  </shooter>
+       
+  <counter>
+    <particles-per-sec>
+      <value>2</value>
+      <spread>3</spread>
+    </particles-per-sec>
+  </counter>
+           
+  <align>billboard</align>
+           
+  <particle>
+
+  <start>
+    <color>
+      <red><value>0.5</value></red>
+      <green><value>0.5</value></green>
+      <blue><value>0.5</value></blue>
+      <alpha><value>0.2</value></alpha>
+    </color>
+    <size>
+      <value>15</value>
+    </size>
+  </start>
+
+  <end>
+    <color>
+      <red><value>0.5</value></red>
+      <green><value>0.5</value></green>
+      <blue><value>0.5</value></blue>
+      <alpha><value>0.0</value></alpha>
+    </color>
+    <size>
+      <value>50</value>
+      <spread>40</spread>
+    </size>
+  </end>
+    
+  <life-sec>
+    <value>20</value>
+  </life-sec>
+
+  <mass-kg>310</mass-kg>
+  <radius-m>10</radius-m>
+  </particle>
+           
+  <program>
+    <fluid>air</fluid>
+    <gravity>true</gravity>
+    <wind>true</wind>
+  </program>
+           
+</particlesystem>
+
+
+</PropertyList>

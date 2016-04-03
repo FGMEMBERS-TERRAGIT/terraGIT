@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+ <path>Crane-100m.ac</path>
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>20000</max-m>
+ </animation>
+
+
+<!--LIGHT-->
+
+<animation>
+  <type>alpha-test</type>
+  <alpha-factor>0.01</alpha-factor>
+ </animation>
+
+ <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>red-light-plate</object-name>    
+    <object-name>white-light-plate</object-name>    
+  </effect>
+
+<!--Day = white-->
+ <animation>
+  <type>select</type>
+ <object-name>white-light-plate</object-name>
+ <object-name>Pos1</object-name>
+  <condition>
+   <less-than>
+    <property>/sim/time/sun-angle-rad</property>
+    <value>1.57</value>
+   </less-than>
+  </condition>
+ </animation>
+ 
+ <animation>
+ <type>timed</type>
+ <object-name>white-light-plate</object-name>
+<object-name>Pos1</object-name>
+ <use-personality type="bool">true</use-personality>
+<branch-duration-sec>
+  <random>
+   <min>1.5</min>
+   <max>1.5</max>
+  </random>
+ </branch-duration-sec>
+ <branch-duration-sec>
+  <random>
+   <min>0.025</min>
+   <max>0.025</max>
+  </random>
+ </branch-duration-sec>
+ </animation>
+
+<!--Night = red-->
+<animation>
+  <type>select</type>
+ <object-name>red-light-plate</object-name>
+<object-name>Pos2</object-name>
+  <condition>
+   <greater-than>
+    <property>/sim/time/sun-angle-rad</property>
+    <value>1.57</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+ <type>timed</type>
+ <object-name>red-light-plate</object-name>
+<object-name>Pos2</object-name>
+ <use-personality type="bool">true</use-personality>
+<branch-duration-sec>
+  <random>
+   <min>1.5</min>
+   <max>1.5</max>
+  </random>
+ </branch-duration-sec>
+ <branch-duration-sec>
+  <random>
+   <min>0.025</min>
+   <max>0.025</max>
+  </random>
+ </branch-duration-sec>
+  </animation>
+
+ <animation>
+    <type>material</type>
+    <object-name>red-light-plate</object-name>    
+    <object-name>white-light-plate</object-name>    
+    <emission>
+      <red>   0.027 </red>
+      <green> 0.027 </green>
+      <blue>  0.027 </blue>
+      <factor>150</factor>
+    </emission>
+  </animation> 
+
+ <animation>
+  <object-name>red-light-plate</object-name>    
+  <object-name>white-light-plate</object-name>  
+  <enable-hot type="bool">false</enable-hot>
+ </animation>
+
+</PropertyList>

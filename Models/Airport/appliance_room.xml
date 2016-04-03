@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PropertyList>
+<path>appliance_room.ac</path>
+	<!-- 
+	appliance room / tool house / container for eletrical or communication installations at the airport field.
+	note: use the appliance_room.xml at the runway field or in the near of aerials, instruments or or independently.
+	have a look at atc_antenna_vhf-uhf-omnidi_sa.xml, dme_antenna_sa.xml or vhf_antenna_multiband_base_station_sa.xml
+   -->
+<animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-property>sim/rendering/static-lod/bare</max-property>
+</animation>
+<model>
+<path>Models/Effects/pos_lamp_red_light_2st.xml</path>
+<offsets>
+		<x-m> 0.9399 </x-m>
+		<y-m> 1.4248 </y-m>
+		<z-m> 2.0169 </z-m>
+		<pitch-deg> 0.00 </pitch-deg>
+		<heading-deg> 0.00 </heading-deg>
+</offsets>
+</model>
+<model>
+<path>Models/Effects/pos_lamp_red_light_2st.xml</path>
+<offsets>
+		<x-m> -0.9399 </x-m>
+		<y-m> -1.4565 </y-m>
+		<z-m>  2.0169 </z-m>
+		<pitch-deg> 0.00 </pitch-deg>
+		<heading-deg> 0.00 </heading-deg>
+</offsets>
+</model>
+</PropertyList>
+         

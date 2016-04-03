@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>radar.ac</path>
+
+ <animation>
+  <type>range</type>
+  <object-name>reflector</object-name>
+  <min-m>0</min-m>
+  <max-m>700</max-m>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <object-name>carrier</object-name>
+  <min-m>0</min-m>
+  <max-m>700</max-m>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <object-name>frame</object-name>
+  <min-m>0</min-m>
+  <max-m>700</max-m>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <object-name>reflector_lowres</object-name>
+  <min-m>700</min-m>
+  <max-m>8000</max-m>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <object-name>frame2_lowres</object-name>
+  <min-m>700</min-m>
+  <max-m>8000</max-m>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <object-name>frame2_lowres</object-name>
+  <min-m>700</min-m>
+  <max-m>8000</max-m>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>reflector</object-name>
+  <object-name>carrier</object-name>
+  <property>/sim/time/elapsed-sec</property>
+  <factor>-90.0</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>15.5</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>reflector_lowres</object-name>
+  <property>/sim/time/elapsed-sec</property>
+  <factor>-90.0</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>15.5</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+</PropertyList>

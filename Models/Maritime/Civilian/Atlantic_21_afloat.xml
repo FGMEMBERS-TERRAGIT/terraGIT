@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+ <path>Atlantic_21_afloat.ac</path>
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>16000</max-m>
+ </animation>
+
+<animation>
+ <type>timed</type>
+ <object-name>Flash1</object-name>
+ <object-name>Blank1</object-name>
+ <use-personality type="bool">true</use-personality>
+<branch-duration-sec>
+  <random>
+   <min>0.1</min>
+   <max>0.1</max>
+  </random>
+ </branch-duration-sec>
+ <branch-duration-sec>
+  <random>
+   <min>0.3</min>
+   <max>0.3</max>
+  </random>
+ </branch-duration-sec>
+</animation>
+
+<animation>
+  <type>rotate</type>
+    <property>/sim/time/elapsed-sec</property>
+  <factor>8.0</factor>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>100.0</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>-1</z>
+  </axis>
+</animation>
+
+<particlesystem>
+    <name>bowwave</name>
+
+    <texture>Atlantic_21_afloat1.png</texture>
+    <emissive>false</emissive>
+    <lighting>true</lighting>
+
+    <attach>world</attach>
+        
+    <align>billboard</align>
+
+    <placer>
+<type>sector</type>
+ 
+</placer>
+
+    <counter>
+      <particles-per-sec>
+        <value>200</value>
+        <spread>10</spread>
+      </particles-per-sec>
+    </counter>
+        
+    <particle>
+      <start>
+        <color>
+          <red>
+            <value>1.0</value>
+          </red>
+          <green>
+            <value>1.0</value>
+          </green>
+          <blue>
+            <value>1.0</value>
+          </blue>
+          <alpha>
+            <value>0.5</value>
+          </alpha>
+        </color>
+        <size>
+          <value>0.1</value>
+        </size>
+      </start>
+
+      <end>
+        <color>
+          <red>
+            <value>1.0</value>
+          </red>
+          <green>
+            <value>1.0</value>
+          </green>
+          <blue>
+            <value>1.0</value>
+          </blue>
+          <alpha>
+            <value>1.0</value>
+          </alpha>
+        </color>
+        <size>
+          <value>0.4</value>
+        </size>
+      </end>
+
+      <life-sec>
+        <value>3.0</value>
+      </life-sec>
+
+      <mass-kg>6</mass-kg>
+      <radius-m>6</radius-m>
+    </particle>
+        
+    <program>
+      <fluid>water</fluid>
+      <gravity>false</gravity>
+      <wind>false</wind>
+    </program>
+   
+
+  </particlesystem>
+
+
+</PropertyList>

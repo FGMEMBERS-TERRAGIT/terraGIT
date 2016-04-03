@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<groundnet>
+  <version>1</version>
+  <parkingList>
+        <Parking index="0" type="gate" name="1" lat="N15 15.697006" lon="W83 46.484018" heading="28.67"  radius="19" pushBackRoute="5" airlineCodes="" />
+        <Parking index="1" type="gate" name="2" lat="N15 15.695935" lon="W83 46.452941" heading="338.96"  radius="19" pushBackRoute="5" airlineCodes="" />
+ </parkingList>
+ <TaxiNodes>
+        <node index="2" lat="N15 15.737029" lon="W83 47.301982" isOnRunway="1" holdPointType="none"  />
+        <node index="3" lat="N15 15.726332" lon="W83 46.441849" isOnRunway="1" holdPointType="PushBack"  />
+        <node index="4" lat="N15 15.726667" lon="W83 46.469638" isOnRunway="1" holdPointType="none"  />
+        <node index="5" lat="N15 15.703885" lon="W83 46.469477" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="6" lat="N15 15.673206" lon="W83 46.497032" isOnRunway="0" holdPointType="none"  />
+        <node index="7" lat="N15 15.670619" lon="W83 46.443203" isOnRunway="0" holdPointType="none"  />
+ </TaxiNodes>
+ <TaxiWaySegments>
+        <arc begin="5" end="4" isPushBackRoute="0" name="apron"  />
+        <arc begin="4" end="5" isPushBackRoute="0" name="apron"  />
+        <arc begin="0" end="6" isPushBackRoute="1" name="1"  />
+        <arc begin="6" end="0" isPushBackRoute="1" name="1"  />
+        <arc begin="6" end="5" isPushBackRoute="1" name="1"  />
+        <arc begin="5" end="6" isPushBackRoute="1" name="1"  />
+        <arc begin="1" end="7" isPushBackRoute="1" name="2"  />
+        <arc begin="7" end="1" isPushBackRoute="1" name="2"  />
+        <arc begin="7" end="3" isPushBackRoute="1" name="2"  />
+        <arc begin="3" end="7" isPushBackRoute="1" name="2"  />
+        <arc begin="0" end="5" isPushBackRoute="1" name="1"  />
+        <arc begin="5" end="0" isPushBackRoute="1" name="1"  />
+        <arc begin="1" end="5" isPushBackRoute="1" name="2"  />
+        <arc begin="5" end="1" isPushBackRoute="1" name="2"  />
+ </TaxiWaySegments>
+</groundnet>

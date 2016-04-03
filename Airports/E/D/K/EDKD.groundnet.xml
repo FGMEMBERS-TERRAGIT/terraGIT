@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<groundnet>
+  <version>1</version>
+  <parkingList>
+        <Parking index="0" type="ga" name="Gras_start_1" lat="N51 18.764145" lon="E7 42.062948" heading="149.93"  radius="10" pushBackRoute="4" airlineCodes="" />
+        <Parking index="1" type="ga" name="Gras_start_2" lat="N51 18.758212" lon="E7 42.048637" heading="150.64"  radius="10" pushBackRoute="5" airlineCodes="" />
+        <Parking index="2" type="ga" name="Gras_start_3" lat="N51 18.752462" lon="E7 42.017389" heading="143.13"  radius="10" pushBackRoute="6" airlineCodes="" />
+ </parkingList>
+ <TaxiNodes>
+        <node index="3" lat="N51 18.814504" lon="E7 42.307945" isOnRunway="0" holdPointType="none"  />
+        <node index="4" lat="N51 18.754348" lon="E7 42.071729" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="5" lat="N51 18.748879" lon="E7 42.055898" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="6" lat="N51 18.739504" lon="E7 42.027985" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="7" lat="N51 18.705470" lon="E7 41.963037" isOnRunway="0" holdPointType="none"  />
+        <node index="8" lat="N51 18.847730" lon="E7 42.416141" isOnRunway="0" holdPointType="none"  />
+        <node index="9" lat="N51 18.836969" lon="E7 42.426126" isOnRunway="1" holdPointType="none"  />
+        <node index="10" lat="N51 18.691126" lon="E7 41.974838" isOnRunway="1" holdPointType="none"  />
+        <node index="11" lat="N51 18.787619" lon="E7 42.049357" isOnRunway="0" holdPointType="none"  />
+        <node index="12" lat="N51 18.781853" lon="E7 42.035338" isOnRunway="0" holdPointType="none"  />
+        <node index="13" lat="N51 18.774162" lon="E7 42.001114" isOnRunway="0" holdPointType="none"  />
+ </TaxiNodes>
+ <TaxiWaySegments>
+        <arc begin="3" end="8" isPushBackRoute="0" name=""  />
+        <arc begin="8" end="3" isPushBackRoute="0" name=""  />
+        <arc begin="4" end="3" isPushBackRoute="0" name=""  />
+        <arc begin="3" end="4" isPushBackRoute="0" name=""  />
+        <arc begin="5" end="4" isPushBackRoute="0" name=""  />
+        <arc begin="4" end="5" isPushBackRoute="0" name=""  />
+        <arc begin="6" end="5" isPushBackRoute="0" name=""  />
+        <arc begin="5" end="6" isPushBackRoute="0" name=""  />
+        <arc begin="7" end="6" isPushBackRoute="0" name=""  />
+        <arc begin="6" end="7" isPushBackRoute="0" name=""  />
+        <arc begin="10" end="7" isPushBackRoute="0" name=""  />
+        <arc begin="7" end="10" isPushBackRoute="0" name=""  />
+        <arc begin="9" end="8" isPushBackRoute="0" name=""  />
+        <arc begin="8" end="9" isPushBackRoute="0" name=""  />
+        <arc begin="0" end="11" isPushBackRoute="1" name="Gras_start_1"  />
+        <arc begin="11" end="0" isPushBackRoute="1" name="Gras_start_1"  />
+        <arc begin="11" end="5" isPushBackRoute="1" name="Gras_start_1"  />
+        <arc begin="5" end="11" isPushBackRoute="1" name="Gras_start_1"  />
+        <arc begin="1" end="12" isPushBackRoute="1" name="Gras_start_2"  />
+        <arc begin="12" end="1" isPushBackRoute="1" name="Gras_start_2"  />
+        <arc begin="12" end="6" isPushBackRoute="1" name="Gras_start_2"  />
+        <arc begin="6" end="12" isPushBackRoute="1" name="Gras_start_2"  />
+        <arc begin="2" end="13" isPushBackRoute="1" name="Gras_start_3"  />
+        <arc begin="13" end="2" isPushBackRoute="1" name="Gras_start_3"  />
+        <arc begin="13" end="6" isPushBackRoute="1" name="Gras_start_3"  />
+        <arc begin="6" end="13" isPushBackRoute="1" name="Gras_start_3"  />
+        <arc begin="0" end="4" isPushBackRoute="1" name="Gras_start_1"  />
+        <arc begin="4" end="0" isPushBackRoute="1" name="Gras_start_1"  />
+        <arc begin="1" end="5" isPushBackRoute="1" name="Gras_start_2"  />
+        <arc begin="5" end="1" isPushBackRoute="1" name="Gras_start_2"  />
+        <arc begin="2" end="6" isPushBackRoute="1" name="Gras_start_3"  />
+        <arc begin="6" end="2" isPushBackRoute="1" name="Gras_start_3"  />
+ </TaxiWaySegments>
+</groundnet>

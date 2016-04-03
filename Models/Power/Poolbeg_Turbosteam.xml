@@ -1,0 +1,1836 @@
+<?xml version="1.0"?>
+<!-- project: D:\0_FlightGear\Edifici\8 - POWERPLANTS\8.6 Poolbeg PP\PoolbegPP.blend -->
+<!-- cursor: 200.150115966797 -69.178817749023 448.793914794922 -->
+
+<PropertyList>
+	<path>Poolbeg_Turbosteam.ac</path>
+
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>25000</max-m>
+	</animation>
+<!-- Stack 1 Top Red Lights -->
+	
+
+	<animation>
+		<name>ST1topXGroup</name>
+		<object-name>ST1topX0</object-name>
+		<object-name>ST1topX1</object-name>
+		<object-name>ST1topX2</object-name>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<name>ST1topXGroupNight</name>
+		<object-name>ST1topXGroup</object-name>
+		<condition>
+			<greater-than>
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.57</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>alpha-test</type>
+		<object-name>ST1topXGroup</object-name>
+		<alpha-factor>0.001</alpha-factor>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>ST1topX0</object-name>
+		<offset-m>282.405416</offset-m>
+		<axis>
+			<x>178.535538</x>
+			<y>-61.464466</y>
+			<z>210</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>ST1topX1</object-name>
+		<offset-m>282.941312</offset-m>
+		<axis>
+			<x>176.294098</x>
+			<y>-69.829628</y>
+			<z>210</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>ST1topX2</object-name>
+		<offset-m>277.698388</offset-m>
+		<axis>
+			<x>170.170364</x>
+			<y>-63.705902</y>
+			<z>210</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>ST1topX0</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>ST1topX1</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>ST1topX2</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>ST1topX0</object-name>
+		<interpolation>
+      
+<entry>
+        
+<ind>0</ind>
+        
+<dep>0.1</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>300</ind>
+        
+<dep>0.2</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>1500</ind>
+        
+<dep>0.5</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>4000</ind>
+        
+<dep>3</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>10000</ind>
+        
+<dep>5</dep>
+      
+</entry>
+    
+</interpolation>
+  
+</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>ST1topX1</object-name>
+		<interpolation>
+      
+<entry>
+        
+<ind>0</ind>
+        
+<dep>0.1</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>300</ind>
+        
+<dep>0.2</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>1500</ind>
+        
+<dep>0.5</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>4000</ind>
+        
+<dep>3</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>10000</ind>
+        
+<dep>5</dep>
+      
+</entry>
+</interpolation>
+  
+</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>ST1topX2</object-name>
+		<interpolation>
+      
+<entry>
+        
+<ind>0</ind>
+        
+<dep>0.1</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>300</ind>
+        
+<dep>0.2</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>1500</ind>
+        
+<dep>0.5</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>4000</ind>
+        
+<dep>3</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>10000</ind>
+        
+<dep>5</dep>
+      
+</entry>
+    
+</interpolation>
+  
+</animation>
+	
+<!-- Stack 1 Mid Red Lights -->
+
+
+	<animation>
+		<name>ST1midXGroup</name>
+		<object-name>ST1midX0</object-name>
+		<object-name>ST1midX1</object-name>
+		<object-name>ST1midX2</object-name>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<name>ST1midXGroupNight</name>
+		<object-name>ST1midXGroup</object-name>
+		<condition>
+			<greater-than>
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.57</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>alpha-test</type>
+		<object-name>ST1midXGroup</object-name>
+		<alpha-factor>0.001</alpha-factor>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>ST1midX0</object-name>
+		<offset-m>235.235728</offset-m>
+		<axis>
+			<x>178.889084</x>
+			<y>-61.110912</y>
+			<z>140</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>ST1midX1</object-name>
+		<offset-m>235.943033</offset-m>
+		<axis>
+			<x>176.423508</x>
+			<y>-70.312592</y>
+			<z>140</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>ST1midX2</object-name>
+		<offset-m>228.988618</offset-m>
+		<axis>
+			<x>169.687408</x>
+			<y>-63.576492</y>
+			<z>140</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>ST1midX0</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>ST1midX1</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>ST1midX2</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>ST1midX0</object-name>
+		<interpolation>
+      
+<entry>
+        
+<ind>0</ind>
+        
+<dep>0.1</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>300</ind>
+        
+<dep>0.2</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>1500</ind>
+        
+<dep>0.5</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>4000</ind>
+        
+<dep>3</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>10000</ind>
+        
+<dep>5</dep>
+      
+</entry>
+    
+</interpolation>
+  
+</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>ST1midX1</object-name>
+		<interpolation>
+      
+<entry>
+        
+<ind>0</ind>
+        
+<dep>0.1</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>300</ind>
+        
+<dep>0.2</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>1500</ind>
+        
+<dep>0.5</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>4000</ind>
+        
+<dep>3</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>10000</ind>
+        
+<dep>5</dep>
+      
+</entry>
+    
+</interpolation>
+  
+</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>ST1midX2</object-name>
+		<interpolation>
+      
+<entry>
+        
+<ind>0</ind>
+        
+<dep>0.1</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>300</ind>
+        
+<dep>0.2</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>1500</ind>
+        
+<dep>0.5</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>4000</ind>
+        
+<dep>3</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>10000</ind>
+        
+<dep>5</dep>
+      
+</entry>
+    
+</interpolation>
+  
+</animation>
+<!-- Stack 1 Bottom Red Lights -->	
+	<ST1bottXparams>
+		<light-near>0.4</light-near>
+		<light-med>0.8</light-med>
+		<light-far>10</light-far>
+	</ST1bottXparams>
+
+	<animation>
+		<name>ST1bottXGroup</name>
+		<object-name>ST1bottX0</object-name>
+		<object-name>ST1bottX1</object-name>
+		<object-name>ST1bottX2</object-name>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<name>ST1bottXGroupNight</name>
+		<object-name>ST1bottXGroup</object-name>
+		<condition>
+			<greater-than>
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.57</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>alpha-test</type>
+		<object-name>ST1bottXGroup</object-name>
+		<alpha-factor>0.001</alpha-factor>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>ST1bottX0</object-name>
+		<offset-m>202.207681</offset-m>
+		<axis>
+			<x>179.949753</x>
+			<y>-60.050251</y>
+			<z>70</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>ST1bottX1</object-name>
+		<offset-m>203.253784</offset-m>
+		<axis>
+			<x>176.811737</x>
+			<y>-71.761482</y>
+			<z>70</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>ST1bottX2</object-name>
+		<offset-m>192.865129</offset-m>
+		<axis>
+			<x>168.238525</x>
+			<y>-63.188263</y>
+			<z>70</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>ST1bottX0</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>ST1bottX1</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>ST1bottX2</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>ST1bottX0</object-name>
+		<interpolation>
+      
+<entry>
+        
+<ind>0</ind>
+        
+<dep>0.1</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>300</ind>
+        
+<dep>0.2</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>1500</ind>
+        
+<dep>0.5</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>4000</ind>
+        
+<dep>3</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>10000</ind>
+        
+<dep>5</dep>
+      
+</entry>
+    
+</interpolation>
+  
+</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>ST1bottX1</object-name>
+		<interpolation>
+      
+<entry>
+        
+<ind>0</ind>
+        
+<dep>0.1</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>300</ind>
+        
+<dep>0.2</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>1500</ind>
+        
+<dep>0.5</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>4000</ind>
+        
+<dep>3</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>10000</ind>
+        
+<dep>5</dep>
+      
+</entry>
+    
+</interpolation>
+  
+</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>ST1bottX2</object-name>
+		<interpolation>
+      
+<entry>
+        
+<ind>0</ind>
+        
+<dep>0.1</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>300</ind>
+        
+<dep>0.2</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>1500</ind>
+        
+<dep>0.5</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>4000</ind>
+        
+<dep>3</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>10000</ind>
+        
+<dep>5</dep>
+      
+</entry>
+</interpolation>
+  
+</animation>
+	
+	<!-- STACK 2 -->
+	<!-- Top Lights -->
+	<ST2topXparams>
+		<light-near>0.4</light-near>
+		<light-med>0.8</light-med>
+		<light-far>10</light-far>
+	</ST2topXparams>
+
+	<animation>
+		<name>ST2topXGroup</name>
+		<object-name>ST2topX0</object-name>
+		<object-name>ST2topX1</object-name>
+		<object-name>ST2topX2</object-name>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<name>ST2topXGroupNight</name>
+		<object-name>ST2topXGroup</object-name>
+		<condition>
+			<greater-than>
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.57</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>alpha-test</type>
+		<object-name>ST2topXGroup</object-name>
+		<alpha-factor>0.001</alpha-factor>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>ST2topX0</object-name>
+		<offset-m>237.184812</offset-m>
+		<axis>
+			<x>91.535538</x>
+			<y>-61.464466</y>
+			<z>210</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>ST2topX1</object-name>
+		<offset-m>238.64118</offset-m>
+		<axis>
+			<x>89.294098</x>
+			<y>-69.829628</y>
+			<z>210</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>ST2topX2</object-name>
+		<offset-m>234.682238</offset-m>
+		<axis>
+			<x>83.170372</x>
+			<y>-63.705902</y>
+			<z>210</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>ST2topX0</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>ST2topX1</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>ST2topX2</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>ST2topX0</object-name>
+		<interpolation>
+      
+<entry>
+        
+<ind>0</ind>
+        
+<dep>0.1</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>300</ind>
+        
+<dep>0.2</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>1500</ind>
+        
+<dep>0.5</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>4000</ind>
+        
+<dep>3</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>10000</ind>
+        
+<dep>5</dep>
+      
+</entry>
+    
+</interpolation>
+  
+</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>ST2topX1</object-name>
+		<interpolation>
+      
+<entry>
+        
+<ind>0</ind>
+        
+<dep>0.1</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>300</ind>
+        
+<dep>0.2</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>1500</ind>
+        
+<dep>0.5</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>4000</ind>
+        
+<dep>3</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>10000</ind>
+        
+<dep>5</dep>
+      
+</entry>
+    
+</interpolation>
+  
+</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>ST2topX2</object-name>
+		<interpolation>
+      
+<entry>
+        
+<ind>0</ind>
+        
+<dep>0.1</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>300</ind>
+        
+<dep>0.2</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>1500</ind>
+        
+<dep>0.5</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>4000</ind>
+        
+<dep>3</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>10000</ind>
+        
+<dep>5</dep>
+      
+</entry>
+    
+</interpolation>
+  
+</animation>
+	
+	<!-- Stack 2 Mid Lights -->
+	
+	<ST2midXparams>
+		<light-near>0.4</light-near>
+		<light-med>0.8</light-med>
+		<light-far>10</light-far>
+	</ST2midXparams>
+
+	<animation>
+		<name>ST2midXGroup</name>
+		<object-name>ST2midX0</object-name>
+		<object-name>ST2midX1</object-name>
+		<object-name>ST2midX2</object-name>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<name>ST2midXGroupNight</name>
+		<object-name>ST2midXGroup</object-name>
+		<condition>
+			<greater-than>
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.57</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>alpha-test</type>
+		<object-name>ST2midXGroup</object-name>
+		<alpha-factor>0.001</alpha-factor>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>ST2midX0</object-name>
+		<offset-m>178.264263</offset-m>
+		<axis>
+			<x>91.889084</x>
+			<y>-61.110912</y>
+			<z>140</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>ST2midX1</object-name>
+		<offset-m>180.389646</offset-m>
+		<axis>
+			<x>89.423508</x>
+			<y>-70.312592</y>
+			<z>140</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>ST2midX2</object-name>
+		<offset-m>174.582868</offset-m>
+		<axis>
+			<x>82.687408</x>
+			<y>-63.576492</y>
+			<z>140</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>ST2midX0</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>ST2midX1</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>ST2midX2</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>ST2midX0</object-name>
+		<interpolation>
+      
+<entry>
+        
+<ind>0</ind>
+        
+<dep>0.1</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>300</ind>
+        
+<dep>0.2</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>1500</ind>
+        
+<dep>0.5</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>4000</ind>
+        
+<dep>3</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>10000</ind>
+        
+<dep>5</dep>
+      
+</entry>
+    
+</interpolation>
+  
+</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>ST2midX1</object-name>
+		<interpolation>
+      
+<entry>
+        
+<ind>0</ind>
+        
+<dep>0.1</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>300</ind>
+        
+<dep>0.2</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>1500</ind>
+        
+<dep>0.5</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>4000</ind>
+        
+<dep>3</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>10000</ind>
+        
+<dep>5</dep>
+      
+</entry>
+    
+</interpolation>
+  
+</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>ST2midX2</object-name>
+		<interpolation>
+      
+<entry>
+        
+<ind>0</ind>
+        
+<dep>0.1</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>300</ind>
+        
+<dep>0.2</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>1500</ind>
+        
+<dep>0.5</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>4000</ind>
+        
+<dep>3</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>10000</ind>
+        
+<dep>5</dep>
+      
+</entry>
+    
+</interpolation>
+  
+</animation>
+<!-- Stack 2 bottom lights -->
+<ST2botXparams>
+		<light-near>0.4</light-near>
+		<light-med>0.8</light-med>
+		<light-far>10</light-far>
+	</ST2botXparams>
+
+	<animation>
+		<name>ST2botXGroup</name>
+		<object-name>ST2botX0</object-name>
+		<object-name>ST2botX1</object-name>
+		<object-name>ST2botX2</object-name>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<name>ST2botXGroupNight</name>
+		<object-name>ST2botXGroup</object-name>
+		<condition>
+			<greater-than>
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.57</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>alpha-test</type>
+		<object-name>ST2botXGroup</object-name>
+		<alpha-factor>0.001</alpha-factor>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>ST2botX0</object-name>
+		<offset-m>130.941543</offset-m>
+		<axis>
+			<x>92.949745</x>
+			<y>-60.050251</y>
+			<z>70</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>ST2botX1</object-name>
+		<offset-m>134.59516</offset-m>
+		<axis>
+			<x>89.811729</x>
+			<y>-71.761482</y>
+			<z>70</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>ST2botX2</object-name>
+		<offset-m>124.468684</offset-m>
+		<axis>
+			<x>81.238518</x>
+			<y>-63.188263</y>
+			<z>70</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>ST2botX0</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>ST2botX1</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>ST2botX2</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>ST2botX0</object-name>
+		<interpolation>
+      
+<entry>
+        
+<ind>0</ind>
+        
+<dep>0.1</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>300</ind>
+        
+<dep>0.2</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>1500</ind>
+        
+<dep>0.5</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>4000</ind>
+        
+<dep>3</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>10000</ind>
+        
+<dep>5</dep>
+      
+</entry>
+    
+</interpolation>
+  
+</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>ST2botX1</object-name>
+		<interpolation>
+      
+<entry>
+        
+<ind>0</ind>
+        
+<dep>0.1</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>300</ind>
+        
+<dep>0.2</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>1500</ind>
+        
+<dep>0.5</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>4000</ind>
+        
+<dep>3</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>10000</ind>
+        
+<dep>5</dep>
+      
+</entry>
+    
+</interpolation>
+  
+</animation>
+	<animation>
+		<type>dist-scale</type>
+		<object-name>ST2botX2</object-name>
+		<interpolation>
+      
+<entry>
+        
+<ind>0</ind>
+        
+<dep>0.1</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>300</ind>
+        
+<dep>0.2</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>1500</ind>
+        
+<dep>0.5</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>4000</ind>
+        
+<dep>3</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>10000</ind>
+        
+<dep>5</dep>
+      
+</entry>
+    
+</interpolation>
+  
+</animation>
+	
+	<!-- Lighthouse -->
+	<LHBeamXparams>
+		<light-near>0.4</light-near>
+		<light-med>0.8</light-med>
+		<light-far>10</light-far>
+	</LHBeamXparams>
+
+	<animation>
+		<name>LHBeamXGroup</name>
+		<object-name>LHBeamX0</object-name>
+		<object-name>LHBeamX1</object-name>
+		<object-name>LHBeamX2</object-name>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<name>LHBeamXGroupNight</name>
+		<object-name>LHBeamXGroup</object-name>
+		<condition>
+			<greater-than>
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.57</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>alpha-test</type>
+		<object-name>LHBeamXGroup</object-name>
+		<alpha-factor>0.001</alpha-factor>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>LHBeamX0</object-name>
+		<offset-m>2678.401902</offset-m>
+		<axis>
+			<x>2677.132324</x>
+			<y>80.118782</y>
+			<z>19.5</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>LHBeamX1</object-name>
+		<offset-m>2676.911524</offset-m>
+		<axis>
+			<x>2675.786865</x>
+			<y>75.098015</y>
+			<z>19.5</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>LHBeamX2</object-name>
+		<offset-m>2673.343555</offset-m>
+		<axis>
+			<x>2672.111572</x>
+			<y>78.773476</y>
+			<z>19.5</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>LHBeamX0</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>LHBeamX1</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>LHBeamX2</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>LHBeamX0</object-name>
+		<interpolation>
+      
+<entry>
+        
+<ind>0</ind>
+        
+<dep>0.1</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>300</ind>
+        
+<dep>0.2</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>1500</ind>
+        
+<dep>0.5</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>4000</ind>
+        
+<dep>3</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>10000</ind>
+        
+<dep>5</dep>
+      
+</entry>
+    
+</interpolation>
+  
+</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>LHBeamX1</object-name>
+		<interpolation>
+      
+<entry>
+        
+<ind>0</ind>
+        
+<dep>0.1</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>300</ind>
+        
+<dep>0.2</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>1500</ind>
+        
+<dep>0.5</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>4000</ind>
+        
+<dep>3</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>10000</ind>
+        
+<dep>5</dep>
+      
+</entry>
+    
+</interpolation>
+  
+</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>LHBeamX2</object-name>
+		<interpolation>
+      
+<entry>
+        
+<ind>0</ind>
+        
+<dep>0.1</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>300</ind>
+        
+<dep>0.2</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>1500</ind>
+        
+<dep>0.5</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>4000</ind>
+        
+<dep>3</dep>
+      
+</entry>
+      
+<entry>
+        
+<ind>10000</ind>
+        
+<dep>5</dep>
+      
+</entry>
+    
+</interpolation>
+  
+</animation>
+
+ <!-- SMOKE -->
+ <particlesystem>
+  <name>Stack1-2</name>
+  
+  <texture>smoke.rgb</texture>
+  <emissive>false</emissive>
+  <lighting>false</lighting>
+       
+  <offsets>
+    <x-m>88</x-m>
+    <y-m>-65</y-m>
+    <z-m>210</z-m>
+  </offsets>
+           
+  <attach>local</attach>
+           
+  <placer>
+    <type>point</type>
+  </placer>
+           
+  <shooter>
+    <speed-mps>
+    	<value>5</value>
+	<spread>3</spread>
+    </speed-mps>
+  </shooter>
+       
+  <counter>
+    <particles-per-sec>
+      <value>2</value>
+      <spread>3</spread>
+    </particles-per-sec>
+  </counter>
+           
+  <align>billboard</align>
+           
+  <particle>
+
+  <start>
+    <color>
+      <red><value>0.5</value></red>
+      <green><value>0.5</value></green>
+      <blue><value>0.5</value></blue>
+      <alpha><value>0.2</value></alpha>
+    </color>
+    <size>
+      <value>12</value>
+    </size>
+  </start>
+
+  <end>
+    <color>
+      <red><value>0.5</value></red>
+      <green><value>0.5</value></green>
+      <blue><value>0.5</value></blue>
+      <alpha><value>0.0</value></alpha>
+    </color>
+    <size>
+      <value>20</value>
+      <spread>15</spread>
+    </size>
+  </end>
+    
+  <life-sec>
+    <value>20</value>
+  </life-sec>
+
+  <mass-kg>510</mass-kg>
+  <radius-m>10</radius-m>
+  </particle>
+           
+  <program>
+    <fluid>air</fluid>
+    <gravity>true</gravity>
+    <wind>true</wind>
+  </program>
+           
+</particlesystem>
+
+
+<!-- STACK Unit 3 SMOKE -->
+
+ <particlesystem>
+  <name>Stack3</name>
+  
+  <texture>smoke.rgb</texture>
+  <emissive>false</emissive>
+  <lighting>false</lighting>
+       
+  <offsets>
+    <x-m>175</x-m>
+    <y-m>-65</y-m>
+    <z-m>210</z-m>
+  </offsets>
+           
+  <attach>local</attach>
+           
+  <placer>
+    <type>point</type>
+  </placer>
+           
+  <shooter>
+    <speed-mps>
+    	<value>5</value>
+	<spread>3</spread>
+    </speed-mps>
+  </shooter>
+       
+  <counter>
+    <particles-per-sec>
+      <value>2</value>
+      <spread>3</spread>
+    </particles-per-sec>
+  </counter>
+           
+  <align>billboard</align>
+           
+  <particle>
+
+  <start>
+    <color>
+      <red><value>0.5</value></red>
+      <green><value>0.5</value></green>
+      <blue><value>0.5</value></blue>
+      <alpha><value>0.2</value></alpha>
+    </color>
+    <size>
+      <value>12</value>
+    </size>
+  </start>
+
+  <end>
+    <color>
+      <red><value>0.5</value></red>
+      <green><value>0.5</value></green>
+      <blue><value>0.5</value></blue>
+      <alpha><value>0.0</value></alpha>
+    </color>
+    <size>
+      <value>20</value>
+      <spread>15</spread>
+    </size>
+  </end>
+    
+  <life-sec>
+    <value>20</value>
+  </life-sec>
+
+  <mass-kg>510</mass-kg>
+  <radius-m>10</radius-m>
+  </particle>
+           
+  <program>
+    <fluid>air</fluid>
+    <gravity>true</gravity>
+    <wind>true</wind>
+  </program>
+           
+</particlesystem>
+
+
+<!-- Textures translation -->
+ <path>Poolbeg_Turbosteam.ac</path>
+
+<animation> 
+    <type>textranslate</type> 
+    <object-name>Blr1-2</object-name> 
+	<object-name>Blr3</object-name>
+	<object-name>TGHall</object-name>
+	
+	 
+    <property>/sim/time/sun-angle-rad</property>
+    <step> 1.57 </step>
+    <factor>0.318471338</factor>
+    <center>
+     <x-m> 0 </x-m>
+     <y-m> 0 </y-m>
+     <z-m> 0 </z-m>
+    </center>
+    <axis> 
+      <x> -1 </x> 
+      <y>  0 </y> 
+      <z>  0 </z> 
+    </axis> 
+  </animation>
+ 
+  <animation>
+    <type>material</type>
+    <object-name>Blr1-2</object-name> 
+	<object-name>Blr3</object-name>
+	<object-name>TGHall</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red>   1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Blr1-2</object-name> 
+	<object-name>Blr3</object-name>
+	<object-name>TGHall</object-name>
+    <condition>
+      <less-than-equals>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </less-than-equals>
+    </condition>
+    <emission>
+      <red>   0.0 </red>
+      <green> 0.0 </green>
+      <blue>  0.0 </blue>
+    </emission>
+  </animation>
+
+
+
+	</PropertyList>

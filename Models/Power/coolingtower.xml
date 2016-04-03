@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PropertyList>
+
+<path>coolingtower.ac</path>
+
+<!-- obstruction lights 80m -->
+<model>
+    <path>../../Models/Effects/pos_lamp_red_light_2st.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>-32.277 </y-m>
+      <z-m> 80.347 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+    <path>../../Models/Effects/pos_lamp_red_light_2st.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> 32.277 </y-m>
+      <z-m> 80.347 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+    <path>../../Models/Effects/pos_lamp_red_light_2st.xml</path>
+    <offsets>
+      <x-m>-32.277 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> 80.347 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+    <path>../../Models/Effects/pos_lamp_red_light_2st.xml</path>
+    <offsets>
+      <x-m> 32.277 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> 80.347 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- obstruction lights 130m -->
+<model>
+    <path>../../Models/Effects/pos_lamp_red_light_2st.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>-35.751 </y-m>
+      <z-m>130.932 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+    <path>../../Models/Effects/pos_lamp_red_light_2st.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> 35.751 </y-m>
+      <z-m>130.932 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+    <path>../../Models/Effects/pos_lamp_red_light_2st.xml</path>
+    <offsets>
+      <x-m>-35.751 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>130.932 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+    <path>../../Models/Effects/pos_lamp_red_light_2st.xml</path>
+    <offsets>
+      <x-m> 35.751 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>130.932 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- particles -->
+<particlesystem>
+	<name>steam</name>
+	
+	<texture>coolingtower_smoke.png</texture>
+	<emissive>false</emissive>
+	<lighting>true</lighting>
+	
+	<offsets>
+		<x-m>0</x-m>
+		<y-m>0</y-m>
+		<z-m>120</z-m>
+	</offsets>
+	
+	<attach>local</attach>
+	
+	<placer>
+		<type>sector</type>
+		<radius-min-m>1</radius-min-m>
+		<radius-max-m>15</radius-max-m>
+	</placer>
+	
+	<shooter>
+		<speed-mps>
+			<value>1</value>
+			<spread>5</spread>
+		</speed-mps>
+	</shooter>
+	
+	<counter>
+		<particles-per-sec>
+			<value>2</value>
+			<spread>2</spread>
+		</particles-per-sec>
+	</counter>
+	
+	<align>billboard</align>
+	
+	<particle>
+		<start>
+			<color>
+				<red><value>0.7</value></red>
+				<green><value>0.7</value></green>
+				<blue><value>0.7</value></blue>
+				<alpha><value>1</value></alpha>
+			</color>
+			<size>
+				<value>20</value>
+				<spread>10</spread>
+			</size>
+		</start>
+		<end>
+			<color>
+				<red><value>1</value></red>
+				<green><value>1</value></green>
+				<blue><value>1</value></blue>
+				<alpha><value>0.25</value></alpha>
+			</color>
+			<size>
+				<value>100</value>
+				<spread>100</spread>
+			</size>
+		</end>
+		<life-sec>
+			<value>20</value>
+		</life-sec>
+		<mass-kg>264000</mass-kg>
+		<radius-m>50</radius-m>
+	</particle>
+	
+	<program>
+		<fluid>air</fluid>
+		<gravity>true</gravity>
+		<wind>true</wind>
+	</program>
+	
+</particlesystem>
+
+</PropertyList>

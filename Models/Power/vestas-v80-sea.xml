@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>vestas-v80-sea.ac</path>
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>20000</max-m>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Generator</object-name>
+  <object-name>Hub</object-name>
+  <object-name>Blade1</object-name>
+  <object-name>Blade2</object-name>
+  <object-name>Blade3</object-name>
+  <property>/environment/wind-from-heading-deg</property>
+  <offset-deg>-90</offset-deg>
+  <factor>-1</factor>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>Hub</object-name>
+  <object-name>Blade1</object-name>
+  <object-name>Blade2</object-name>
+  <object-name>Blade3</object-name>
+  <use-personality type="bool">true</use-personality>
+  <property>/environment/wind-speed-kt</property>
+  <interpolation>
+	<entry>
+      <ind>7.3</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>7.8</ind>
+      <dep>9</dep>
+    </entry>
+    <entry>
+      <ind>48.6</ind>
+      <dep>19</dep>
+    </entry>
+	<entry>
+      <ind>49.1</ind>
+      <dep>0</dep>
+    </entry>
+  </interpolation>
+  <starting-pos-deg>
+   <random>
+    <min>0</min>
+    <max>360</max>
+   </random>
+  </starting-pos-deg>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>59.0</z-m>
+  </center>
+ </animation>
+
+</PropertyList>

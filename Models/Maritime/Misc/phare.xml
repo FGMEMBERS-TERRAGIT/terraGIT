@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+  
+    <path>phare.ac</path>
+
+  <animation>
+    <type>rotate</type>  
+    <object-name>light-volume</object-name>
+    <object-name>whiteFlash</object-name>
+    <property>/sim/time/elapsed-sec</property>
+    <factor>22</factor>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>-1</z>
+    </axis>
+  </animation>
+
+<animation>
+  <type>light</type>
+  <light-type>spot</light-type>
+  <name>LightSource_1</name>
+  <object-name>light-volume</object-name>
+  <position>
+   <x> 0 </x>
+   <y> 0 </y>
+   <z> 80</z>
+  </position>
+  <direction>
+   <x>-1</x>
+   <y>0</y>
+   <z>2</z>
+  </direction>
+  <ambient>
+   <r>2</r>
+   <g>2</g>
+   <b>2</b>
+   <a>1.0</a>
+  </ambient>
+  <diffuse>
+   <r>0.75</r>
+   <g>1</g>
+   <b>1</b>
+   <a>1.0</a>
+  </diffuse>
+  <specular>
+   <r>0.75</r>
+   <g>1</g>
+   <b>1</b>
+   <a>1.0</a>
+  </specular>
+  <attenuation>
+   <c>0.5</c>
+   <l>0.0</l>
+   <q>0.000005</q>
+  </attenuation>
+  <exponent>2</exponent>
+  <cutoff>100</cutoff>
+  <near-m>60</near-m>
+  <far-m>4000</far-m>
+ </animation>
+
+
+<animation>
+  <type>select</type>
+  <object-name>LightSource_1</object-name>
+  
+  <condition>
+   <and>
+    <greater-than>
+     <property>/sim/time/sun-angle-rad</property>
+     <value>1.35</value>
+    </greater-than>
+    <property>/sim/rendering/rembrandt/enabled</property>
+    <greater-than>
+     <property>/sim/rendering/shaders/lights</property>
+     <value>0.0</value>
+    </greater-than>
+   </and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>WhiteFlash</object-name>
+
+  <condition>
+   <greater-than>
+    <property>/sim/time/sun-angle-rad</property>
+    <value>1.35</value>
+   </greater-than>
+  </condition>
+
+ </animation>
+
+</PropertyList>

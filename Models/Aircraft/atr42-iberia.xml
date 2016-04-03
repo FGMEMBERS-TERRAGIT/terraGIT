@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+ <description>AT42</description>  
+ <path>atr42-iberia.ac</path> 
+ <offsets>
+   <z-m>3.8</z-m>
+   <pitch-deg>0.2</pitch-deg>
+ </offsets>   
+ 
+    <animation>
+		<type>select</type>
+		<object-name>Cylinder.001</object-name>
+   		<object-name>Cylinder.005</object-name>
+       <object-name>Circle.003</object-name>
+		<condition>
+			<less-than>
+				<property>velocities/true-airspeed-kt</property>
+				<value>150</value>
+			</less-than>
+		</condition>
+	</animation>
+  
+       <animation>
+    <name>leftprop</name>
+    <object-name>Cube.000</object-name>
+    <object-name>Circle.002</object-name>
+  </animation>
+    
+
+    <animation>
+    <type>select</type>
+    <object-name>Circle.002</object-name>
+    <condition>
+      <greater-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value>50</value>
+      </greater-than>
+    </condition>
+  </animation>
+    
+      <animation>
+    <type>select</type>
+    <object-name>Cube.000</object-name>
+    <condition>
+      <less-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value>60</value>
+      </less-than>
+    </condition>
+  </animation>
+    
+      <animation>
+    <type>spin</type>
+    <object-name>leftprop</object-name>
+    <property>velocities/true-airspeed-kt</property>
+    <factor> 60 </factor>
+    <center>
+      <x-m> -3.8634 </x-m>
+      <y-m> -4.0282 </y-m>
+      <z-m> -0.7675 </z-m>
+    </center>
+    <axis>
+      <x> -1.000 </x>
+      <y>  0.000 </y>
+      <z>  0.000 </z>
+    </axis>
+  </animation>
+  
+      <animation>
+    <name>rightprop</name>
+    <object-name>Cube.001</object-name>
+    <object-name>Circle.004</object-name>
+    </animation>
+  
+      <animation>
+    <type>select</type>
+    <object-name>Circle.004</object-name>
+    <condition>
+      <greater-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value>50</value>
+      </greater-than>
+    </condition>
+  </animation>
+    
+      <animation>
+    <type>select</type>
+    <object-name>Cube.001</object-name>
+    <condition>
+      <less-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value>60</value>
+      </less-than>
+    </condition>
+  </animation>
+ 
+   <animation>
+    <type>spin</type>
+    <object-name>rightprop</object-name>
+    <property>velocities/true-airspeed-kt</property>
+    <factor> 60 </factor>
+    <center>
+      <x-m> -3.8640 </x-m>
+      <y-m> 3.9997 </y-m>
+      <z-m> -0.7677 </z-m>
+    </center>
+    <axis>
+      <x> -1.000 </x>
+      <y>  0.000 </y>
+      <z>  0.000 </z>
+    </axis>
+  </animation>
+  
+</PropertyList>

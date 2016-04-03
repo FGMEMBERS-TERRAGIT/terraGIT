@@ -1,0 +1,320 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>tower-usaf-40m.ac</path>
+
+ <animation>
+  <type>range</type>
+  <object-name>Whips</object-name>
+  <object-name>Railing</object-name>
+  <min-m>0</min-m>
+  <max-property>/sim/rendering/static-lod/detailed</max-property>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <object-name>WalkWay</object-name>
+  <object-name>Interior</object-name>
+  <min-m>0</min-m>
+  <max-property>/sim/rendering/static-lod/rough</max-property>
+ </animation>
+
+ <animation>
+  <type>alpha-test</type>
+  <object-name>Railing</object-name>
+  <object-name>Walkway</object-name>
+  <object-name>Whips</object-name>
+  <alpha-factor>0.1</alpha-factor>
+ </animation>
+
+ <animation>
+  <type>noshadow</type>
+  <object-name>Walkway</object-name>
+  <object-name>Railing</object-name>
+  <object-name>Whips</object-name>
+  <object-name>Windows</object-name>
+  <object-name>Interior</object-name>
+ </animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>Whip1</object-name>
+		<offset-m>36.318102</offset-m>
+		<axis>
+			<x>-3.42416</x>
+			<y>1.108565</y>
+			<z>36.139324</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>Whip2</object-name>
+		<offset-m>36.317568</offset-m>
+		<axis>
+			<x>-0.007736</x>
+			<y>3.593739</y>
+			<z>36.139324</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>Whip3</object-name>
+		<offset-m>36.317034</offset-m>
+		<axis>
+			<x>3.412827</x>
+			<y>1.10853</y>
+			<z>36.139324</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>Whip4</object-name>
+		<offset-m>36.317239</offset-m>
+		<axis>
+			<x>2.104975</x>
+			<y>-2.908633</y>
+			<z>36.139324</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>Whip5</object-name>
+		<offset-m>36.317899</offset-m>
+		<axis>
+			<x>-2.119721</x>
+			<y>-2.906163</y>
+			<z>36.139324</z>
+		</axis>
+	</animation>
+
+ <animation>
+  <type>billboard</type>
+  <spherical>false</spherical>
+  <object-name>Whip1</object-name>
+ </animation>
+
+ <animation>
+  <type>billboard</type>
+  <spherical>false</spherical>
+  <object-name>Whip2</object-name>
+ </animation>
+
+ <animation>
+  <type>billboard</type>
+  <spherical>false</spherical>
+  <object-name>Whip3</object-name>
+ </animation>
+
+ <animation>
+  <type>billboard</type>
+  <spherical>false</spherical>
+  <object-name>Whip4</object-name>
+ </animation>
+
+ <animation>
+  <type>billboard</type>
+  <spherical>false</spherical>
+  <object-name>Whip5</object-name>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>Windows</object-name>
+  <transparency>
+   <factor>-0.05</factor>
+   <offset>0.2</offset>
+   <alpha-prop>rendering/scene/diffuse/blue</alpha-prop>
+  </transparency>
+  <emission>
+   <factor>-1</factor>
+   <offset>0.5</offset>
+   <red-prop>rendering/scene/diffuse/blue</red-prop>
+	<green>1</green>
+	<blue>1</blue>
+  </emission>
+ </animation>
+
+
+	<PlaneXparams>
+		<light-near>0.4</light-near>
+		<light-med>0.8</light-med>
+		<light-far>10</light-far>
+	</PlaneXparams>
+
+	<animation>
+		<name>PlaneXGroup</name>
+		<object-name>PlaneX0</object-name>
+		<object-name>PlaneX1</object-name>
+		<object-name>PlaneX2</object-name>
+		<object-name>PlaneX3</object-name>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<name>PlaneXGroupNight</name>
+		<object-name>PlaneXGroup</object-name>
+		<condition>
+			<greater-than>
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.57</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>alpha-test</type>
+		<object-name>PlaneXGroup</object-name>
+		<alpha-factor>0.001</alpha-factor>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>PlaneX0</object-name>
+		<offset-m>37.274278</offset-m>
+		<axis>
+			<x>1.337684</x>
+			<y>1.343357</y>
+			<z>37.226036</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>PlaneX1</object-name>
+		<offset-m>37.274278</offset-m>
+		<axis>
+			<x>1.337684</x>
+			<y>-1.343358</y>
+			<z>37.226036</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>PlaneX2</object-name>
+		<offset-m>37.274687</offset-m>
+		<axis>
+			<x>-1.349031</x>
+			<y>-1.343357</y>
+			<z>37.226036</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>PlaneX3</object-name>
+		<offset-m>37.274687</offset-m>
+		<axis>
+			<x>-1.349031</x>
+			<y>1.343358</y>
+			<z>37.226036</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>PlaneX0</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>PlaneX1</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>PlaneX2</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>PlaneX3</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>PlaneX0</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../PlaneXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../PlaneXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../PlaneXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>PlaneX1</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../PlaneXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../PlaneXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../PlaneXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>PlaneX2</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../PlaneXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../PlaneXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../PlaneXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>PlaneX3</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../PlaneXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../PlaneXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../PlaneXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+
+</PropertyList>
+

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+ <path>generic_power_plant.ac</path>
+ 
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>25000</max-m>
+ </animation>
+
+<particlesystem>
+  <name>steam</name>
+  
+  <texture>smoke.png</texture>
+  <emissive>false</emissive>
+  <lighting>false</lighting>
+       
+  <offsets>
+    <x-m>0</x-m>
+    <y-m>0</y-m>
+    <z-m>115</z-m>
+  </offsets>
+           
+  <attach>local</attach>
+           
+  <placer>
+    <type>sector</type>
+    <radius-min-m>1</radius-min-m>
+    <radius-max-m>15</radius-max-m>
+  </placer>
+           
+  <shooter>
+    <speed-mps>
+    	<value>4</value>
+	<spread>2</spread>
+    </speed-mps>
+  </shooter>
+       
+  <counter>
+    <particles-per-sec>
+      <value>2</value>
+      <spread>1</spread>
+    </particles-per-sec>
+  </counter>
+           
+  <align>billboard</align>
+           
+  <particle>
+
+  <start>
+    <color>
+      <red><value>0.9</value></red>
+      <green><value>0.9</value></green>
+      <blue><value>0.93</value></blue>
+      <alpha><value>0.9</value></alpha>
+    </color>
+    <size>
+      <value>20</value>
+      <spread>10</spread>
+    </size>
+  </start>
+
+  <end>
+    <color>
+      <red><value>0.9</value></red>
+      <green><value>0.9</value></green>
+      <blue><value>0.95</value></blue>
+      <alpha><value>0.2</value></alpha>
+    </color>
+    <size>
+      <value>80</value>
+      <spread>60</spread>
+    </size>
+  </end>
+    
+  <life-sec>
+    <value>20</value>
+  </life-sec>
+             
+  <mass-kg>120000</mass-kg>
+  <radius-m>30</radius-m>
+  </particle>
+           
+  <program>
+    <fluid>air</fluid>
+    <gravity>true</gravity>
+    <wind>true</wind>
+  </program>
+           
+</particlesystem>
+
+<particlesystem>
+  <name>steam2</name>
+  
+  <texture>smoke.png</texture>
+  <emissive>false</emissive>
+  <lighting>false</lighting>
+       
+  <offsets>
+    <x-m>163</x-m>
+    <y-m>0</y-m>
+    <z-m>115</z-m>
+  </offsets>
+           
+  <attach>local</attach>
+           
+  <placer>
+    <type>sector</type>
+    <radius-min-m>1</radius-min-m>
+    <radius-max-m>15</radius-max-m>
+  </placer>
+           
+  <shooter>
+    <speed-mps>
+    	<value>4</value>
+	<spread>2</spread>
+    </speed-mps>
+  </shooter>
+       
+  <counter>
+    <particles-per-sec>
+      <value>2</value>
+      <spread>1</spread>
+    </particles-per-sec>
+  </counter>
+           
+  <align>billboard</align>
+           
+  <particle>
+
+  <start>
+    <color>
+      <red><value>0.9</value></red>
+      <green><value>0.9</value></green>
+      <blue><value>0.93</value></blue>
+      <alpha><value>0.9</value></alpha>
+    </color>
+    <size>
+      <value>20</value>
+      <spread>10</spread>
+    </size>
+  </start>
+
+  <end>
+    <color>
+      <red><value>0.9</value></red>
+      <green><value>0.9</value></green>
+      <blue><value>0.95</value></blue>
+      <alpha><value>0.2</value></alpha>
+    </color>
+    <size>
+      <value>80</value>
+      <spread>60</spread>
+    </size>
+  </end>
+    
+  <life-sec>
+    <value>20</value>
+  </life-sec>
+             
+  <mass-kg>120000</mass-kg>
+  <radius-m>30</radius-m>
+  </particle>
+           
+  <program>
+    <fluid>air</fluid>
+    <gravity>true</gravity>
+    <wind>true</wind>
+  </program>
+           
+</particlesystem>
+
+<particlesystem>
+  <name>smoke</name>
+  
+  <texture>smoke.png</texture>
+  <emissive>false</emissive>
+  <lighting>false</lighting>
+       
+  <offsets>
+    <x-m>28</x-m>
+    <y-m>-103</y-m>
+    <z-m>170</z-m>
+  </offsets>
+           
+  <attach>local</attach>
+           
+  <placer>
+    <type>point</type>
+  </placer>
+           
+  <shooter>
+    <speed-mps>
+    	<value>3</value>
+	<spread>2</spread>
+    </speed-mps>
+  </shooter>
+       
+  <counter>
+    <particles-per-sec>
+      <value>2</value>
+      <spread>1</spread>
+    </particles-per-sec>
+  </counter>
+           
+  <align>billboard</align>
+           
+  <particle>
+
+  <start>
+    <color>
+      <red><value>0.8</value></red>
+      <green><value>0.8</value></green>
+      <blue><value>0.8</value></blue>
+      <alpha><value>0.5</value></alpha>
+    </color>
+    <size>
+      <value>8</value>
+      <spread>4</spread>
+    </size>
+  </start>
+
+  <end>
+    <color>
+      <red><value>0.8</value></red>
+      <green><value>0.8</value></green>
+      <blue><value>0.8</value></blue>
+      <alpha><value>0.1</value></alpha>
+    </color>
+    <size>
+      <value>20</value>
+      <spread>15</spread>
+    </size>
+  </end>
+    
+  <life-sec>
+    <value>20</value>
+  </life-sec>
+
+  <mass-kg>4500</mass-kg>
+  <radius-m>10</radius-m>
+  </particle>
+           
+  <program>
+    <fluid>air</fluid>
+    <gravity>true</gravity>
+    <wind>true</wind>
+  </program>
+           
+</particlesystem>
+
+<particlesystem>
+  <name>smoke2</name>
+  
+  <texture>smoke.png</texture>
+  <emissive>false</emissive>
+  <lighting>false</lighting>
+       
+  <offsets>
+   <x-m>28</x-m>
+   <y-m>-168</y-m>
+   <z-m>170</z-m>
+  </offsets>
+                           
+  <attach>local</attach>
+           
+  <placer>
+    <type>point</type>
+  </placer>
+           
+  <shooter>
+    <speed-mps>
+    	<value>3</value>
+	<spread>2</spread>
+    </speed-mps>
+  </shooter>
+       
+  <counter>
+    <particles-per-sec>
+      <value>2</value>
+      <spread>1</spread>
+    </particles-per-sec>
+  </counter>
+           
+  <align>billboard</align>
+           
+  <particle>
+
+  <start>
+    <color>
+      <red><value>0.8</value></red>
+      <green><value>0.8</value></green>
+      <blue><value>0.8</value></blue>
+      <alpha><value>0.5</value></alpha>
+    </color>
+    <size>
+      <value>8</value>
+      <spread>4</spread>
+    </size>
+  </start>
+
+  <end>
+    <color>
+      <red><value>0.8</value></red>
+      <green><value>0.8</value></green>
+      <blue><value>0.8</value></blue>
+      <alpha><value>0.1</value></alpha>
+    </color>
+    <size>
+      <value>20</value>
+      <spread>15</spread>
+    </size>
+  </end>
+    
+  <life-sec>
+    <value>20</value>
+  </life-sec>
+
+  <mass-kg>4500</mass-kg>
+  <radius-m>10</radius-m>
+  </particle>
+           
+  <program>
+    <fluid>air</fluid>
+    <gravity>true</gravity>
+    <wind>true</wind>
+  </program>
+           
+</particlesystem>
+
+</PropertyList>
+         

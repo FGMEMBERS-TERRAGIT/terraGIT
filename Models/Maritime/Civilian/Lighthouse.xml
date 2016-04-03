@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+ <path>Lighthouse.ac</path>
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>20000</max-m>
+ </animation>
+
+ <animation>
+  <object-name>Lampe</object-name>
+  <object-name>Flash1</object-name>
+  <object-name>Flash2</object-name>
+  <object-name>Flash3</object-name>
+  <object-name>Flash4</object-name>
+  <object-name>ConeLumiere1</object-name>
+  <object-name>ConeLumiere2</object-name>
+  <object-name>ConeLumiere3</object-name>
+  <object-name>ConeLumiere4</object-name>
+  <enable-hot type="bool">false</enable-hot>
+ </animation>
+
+ <animation>
+  <type>alpha-test</type>
+  <alpha-factor>0.01</alpha-factor>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>Flash1</object-name>
+  <object-name>Flash2</object-name>
+  <object-name>Flash3</object-name>
+  <object-name>Flash4</object-name>
+  <object-name>ConeLumiere1</object-name>
+  <object-name>ConeLumiere2</object-name>
+  <object-name>ConeLumiere3</object-name>
+  <object-name>ConeLumiere4</object-name>
+  <condition>
+   <greater-than>
+    <property>/sim/time/sun-angle-rad</property>
+    <value>1.57</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <object-name>ConeLumiere1</object-name>
+  <object-name>ConeLumiere2</object-name>
+  <object-name>ConeLumiere3</object-name>
+  <object-name>ConeLumiere4</object-name>
+  <min-m>0</min-m>
+  <max-m>10000</max-m>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>ConeLumiere1</object-name>
+  <object-name>ConeLumiere2</object-name>
+  <object-name>ConeLumiere3</object-name>
+  <object-name>ConeLumiere4</object-name>
+  <property>/sim/time/elapsed-sec</property>
+  <factor>25.0</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>37.4</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <object-name>Lampe</object-name>
+  <min-m>0</min-m>
+  <max-m>1500</max-m>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Lampe</object-name>
+  <condition>
+   <greater-than>
+    <property>/sim/time/sun-angle-rad</property>
+    <value>1.57</value>
+   </greater-than>
+  </condition>
+  <property>/sim/time/elapsed-sec</property>
+  <factor>25.0</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>37.4</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <object-name>Flash1</object-name>
+  <min-m>0</min-m>
+  <max-m>20000</max-m>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Flash1</object-name>
+  <property>/sim/time/elapsed-sec</property>
+  <factor>25.0</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>37.4</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>flash</type>
+  <object-name>Flash1</object-name>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>37.4</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+  <power>100</power>
+ </animation>
+
+
+ <animation>
+  <type>range</type>
+  <object-name>Flash2</object-name>
+  <min-m>0</min-m>
+  <max-m>20000</max-m>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Flash2</object-name>
+  <property>/sim/time/elapsed-sec</property>
+  <factor>25.0</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>37.4</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>flash</type>
+  <object-name>Flash2</object-name>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>37.4</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+  <power>100</power>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <object-name>Flash3</object-name>
+  <min-m>0</min-m>
+  <max-m>20000</max-m>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Flash3</object-name>
+  <property>/sim/time/elapsed-sec</property>
+  <factor>25.0</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>37.4</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>flash</type>
+  <object-name>Flash3</object-name>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>37.4</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+  <power>100</power>
+ </animation>
+
+
+ <animation>
+  <type>range</type>
+  <object-name>Flash4</object-name>
+  <min-m>0</min-m>
+  <max-m>20000</max-m>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Flash4</object-name>
+  <property>/sim/time/elapsed-sec</property>
+  <factor>25.0</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>37.4</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>flash</type>
+  <object-name>Flash4</object-name>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>37.4</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+  <power>100</power>
+ </animation>
+
+
+</PropertyList>

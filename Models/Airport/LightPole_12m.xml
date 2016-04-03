@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PropertyList>
+ <path>LightPole_12m.ac</path>
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>16000</max-m>
+ </animation>
+ <animation>
+  <object-name>Material1</object-name>
+  <enable-hot type="bool">false</enable-hot>
+ </animation>
+ <animation>
+  <type>alpha-test</type>
+  <alpha-factor>0.01</alpha-factor>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>Material1</object-name>
+  <condition>
+   <greater-than>
+    <property>/sim/time/sun-angle-rad</property>
+    <value>1.57</value>
+   </greater-than>
+  </condition>
+</animation>
+</PropertyList>

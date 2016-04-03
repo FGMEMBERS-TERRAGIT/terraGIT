@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<!-- Apron Lamp	22m			-->
+	<!-- 28.12.2012 - by Andre Burkert	--> 
+
+	<path>LIGHTCONE22M_rembrandt.ac</path>
+
+<!--  Rembrandt Light  -->
+<animation>
+<type>light</type>
+<light-type>spot</light-type>
+<name>LightSource</name>
+<object-name>lightvolume</object-name>
+<position>
+     	<x> -2.789</x>
+      	<y>  4.302</y>
+      	<z> 31.000</z>
+</position>
+<direction>
+      <x> -5.32009</x>
+      <y>  8.46739</y>
+      <z>-31.00000</z>
+</direction>
+<ambient>
+      <r>0.1</r>
+      <g>0.1</g>
+      <b>0.1</b>
+      <a>1.0</a>
+</ambient>
+<diffuse>
+      <r>0.5</r>
+      <g>0.404</g>
+      <b>0.2</b>
+      <a>1.0</a>
+</diffuse>
+<specular>
+      <r>0.5</r>
+      <g>0.5</g>
+      <b>0.5</b>
+      <a>1.0</a>
+</specular>
+<dim-factor>
+<property>/sim/time/sun-angle-rad</property>
+<interpolation>
+        <entry><ind>0</ind><dep>0</dep></entry>
+        <entry><ind>1.49</ind><dep>0</dep></entry>
+        <entry><ind>1.52</ind><dep>1</dep></entry>
+        <entry><ind>3.14</ind><dep>1</dep></entry>
+</interpolation>
+</dim-factor>
+<attenuation>
+	<c>1.0</c>
+	<l>0.0002</l>
+	<q>0.00005</q>
+</attenuation>
+<exponent>4.0</exponent>
+<cutoff>100</cutoff>
+<near-m>3.5</near-m>
+<far-m>225</far-m>
+</animation>
+<animation>
+<type>select</type>
+<object-name>LightSource</object-name>
+<condition>
+      <and>
+        <greater-than>
+          <property>/sim/time/sun-angle-rad</property>
+          <value>1.48</value>
+        </greater-than>
+        <property>/sim/rendering/rembrandt/enabled</property>
+        <greater-than>
+          <property>/sim/rendering/shaders/lights</property>
+          <value>0.0</value>
+        </greater-than>
+      </and>
+</condition>
+</animation>
+<!--  night light area  -->
+<animation>
+<type>material</type>
+	<object-name>lightarea</object-name>
+<transparency>
+	<alpha-prop>environment/visibility-m</alpha-prop>
+	<factor>1</factor>
+	<offset>0</offset>
+</transparency>
+	<threshold>0.001</threshold>
+</animation>
+<animation>
+<type>select</type>
+	<object-name>lightarea</object-name>
+<condition>		
+<greater-than>		
+	<property>/sim/time/sun-angle-rad</property>
+	<value>1.49</value>
+</greater-than>
+</condition>
+</animation>
+<animation>
+<type>select</type>
+<object-name>lightarea</object-name>
+<condition>
+      <not>
+      <property>/sim/rendering/rembrandt/enabled</property>
+      </not>
+</condition>
+</animation>
+<!--  enable-hot  -->
+<animation>
+ 	<object-name>lightvolume</object-name>
+ 	<object-name>lightarea</object-name>
+<enable-hot type="bool">false</enable-hot>
+</animation>
+
+<animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-property>sim/rendering/static-lod/bare</max-property>
+</animation>
+
+</PropertyList>

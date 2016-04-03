@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+	
+	<!-- WES18 windturbine        -->
+	<!-- Rotor hub height 30m     -->
+	<!-- Red obstruction lights   -->
+	
+	<path>windturbine_WES18_30m_obst.ac</path>
+	
+	<model>
+		<name>obst_top_red01</name>
+		<path>../../Models/Effects/pos_lamp_red_light_2st.xml</path>
+		<offsets>
+		  <x-m>  1.165 </x-m>
+		  <y-m>  0.764 </y-m>
+		  <z-m> 30.289 </z-m>
+		  <pitch-deg> 0.00</pitch-deg>
+		  <heading-deg>0.0 </heading-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>obst_top_red02</name>
+		<path>../../Models/Effects/pos_lamp_red_light_2st.xml</path>
+		<offsets>
+		  <x-m> -1.165 </x-m>
+		  <y-m>  0.764 </y-m>
+		  <z-m> 30.289 </z-m>
+		  <pitch-deg> 0.00</pitch-deg>
+		  <heading-deg>0.0 </heading-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+	<name>obst_top</name>
+		<object-name>obst_top_red01</object-name>
+		<object-name>obst_top_red02</object-name>
+	</animation>
+	
+	<!-- obstruction lights Top /sim/time/real/second -->
+	<animation>
+		<type>select</type>
+		<object-name>obst_top</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>2</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>5</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>6</value>
+				</equals>
+				
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>11</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>12</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>15</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>16</value>
+				</equals>
+				
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>21</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>22</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>25</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>26</value>
+				</equals>
+				
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>31</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>32</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>35</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>36</value>
+				</equals>
+				
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>41</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>42</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>45</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>46</value>
+				</equals>
+				
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>51</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>52</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>55</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>56</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>material</type> 
+		<object-name>obst_red_30m</object-name>
+		<condition>
+			<and>
+			<or>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>2</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>5</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>6</value>
+				</equals>
+				
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>11</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>12</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>15</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>16</value>
+				</equals>
+				
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>21</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>22</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>25</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>26</value>
+				</equals>
+				
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>31</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>32</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>35</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>36</value>
+				</equals>
+				
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>41</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>42</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>45</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>46</value>
+				</equals>
+				
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>51</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>52</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>55</value>
+				</equals>
+				<equals>
+					<property>/sim/time/real/second</property>
+					<value>56</value>
+				</equals>
+			</or>
+			<or>
+				<greater-than>
+					<property>/sim/time/sun-angle-rad</property>
+					<value>1.57</value>
+				</greater-than>
+				<less-than>
+					<property>environment/visibility-m</property>
+					<value>4500.00</value>
+				</less-than>
+			</or>
+			</and>
+		</condition>
+		<emission>	
+			<red>0.8</red>	
+			<green>0.8</green>	
+			<blue>0.8</blue>
+		</emission>
+	</animation>
+	
+	<!-- winturbine animation -->
+	<animation>
+		<type>rotate</type>
+		<object-name>obst_top</object-name>
+		<object-name>obst_red_30m</object-name>
+		<object-name>obst_fix_30m</object-name>
+		<object-name>nacelle_30m</object-name>
+		<object-name>rotor_30m</object-name>
+		<property>/environment/wind-from-heading-deg</property>
+		<offset-deg>-90</offset-deg>
+		<factor>-1</factor>
+		<center>
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>spin</type>
+		<object-name>rotor_30m</object-name>
+		<use-personality type="bool">true</use-personality>
+		<property>/environment/wind-speed-kt</property>
+		<!--
+		<factor>
+			<random>
+				<min>0.4</min>
+				<max>0.6</max>
+			</random>
+		</factor>
+		-->
+		<interpolation>
+			<entry><ind>  0.0 </ind><dep>  0.0 </dep></entry>
+			<entry><ind> 24.2 </ind><dep> 60.0 </dep></entry>
+			<entry><ind> 48.0 </ind><dep>120.0 </dep></entry>
+			<entry><ind>100.0 </ind><dep>120.0 </dep></entry>
+		</interpolation>
+		<starting-pos-deg>
+			<random>
+				<min>0</min>
+				<max>360</max>
+			</random>
+		</starting-pos-deg>
+		<axis>
+			<x1-m> 0.000</x1-m>
+			<y1-m>-2.592</y1-m>
+			<z1-m>30.018</z1-m>
+			<x2-m> 0.000</x2-m>
+			<y2-m>-1.784</y2-m>
+			<z2-m>29.919</z2-m>
+		</axis>
+	</animation>
+	
+<!-- LOD -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>20000</max-m>
+	</animation>
+
+</PropertyList>

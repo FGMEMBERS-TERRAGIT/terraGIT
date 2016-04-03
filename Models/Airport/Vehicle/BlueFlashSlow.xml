@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PropertyList>
+
+ <path>BlueFlashSlow.ac</path>
+
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>BlueFlash</object-name>
+  <property>/sim/time/elapsed-sec</property>
+  <factor>400</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+<animation>
+  <type>flash</type>
+  <object-name>BlueFlash</object-name>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0.35</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1</y>
+   <z>0.1</z>
+  </axis>
+  <power>100</power>
+ </animation>
+ 
+  <animation>
+  <type>range</type>
+  <object-name>BlueFlash</object-name>
+  <min-m>0</min-m>
+  <max-m>16000</max-m>
+ </animation>
+
+</PropertyList>

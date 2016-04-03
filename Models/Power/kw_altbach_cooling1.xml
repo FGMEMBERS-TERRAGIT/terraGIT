@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<path>kw_altbach_cooling1.ac</path>
+
+<particlesystem>
+  <name>kuehlturm1o</name>
+  
+  <texture>kw_altbach_cooling1_smoke.png</texture>
+  <emissive>false</emissive>
+  <lighting>true</lighting>
+       
+  <offsets>
+    <x-m>0</x-m>
+    <y-m>0</y-m>
+    <z-m>24</z-m>
+  </offsets>
+           
+  <attach>local</attach>
+           
+  <placer>
+    <type>point</type>
+  </placer>
+           
+  <shooter>
+    <speed-mps>
+    	<value>5</value>
+	<spread>3</spread>
+    </speed-mps>
+  </shooter>
+       
+  <counter>
+    <particles-per-sec>
+      <value>2</value>
+      <spread>3</spread>
+    </particles-per-sec>
+  </counter>
+           
+  <align>billboard</align>
+           
+  <particle>
+
+  <start>
+    <color>
+      <red><value>1</value></red>
+      <green><value>1</value></green>
+      <blue><value>1</value></blue>
+      <alpha><value>0.2</value></alpha>
+    </color>
+    <size>
+      <value>30</value>
+    </size>
+  </start>
+
+  <end>
+    <color>
+      <red><value>1</value></red>
+      <green><value>1</value></green>
+      <blue><value>1</value></blue>
+      <alpha><value>0.0</value></alpha>
+    </color>
+    <size>
+      <value>20</value>
+      <spread>5</spread>
+    </size>
+  </end>
+    
+  <life-sec>
+    <value>10</value>
+  </life-sec>
+
+  <mass-kg>510</mass-kg>
+  <radius-m>10</radius-m>
+  </particle>
+           
+  <program>
+    <fluid>air</fluid>
+    <gravity>true</gravity>
+    <wind>true</wind>
+  </program>
+           
+</particlesystem>
+
+</PropertyList>

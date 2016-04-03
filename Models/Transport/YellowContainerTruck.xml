@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PropertyList>
+
+    <path>YellowContainerTruck.ac</path>
+
+    <animation>
+        <type>material</type>
+        <object-name>TextureSolid02</object-name>		
+        <condition>
+            <greater-than>
+                <property>/sim/time/sun-angle-rad</property>
+                <value>1.57</value>
+            </greater-than>
+        </condition>
+        <texture>YellowContainerTruck_02.png</texture>
+        <emission>
+            <red> 0.8 </red>
+            <green> 0.6 </green>
+            <blue> 0.4 </blue>
+        </emission>
+	</animation>
+
+ 	<animation>
+		<type>material</type>
+		<object-name>TextureSolid03</object-name>
+		<transparency>
+			<alpha-prop>environment/visibility-m</alpha-prop>
+			<factor>1</factor>
+			<offset>0</offset>
+			</transparency>
+		<threshold>0.001</threshold>
+    </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>TextureSolid03</object-name>
+    <enable-hot type="bool">false</enable-hot>
+    <condition>
+        <greater-than>
+          <property>/sim/time/sun-angle-rad</property>
+          <value>1.57</value>
+        </greater-than>
+    </condition>		
+
+
+  </animation>
+	
+    <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>15000</max-m>
+    </animation>
+
+</PropertyList>

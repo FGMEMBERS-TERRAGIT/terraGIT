@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Texture select and light -->
+
+<PropertyList>
+
+ <path>Hall32x50mLit.ac</path>
+
+  <animation>
+   <name>TheLights</name>
+    <object-name>Lights</object-name> 
+    <object-name>Lights1</object-name> 
+  </animation>
+
+  <animation>
+    <type>select</type> 
+    <object-name>TheLights</object-name> 
+      <condition>
+       <greater-than>
+    <property>/sim/time/sun-angle-rad</property>
+    <value>1.47</value>
+       </greater-than>
+      </condition>
+  </animation>
+
+  <animation>
+    <type>material</type> 
+    <object-name>TheLights</object-name> 
+ <condition>		
+  <greater-than-equals>		
+   <property>/sim/time/sun-angle-rad</property>
+   <value>1.47</value>
+  </greater-than-equals>
+ </condition>
+ <emission>	
+  <red>0.9</red>	
+  <green>0.9</green>	
+  <blue>0.9</blue>
+ </emission>
+  </animation>
+
+  <animation>
+    <type>material</type> 
+    <object-name>Inside</object-name> 
+ <condition>		
+  <greater-than-equals>		
+   <property>/sim/time/sun-angle-rad</property>
+   <value>1.47</value>
+  </greater-than-equals>
+ </condition>
+ <emission>	
+  <red>0.8</red>	
+  <green>0.8</green>	
+  <blue>0.8</blue>
+ </emission>
+  </animation>
+
+  <animation>
+    <type>material</type> 
+    <object-name>Floor</object-name> 
+ <condition>		
+  <greater-than-equals>		
+   <property>/sim/time/sun-angle-rad</property>
+   <value>1.47</value>
+  </greater-than-equals>
+ </condition>
+ <emission>	
+  <red>0.2</red>	
+  <green>0.2</green>	
+  <blue>0.15</blue>
+ </emission>
+  </animation>
+
+
+</PropertyList>

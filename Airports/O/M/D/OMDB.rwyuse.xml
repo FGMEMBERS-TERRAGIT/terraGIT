@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<rwyuse> <!-- Times are in UTC -->
+	<com>  <!-- Commercial Traffic-->
+		<wind tail="7"
+					cross="20" />
+		<time start = "00:00"
+					end   = "05:00"
+					schedule = "night"/>
+		<time start = "05:00"
+					end   = "06:20"
+					schedule = "offpeak"/>
+		<time start = "06:20"
+					end   = "08:30"
+					schedule = "inbound"/> 
+	<time start = "08:30"
+					end   = "10:20"
+					schedule = "outbound"/>
+		<time start = "10:20"
+					end   = "12:20"
+					schedule = "inbound"/>
+		<time start = "12:20"
+					end   = "13:40"
+					schedule = "outbound"/>
+	<time start = "13:40"
+					end   = "14:40"
+					schedule = "inbound"/> 
+	<time start = "14:40"
+					end   = "16:00"
+					schedule = "outbound"/>
+		<time start = "16:00"
+					end   = "17:40"
+					schedule = "inbound"/>
+		<time start = "17:40"
+					end   = "19:30"
+					schedule = "outbound"/>
+		<time start = "19:30"
+					end   = "22:00"
+					schedule = "offpeak"/>
+	<time start = "22:00"
+					end   = "24:00"
+					schedule = "night"/>
+	</com> 
+	<gen> <!-- General Aviation --> 
+		<wind tail="7"
+					cross="20"/>
+		<time start="0:00"
+					end  = "24:00"
+					schedule = "general"/>
+	</gen>
+	<!-- commercial schedule -->
+	<schedule name="inbound">
+		<takeoff>12L, 30L</takeoff>
+		<landing>12R, 30R</landing>
+	</schedule>
+	<schedule name="outbound">
+		<takeoff>12L, 30L</takeoff>
+		<landing>12R, 30R</landing>
+	</schedule>
+	<schedule name="offpeak">
+		<takeoff>12L, 30L, 12R, 30R</takeoff>
+		<landing>12L, 30L, 12R, 30R</landing>
+	</schedule>
+	<schedule name="night">
+		<takeoff>12L, 30L, 12R, 30R</takeoff>
+		<landing>12L, 30L, 12R, 30R</landing>
+	</schedule>
+	<!-- general aviation schedule -->
+	<schedule name = "general">
+		<takeoff>12L, 30L, 12R, 30R</takeoff>
+		<landing>12L, 30L, 12R, 30R</landing>
+	</schedule>
+</rwyuse>

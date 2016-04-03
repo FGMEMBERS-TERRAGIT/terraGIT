@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+ <path>RedLightBlinking.ac</path>
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>16000</max-m>
+ </animation>
+
+ <animation>
+  <type>alpha-test</type>
+  <alpha-factor>0.01</alpha-factor>
+ </animation>
+
+ <animation>
+  <type>noshadow</type>
+  <object-name>RedLight.11</object-name>
+ </animation>
+ 
+ <animation>
+  <type>noshadow</type>
+  <object-name>RedLight.12</object-name>
+ </animation>
+
+ <animation>
+  <type>noshadow</type>
+  <object-name>RedLight.20</object-name>
+ </animation>
+
+ <animation>
+  <name>StrobesOn</name>
+  <object-name>RedLight.11</object-name>
+ </animation>
+
+ <animation>
+  <name>StrobesOff</name>
+  <object-name>RedLight.12</object-name>
+ </animation>
+
+ <animation>
+  <name>Fixed</name>
+  <object-name>RedLight.20</object-name>
+</animation>
+ 
+    <animation>
+    <type>select</type>
+    <object-name>RedLight.11</object-name>
+    <condition>
+       <greater-than>
+          <property>sim/time/sun-angle-rad</property>
+          <value>1.48</value>
+       </greater-than>
+    </condition>
+   </animation>
+   
+   <animation>
+    <type>select</type>
+    <object-name>RedLight.12</object-name>
+    <condition>
+       <greater-than>
+          <property>sim/time/sun-angle-rad</property>
+          <value>1.48</value>
+       </greater-than>
+    </condition>
+   </animation>
+   
+   <animation>
+    <type>select</type>
+    <object-name>RedLight.20</object-name>
+    <condition>
+       <greater-than>
+          <property>sim/time/sun-angle-rad</property>
+          <value>1.48</value>
+       </greater-than>
+    </condition>
+   </animation>
+
+ <animation>
+  <type>timed</type>
+  <object-name>StrobesOn</object-name>
+  <object-name>StrobesOff</object-name>
+  <use-personality type="bool">true</use-personality>
+  <branch-duration-sec>
+   <random>
+    <min>1.49</min>
+    <max>1.5</max>
+   </random>
+  </branch-duration-sec>
+  <branch-duration-sec>
+   <random>
+    <min>1.49</min>
+    <max>1.5</max>
+   </random>
+  </branch-duration-sec>
+ </animation>
+
+<!--  -->
+<animation>
+<type>billboard</type>
+<object-name>RedLight.11</object-name>
+<spherical type="bool">true</spherical>
+</animation>
+
+<animation>
+<type>dist-scale</type>
+<object-name>RedLight.11</object-name>
+<interpolation>
+<entry><ind>0</ind><dep>0.1</dep></entry>
+<entry><ind>500</ind><dep>0.3</dep></entry>
+<entry><ind>8000</ind><dep>0.8</dep></entry>
+<entry><ind>16000</ind><dep>2.1</dep></entry>
+</interpolation>
+</animation>
+
+
+<animation>
+<type>billboard</type>
+<object-name>RedLight.12</object-name>
+<spherical type="bool">true</spherical>
+</animation>
+
+<animation>
+<type>dist-scale</type>
+<object-name>RedLight.12</object-name>
+<interpolation>
+<entry><ind>0</ind><dep>0.1</dep></entry>
+<entry><ind>500</ind><dep>0.3</dep></entry>
+<entry><ind>8000</ind><dep>0.8</dep></entry>
+<entry><ind>16000</ind><dep>2.1</dep></entry>
+</interpolation>
+</animation>
+
+
+<animation>
+<type>billboard</type>
+<object-name>RedLight.20</object-name>
+<spherical type="bool">true</spherical>
+</animation>
+
+<animation>
+<type>dist-scale</type>
+<object-name>RedLight.20</object-name>
+<interpolation>
+<entry><ind>0</ind><dep>0.1</dep></entry>
+<entry><ind>500</ind><dep>0.3</dep></entry>
+<entry><ind>8000</ind><dep>0.8</dep></entry>
+<entry><ind>16000</ind><dep>2.1</dep></entry>
+</interpolation>
+</animation>
+ 
+</PropertyList>

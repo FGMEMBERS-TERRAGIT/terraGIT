@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>MerryGoRound.ac</path>
+ 
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>25000</max-m>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>horses</object-name>
+  <use-personality type="bool">true</use-personality>
+  <property>/sim/time/elapsed-sec</property>
+  <factor>0.15</factor>
+  <starting-pos-deg>
+   <random>
+    <min>0</min>
+    <max>360</max>
+   </random>
+  </starting-pos-deg>                                               
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>0.05</z>
+  </axis>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>
+ </animation>
+                                           
+</PropertyList>
+         

@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+
+	<path>container_20ft_ISO.ac</path>
+
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>10000</max-m>
+	</animation>
+
+	<offsets>
+		<x-m>0</x-m>
+		<y-m>0</y-m>
+		<z-m>0</z-m>
+	</offsets>
+
+	<animation>
+		<enable-hot type="bool">false</enable-hot>
+	</animation>
+
+	<!--container_20ft_ISO.ac is a corrugated in white use this section to paint it the desired colour-->
+
+	<animation>
+		<type>material</type>
+		<object-name>container</object-name>
+		<ambient>
+			<red>   1.0 </red>
+			<green> 1.0 </green>
+			<blue>  1.0 </blue>
+		</ambient>
+		<diffuse>
+			<red>   1.0 </red>
+			<green> 1.0 </green>
+			<blue>  1.0 </blue>
+		</diffuse>
+	</animation>
+
+	<!--container_20ft_decal-mt.png is a transparent texture - use your own to decorate the container sides-->
+
+	<animation>
+		<type>material</type>
+		<object-name>decal-l</object-name>
+		<ambient>
+			<red>   1.0 </red>
+			<green> 1.0 </green>
+			<blue>  1.0 </blue>
+		</ambient>
+		<diffuse>
+			<red>   1.0 </red>
+			<green> 1.0 </green>
+			<blue>  1.0 </blue>
+		</diffuse>
+		<transparency>
+			<alpha>1.0</alpha>
+		</transparency>
+		<texture>container_20ft_decal-mt.png</texture>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>decal-r</object-name>
+		<ambient>
+			<red>   1.0 </red>
+			<green> 1.0 </green>
+			<blue>  1.0 </blue>
+		</ambient>
+		<diffuse>
+			<red>   1.0 </red>
+			<green> 1.0 </green>
+			<blue>  1.0 </blue>
+		</diffuse>
+		<transparency>
+			<alpha>1.0</alpha>
+		</transparency>
+		<texture>container_20ft_decal-mt.png</texture>
+	</animation>
+
+</PropertyList>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+    #######################################################################################################
+    
+    Arcraft development for Flightgear by Herbert Wagner 2014-2015                            Model: MI-6PS
+    
+    This file is licenced under the terms mentioned in the LICENCE.txt file.
+    Mi6dev was initially started by Moritz Röhrich (Blender3D) 2010-2012 as CC 3.0 BY NC SA.
+    The 3D-model still holds the CC 3.0 BY NC SA license, everything else is GNU GPLv2+ License.
+    The low-poly model from mi6dev (now MI-6PS) called: Mi-6PS-lowpoly.ac is GPLv2+ as confirmed by Moritz Röhrich
+    to Herbert Wagner on 13th Nov 2015 by Email.
+    
+    ########################################################################################################
+-->
+
+<PropertyList>
+  <!--Mi6 Main Model LOW-Poly Version XML File-->
+  <path>Mi-6PS-lowpoly.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>BackDoorL</object-name>
+    <object-name>BackDoorM</object-name>
+    <object-name>BackDoorR</object-name>   
+    <object-name>E-Door</object-name>
+    <object-name>Elevator</object-name>    
+    <object-name>Fuselage</object-name>
+    <object-name>Fuselage.091</object-name>    
+    <object-name>N-Door</object-name>
+    <object-name>PilotDoorL</object-name>
+    <object-name>PilotDoorR</object-name>
+    <object-name>Reeling</object-name>    
+    <object-name>TankL</object-name>
+    <object-name>Tankmounting</object-name>
+    <object-name>TankR</object-name>
+    <object-name>Wings</object-name>
+    <condition>
+      <greater-than>
+	<property>/sim/time/sun-angle-rad</property>
+	<value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>  
+      <red>   0.1 </red>
+      <green> 0.05 </green>
+      <blue>  0.05 </blue>
+    </emission>
+  </animation>
+      
+      <animation>
+	<type>material</type>
+	<object-name>PilotDoorL.001</object-name>
+	<object-name>PilotDoorR.001</object-name>
+	<object-name>E-Door.001</object-name>
+	<object-name>FrontGlass</object-name>
+	<object-name>window01</object-name>
+	<object-name>window02</object-name>
+	<emission>	  
+	  <red>   0.15 </red>
+	  <green> 0.15 </green>
+	  <blue>  0.60 </blue>
+	</emission>
+      </animation>
+
+      <!-- Doors Navigator-->
+      
+      <animation>
+	<type>rotate</type>
+	<object-name>N-Door</object-name>	
+	<property>sim/signals/fdm-initialized</property>
+	<factor>-120</factor>
+	<center>
+	  <x-m>-6.283</x-m>
+	  <y-m>1.010</y-m>
+	  <z-m>2.301</z-m>
+	</center>
+	<axis>
+	  <x>0</x>
+	  <y>0</y>
+	  <z>1</z>
+	</axis>
+      </animation>
+      
+      <!-- Doors Pilot right-->
+
+      <animation>
+	<type>rotate</type>
+	<object-name>PilotDoorR</object-name>
+	<object-name>PilotDoorR.001</object-name>
+	<property>sim/signals/fdm-initialized</property>
+	<factor>-97</factor>
+	<axis>
+	  <x1-m> -5.487 </x1-m>
+	  <y1-m>  0.984 </y1-m>
+	  <z1-m>  3.372 </z1-m>
+	  <x2-m> -5.661 </x2-m>
+	  <y2-m>  1.039 </y2-m>
+	  <z2-m>  2.984 </z2-m>
+	</axis>
+      </animation>
+      
+  	<!--Main Rotor-->
+	<animation>
+		<name>RotorTotal</name>
+		<object-name>HeadC</object-name>
+		<object-name>Blade1</object-name>
+		<object-name>Blade2</object-name>
+		<object-name>Blade3</object-name>
+		<object-name>Blade4</object-name>
+		<object-name>Blade5</object-name>
+		<object-name>BladeC1</object-name>
+		<object-name>BladeC2</object-name>
+		<object-name>BladeC3</object-name>
+		<object-name>BladeC4</object-name>
+		<object-name>BladeC5</object-name>
+	</animation>    
+      
+      	<animation>
+		<type>spin</type>
+		<object-name>RotorTotal</object-name>
+		<property>sim/signals/fdm-initialized</property>
+	        <factor>15</factor>
+		<center>
+			<x-m>3.581</x-m>
+			<y-m>0</y-m>
+			<z-m>6.367</z-m>
+		</center>
+		<axis>
+		  <x> 0.08</x>
+		  <y> 0.0</y>
+		  <z>-0.907</z>
+		</axis>
+	</animation>
+	
+		<!--TAILROTOR-->
+	
+	<animation>
+		<name>Tailrotor</name>
+		<object-name>TailrotorSwashplate</object-name>
+		<object-name>TailrotorBlade1</object-name>
+	</animation>
+	
+	<animation>
+		<type>spin</type>
+		<object-name>Tailrotor</object-name>
+		<property>sim/signals/fdm-initialized</property>
+	        <factor>20</factor>
+		<center>
+			<x-m>25.068</x-m>
+			<y-m>1.421</y-m>
+			<z-m>7.142</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+      
+      </PropertyList>

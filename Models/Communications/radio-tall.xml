@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>radio-tall.ac</path>
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>16000</max-m>
+ </animation>
+
+ <animation>
+  <type>alpha-test</type>
+  <alpha-factor>0.01</alpha-factor>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <object-name>Detailed</object-name>
+  <min-m>0</min-m>
+  <max-m>1000</max-m>
+ </animation>
+
+ <animation>
+  <type>noshadow</type>
+  <object-name>Wires.1</object-name>
+ </animation>
+ 
+ <animation>
+  <type>range</type>
+  <object-name>Wires.1</object-name>
+  <min-m>0</min-m>
+  <max-m>3000</max-m>
+ </animation>
+
+ <animation>
+  <type>noshadow</type>
+  <object-name>Wires.2</object-name>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <object-name>Wires.2</object-name>
+  <min-m>0</min-m>
+  <max-m>3000</max-m>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <object-name>Bare</object-name>
+  <min-m>1000</min-m>
+  <max-m>32000</max-m>
+ </animation>
+
+ <animation>
+  <type>billboard</type>
+  <object-name>Bare</object-name>
+  <spherical type="bool">false</spherical>
+ </animation>
+
+<!--  -->
+ <animation>
+  <name>StrobesOn</name>
+  <object-name>RedLight.011</object-name>
+  <object-name>RedLight.031</object-name>
+  <object-name>RedLight.051</object-name>
+  <object-name>RedLight.071</object-name>
+  <object-name>RedLight.091</object-name>
+ </animation>
+
+ <animation>
+  <name>StrobesOff</name>
+  <object-name>RedLight.012</object-name>
+  <object-name>RedLight.032</object-name>
+  <object-name>RedLight.052</object-name>
+  <object-name>RedLight.072</object-name>
+  <object-name>RedLight.092</object-name>
+ </animation>
+
+ <animation>
+  <name>Fixed</name>
+  <object-name>RedLight.020</object-name>
+  <object-name>RedLight.040</object-name>
+  <object-name>RedLight.060</object-name>
+  <object-name>RedLight.080</object-name>
+  <object-name>RedLight.100</object-name>
+ </animation>
+ 
+ <animation>
+  <type>timed</type>
+  <object-name>StrobesOn</object-name>
+  <object-name>StrobesOff</object-name>
+  <use-personality type="bool">true</use-personality>
+  <branch-duration-sec>
+   <random>
+    <min>0.9</min>
+    <max>1.1</max>
+   </random>
+  </branch-duration-sec>
+  <branch-duration-sec>
+   <random>
+    <min>0.9</min>
+    <max>1.1</max>
+   </random>
+  </branch-duration-sec>
+ </animation>
+
+<!--  -->
+ <animation><type>translate</type><object-name>RedLight.011</object-name><offset-m>611</offset-m><axis><x>0</x><y>0</y><z>1</z></axis></animation><animation><type>billboard</type><object-name>RedLight.011</object-name><spherical type="bool">true</spherical></animation><animation><type>translate</type><object-name>RedLight.011</object-name><offset-m>4</offset-m><axis><x>0</x><y>-1</y><z>0</z></axis></animation><animation><type>dist-scale</type><object-name>RedLight.011</object-name><interpolation><entry><ind>0</ind><dep>0.1</dep></entry><entry><ind>500</ind><dep>0.3</dep></entry><entry><ind>16000</ind><dep>3.5</dep></entry></interpolation></animation>
+ <animation><type>translate</type><object-name>RedLight.012</object-name><offset-m>611</offset-m><axis><x>0</x><y>0</y><z>1</z></axis></animation><animation><type>billboard</type><object-name>RedLight.012</object-name><spherical type="bool">true</spherical></animation><animation><type>translate</type><object-name>RedLight.012</object-name><offset-m>4</offset-m><axis><x>0</x><y>-1</y><z>0</z></axis></animation><animation><type>dist-scale</type><object-name>RedLight.012</object-name><interpolation><entry><ind>0</ind><dep>0.1</dep></entry><entry><ind>500</ind><dep>0.3</dep></entry><entry><ind>16000</ind><dep>3.0</dep></entry></interpolation></animation>
+ <animation><type>translate</type><object-name>RedLight.020</object-name><offset-m>549</offset-m><axis><x>0</x><y>0</y><z>1</z></axis></animation><animation><type>billboard</type><object-name>RedLight.020</object-name><spherical type="bool">true</spherical></animation><animation><type>translate</type><object-name>RedLight.020</object-name><offset-m>4</offset-m><axis><x>0</x><y>-1</y><z>0</z></axis></animation><animation><type>dist-scale</type><object-name>RedLight.020</object-name><interpolation><entry><ind>0</ind><dep>0.1</dep></entry><entry><ind>500</ind><dep>0.3</dep></entry><entry><ind>16000</ind><dep>3.0</dep></entry></interpolation></animation>
+ <animation><type>translate</type><object-name>RedLight.031</object-name><offset-m>488</offset-m><axis><x>0</x><y>0</y><z>1</z></axis></animation><animation><type>billboard</type><object-name>RedLight.031</object-name><spherical type="bool">true</spherical></animation><animation><type>translate</type><object-name>RedLight.031</object-name><offset-m>4</offset-m><axis><x>0</x><y>-1</y><z>0</z></axis></animation><animation><type>dist-scale</type><object-name>RedLight.031</object-name><interpolation><entry><ind>0</ind><dep>0.1</dep></entry><entry><ind>500</ind><dep>0.3</dep></entry><entry><ind>16000</ind><dep>3.5</dep></entry></interpolation></animation>
+ <animation><type>translate</type><object-name>RedLight.032</object-name><offset-m>488</offset-m><axis><x>0</x><y>0</y><z>1</z></axis></animation><animation><type>billboard</type><object-name>RedLight.032</object-name><spherical type="bool">true</spherical></animation><animation><type>translate</type><object-name>RedLight.032</object-name><offset-m>4</offset-m><axis><x>0</x><y>-1</y><z>0</z></axis></animation><animation><type>dist-scale</type><object-name>RedLight.032</object-name><interpolation><entry><ind>0</ind><dep>0.1</dep></entry><entry><ind>500</ind><dep>0.3</dep></entry><entry><ind>16000</ind><dep>3.0</dep></entry></interpolation></animation>
+ <animation><type>translate</type><object-name>RedLight.040</object-name><offset-m>427</offset-m><axis><x>0</x><y>0</y><z>1</z></axis></animation><animation><type>billboard</type><object-name>RedLight.040</object-name><spherical type="bool">true</spherical></animation><animation><type>translate</type><object-name>RedLight.040</object-name><offset-m>4</offset-m><axis><x>0</x><y>-1</y><z>0</z></axis></animation><animation><type>dist-scale</type><object-name>RedLight.040</object-name><interpolation><entry><ind>0</ind><dep>0.1</dep></entry><entry><ind>500</ind><dep>0.3</dep></entry><entry><ind>16000</ind><dep>3.0</dep></entry></interpolation></animation>
+ <animation><type>translate</type><object-name>RedLight.051</object-name><offset-m>366</offset-m><axis><x>0</x><y>0</y><z>1</z></axis></animation><animation><type>billboard</type><object-name>RedLight.051</object-name><spherical type="bool">true</spherical></animation><animation><type>translate</type><object-name>RedLight.051</object-name><offset-m>4</offset-m><axis><x>0</x><y>-1</y><z>0</z></axis></animation><animation><type>dist-scale</type><object-name>RedLight.051</object-name><interpolation><entry><ind>0</ind><dep>0.1</dep></entry><entry><ind>500</ind><dep>0.3</dep></entry><entry><ind>16000</ind><dep>3.5</dep></entry></interpolation></animation>
+ <animation><type>translate</type><object-name>RedLight.052</object-name><offset-m>366</offset-m><axis><x>0</x><y>0</y><z>1</z></axis></animation><animation><type>billboard</type><object-name>RedLight.052</object-name><spherical type="bool">true</spherical></animation><animation><type>translate</type><object-name>RedLight.052</object-name><offset-m>4</offset-m><axis><x>0</x><y>-1</y><z>0</z></axis></animation><animation><type>dist-scale</type><object-name>RedLight.052</object-name><interpolation><entry><ind>0</ind><dep>0.1</dep></entry><entry><ind>500</ind><dep>0.3</dep></entry><entry><ind>16000</ind><dep>3.0</dep></entry></interpolation></animation>
+ <animation><type>translate</type><object-name>RedLight.060</object-name><offset-m>305</offset-m><axis><x>0</x><y>0</y><z>1</z></axis></animation><animation><type>billboard</type><object-name>RedLight.060</object-name><spherical type="bool">true</spherical></animation><animation><type>translate</type><object-name>RedLight.060</object-name><offset-m>4</offset-m><axis><x>0</x><y>-1</y><z>0</z></axis></animation><animation><type>dist-scale</type><object-name>RedLight.060</object-name><interpolation><entry><ind>0</ind><dep>0.1</dep></entry><entry><ind>500</ind><dep>0.3</dep></entry><entry><ind>16000</ind><dep>3.0</dep></entry></interpolation></animation>
+ <animation><type>translate</type><object-name>RedLight.071</object-name><offset-m>244</offset-m><axis><x>0</x><y>0</y><z>1</z></axis></animation><animation><type>billboard</type><object-name>RedLight.071</object-name><spherical type="bool">true</spherical></animation><animation><type>translate</type><object-name>RedLight.071</object-name><offset-m>4</offset-m><axis><x>0</x><y>-1</y><z>0</z></axis></animation><animation><type>dist-scale</type><object-name>RedLight.071</object-name><interpolation><entry><ind>0</ind><dep>0.1</dep></entry><entry><ind>500</ind><dep>0.3</dep></entry><entry><ind>16000</ind><dep>3.5</dep></entry></interpolation></animation>
+ <animation><type>translate</type><object-name>RedLight.072</object-name><offset-m>244</offset-m><axis><x>0</x><y>0</y><z>1</z></axis></animation><animation><type>billboard</type><object-name>RedLight.072</object-name><spherical type="bool">true</spherical></animation><animation><type>translate</type><object-name>RedLight.072</object-name><offset-m>4</offset-m><axis><x>0</x><y>-1</y><z>0</z></axis></animation><animation><type>dist-scale</type><object-name>RedLight.072</object-name><interpolation><entry><ind>0</ind><dep>0.1</dep></entry><entry><ind>500</ind><dep>0.3</dep></entry><entry><ind>16000</ind><dep>3.0</dep></entry></interpolation></animation>
+ <animation><type>translate</type><object-name>RedLight.080</object-name><offset-m>183</offset-m><axis><x>0</x><y>0</y><z>1</z></axis></animation><animation><type>billboard</type><object-name>RedLight.080</object-name><spherical type="bool">true</spherical></animation><animation><type>translate</type><object-name>RedLight.080</object-name><offset-m>4</offset-m><axis><x>0</x><y>-1</y><z>0</z></axis></animation><animation><type>dist-scale</type><object-name>RedLight.080</object-name><interpolation><entry><ind>0</ind><dep>0.1</dep></entry><entry><ind>500</ind><dep>0.3</dep></entry><entry><ind>16000</ind><dep>3.0</dep></entry></interpolation></animation>
+ <animation><type>translate</type><object-name>RedLight.091</object-name><offset-m>122</offset-m><axis><x>0</x><y>0</y><z>1</z></axis></animation><animation><type>billboard</type><object-name>RedLight.091</object-name><spherical type="bool">true</spherical></animation><animation><type>translate</type><object-name>RedLight.091</object-name><offset-m>4</offset-m><axis><x>0</x><y>-1</y><z>0</z></axis></animation><animation><type>dist-scale</type><object-name>RedLight.091</object-name><interpolation><entry><ind>0</ind><dep>0.1</dep></entry><entry><ind>500</ind><dep>0.3</dep></entry><entry><ind>16000</ind><dep>3.5</dep></entry></interpolation></animation>
+ <animation><type>translate</type><object-name>RedLight.092</object-name><offset-m>122</offset-m><axis><x>0</x><y>0</y><z>1</z></axis></animation><animation><type>billboard</type><object-name>RedLight.092</object-name><spherical type="bool">true</spherical></animation><animation><type>translate</type><object-name>RedLight.092</object-name><offset-m>4</offset-m><axis><x>0</x><y>-1</y><z>0</z></axis></animation><animation><type>dist-scale</type><object-name>RedLight.092</object-name><interpolation><entry><ind>0</ind><dep>0.1</dep></entry><entry><ind>500</ind><dep>0.3</dep></entry><entry><ind>16000</ind><dep>3.0</dep></entry></interpolation></animation>
+ <animation><type>translate</type><object-name>RedLight.100</object-name><offset-m>061</offset-m><axis><x>0</x><y>0</y><z>1</z></axis></animation><animation><type>billboard</type><object-name>RedLight.100</object-name><spherical type="bool">true</spherical></animation><animation><type>translate</type><object-name>RedLight.100</object-name><offset-m>4</offset-m><axis><x>0</x><y>-1</y><z>0</z></axis></animation><animation><type>dist-scale</type><object-name>RedLight.100</object-name><interpolation><entry><ind>0</ind><dep>0.1</dep></entry><entry><ind>500</ind><dep>0.3</dep></entry><entry><ind>16000</ind><dep>3.0</dep></entry></interpolation></animation>
+
+</PropertyList>

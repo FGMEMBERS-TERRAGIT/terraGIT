@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<groundnet>
+  <version>1</version>
+  <parkingList>
+        <Parking index="0" type="gate" name="Heavy_Start_1" lat="N36 12.960571" lon="E1 19.431228" heading="77.69"  radius="44" pushBackRoute="12" airlineCodes="" />
+        <Parking index="1" type="ga" name="Light_Start_1" lat="N36 12.985151" lon="E1 19.414138" heading="130.86"  radius="10" pushBackRoute="13" airlineCodes="" />
+        <Parking index="2" type="ga" name="Light_Start_2" lat="N36 12.982901" lon="E1 19.400059" heading="126.5"  radius="10" pushBackRoute="13" airlineCodes="" />
+        <Parking index="3" type="gate" name="Jet_Start_2" lat="N36 12.997234" lon="E1 19.515056" heading="347.01"  radius="44" pushBackRoute="15" airlineCodes="" />
+        <Parking index="4" type="gate" name="Jet_Start_1" lat="N36 12.991030" lon="E1 19.482704" heading="347.24"  radius="44" pushBackRoute="16" airlineCodes="" />
+ </parkingList>
+ <TaxiNodes>
+        <node index="5" lat="N36 12.955250" lon="E1 19.550346" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="6" lat="N36 12.927430" lon="E1 19.393804" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="7" lat="N36 12.929942" lon="E1 19.479131" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="8" lat="N36 12.929942" lon="E1 19.479131" isOnRunway="0" holdPointType="none"  />
+        <node index="9" lat="N36 12.848499" lon="E1 19.525823" isOnRunway="0" holdPointType="none"  />
+        <node index="10" lat="N36 13.168997" lon="E1 21.278389" isOnRunway="1" holdPointType="none"  />
+        <node index="11" lat="N36 12.848499" lon="E1 19.525823" isOnRunway="1" holdPointType="none"  />
+        <node index="12" lat="N36 12.954788" lon="E1 19.404727" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="13" lat="N36 13.002896" lon="E1 19.393623" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="14" lat="N36 12.999035" lon="E1 19.378255" isOnRunway="0" holdPointType="none"  />
+        <node index="15" lat="N36 12.970804" lon="E1 19.521154" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="16" lat="N36 12.964575" lon="E1 19.488695" isOnRunway="0" holdPointType="PushBack"  />
+ </TaxiNodes>
+ <TaxiWaySegments>
+        <arc begin="6" end="7" isPushBackRoute="0" name="N"  />
+        <arc begin="7" end="6" isPushBackRoute="0" name="N"  />
+        <arc begin="7" end="5" isPushBackRoute="0" name="N"  />
+        <arc begin="5" end="7" isPushBackRoute="0" name="N"  />
+        <arc begin="9" end="8" isPushBackRoute="0" name="N"  />
+        <arc begin="8" end="9" isPushBackRoute="0" name="N"  />
+        <arc begin="0" end="12" isPushBackRoute="1" name="Heavy_Start_1"  />
+        <arc begin="12" end="0" isPushBackRoute="1" name="Heavy_Start_1"  />
+        <arc begin="12" end="6" isPushBackRoute="1" name="Heavy_Start_1"  />
+        <arc begin="6" end="12" isPushBackRoute="1" name="Heavy_Start_1"  />
+        <arc begin="1" end="13" isPushBackRoute="1" name="Light_Start_1"  />
+        <arc begin="13" end="1" isPushBackRoute="1" name="Light_Start_1"  />
+        <arc begin="13" end="6" isPushBackRoute="1" name="Light_Start_1"  />
+        <arc begin="6" end="13" isPushBackRoute="1" name="Light_Start_1"  />
+        <arc begin="2" end="14" isPushBackRoute="1" name="Light_Start_2"  />
+        <arc begin="14" end="2" isPushBackRoute="1" name="Light_Start_2"  />
+        <arc begin="14" end="6" isPushBackRoute="1" name="Light_Start_2"  />
+        <arc begin="6" end="14" isPushBackRoute="1" name="Light_Start_2"  />
+        <arc begin="3" end="15" isPushBackRoute="1" name="Jet_Start_2"  />
+        <arc begin="15" end="3" isPushBackRoute="1" name="Jet_Start_2"  />
+        <arc begin="15" end="5" isPushBackRoute="1" name="Jet_Start_2"  />
+        <arc begin="5" end="15" isPushBackRoute="1" name="Jet_Start_2"  />
+        <arc begin="4" end="16" isPushBackRoute="1" name="Jet_Start_1"  />
+        <arc begin="16" end="4" isPushBackRoute="1" name="Jet_Start_1"  />
+        <arc begin="16" end="7" isPushBackRoute="1" name="Jet_Start_1"  />
+        <arc begin="7" end="16" isPushBackRoute="1" name="Jet_Start_1"  />
+        <arc begin="0" end="12" isPushBackRoute="1" name="Heavy_Start_1"  />
+        <arc begin="12" end="0" isPushBackRoute="1" name="Heavy_Start_1"  />
+        <arc begin="1" end="13" isPushBackRoute="1" name="Light_Start_1"  />
+        <arc begin="13" end="1" isPushBackRoute="1" name="Light_Start_1"  />
+        <arc begin="2" end="13" isPushBackRoute="1" name="Light_Start_2"  />
+        <arc begin="13" end="2" isPushBackRoute="1" name="Light_Start_2"  />
+        <arc begin="3" end="15" isPushBackRoute="1" name="Jet_Start_2"  />
+        <arc begin="15" end="3" isPushBackRoute="1" name="Jet_Start_2"  />
+        <arc begin="4" end="16" isPushBackRoute="1" name="Jet_Start_1"  />
+        <arc begin="16" end="4" isPushBackRoute="1" name="Jet_Start_1"  />
+ </TaxiWaySegments>
+</groundnet>

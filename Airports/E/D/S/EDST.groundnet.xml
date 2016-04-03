@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<groundnet>
+  <version>1</version>
+  <parkingList>
+        <Parking index="0" type="ga" name="Apron_parking" lat="N48 37.953962" lon="E9 25.815847" heading="218.58"  radius="10" pushBackRoute="15" airlineCodes="" />
+        <Parking index="1" type="ga" name="Gras_parking_1" lat="N48 38.043502" lon="E9 25.553519" heading="218.58"  radius="10" pushBackRoute="7" airlineCodes="" />
+        <Parking index="2" type="ga" name="Gras_parking_2" lat="N48 38.048710" lon="E9 25.546052" heading="218.58"  radius="10" pushBackRoute="7" airlineCodes="" />
+        <Parking index="3" type="ga" name="Gras_parking_3" lat="N48 37.821411" lon="E9 26.019035" heading="218.58"  radius="10" pushBackRoute="5" airlineCodes="" />
+        <Parking index="4" type="ga" name="Gras_parking_4" lat="N48 37.828513" lon="E9 26.003387" heading="218.58"  radius="10" pushBackRoute="6" airlineCodes="" />
+ </parkingList>
+ <TaxiNodes>
+        <node index="5" lat="N48 37.817133" lon="E9 26.014328" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="6" lat="N48 37.824383" lon="E9 25.999930" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="7" lat="N48 38.038486" lon="E9 25.548618" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="8" lat="N48 38.042904" lon="E9 25.538848" isOnRunway="0" holdPointType="none"  />
+        <node index="9" lat="N48 38.035880" lon="E9 25.562331" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="10" lat="N48 38.028970" lon="E9 25.553589" isOnRunway="0" holdPointType="none"  />
+        <node index="11" lat="N48 37.821251" lon="E9 25.996439" isOnRunway="0" holdPointType="none"  />
+        <node index="12" lat="N48 37.815371" lon="E9 25.976591" isOnRunway="0" holdPointType="none"  />
+        <node index="13" lat="N48 37.819895" lon="E9 25.965413" isOnRunway="1" holdPointType="PushBack"  />
+        <node index="14" lat="N48 38.022202" lon="E9 25.558195" isOnRunway="1" holdPointType="none"  />
+        <node index="15" lat="N48 37.975167" lon="E9 25.832762" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="16" lat="N48 38.064706" lon="E9 25.570434" isOnRunway="0" holdPointType="none"  />
+        <node index="17" lat="N48 38.069915" lon="E9 25.562968" isOnRunway="0" holdPointType="none"  />
+        <node index="18" lat="N48 37.842615" lon="E9 26.035951" isOnRunway="0" holdPointType="none"  />
+        <node index="19" lat="N48 37.849718" lon="E9 26.020302" isOnRunway="0" holdPointType="none"  />
+ </TaxiNodes>
+ <TaxiWaySegments>
+        <arc begin="6" end="5" isPushBackRoute="0" name=""  />
+        <arc begin="5" end="6" isPushBackRoute="0" name=""  />
+        <arc begin="11" end="6" isPushBackRoute="0" name=""  />
+        <arc begin="6" end="11" isPushBackRoute="0" name=""  />
+        <arc begin="9" end="11" isPushBackRoute="0" name=""  />
+        <arc begin="11" end="9" isPushBackRoute="0" name=""  />
+        <arc begin="7" end="9" isPushBackRoute="0" name=""  />
+        <arc begin="9" end="7" isPushBackRoute="0" name=""  />
+        <arc begin="8" end="7" isPushBackRoute="0" name=""  />
+        <arc begin="7" end="8" isPushBackRoute="0" name=""  />
+        <arc begin="10" end="9" isPushBackRoute="0" name=""  />
+        <arc begin="9" end="10" isPushBackRoute="0" name=""  />
+        <arc begin="14" end="10" isPushBackRoute="0" name=""  />
+        <arc begin="10" end="14" isPushBackRoute="0" name=""  />
+        <arc begin="12" end="11" isPushBackRoute="0" name=""  />
+        <arc begin="11" end="12" isPushBackRoute="0" name=""  />
+        <arc begin="13" end="12" isPushBackRoute="0" name=""  />
+        <arc begin="12" end="13" isPushBackRoute="0" name=""  />
+        <arc begin="0" end="15" isPushBackRoute="1" name="Apron_parking"  />
+        <arc begin="15" end="0" isPushBackRoute="1" name="Apron_parking"  />
+        <arc begin="15" end="13" isPushBackRoute="1" name="Apron_parking"  />
+        <arc begin="13" end="15" isPushBackRoute="1" name="Apron_parking"  />
+        <arc begin="1" end="16" isPushBackRoute="1" name="Gras_parking_1"  />
+        <arc begin="16" end="1" isPushBackRoute="1" name="Gras_parking_1"  />
+        <arc begin="16" end="9" isPushBackRoute="1" name="Gras_parking_1"  />
+        <arc begin="9" end="16" isPushBackRoute="1" name="Gras_parking_1"  />
+        <arc begin="2" end="17" isPushBackRoute="1" name="Gras_parking_2"  />
+        <arc begin="17" end="2" isPushBackRoute="1" name="Gras_parking_2"  />
+        <arc begin="17" end="9" isPushBackRoute="1" name="Gras_parking_2"  />
+        <arc begin="9" end="17" isPushBackRoute="1" name="Gras_parking_2"  />
+        <arc begin="3" end="18" isPushBackRoute="1" name="Gras_parking_3"  />
+        <arc begin="18" end="3" isPushBackRoute="1" name="Gras_parking_3"  />
+        <arc begin="18" end="5" isPushBackRoute="1" name="Gras_parking_3"  />
+        <arc begin="5" end="18" isPushBackRoute="1" name="Gras_parking_3"  />
+        <arc begin="4" end="19" isPushBackRoute="1" name="Gras_parking_4"  />
+        <arc begin="19" end="4" isPushBackRoute="1" name="Gras_parking_4"  />
+        <arc begin="19" end="5" isPushBackRoute="1" name="Gras_parking_4"  />
+        <arc begin="5" end="19" isPushBackRoute="1" name="Gras_parking_4"  />
+        <arc begin="0" end="15" isPushBackRoute="1" name="Apron_parking"  />
+        <arc begin="15" end="0" isPushBackRoute="1" name="Apron_parking"  />
+        <arc begin="1" end="7" isPushBackRoute="1" name="Gras_parking_1"  />
+        <arc begin="7" end="1" isPushBackRoute="1" name="Gras_parking_1"  />
+        <arc begin="2" end="7" isPushBackRoute="1" name="Gras_parking_2"  />
+        <arc begin="7" end="2" isPushBackRoute="1" name="Gras_parking_2"  />
+        <arc begin="3" end="5" isPushBackRoute="1" name="Gras_parking_3"  />
+        <arc begin="5" end="3" isPushBackRoute="1" name="Gras_parking_3"  />
+        <arc begin="4" end="6" isPushBackRoute="1" name="Gras_parking_4"  />
+        <arc begin="6" end="4" isPushBackRoute="1" name="Gras_parking_4"  />
+ </TaxiWaySegments>
+</groundnet>

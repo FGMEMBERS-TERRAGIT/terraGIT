@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+    <path>container-crane-PAS.ac</path>
+
+    <animation>
+        <type>material</type> 
+        <object-name>grue</object-name>
+        <object-name>cabine</object-name> 
+        <condition>		
+            <greater-than>		
+                <property>/sim/time/sun-angle-rad</property>
+                <value>1.57</value>
+            </greater-than>
+        </condition>
+        <emission>	
+            <red>0.33</red>	
+            <green>0.3</green>	
+            <blue>0.25</blue>
+        </emission>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>lumiere</object-name>
+        <condition>
+            <greater-than>
+                <property>/sim/time/sun-angle-rad</property>
+                <value>1.57</value>
+            </greater-than>
+        </condition>
+    </animation>
+
+</PropertyList>
+

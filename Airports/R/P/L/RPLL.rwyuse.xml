@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<rwyuse> <!-- Times are in UTC -->
+	<com>  <!-- Commercial Traffic-->
+		<wind tail  = "7"
+					cross = "20" />
+		<time start = "00:00"
+					end   = "24:00"
+					schedule = "day"/>
+	</com>
+	<gen> <!-- General Aviation -->
+		<wind tail  = "7"
+					cross = "20"/>
+		<time start = "00:00"
+					end   = "24:00"
+					schedule = "general"/>
+	</gen>
+	<!-- Commercial Schedule -->
+	<schedule name="day">
+		<takeoff>06, 24, 13, 31</takeoff>
+		<landing>06, 24, 13, 31</landing>
+	</schedule>
+	<!-- General Aviation Schedule -->
+	<schedule name = "general">
+		<takeoff>13, 31</takeoff>
+		<landing>13, 31</landing>
+	</schedule>
+</rwyuse>

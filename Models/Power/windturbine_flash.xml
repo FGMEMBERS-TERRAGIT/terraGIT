@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+ <path>windturbine_flash.ac</path>
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>20000</max-m>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Generator</object-name>
+  <object-name>Shaft</object-name>
+  <object-name>Hub</object-name>
+  <object-name>Blade1</object-name>
+  <object-name>Blade2</object-name>
+  <object-name>Blade3</object-name>
+  <property>/environment/wind-from-heading-deg</property>
+  <offset-deg>-90</offset-deg>
+  <factor>-1</factor>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>Shaft</object-name>
+  <object-name>Hub</object-name>
+  <object-name>Blade1</object-name>
+  <object-name>Blade2</object-name>
+  <object-name>Blade3</object-name>
+  <use-personality type="bool">true</use-personality>
+  <property>/environment/wind-speed-kt</property>
+  <factor>
+   <random>
+    <min>0.4</min>
+    <max>0.6</max>
+   </random>
+  </factor>
+  <starting-pos-deg>
+   <random>
+    <min>0</min>
+    <max>360</max>
+   </random>
+  </starting-pos-deg>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>81.0</z-m>
+  </center>
+ </animation>
+
+<!--LIGHT-->
+
+<animation>
+  <type>alpha-test</type>
+  <alpha-factor>0.01</alpha-factor>
+ </animation>
+
+ <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>red-light-plate</object-name>    
+    <object-name>white-light-plate</object-name>    
+  </effect>
+
+<!--Day = white-->
+ <animation>
+  <type>select</type>
+ <object-name>white-light-plate</object-name>
+ <object-name>Pos1</object-name>
+  <condition>
+   <less-than>
+    <property>/sim/time/sun-angle-rad</property>
+    <value>1.57</value>
+   </less-than>
+  </condition>
+ </animation>
+ 
+ <animation>
+ <type>timed</type>
+ <object-name>white-light-plate</object-name>
+<object-name>Pos1</object-name>
+ <use-personality type="bool">true</use-personality>
+<branch-duration-sec>
+  <random>
+   <min>1.5</min>
+   <max>1.5</max>
+  </random>
+ </branch-duration-sec>
+ <branch-duration-sec>
+  <random>
+   <min>0.025</min>
+   <max>0.025</max>
+  </random>
+ </branch-duration-sec>
+ </animation>
+
+<animation>
+    <type>dist-scale</type>        
+    <object-name>white-light-plate</object-name>    
+    <interpolation>
+      <entry><ind>    0  </ind><dep>  0.2  </dep></entry>      
+      <entry><ind>  5000 </ind><dep>  4.0  </dep></entry>
+      <entry><ind> 10000 </ind><dep>  8.0  </dep></entry>
+      <entry><ind> 15000 </ind><dep> 12.0  </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 83 </z-m>
+    </center>
+  </animation>
+
+<!--Night = red-->
+<animation>
+  <type>select</type>
+ <object-name>red-light-plate</object-name>
+<object-name>Pos2</object-name>
+  <condition>
+   <greater-than>
+    <property>/sim/time/sun-angle-rad</property>
+    <value>1.57</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+ <type>timed</type>
+ <object-name>red-light-plate</object-name>
+<object-name>Pos2</object-name>
+ <use-personality type="bool">true</use-personality>
+<branch-duration-sec>
+  <random>
+   <min>1.5</min>
+   <max>1.5</max>
+  </random>
+ </branch-duration-sec>
+ <branch-duration-sec>
+  <random>
+   <min>0.025</min>
+   <max>0.025</max>
+  </random>
+ </branch-duration-sec>
+  </animation>
+
+<animation>
+    <type>dist-scale</type>
+    <object-name>red-light-plate</object-name>       
+    <interpolation>
+      <entry><ind>    0 </ind><dep> 0.15 </dep></entry>      
+      <entry><ind> 1000 </ind><dep> 0.4 </dep></entry>
+      <entry><ind> 2000 </ind><dep> 0.6 </dep></entry>
+      <entry><ind> 5000 </ind><dep> 3.0 </dep></entry>
+      <entry><ind>10000 </ind><dep> 6.0 </dep></entry>
+      <entry><ind>15000 </ind><dep> 9.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 83 </z-m>
+    </center>
+  </animation>
+
+ <animation>
+    <type>material</type>
+    <object-name>red-light-plate</object-name>    
+    <object-name>white-light-plate</object-name>    
+    <emission>
+      <red>   0.027 </red>
+      <green> 0.027 </green>
+      <blue>  0.027 </blue>
+      <factor>150</factor>
+    </emission>
+  </animation> 
+
+ <animation>
+  <object-name>red-light-plate</object-name>    
+  <object-name>white-light-plate</object-name>  
+  <enable-hot type="bool">false</enable-hot>
+ </animation>
+
+</PropertyList>

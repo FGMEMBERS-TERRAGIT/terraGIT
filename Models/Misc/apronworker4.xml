@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PropertyList>
+	<!-- 09.04.2013-Andre Burkert	--> 
+	<path>apronworker4.ac</path>
+<animation>
+	<type>alpha-test</type>
+	<alpha-factor>0.01</alpha-factor>
+</animation>
+<animation>
+	<type>billboard</type>
+	<object-name>apronworker4</object-name>
+	<spherical type="bool">true</spherical>
+</animation>
+<animation>
+	<object-name>apronworker4</object-name>
+	<enable-hot type="bool">false</enable-hot>
+</animation>
+<animation>
+	<type>textranslate</type> 
+	<object-name>apronworker4</object-name> 
+	<property>/sim/time/sun-angle-rad</property>
+	<step> 1.57 </step>
+	<factor>0.318471338</factor>
+	<axis> 
+		<x> -1 </x> 
+		<y>  0 </y> 
+	</axis> 
+</animation>
+<animation>
+	<type>material</type>
+	<object-name>apronworker4</object-name>
+		<condition>		
+		<greater-than>		
+		<property>/sim/time/sun-angle-rad</property>
+		<value>1.57</value>
+		</greater-than>
+		</condition>
+		<emission>	
+			<red>0.6</red>	
+			<green>0.6</green>	
+			<blue>0.6</blue>
+		</emission>
+</animation>
+<animation>
+	<type>range</type>
+	<min-m>0</min-m>
+	<max-m>300</max-m>
+</animation>
+</PropertyList>

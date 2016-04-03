@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>base_clape_03.ac</path>
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>20000</max-m>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>RedLight.3</object-name>
+  <condition>
+   <greater-than>
+    <property>/sim/time/sun-angle-rad</property>
+    <value>1.57</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>translate</type>
+  <object-name>RedLight.3</object-name>
+  <offset-m>39.45</offset-m>
+  <axis>
+   <x>-2.95</x>
+   <y>-1.65</y>
+   <z>39.45</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>billboard</type>
+  <object-name>RedLight.3</object-name>
+  <spherical type="bool">true</spherical>
+ </animation>
+
+ <animation>
+  <type>dist-scale</type>
+  <object-name>RedLight.3</object-name>
+  <interpolation>
+   <entry><ind>0</ind><dep>0.1</dep></entry>
+   <entry><ind>500</ind><dep>0.2</dep></entry>
+   <entry><ind>20000</ind><dep>4</dep></entry>
+  </interpolation>
+ </animation>
+
+</PropertyList>

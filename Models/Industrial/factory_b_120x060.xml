@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+	<path>factory_b_120x060.ac</path>
+
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>25000</max-m>
+	</animation>
+
+<animation>
+    <type>material</type>
+    <object-name>120x060fenster</object-name>
+    <condition>
+        <greater-than>
+          <property>/sim/time/sun-angle-rad</property>
+          <value>1.47</value>
+        </greater-than>
+    </condition>
+    <emission>	
+	<red>0.50</red>	
+	<green>0.50</green>	
+	<blue>0.4</blue>
+    </emission>
+</animation>
+
+<animation>
+    <type>material</type>
+    <object-name>120x060dach1</object-name>
+    <condition>
+        <greater-than>
+          <property>/sim/time/sun-angle-rad</property>
+          <value>1.62</value>
+        </greater-than>
+    </condition>
+    <emission>	
+	<red>0.10</red>	
+	<green>0.10</green>	
+	<blue>0.10</blue>
+    </emission>
+</animation>
+
+<animation>
+    <type>material</type>
+    <object-name>120x060dach2</object-name>
+    <condition>
+        <greater-than>
+          <property>/sim/time/sun-angle-rad</property>
+          <value>1.62</value>
+        </greater-than>
+    </condition>
+    <emission>	
+	<red>0.30</red>	
+	<green>0.30</green>	
+	<blue>0.25</blue>
+    </emission>
+</animation>
+
+</PropertyList>

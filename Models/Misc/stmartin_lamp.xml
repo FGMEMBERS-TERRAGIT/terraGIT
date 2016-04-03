@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<path>stmartin_lamp.ac</path>
+
+	<!--animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>12000</max-m>
+	</animation-->
+	
+	<animation>
+		<type>material</type>
+		<object-name>Plane</object-name>
+		<condition>
+			<greater-than>
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.57</value>
+			</greater-than>
+		</condition>
+		<global type="bool">true</global>
+		<emission>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+		</emission>
+		<texture>stmartin_lamp_n.png</texture>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>Plane</object-name>
+		<condition>
+			<less-than-equals>
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.57</value>
+			</less-than-equals>
+		</condition>
+		<global type="bool">true</global>
+		<emission>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</emission>
+		<texture>stmartin_lamp.png</texture>
+	</animation>
+
+</PropertyList>

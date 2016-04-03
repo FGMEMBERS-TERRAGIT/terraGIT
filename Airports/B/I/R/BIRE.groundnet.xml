@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<groundnet>
+  <version>1</version>
+  <parkingList>
+        <Parking index="0" type="ga" name="Ramp_Start" lat="N65 27.204704" lon="W22 12.129374" heading="247.67"  radius="10" pushBackRoute="1" airlineCodes="" />
+ </parkingList>
+ <TaxiNodes>
+        <node index="1" lat="N65 27.205436" lon="W22 12.120512" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="2" lat="N65 27.197591" lon="W22 12.158584" isOnRunway="0" holdPointType="none"  />
+        <node index="3" lat="N65 27.176587" lon="W22 12.187213" isOnRunway="0" holdPointType="none"  />
+        <node index="4" lat="N65 27.172616" lon="W22 12.209711" isOnRunway="1" holdPointType="none"  />
+        <node index="5" lat="N65 27.008148" lon="W22 13.121644" isOnRunway="1" holdPointType="none"  />
+        <node index="6" lat="N65 27.215010" lon="W22 12.104284" isOnRunway="0" holdPointType="none"  />
+ </TaxiNodes>
+ <TaxiWaySegments>
+        <arc begin="2" end="1" isPushBackRoute="0" name=""  />
+        <arc begin="1" end="2" isPushBackRoute="0" name=""  />
+        <arc begin="3" end="2" isPushBackRoute="0" name=""  />
+        <arc begin="2" end="3" isPushBackRoute="0" name=""  />
+        <arc begin="4" end="3" isPushBackRoute="0" name=""  />
+        <arc begin="3" end="4" isPushBackRoute="0" name=""  />
+        <arc begin="0" end="6" isPushBackRoute="1" name="Ramp_Start"  />
+        <arc begin="6" end="0" isPushBackRoute="1" name="Ramp_Start"  />
+        <arc begin="6" end="1" isPushBackRoute="1" name="Ramp_Start"  />
+        <arc begin="1" end="6" isPushBackRoute="1" name="Ramp_Start"  />
+        <arc begin="0" end="1" isPushBackRoute="1" name="Ramp_Start"  />
+        <arc begin="1" end="0" isPushBackRoute="1" name="Ramp_Start"  />
+ </TaxiWaySegments>
+</groundnet>

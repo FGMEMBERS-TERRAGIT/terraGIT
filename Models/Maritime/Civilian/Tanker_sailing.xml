@@ -1,0 +1,730 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+<path>Tanker.ac</path>
+
+<animation>
+<type>range</type>
+<min-m>0</min-m>
+<max-m>25000</max-m>
+</animation>
+<animation> 
+    <type>textranslate</type> 
+    <object-name>F-light</object-name> 
+	<object-name>Accommodation</object-name>
+	<object-name>Bridge</object-name>
+	<object-name>DecHouse</object-name>
+	<object-name>logo</object-name>
+	 <object-name>superstrictures</object-name>
+	<property>/sim/time/sun-angle-rad</property>
+    <step> 1.57 </step>
+    <factor>0.318471338</factor>
+    <center>
+     <x-m> 0 </x-m>
+     <y-m> 0 </y-m>
+     <z-m> 0 </z-m>
+    </center>
+    <axis> 
+      <x> -1 </x> 
+      <y>  0 </y> 
+      <z>  0 </z> 
+    </axis> 
+  </animation>
+ 
+  <animation>
+    <type>material</type>
+    <object-name>F-light</object-name> 
+	<object-name>Accommodation</object-name>
+	<object-name>Bridge</object-name>
+	<object-name>DecHouse</object-name>
+	<object-name>logo</object-name>
+	<object-name>superstrictures</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red>   1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>F-light</object-name> 
+	<object-name>Accommodation</object-name>
+	<object-name>Bridge</object-name>
+	<object-name>DecHouse</object-name>
+	<object-name>logo</object-name>
+	<object-name>superstrictures</object-name>
+    <condition>
+      <less-than-equals>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </less-than-equals>
+    </condition>
+    <emission>
+      <red>   0.0 </red>
+      <green> 0.0 </green>
+      <blue>  0.0 </blue>
+    </emission>
+  </animation>
+  
+  <path>Tanker.ac</path>
+<animation>
+<type>range</type>
+<min-m>0</min-m>
+<max-m>40000</max-m>
+</animation>
+	<!-- Luce di Prua Bianca -->
+        <bec1Xparams>
+		<light-near>0.4</light-near>
+		<light-med>0.8</light-med>
+		<light-far>10</light-far>
+	</bec1Xparams>
+
+	<animation>
+		<name>bec1XGroup</name>
+		<object-name>bec1X0</object-name>
+		<object-name>bec1X1</object-name>
+		<object-name>bec1X2</object-name>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<name>bec1XGroupNight</name>
+		<object-name>bec1XGroup</object-name>
+		<condition>
+			<greater-than>
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.57</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>alpha-test</type>
+		<object-name>bec1XGroup</object-name>
+		<alpha-factor>0.001</alpha-factor>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>bec1X0</object-name>
+		<offset-m>114.901477</offset-m>
+		<axis>
+			<x>-112.75</x>
+			<y>0.433013</y>
+			<z>22.126892</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>bec1X1</object-name>
+		<offset-m>114.901477</offset-m>
+		<axis>
+			<x>-112.75</x>
+			<y>-0.433013</y>
+			<z>22.126892</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>bec1X2</object-name>
+		<offset-m>115.636713</offset-m>
+		<axis>
+			<x>-113.5</x>
+			<y>0</y>
+			<z>22.126892</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>bec1X0</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>bec1X1</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>bec1X2</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>bec1X0</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../bec1Xparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../bec1Xparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../bec1Xparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>bec1X1</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../bec1Xparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../bec1Xparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../bec1Xparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>bec1X2</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../bec1Xparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../bec1Xparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../bec1Xparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+<!-- Red Lights -->
+<rbeacXparams>
+		<light-near>0.4</light-near>
+		<light-med>0.8</light-med>
+		<light-far>10</light-far>
+	</rbeacXparams>
+
+	<animation>
+		<name>rbeacXGroup</name>
+		<object-name>rbeacX0</object-name>
+		<object-name>rbeacX1</object-name>
+		<object-name>rbeacX2</object-name>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<name>rbeacXGroupNight</name>
+		<object-name>rbeacXGroup</object-name>
+		<condition>
+			<greater-than>
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.57</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>alpha-test</type>
+		<object-name>rbeacXGroup</object-name>
+		<alpha-factor>0.001</alpha-factor>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>rbeacX0</object-name>
+		<offset-m>87.907077</offset-m>
+		<axis>
+			<x>83.832809</x>
+			<y>-13.683441</y>
+			<z>22.637968</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>rbeacX1</object-name>
+		<offset-m>88.193282</offset-m>
+		<axis>
+			<x>83.832809</x>
+			<y>-15.415492</y>
+			<z>22.637968</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>rbeacX2</object-name>
+		<offset-m>86.619028</offset-m>
+		<axis>
+			<x>82.332809</x>
+			<y>-14.549466</y>
+			<z>22.637968</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>rbeacX0</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>rbeacX1</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>rbeacX2</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>rbeacX0</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../rbeacXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../rbeacXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../rbeacXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>rbeacX1</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../rbeacXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../rbeacXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../rbeacXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>rbeacX2</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../rbeacXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../rbeacXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../rbeacXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+	<!-- Main mast Lights -->
+	<mastlitXparams>
+		<light-near>0.4</light-near>
+		<light-med>0.8</light-med>
+		<light-far>10</light-far>
+	</mastlitXparams>
+
+	<animation>
+		<name>mastlitXGroup</name>
+		<object-name>mastlitX0</object-name>
+		<object-name>mastlitX1</object-name>
+		<object-name>mastlitX2</object-name>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<name>mastlitXGroupNight</name>
+		<object-name>mastlitXGroup</object-name>
+		<condition>
+			<greater-than>
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.57</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>alpha-test</type>
+		<object-name>mastlitXGroup</object-name>
+		<alpha-factor>0.001</alpha-factor>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>mastlitX0</object-name>
+		<offset-m>92.971119</offset-m>
+		<axis>
+			<x>85.968163</x>
+			<y>0.707107</y>
+			<z>35.392147</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>mastlitX1</object-name>
+		<offset-m>92.559095</offset-m>
+		<axis>
+			<x>85.519875</x>
+			<y>-0.965926</y>
+			<z>35.392147</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>mastlitX2</object-name>
+		<offset-m>91.423956</offset-m>
+		<axis>
+			<x>84.295128</x>
+			<y>0.258819</y>
+			<z>35.392147</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>mastlitX0</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>mastlitX1</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>mastlitX2</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>mastlitX0</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../mastlitXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../mastlitXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../mastlitXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>mastlitX1</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../mastlitXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../mastlitXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../mastlitXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>mastlitX2</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../mastlitXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../mastlitXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../mastlitXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+<!-- Green Light -->
+<gbeacXparams>
+		<light-near>0.4</light-near>
+		<light-med>0.8</light-med>
+		<light-far>10</light-far>
+	</gbeacXparams>
+
+	<animation>
+		<name>gbeacXGroup</name>
+		<object-name>gbeacX0</object-name>
+		<object-name>gbeacX1</object-name>
+		<object-name>gbeacX2</object-name>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<name>gbeacXGroupNight</name>
+		<object-name>gbeacXGroup</object-name>
+		<condition>
+			<greater-than>
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.57</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>alpha-test</type>
+		<object-name>gbeacXGroup</object-name>
+		<alpha-factor>0.001</alpha-factor>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>gbeacX0</object-name>
+		<offset-m>88.169767</offset-m>
+		<axis>
+			<x>83.832809</x>
+			<y>15.280391</y>
+			<z>22.637968</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>gbeacX1</object-name>
+		<offset-m>87.886148</offset-m>
+		<axis>
+			<x>83.832809</x>
+			<y>13.54834</y>
+			<z>22.637968</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>gbeacX2</object-name>
+		<offset-m>86.596438</offset-m>
+		<axis>
+			<x>82.332809</x>
+			<y>14.414366</y>
+			<z>22.637968</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>gbeacX0</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>gbeacX1</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>gbeacX2</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>gbeacX0</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../gbeacXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../gbeacXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../gbeacXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>gbeacX1</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../gbeacXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../gbeacXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../gbeacXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>gbeacX2</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../gbeacXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../gbeacXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../gbeacXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+	
+	<!-- SMOKE Section -->
+	<path>Tanker.ac</path>
+
+<animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>25000</max-m>
+ </animation>
+ 
+ <particlesystem>
+  <name>stack</name>
+  
+  <texture>smoke.png</texture>
+  <emissive>false</emissive>
+  <lighting>false</lighting>
+       
+  <offsets>
+    <x-m>97</x-m>
+    <y-m>0</y-m>
+    <z-m>27.4</z-m>
+  </offsets>
+           
+  <attach>local</attach>
+           
+  <placer>
+    <type>point</type>
+  </placer>
+           
+  <shooter>
+    <speed-mps>
+    	<value>3</value>
+	<spread>2</spread>
+    </speed-mps>
+  </shooter>
+       
+  <counter>
+    <particles-per-sec>
+      <value>2</value>
+      <spread>3</spread>
+    </particles-per-sec>
+  </counter>
+           
+  <align>billboard</align>
+           
+  <particle>
+
+  <start>
+    <color>
+      <red><value>0.5</value></red>
+      <green><value>0.5</value></green>
+      <blue><value>0.5</value></blue>
+      <alpha><value>0.2</value></alpha>
+    </color>
+    <size>
+      <value>8</value>
+    </size>
+  </start>
+
+  <end>
+    <color>
+      <red><value>0.5</value></red>
+      <green><value>0.5</value></green>
+      <blue><value>0.5</value></blue>
+      <alpha><value>0.0</value></alpha>
+    </color>
+    <size>
+      <value>15</value>
+      <spread>10</spread>
+    </size>
+  </end>
+    
+  <life-sec>
+    <value>15</value>
+  </life-sec>
+
+  <mass-kg>310</mass-kg>
+  <radius-m>7</radius-m>
+  </particle>
+           
+  <program>
+    <fluid>air</fluid>
+    <gravity>true</gravity>
+    <wind>true</wind>
+  </program>
+           
+</particlesystem>
+<!-- SMOKE END -->
+ 
+
+
+</PropertyList>

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>generic.ac</path>
+
+	<!-- Required -->
+	<is-animated-jetway type="bool">true</is-animated-jetway>
+
+	<!-- Parameters read by the script -->
+	<rotunda>
+		<x-m>2.04</x-m>
+		<y-m>0.04</y-m>
+		<z-m>3.902</z-m>
+	</rotunda>
+	<extend-offset-m>12.254</extend-offset-m>
+	<entrance-offset-m>2.4</entrance-offset-m>
+	<min-extend-m>0</min-extend-m>
+	<max-extend-m>16</max-extend-m>
+
+	<!-- Parameters set by the script -->
+	<toggle-action-script type="string" />
+	<extend-m type="string" />
+	<pitch-deg type="string" />
+	<heading-deg type="string" />
+	<entrance-heading-deg type="string" />
+	<hood-deg type="string" />
+	<gate type="string" />
+
+	<!-- Animations -->
+	<!-- Click action -->
+	<animation>
+		<type>pick</type>
+		<object-name>Scissors</object-name>
+		<object-name>Support</object-name>
+		<object-name>SupportGirder</object-name>
+		<object-name>Tunnel1</object-name>
+		<object-name>Tunnel2</object-name>
+		<object-name>Tunnel3</object-name>
+		<object-name>Tunnel4</object-name>
+		
+		<object-name>Rotunda2</object-name>
+		<object-name>Entrance</object-name>
+		<object-name>Hood</object-name>
+		<object-name>AirlineSign</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script alias="../../../../toggle-action-script" />
+			</binding>
+		</action>
+	</animation>
+
+	<!-- Gate number -->
+	<text>
+		<name>Gate number 1</name>
+		<offsets>
+			<x-m>13.984</x-m>
+			<y-m>-0.342</y-m>
+			<z-m>6.924</z-m>
+			<heading-deg>45</heading-deg>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type>literal</type>
+		<text alias="../../gate" />
+		<font>helvetica_bold.txf</font>
+		<character-size>0.5</character-size>
+		<character-aspect-ratio type="double">-1.3</character-aspect-ratio>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>Gate number 2</name>
+		<offsets>
+			<x-m>14.814</x-m>
+			<y-m>-0.12</y-m>
+			<z-m>6.924</z-m>
+			<heading-deg>165</heading-deg>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type>literal</type>
+		<text alias="../../gate" />
+		<font>helvetica_bold.txf</font>
+		<character-size>0.5</character-size>
+		<character-aspect-ratio type="double">-1.3</character-aspect-ratio>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>Gate number 3</name>
+		<offsets>
+			<x-m>14.207</x-m>
+			<y-m>0.519</y-m>
+			<z-m>6.924</z-m>
+			<heading-deg>-75</heading-deg>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type>literal</type>
+		<text alias="../../gate" />
+		<font>helvetica_bold.txf</font>
+		<character-size>0.5</character-size>
+		<character-aspect-ratio type="double">-1.3</character-aspect-ratio>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<animation>
+		<type>material</type>
+		<object-name>Gate number 1</object-name>
+		<object-name>Gate number 2</object-name>
+		<object-name>Gate number 3</object-name>
+		<emission>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.5</blue>
+		</emission>
+	</animation>
+
+	<!-- Day/night lighting -->
+	<animation>
+		<type>material</type>
+		<object-name>Scissors</object-name>
+		<object-name>Support</object-name>
+		<object-name>SupportGirder</object-name>
+		<object-name>Tunnel1</object-name>
+		<object-name>Tunnel2</object-name>
+		<object-name>Tunnel3</object-name>
+		<object-name>Tunnel4</object-name>
+		<object-name>Rotunda1</object-name>
+		<object-name>Rotunda2</object-name>
+		<object-name>Entrance</object-name>
+		<object-name>Hood</object-name>
+		<object-name>AirlineSign</object-name>
+		<emission>
+			<red>0.3</red>
+			<green>0.3</green>
+			<blue>0.3</blue>
+		</emission>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>Scissors</object-name>
+		<object-name>Support</object-name>
+		<object-name>SupportGirder</object-name>
+		<object-name>Tunnel1</object-name>
+		<object-name>Tunnel2</object-name>
+		<object-name>Tunnel3</object-name>
+		<object-name>Tunnel4</object-name>
+		<object-name>Rotunda1</object-name>
+		<object-name>Rotunda2</object-name>
+		<object-name>Entrance</object-name>
+		<object-name>Hood</object-name>
+		<property>/sim/time/sun-angle-rad</property>
+		<factor>0.3125</factor>
+		<step>1.6</step>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+		</axis>
+	</animation>
+
+	<!-- Don't let the entrance rotunda interact with aircraft -->
+	<animation>
+		<object-name>Entrance</object-name>
+		<object-name>Hood</object-name>
+		<object-name>Rotunda2</object-name>
+		<enable-hot type="bool">false</enable-hot>
+	</animation>
+
+	<!-- Jetway movement -->
+	<animation>
+		<type>translate</type>
+		<object-name>SupportGirder</object-name>
+		<expression>
+			<product>
+				<tan>
+					<deg2rad>
+						<property alias="../../../../../../pitch-deg" />
+					</deg2rad>
+				</tan>
+				<value>7.13</value>
+			</product>
+		</expression>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Scissors</object-name>
+		<object-name>Tunnel1</object-name>
+		<object-name>Tunnel2</object-name>
+		<object-name>Tunnel3</object-name>
+		<object-name>Tunnel4</object-name>
+		<object-name>AirlineSign</object-name>
+		<object-name>Support</object-name>
+		<object-name>SupportGirder</object-name>
+		<object-name>Rotunda2</object-name>
+		<object-name>GateSign</object-name>
+		<object-name>Gate number 1</object-name>
+		<object-name>Gate number 2</object-name>
+		<object-name>Gate number 3</object-name>
+		<object-name>Entrance</object-name>
+		<object-name>Hood</object-name>
+		<property alias="../../heading-deg" />
+		<center>
+			<x-m>2.04</x-m>
+			<y-m>0.04</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>-1</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Scissors</object-name>
+		<object-name>Tunnel2</object-name>
+		<object-name>Tunnel3</object-name>
+		<object-name>Tunnel4</object-name>
+		<object-name>AirlineSign</object-name>
+		<object-name>Rotunda2</object-name>
+		<object-name>GateSign</object-name>
+		<object-name>Gate number 1</object-name>
+		<object-name>Gate number 2</object-name>
+		<object-name>Gate number 3</object-name>
+		<object-name>Entrance</object-name>
+		<object-name>Hood</object-name>
+		<property alias="../../pitch-deg" />
+		<center>
+			<x-m>3.548</x-m>
+			<y-m>0</y-m>
+			<z-m>3.945</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>Scissors</object-name>
+		<object-name>Tunnel3</object-name>
+		<property alias="../../extend-m" />
+		<factor>0.5</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>scale</type>
+		<object-name>Scissors</object-name>
+		<property alias="../../extend-m" />
+		<x-factor>0.65625</x-factor>
+		<x-offset>1</x-offset>
+		<y-factor>0</y-factor>
+		<y-min>1</y-min>
+		<z-factor>0</z-factor>
+		<z-min>1</z-min>
+		<center>
+			<x-m>4.469</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>Tunnel4</object-name>
+		<object-name>AirlineSign</object-name>
+		<object-name>Support</object-name>
+		<object-name>SupportGirder</object-name>
+		<object-name>Rotunda2</object-name>
+		<object-name>GateSign</object-name>
+		<object-name>Gate number 1</object-name>
+		<object-name>Gate number 2</object-name>
+		<object-name>Gate number 3</object-name>
+		<object-name>Entrance</object-name>
+		<object-name>Hood</object-name>
+		<property alias="../../extend-m" />
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Entrance</object-name>
+		<object-name>Hood</object-name>
+		<property alias="../../entrance-heading-deg" />
+		<center>
+			<x-m>14.335</x-m>
+			<y-m>0.04</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>-1</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Hood</object-name>
+		<property alias="../../hood-deg" />
+		<center>
+			<x-m>15.814</x-m>
+			<y-m>0</y-m>
+			<z-m>3.902</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+</PropertyList>
