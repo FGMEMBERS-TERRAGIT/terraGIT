@@ -1,0 +1,58 @@
+#!/bin/sh
+
+## USAGE EXAMPLE
+##
+## install/Australia
+## installs tiles covering Australia
+
+# Copyright (C) 2016 IAHM-COL
+
+#This program is free software; you can redistribute it and/or
+#modify it under the terms of the GNU General Public License
+#as published by the Free Software Foundation; either version 2
+#of the License, or (at your option) any later version.
+
+#This program is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+
+#You should have received a copy of the GNU General Public License
+#along with this program; if not, write to the Free Software
+#Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+## Install any tile listed completely (initializing and updating both Terrain and Objects)
+
+git submodule init Objects/e140s50
+git submodule init Objects/e110s40
+git submodule init Objects/e120s40
+git submodule init Objects/e130s40
+git submodule init Objects/e140s40
+git submodule init Objects/e150s40
+git submodule init Objects/e110s30
+git submodule init Objects/e120s30
+git submodule init Objects/e130s30
+git submodule init Objects/e140s30
+git submodule init Objects/e150s30
+git submodule init Objects/e110s20
+git submodule init Objects/e120s20
+git submodule init Objects/e130s20
+git submodule init Objects/e140s20
+git submodule init Objects/e150s20
+git submodule init Terrain/e140s50
+git submodule init Terrain/e110s40
+git submodule init Terrain/e120s40
+git submodule init Terrain/e130s40
+git submodule init Terrain/e140s40
+git submodule init Terrain/e150s40
+git submodule init Terrain/e110s30
+git submodule init Terrain/e120s30
+git submodule init Terrain/e130s30
+git submodule init Terrain/e140s30
+git submodule init Terrain/e150s30
+git submodule init Terrain/e110s20
+git submodule init Terrain/e120s20
+git submodule init Terrain/e130s20
+git submodule init Terrain/e140s20
+git submodule init Terrain/e150s20
+git submodule update
