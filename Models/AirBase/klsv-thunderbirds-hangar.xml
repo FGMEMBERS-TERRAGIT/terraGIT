@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+	<path>klsv-thunderbirds-hangar.ac</path>
+
+	<nasal>
+		<load>
+			print("loading KLSV");
+			var lonN = props.globals.getNode("/position/longitude-deg", 1);
+			var latN = props.globals.getNode("/position/latitude-deg", 1);
+			var door_lon = -115.03662602;
+			var door_lat = 36.24148436;
+			var door = aircraft.door.new("/model/static/w120n30/w116n36/klsv-thunderbirds-hangar.xml/door", 30);
+			var loop_id = 0;
+
+			var loop = func(id) {
+				id == loop_id or return;
+				var dlon = door_lon - lonN.getValue();
+				var dlat = door_lat - latN.getValue();
+				var dist = dlon * dlon + dlat * dlat;
+				door.move(0.000001 &gt; dist);
+				settimer(func { loop(id) }, 5);
+			}
+			loop(loop_id += 1);
+		</load>
+		<unload>loop_id += 1</unload>
+	</nasal>
+
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>30000</max-m>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>door-L-1</object-name>
+		<property>/model/static/w120n30/w116n36/klsv-thunderbirds-hangar.xml/door/position-norm</property>
+		<factor>15.18</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>door-L-2</object-name>
+		<property>/model/static/w120n30/w116n36/klsv-thunderbirds-hangar.xml/door/position-norm</property>
+		<factor>10.11</factor>
+		<axis>
+			<x>7</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>door-L-3</object-name>
+		<property>/model/static/w120n30/w116n36/klsv-thunderbirds-hangar.xml/door/position-norm</property>
+		<factor>5.2</factor>
+		<axis>
+			<x>7</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>door-R-3</object-name>
+		<property>/model/static/w120n30/w116n36/klsv-thunderbirds-hangar.xml/door/position-norm</property>
+		<factor>-15.18</factor>
+		<axis>
+			<x>7</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>door-R-2</object-name>
+		<property>/model/static/w120n30/w116n36/klsv-thunderbirds-hangar.xml/door/position-norm</property>
+		<factor>-10.11</factor>
+		<axis>
+			<x>7</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>door-R-1</object-name>
+		<property>/model/static/w120n30/w116n36/klsv-thunderbirds-hangar.xml/door/position-norm</property>
+		<factor>-5.2</factor>
+		<axis>
+			<x>7</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+</PropertyList>
