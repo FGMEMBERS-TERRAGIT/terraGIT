@@ -1,0 +1,94 @@
+#!/bin/sh
+
+## USAGE EXAMPLE
+##
+## deinstall/lon-e140
+## deinstalls tiles covering lon-e140
+
+# Copyright (C) 2016 IAHM-COL
+
+#This program is free software; you can redistribute it and/or
+#modify it under the terms of the GNU General Public License
+#as published by the Free Software Foundation; either version 2
+#of the License, or (at your option) any later version.
+
+#This program is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+
+#You should have received a copy of the GNU General Public License
+#along with this program; if not, write to the Free Software
+#Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+## Deinstall any tile listed completely (initializing and updating both Terrain and Objects)
+
+git submodule deinit Objects/e140n00
+git submodule deinit Objects/e140n10
+git submodule deinit Objects/e140n20
+git submodule deinit Objects/e140n30
+git submodule deinit Objects/e140n40
+git submodule deinit Objects/e140n50
+git submodule deinit Objects/e140n60
+git submodule deinit Objects/e140n70
+git submodule deinit Objects/e140n80
+git submodule deinit Objects/e140s10
+git submodule deinit Objects/e140s20
+git submodule deinit Objects/e140s30
+git submodule deinit Objects/e140s40
+git submodule deinit Objects/e140s50
+git submodule deinit Objects/e140s70
+git submodule deinit Objects/e140s80
+git submodule deinit Objects/e140s90
+git submodule deinit Terrain/e140n00
+git submodule deinit Terrain/e140n10
+git submodule deinit Terrain/e140n20
+git submodule deinit Terrain/e140n30
+git submodule deinit Terrain/e140n40
+git submodule deinit Terrain/e140n50
+git submodule deinit Terrain/e140n60
+git submodule deinit Terrain/e140n70
+git submodule deinit Terrain/e140n80
+git submodule deinit Terrain/e140s10
+git submodule deinit Terrain/e140s20
+git submodule deinit Terrain/e140s30
+git submodule deinit Terrain/e140s40
+git submodule deinit Terrain/e140s50
+git submodule deinit Terrain/e140s70
+git submodule deinit Terrain/e140s80
+git submodule deinit Terrain/e140s90
+
+git submodule update Objects/e140n00
+git submodule update Objects/e140n10
+git submodule update Objects/e140n20
+git submodule update Objects/e140n30
+git submodule update Objects/e140n40
+git submodule update Objects/e140n50
+git submodule update Objects/e140n60
+git submodule update Objects/e140n70
+git submodule update Objects/e140n80
+git submodule update Objects/e140s10
+git submodule update Objects/e140s20
+git submodule update Objects/e140s30
+git submodule update Objects/e140s40
+git submodule update Objects/e140s50
+git submodule update Objects/e140s70
+git submodule update Objects/e140s80
+git submodule update Objects/e140s90
+git submodule update Terrain/e140n00
+git submodule update Terrain/e140n10
+git submodule update Terrain/e140n20
+git submodule update Terrain/e140n30
+git submodule update Terrain/e140n40
+git submodule update Terrain/e140n50
+git submodule update Terrain/e140n60
+git submodule update Terrain/e140n70
+git submodule update Terrain/e140n80
+git submodule update Terrain/e140s10
+git submodule update Terrain/e140s20
+git submodule update Terrain/e140s30
+git submodule update Terrain/e140s40
+git submodule update Terrain/e140s50
+git submodule update Terrain/e140s70
+git submodule update Terrain/e140s80
+git submodule update Terrain/e140s90

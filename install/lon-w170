@@ -1,0 +1,74 @@
+#!/bin/sh
+
+## USAGE EXAMPLE
+##
+## install/lon-w170
+## installs tiles covering lon-w170 
+
+# Copyright (C) 2016 IAHM-COL
+
+#This program is free software; you can redistribute it and/or
+#modify it under the terms of the GNU General Public License
+#as published by the Free Software Foundation; either version 2
+#of the License, or (at your option) any later version.
+
+#This program is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+
+#You should have received a copy of the GNU General Public License
+#along with this program; if not, write to the Free Software
+#Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+## Install any tile listed completely (initializing and updating both Terrain and Objects)
+
+git submodule init Objects/w170n00
+git submodule init Objects/w170n10
+git submodule init Objects/w170n20
+git submodule init Objects/w170n50
+git submodule init Objects/w170n60
+git submodule init Objects/w170n70
+git submodule init Objects/w170n80
+git submodule init Objects/w170s10
+git submodule init Objects/w170s20
+git submodule init Objects/w170s70
+git submodule init Objects/w170s80
+git submodule init Objects/w170s90
+git submodule init Terrain/w170n00
+git submodule init Terrain/w170n10
+git submodule init Terrain/w170n20
+git submodule init Terrain/w170n50
+git submodule init Terrain/w170n60
+git submodule init Terrain/w170n70
+git submodule init Terrain/w170n80
+git submodule init Terrain/w170s10
+git submodule init Terrain/w170s20
+git submodule init Terrain/w170s70
+git submodule init Terrain/w170s80
+git submodule init Terrain/w170s90
+
+git submodule update Objects/w170n00
+git submodule update Objects/w170n10
+git submodule update Objects/w170n20
+git submodule update Objects/w170n50
+git submodule update Objects/w170n60
+git submodule update Objects/w170n70
+git submodule update Objects/w170n80
+git submodule update Objects/w170s10
+git submodule update Objects/w170s20
+git submodule update Objects/w170s70
+git submodule update Objects/w170s80
+git submodule update Objects/w170s90
+git submodule update Terrain/w170n00
+git submodule update Terrain/w170n10
+git submodule update Terrain/w170n20
+git submodule update Terrain/w170n50
+git submodule update Terrain/w170n60
+git submodule update Terrain/w170n70
+git submodule update Terrain/w170n80
+git submodule update Terrain/w170s10
+git submodule update Terrain/w170s20
+git submodule update Terrain/w170s70
+git submodule update Terrain/w170s80
+git submodule update Terrain/w170s90

@@ -1,0 +1,86 @@
+#!/bin/sh
+
+## USAGE EXAMPLE
+##
+## install/lon-e000
+## installs tiles covering lon-e000
+
+# Copyright (C) 2016 IAHM-COL
+
+#This program is free software; you can redistribute it and/or
+#modify it under the terms of the GNU General Public License
+#as published by the Free Software Foundation; either version 2
+#of the License, or (at your option) any later version.
+
+#This program is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+
+#You should have received a copy of the GNU General Public License
+#along with this program; if not, write to the Free Software
+#Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+## Install any tile listed completely (initializing and updating both Terrain and Objects)
+
+git submodule init Objects/e000n00
+git submodule init Objects/e000n10
+git submodule init Objects/e000n20
+git submodule init Objects/e000n30
+git submodule init Objects/e000n40
+git submodule init Objects/e000n50
+git submodule init Objects/e000n60
+git submodule init Objects/e000n70
+git submodule init Objects/e000n80
+git submodule init Objects/e000s10
+git submodule init Objects/e000s20
+git submodule init Objects/e000s60
+git submodule init Objects/e000s70
+git submodule init Objects/e000s80
+git submodule init Objects/e000s90
+git submodule init Terrain/e000n00
+git submodule init Terrain/e000n10
+git submodule init Terrain/e000n20
+git submodule init Terrain/e000n30
+git submodule init Terrain/e000n40
+git submodule init Terrain/e000n50
+git submodule init Terrain/e000n60
+git submodule init Terrain/e000n70
+git submodule init Terrain/e000n80
+git submodule init Terrain/e000s10
+git submodule init Terrain/e000s20
+git submodule init Terrain/e000s60
+git submodule init Terrain/e000s70
+git submodule init Terrain/e000s80
+git submodule init Terrain/e000s90
+
+git submodule update Objects/e000n00
+git submodule update Objects/e000n10
+git submodule update Objects/e000n20
+git submodule update Objects/e000n30
+git submodule update Objects/e000n40
+git submodule update Objects/e000n50
+git submodule update Objects/e000n60
+git submodule update Objects/e000n70
+git submodule update Objects/e000n80
+git submodule update Objects/e000s10
+git submodule update Objects/e000s20
+git submodule update Objects/e000s60
+git submodule update Objects/e000s70
+git submodule update Objects/e000s80
+git submodule update Objects/e000s90
+git submodule update Terrain/e000n00
+git submodule update Terrain/e000n10
+git submodule update Terrain/e000n20
+git submodule update Terrain/e000n30
+git submodule update Terrain/e000n40
+git submodule update Terrain/e000n50
+git submodule update Terrain/e000n60
+git submodule update Terrain/e000n70
+git submodule update Terrain/e000n80
+git submodule update Terrain/e000s10
+git submodule update Terrain/e000s20
+git submodule update Terrain/e000s60
+git submodule update Terrain/e000s70
+git submodule update Terrain/e000s80
+git submodule update Terrain/e000s90
