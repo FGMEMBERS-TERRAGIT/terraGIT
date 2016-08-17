@@ -2,8 +2,8 @@
 
 ## USAGE EXAMPLE
 ##
-## install/USA.Tour47
-## installs tiles covering KMEM and KDCA
+## install/USA.Tour49
+## installs tiles covering KBDR KVVS KLOU
 
 # Copyright (C) 2016 IAHM-COL
 # Copyright (C) 2016 D-LASER
@@ -25,13 +25,15 @@
 ## Install any tile listed completely (initializing and updating both Terrain and Objects)
 
 git submodule init Objects/w080n30
+git submodule init Objects/w080n40
 git submodule init Objects/w090n30
 git submodule init Terrain/w080n30
+git submodule init Terrain/w080n40
 git submodule init Terrain/w090n30
 
 git submodule update Objects/w080n30
+git submodule update Objects/w080n40
 git submodule update Objects/w090n30
 git submodule update Terrain/w080n30
+git submodule update Terrain/w080n40
 git submodule update Terrain/w090n30
-
-

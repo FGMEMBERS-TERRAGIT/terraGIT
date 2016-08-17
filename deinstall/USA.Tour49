@@ -2,8 +2,8 @@
 
 ## USAGE EXAMPLE
 ##
-## deinstall/USA.Tour47
-## deinstalls tiles covering KMEM and KDCA
+## deinstall/USA.Tour49
+## deinstalls tiles covering KBDR KVVS KLOU
 
 # Copyright (C) 2016 IAHM-COL
 # Copyright (C) 2016 D-LASER
@@ -25,13 +25,15 @@
 ## Deinstall any tile listed completely (initializing and updating both Terrain and Objects)
 
 git submodule deinit Objects/w080n30
+git submodule deinit Objects/w080n40
 git submodule deinit Objects/w090n30
 git submodule deinit Terrain/w080n30
+git submodule deinit Terrain/w080n40
 git submodule deinit Terrain/w090n30
 
 git submodule update Objects/w080n30
+git submodule update Objects/w080n40
 git submodule update Objects/w090n30
 git submodule update Terrain/w080n30
+git submodule update Terrain/w080n40
 git submodule update Terrain/w090n30
-
-
