@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>ampel-klein.ac</path>
+ 
+<animation>
+	 <type>material</type>
+	 <object-name>red.001</object-name>
+	 <object-name>red.002</object-name>
+	 <object-name>red.003</object-name>
+	 <object-name>red.004</object-name>
+	 <object-name>red.005</object-name>
+	 <emission>
+	  <red>1</red>
+	  <green>0</green>
+	  <blue>0</blue>
+   	</emission>
+</animation>
+
+<animation>
+	 <type>material</type>
+	 <object-name>green</object-name>
+	 <emission>
+	  <red>0</red>
+	  <green>1</green>
+	  <blue>0</blue>
+   	</emission>
+</animation>
+
+<animation>
+	 <type>material</type>
+	 <object-name>yellow</object-name>
+	 <emission>
+	  <red>1</red>
+	  <green>1</green>
+	  <blue>0</blue>
+   	</emission>
+</animation>
+
+<animation>
+  <type>select</type>
+	 <object-name>red.001</object-name>
+  <condition>
+	<or>
+	  <equals>
+       <property>/startsignal</property>
+	   <value>1</value>
+	  </equals>
+	  <equals>
+       <property>/startsignal</property>
+	   <value>2</value>
+	  </equals>
+	  <equals>
+       <property>/startsignal</property>
+	   <value>3</value>
+	  </equals>
+	  <equals>
+       <property>/startsignal</property>
+	   <value>4</value>
+	  </equals>
+	  <equals>
+       <property>/startsignal</property>
+	   <value>5</value>
+	  </equals>
+    </or>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+	 <object-name>red.002</object-name>
+  <condition>
+  	<or>
+  	  <equals>
+         <property>/startsignal</property>
+  	   <value>2</value>
+  	  </equals>
+  	  <equals>
+         <property>/startsignal</property>
+  	   <value>3</value>
+  	  </equals>
+  	  <equals>
+         <property>/startsignal</property>
+  	   <value>4</value>
+  	  </equals>
+  	  <equals>
+         <property>/startsignal</property>
+  	   <value>5</value>
+  	  </equals>
+      </or>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+	 <object-name>red.003</object-name>
+  <condition>
+  	<or>
+  	  <equals>
+         <property>/startsignal</property>
+  	   <value>3</value>
+  	  </equals>
+  	  <equals>
+         <property>/startsignal</property>
+  	   <value>4</value>
+  	  </equals>
+  	  <equals>
+         <property>/startsignal</property>
+  	   <value>5</value>
+  	  </equals>
+      </or>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+	 <object-name>red.004</object-name>
+  <condition>
+  	<or>
+  	  <equals>
+         <property>/startsignal</property>
+  	   <value>4</value>
+  	  </equals>
+  	  <equals>
+         <property>/startsignal</property>
+  	   <value>5</value>
+  	  </equals>
+      </or>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+	 <object-name>red.005</object-name>
+  <condition>
+	  <equals>
+       <property>/startsignal</property>
+	   <value>5</value>
+	  </equals>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+	 <object-name>yellow</object-name>
+  <condition>
+	  <equals>
+       <property>/startsignal</property>
+	   <value>6</value>
+	  </equals>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+	 <object-name>green</object-name>
+  <condition>
+	  <equals>
+       <property>/startsignal</property>
+	   <value>7</value>
+	  </equals>
+  </condition>
+</animation>
+ 
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>10000</max-m>
+ </animation>
+
+</PropertyList>

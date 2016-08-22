@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>marshall.ac</path>
+ 
+ <animation>
+  <type>billboard</type>
+  <spherical>false</spherical>
+ </animation>
+ 
+ <effect>
+ 	<inherits-from>Effects/model-transparent</inherits-from>
+ 	 <object-name>marshall.001</object-name>
+ 	 <object-name>flag-finish</object-name>
+ 	 <object-name>flag-green-finish</object-name>
+ 	 <object-name>flag-red</object-name>
+ 	 <object-name>flag-yellow</object-name>
+ 	 <object-name>flag-green</object-name>
+ </effect>
+ 
+ <animation>
+   <type>select</type>
+ 	 <object-name>marshall.001</object-name>
+ 	 <object-name>marshall.arm</object-name>
+   <condition>
+	 <or>
+	  <greater-than>
+        <property>/controls/flag-marshall-finish-line</property>
+ 	   <value>0</value>
+ 	  </greater-than>
+	  <greater-than>
+        <property>/controls/flag-last-lap</property>
+ 	   <value>0</value>
+ 	  </greater-than>
+  	</or>
+   </condition>
+ </animation>
+ 
+ <animation>
+   <type>select</type>
+ 	 <object-name>flag-green</object-name>
+   <condition>
+	  <equals>
+        <property>/controls/flag</property>
+ 	    <value>99</value>
+ 	  </equals>
+   </condition>
+ </animation>
+ 
+ <animation>
+   <type>select</type>
+ 	 <object-name>flag-yellow</object-name>
+   <condition>
+	  <equals>
+        <property>/controls/flag</property>
+ 	   <value>99</value>
+ 	  </equals>
+   </condition>
+ </animation>
+ 
+ <animation>
+   <type>select</type>
+ 	 <object-name>flag-red</object-name>
+   <condition>
+	  <equals>
+        <property>/controls/flag</property>
+ 	   <value>99</value>
+ 	  </equals>
+   </condition>
+ </animation>
+ 
+ <animation>
+   <type>select</type>
+ 	 <object-name>flag-lastlap</object-name>
+   <condition>
+	  <equals>
+        <property>/controls/flag-last-lap</property>
+ 	   <value>1</value>
+ 	  </equals>
+   </condition>
+ </animation>
+ 
+ <animation>
+   <type>select</type>
+ 	 <object-name>flag-finish</object-name>
+   <condition>
+	  <equals>
+        <property>/controls/flag-marshall-finish-line</property>
+ 	   <value>1</value>
+ 	  </equals>
+   </condition>
+ </animation>
+ 
+ <animation>
+   <type>select</type>
+ 	 <object-name>flag-green-finish</object-name>
+   <condition>
+	  <equals>
+        <property>/controls/flag</property>
+ 	   <value>99</value>
+ 	  </equals>
+   </condition>
+ </animation>
+  
+ <animation>
+ 	<type>rotate</type>
+  	 <object-name>flag-finish</object-name>
+  	 <object-name>marshall.arm</object-name> 
+     <condition>
+  		  <not>
+  			  <equals>
+  		        <property>/controls/flag-last-lap</property>
+  		 	   <value>1</value>
+  		 	  </equals>
+  		  </not>
+     </condition>
+ 	<property>/sim/time/elapsed-sec</property>
+ 	<factor>-350</factor>
+ 	<center>
+ 		<x-m>0.22</x-m>
+ 		<y-m>0.02</y-m>
+ 		<z-m>1.24</z-m>
+ 	</center>
+ 	<axis>
+ 		<x>0</x>
+ 		<y>1</y>
+ 		<z>0</z>
+ 	</axis>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>10000</max-m>
+ </animation>
+
+</PropertyList>

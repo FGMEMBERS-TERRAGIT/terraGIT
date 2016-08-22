@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Boeing 707 for Flightgear Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+ <path>lightcone.ac</path>
+	<animation>
+		 <type>light</type>
+		 <light-type>spot</light-type>
+		 <name>Flootlight</name>
+		 <object-name>lightcone</object-name>
+		 <nopreview/>
+		 <position>
+		   <x>0.0</x>
+		   <y>0.0</y>
+		   <z>200.0</z>
+		 </position>
+		 <direction>
+		   <x>0.0</x>
+		   <y>0.0</y>
+		   <z>-1.0</z>
+		 </direction>
+		 <ambient>
+		   <r>0.1</r>
+		   <g>0.1</g>
+		   <b>0.1</b>
+		   <a>1.0</a>
+		 </ambient>
+		 <diffuse>
+		   <r>0.9</r>
+		   <g>0.9</g>
+		   <b>0.8</b>
+		   <a>1.0</a>
+		 </diffuse>
+		 <specular>
+		   <r>0.9</r>
+		   <g>0.9</g>
+		   <b>0.9</b>
+		   <a>1.0</a>
+		 </specular>
+		 <dim-factor>
+			 <property>/sim/time/sun-angle-rad</property>
+			 <factor>1.5</factor>
+			 <offset>0</offset>
+			 <min>0</min>
+			 <max>2.75</max>
+		 </dim-factor>
+		 <attenuation>
+		   <c>1.0</c>
+		   <l>0.002</l>
+		   <q>0.00005</q>
+		 </attenuation>
+		 <exponent>800.0</exponent>
+		 <cutoff>600.0</cutoff>
+		 <near-m>20.0</near-m>
+		 <far-m>600.0</far-m>
+	 </animation>
+	 
+	 <animation>
+	    <type>select</type>
+	    <!-- Select the named animation -->
+	    <object-name>Flootlight</object-name>
+	    <condition>
+	       <and>
+	          <!-- Rembrandt enabled ? -->
+	          <property>/sim/rendering/rembrandt/enabled</property>         
+			  <!-- Quality ok ? -->
+         	 <greater-than>
+            	 <property>/sim/rendering/shaders/lights</property>
+            	 <value>2.0</value>
+         	</greater-than>
+	          <!-- Simulation conditions ? -->
+	          <greater-than>
+	             <property>/sim/time/sun-angle-rad</property>
+	             <value>1.57</value>
+	          </greater-than>
+	       </and>
+	    </condition>
+	 </animation>
+</PropertyList> 

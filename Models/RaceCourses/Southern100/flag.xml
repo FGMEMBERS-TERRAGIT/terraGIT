@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>flag.ac</path>
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5000</max-m>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>flag_wind</object-name>
+  <property>/environment/wind-from-heading-deg</property>
+  <offset-deg>-90</offset-deg>
+  <factor>-1</factor>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>
+ </animation>
+ 
+ <animation>
+   <type>select</type>
+   <object-name>flag_wind</object-name>
+   <condition>
+       <greater-than>
+         <property>/environment/wind-speed-kt</property>
+         <value>10</value>
+       </greater-than>
+   </condition>
+ </animation>
+ 
+ <animation>
+   <type>select</type>
+   <object-name>flag</object-name>
+   <condition>
+       <less-than>
+         <property>/environment/wind-speed-kt</property>
+         <value>10</value>
+       </less-than>
+   </condition>
+ </animation>
+</PropertyList>
