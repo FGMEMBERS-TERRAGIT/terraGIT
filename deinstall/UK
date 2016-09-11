@@ -21,14 +21,16 @@
 #along with this program; if not, write to the Free Software
 #Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
-## Deinstall any tile listed completely (deinitializing and updating both Terrain and Objects)
+## Deinstall any tile listed completely (initializing and updating both Terrain and Objects)
 
 git submodule deinit Objects/e000n50
+git submodule deinit Objects/w010n40
 git submodule deinit Objects/w010n50
-git submodule deinit Terrain/e000n50
-git submodule deinit Terrain/w010n50
+git submodule deinit Objects/w010n60
+git submodule deinit Objects/w020n50
 
 git submodule update Objects/e000n50
+git submodule update Objects/w010n40
 git submodule update Objects/w010n50
-git submodule update Terrain/e000n50
-git submodule update Terrain/w010n50
+git submodule update Objects/w010n60
+git submodule update Objects/w020n50
