@@ -2,11 +2,10 @@
 
 ## USAGE EXAMPLE
 ##
-## deinstall/USA.Tour50
-## deinstalls tiles covering KBDR KVVS KLOU
+## install/USA.Tour51
+## installs tiles covering KBOS-KDSM
 
 # Copyright (C) 2016 IAHM-COL
-# Copyright (C) 2016 D-LASER
 
 #This program is free software; you can redistribute it and/or
 #modify it under the terms of the GNU General Public License
@@ -22,18 +21,22 @@
 #along with this program; if not, write to the Free Software
 #Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
-## Deinstall any tile listed completely (initializing and updating both Terrain and Objects)
+## Install any tile listed completely (initializing and updating both Terrain and Objects)
 
-git submodule deinit Objects/w080n30
-git submodule deinit Objects/w080n40
-git submodule deinit Objects/w090n30
-git submodule deinit Terrain/w080n30
-git submodule deinit Terrain/w080n40
-git submodule deinit Terrain/w090n30
+git submodule init Objects/w070n40
+git submodule init Objects/w080n40
+git submodule init Objects/w090n40
+git submodule init Objects/w100n40
+git submodule init Terrain/w070n40
+git submodule init Terrain/w080n40
+git submodule init Terrain/w090n40
+git submodule init Terrain/w100n40
 
-git submodule update Objects/w080n30
+git submodule update Objects/w070n40
 git submodule update Objects/w080n40
-git submodule update Objects/w090n30
-git submodule update Terrain/w080n30
+git submodule update Objects/w090n40
+git submodule update Objects/w100n40
+git submodule update Terrain/w070n40
 git submodule update Terrain/w080n40
-git submodule update Terrain/w090n30
+git submodule update Terrain/w090n40
+git submodule update Terrain/w100n40
