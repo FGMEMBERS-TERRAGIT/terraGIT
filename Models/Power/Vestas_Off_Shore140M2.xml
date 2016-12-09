@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PropertyList>
+
+ <path>Vestas_Off_Shore140M2.ac</path>
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>20000</max-m>
+ </animation>
+
+<animation>
+ <object-name>Flash1</object-name>
+ <object-name>Blank1</object-name>
+ <object-name>Flash2</object-name>
+ <object-name>Blank2</object-name>
+ <object-name>Flash3</object-name>
+ <object-name>Blank3</object-name>
+  <enable-hot type="bool">false</enable-hot>
+ </animation>
+ 
+ <animation>
+  <type>alpha-test</type>
+  <alpha-factor>0.01</alpha-factor>
+ </animation>
+
+ <animation>
+  <type>select</type>
+ <object-name>Flash1</object-name>
+ <object-name>Blank1</object-name>
+ <object-name>Flash2</object-name>
+ <object-name>Blank2</object-name>
+ <object-name>Flash3</object-name>
+ <object-name>Blank3</object-name>
+  <condition>
+   <greater-than>
+    <property>/sim/time/sun-angle-rad</property>
+    <value>1.57</value>
+   </greater-than>
+  </condition>
+ </animation>
+ 
+ <animation>
+ <type>timed</type>
+ <object-name>Flash1</object-name>
+ <object-name>Blank1</object-name>
+ <object-name>Flash2</object-name>
+ <object-name>Blank2</object-name>
+ <object-name>Flash3</object-name>
+ <object-name>Blank3</object-name>
+ <use-personality type="bool">true</use-personality>
+<branch-duration-sec>
+  <random>
+   <min>0.1</min>
+   <max>0.1</max>
+  </random>
+ </branch-duration-sec>
+ <branch-duration-sec>
+  <random>
+   <min>0.5</min>
+   <max>0.5</max>
+  </random>
+ </branch-duration-sec>
+<branch-duration-sec>
+  <random>
+   <min>0.1</min>
+   <max>0.1</max>
+  </random>
+ </branch-duration-sec>
+ <branch-duration-sec>
+  <random>
+   <min>0.5</min>
+   <max>0.5</max>
+  </random>
+ </branch-duration-sec>
+<branch-duration-sec>
+  <random>
+   <min>0.1</min>
+   <max>0.1</max>
+  </random>
+ </branch-duration-sec>
+ <branch-duration-sec>
+  <random>
+   <min>5.0</min>
+   <max>5.0</max>
+  </random>
+ </branch-duration-sec>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <property>/environment/wind-from-heading-deg</property>
+  <offset-deg>-90</offset-deg>
+  <factor>-1</factor>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>Blades</object-name>
+  <use-personality type="bool">true</use-personality>
+  <property>/environment/wind-speed-kt</property>
+  <interpolation>
+	<entry>
+      <ind>7.3</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>7.8</ind>
+      <dep>9</dep>
+    </entry>
+    <entry>
+      <ind>48.6</ind>
+      <dep>19</dep>
+    </entry>
+	<entry>
+      <ind>49.1</ind>
+      <dep>0</dep>
+    </entry>
+  </interpolation>
+  <starting-pos-deg>
+   <random>
+    <min>0</min>
+    <max>360</max>
+   </random>
+  </starting-pos-deg>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>84.0</z-m>
+  </center>
+ </animation>
+
+<model>
+  <path>Models/Fauna/SeaGull_Origin.xml</path>
+  <offsets>
+  <x-m> 0.0</x-m>
+  <y-m> 00.0</y-m>
+  <z-m> 15.0</z-m>
+  </offsets>
+</model>
+
+<model>
+  <path>Models/Fauna/SeaGull_Origin_2.xml</path>
+  <offsets>
+  <x-m> 0.0</x-m>
+  <y-m> 00.0</y-m>
+  <z-m> 20.0</z-m>
+  </offsets>
+</model>
+
+<model>
+  <path>Models/Fauna/SeaGull_Origin.xml</path>
+  <offsets>
+  <x-m> 0.0</x-m>
+  <y-m> 00.0</y-m>
+  <z-m> 115.0</z-m>
+  </offsets>
+</model>
+
+<model>
+  <path>Models/Fauna/SeaGull_Origin_2.xml</path>
+  <offsets>
+  <x-m> 0.0</x-m>
+  <y-m> 00.0</y-m>
+  <z-m> 120.0</z-m>
+  </offsets>
+</model>
+
+</PropertyList>

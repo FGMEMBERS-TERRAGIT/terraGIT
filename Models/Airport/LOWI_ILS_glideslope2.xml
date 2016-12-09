@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PropertyList>
+       
+<path>LOWI_ILS_glideslope2.ac</path>
+
+<model>
+    <path>Models/Effects/pos_lamp_red_light_2st.xml</path>
+    <offsets>
+      <x-m> 0.570 </x-m>
+      <y-m> -0.519 </y-m>
+      <z-m> 10.792 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+    <path>Models/Effects/pos_lamp_red_light_2st.xml</path>
+    <offsets>
+      <x-m> 0.570 </x-m>
+      <y-m> 0.519 </y-m>
+      <z-m> 10.792 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Obstruction lamp glass illumination -->
+<animation>
+	<type>material</type> 
+	<object-name>obst_lamp_glass</object-name>
+	<condition>		
+	<greater-than>		
+	<property>/sim/time/sun-angle-rad</property>
+	<value>1.57</value>
+	</greater-than>
+	</condition>
+	<emission>	
+	<red>0.8</red>	
+	<green>0.8</green>	
+	<blue>0.8</blue>
+	</emission>
+</animation>
+
+<!-- LOD -->
+<animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>15000</max-m>
+</animation>
+
+       
+</PropertyList>

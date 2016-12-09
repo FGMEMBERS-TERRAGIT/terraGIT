@@ -1,31 +1,233 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--  Christian Schmitt, updated by Herbert Wagner 11/2016 for Rembrandt compatibility -->
 
 <PropertyList>
-
+  
   <path>apronv20_lightpole.ac</path>
-<animation>
-		<type>material</type>
-		<object-name>lightcone</object-name>
-		<transparency>
-			<alpha-prop>environment/visibility-m</alpha-prop>
-			<factor>1</factor>
-			<offset>0</offset>
-			</transparency>
-		<threshold>0.001</threshold>
-	</animation>
-
+  
   <animation>
     <type>select</type>
     <object-name>lightcone</object-name>
     <object-name>groundlight</object-name>
-    <enable-hot type="bool">false</enable-hot>
     <condition>
-        <greater-than>
-          <property>/sim/time/sun-angle-rad</property>
-          <value>1.57</value>
-        </greater-than>
+      <greater-than>
+	<property>/sim/time/sun-angle-rad</property>
+	<value>1.57</value>
+      </greater-than>
     </condition>
   </animation>
-
-</PropertyList>
-
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>/sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>lightcone</object-name>
+  </effect>
+  
+  <animation>
+    <object-name>lightcone</object-name>
+  </animation>
+  
+  
+  <!--  Rembrandt Light  -->
+  <animation>
+    <type>light</type>
+    <light-type>spot</light-type>
+    <name>LightSource1</name>
+    <object-name>volume1</object-name>
+    <position>
+      <x>  0.635</x>
+      <y> -1.399</y>
+      <z>  25.938</z>
+    </position>
+    <direction>
+      <x>0.635</x>
+      <y>-52.454</y>
+      <z>-78.74</z>
+    </direction>
+    <ambient>
+      <r>0.75</r>
+      <g>0.85</g>
+      <b>0.75</b>
+      <a>1.0</a>
+    </ambient>
+    <diffuse>
+      <r>0.75</r>
+      <g>0.85</g>
+      <b>0.75</b>
+      <a>1.0</a>
+    </diffuse>
+    <specular>
+      <r>0.5</r>
+      <g>0.6</g>
+      <b>0.5</b>
+      <a>1.0</a>
+    </specular>
+    <dim-factor>
+      <property>/sim/time/sun-angle-rad</property>
+      <interpolation>
+	<entry><ind>0</ind><dep>0</dep></entry>
+	<entry><ind>1.49</ind><dep>0</dep></entry>
+	<entry><ind>1.52</ind><dep>1</dep></entry>
+	<entry><ind>3.14</ind><dep>1</dep></entry>
+      </interpolation>
+    </dim-factor>
+    <attenuation>
+      <c>1.0</c>
+      <l>0.002</l>
+      <q>0.00146</q>
+    </attenuation>
+    <exponent>8.0</exponent>
+    <cutoff>20.5</cutoff>
+    <near-m>1</near-m>
+    <far-m>100</far-m>
+  </animation>
+  
+  <animation>
+    <type>light</type>
+    <light-type>spot</light-type>
+    <name>LightSource2</name>
+    <object-name>volume2</object-name>
+    <position>
+      <x>  0.635</x>
+      <y> 1.399</y>
+      <z>  25.969</z>
+    </position>
+    <direction>
+      <x>0.635</x>
+      <y>52.454</y>
+      <z>-78.708</z>
+    </direction>
+    <ambient>
+      <r>0.75</r>
+      <g>0.85</g>
+      <b>0.75</b>
+      <a>1.0</a>
+    </ambient>
+    <diffuse>
+      <r>0.75</r>
+      <g>0.85</g>
+      <b>0.75</b>
+      <a>1.0</a>
+    </diffuse>
+    <specular>
+      <r>0.5</r>
+      <g>0.6</g>
+      <b>0.5</b>
+      <a>1.0</a>
+    </specular>
+    <dim-factor>
+      <property>/sim/time/sun-angle-rad</property>
+      <interpolation>
+	<entry><ind>0</ind><dep>0</dep></entry>
+	<entry><ind>1.49</ind><dep>0</dep></entry>
+	<entry><ind>1.52</ind><dep>1</dep></entry>
+	<entry><ind>3.14</ind><dep>1</dep></entry>
+      </interpolation>
+    </dim-factor>
+    <attenuation>
+      <c>1.0</c>
+      <l>0.002</l>
+      <q>0.00146</q>
+    </attenuation>
+    <exponent>8.0</exponent>
+    <cutoff>20.5</cutoff>
+    <near-m>1</near-m>
+    <far-m>100</far-m>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>LightSource1</object-name>
+    <object-name>LightSource2</object-name>
+    <condition>
+      <and>
+	<greater-than>
+	  <property>/sim/time/sun-angle-rad</property>
+	  <value>1.48</value>
+	</greater-than>
+	<property>/sim/rendering/rembrandt/enabled</property>
+	<greater-than>
+	  <property>/sim/rendering/shaders/lights</property>
+	  <value>0.0</value>
+	</greater-than>
+      </and>
+    </condition>
+  </animation>
+  
+  <!--  night light area  -->
+  <animation>
+    <type>material</type>
+    <object-name>groundlight</object-name>
+    <transparency>
+      <alpha-prop>environment/visibility-m</alpha-prop>
+      <factor>1</factor>
+      <offset>0</offset>
+    </transparency>
+    <threshold>0.001</threshold>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>groundlight</object-name>
+    <condition>
+      <and>
+	<not>
+	  <property>/sim/rendering/rembrandt/enabled</property>
+	</not>
+	<greater-than>		
+	  <property>/sim/time/sun-angle-rad</property>
+	  <value>1.49</value>
+	</greater-than>
+      </and>
+    </condition>
+  </animation>
+  
+  <!--  night floodlight  -->
+  <animation>
+    <type>material</type>
+    <object-name>floodlight</object-name>
+    <condition>		
+      <greater-than>		
+	<property>/sim/time/sun-angle-rad</property>
+	<value>1.49</value>
+      </greater-than>
+    </condition>
+    <emission>	
+      <red>0.9</red>	
+      <green>0.9</green>	
+      <blue>0.9</blue>
+    </emission>
+  </animation>
+  
+  <!--  night emission  -->
+  <animation>
+    <type>material</type>
+    <object-name>mast</object-name>
+    <object-name>mastparts</object-name>
+    <condition>		
+      <greater-than>		
+	<property>/sim/time/sun-angle-rad</property>
+	<value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>	
+      <red>0.02</red>	
+      <green>0.02</green>	
+      <blue>0.02</blue>
+    </emission>
+  </animation>
+  
+  <!--  enable-hot  -->
+  <animation>
+    <enable-hot type="bool">false</enable-hot>
+  </animation>
+  
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-property>sim/rendering/static-lod/bare</max-property>
+  </animation>
+  
+  </PropertyList>

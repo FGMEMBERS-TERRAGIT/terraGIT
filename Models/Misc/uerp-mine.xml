@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+Copyright (C) Herbert Wagner 2016
+-->
+
+<PropertyList>
+
+
+ <path>uerp-mine.ac</path>
+
+<particlesystem>
+    <name>waterfall</name>
+
+    <offsets>
+      <x-m>270</x-m>
+      <y-m>-763</y-m>
+      <z-m>610</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>129</pitch-deg>
+      <heading-deg>265</heading-deg>
+    </offsets>
+    
+    <texture>uerp-mine3.png</texture>
+    <emissive>true</emissive>
+    <lighting>true</lighting>
+
+    <attach>world</attach>
+        
+    <align>billboard</align>
+
+    <placer>
+<type>point</type>
+ 
+</placer>
+
+<shooter>
+      <theta-min-deg>  -0 </theta-min-deg>
+      <theta-max-deg>  0 </theta-max-deg>
+      <phi-min-deg>   -0 </phi-min-deg>
+      <phi-max-deg>    0 </phi-max-deg>
+      <speed-mps>
+        <value>  120 </value>
+        <spread>  0 </spread>
+      </speed-mps>
+      <rotation-speed>
+        <x-max-deg-sec> 50 </x-max-deg-sec>
+        <x-min-deg-sec> -50 </x-min-deg-sec>
+        <y-max-deg-sec>  10 </y-max-deg-sec>
+        <y-min-deg-sec> -10 </y-min-deg-sec>
+        <z-max-deg-sec>  50 </z-max-deg-sec>
+        <z-min-deg-sec> -50 </z-min-deg-sec>
+      </rotation-speed>
+    </shooter>
+
+    <counter>
+      <particles-per-sec>
+        <value>17</value>
+        <spread>10</spread>
+      </particles-per-sec>
+    </counter>
+        
+    <particle>
+      <start>
+        <color>
+          <red>
+            <value>1</value>
+          </red>
+          <green>
+            <value>1</value>
+          </green>
+          <blue>
+            <value>1.0</value>
+          </blue>
+          <alpha>
+            <value>0.1</value>
+          </alpha>
+        </color>
+        <size>
+          <value>2</value>
+        </size>
+      </start>
+
+      <end>
+        <color>
+          <red>
+            <value>1</value>
+          </red>
+          <green>
+            <value>1</value>
+          </green>
+          <blue>
+            <value>1.0</value>
+          </blue>
+          <alpha>
+            <value>0.7</value>
+          </alpha>
+        </color>
+        <size>
+          <value>12</value>
+        </size>
+      </end>
+
+      <life-sec>
+        <value>12.5</value>
+      </life-sec>
+
+      <mass-kg>2.6</mass-kg>
+      <radius-m>0.1</radius-m>
+    </particle>
+        
+    <program>
+      <fluid>air</fluid>
+      <gravity>false</gravity>
+      <wind>false</wind>
+    </program>
+    
+    </particlesystem>
+    
+    <particlesystem>
+    
+    <name>mud</name>
+
+    <offsets>
+      <x-m>1535.7</x-m>
+      <y-m>122</y-m>
+      <z-m>912</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>0</heading-deg>
+    </offsets>
+    
+    <texture>uerp-mine3.png</texture>
+    <emissive>true</emissive>
+    <lighting>true</lighting>
+
+    <attach>world</attach>
+        
+    <align>billboard</align>
+
+    <placer>
+<type>point</type>
+ 
+</placer>
+
+<shooter>
+      <theta-min-deg>  -0 </theta-min-deg>
+      <theta-max-deg>  0 </theta-max-deg>
+      <phi-min-deg>   -0 </phi-min-deg>
+      <phi-max-deg>    0 </phi-max-deg>
+      <speed-mps>
+        <value>  10 </value>
+        <spread>  0 </spread>
+      </speed-mps>
+      
+    </shooter>
+
+    <counter>
+      <particles-per-sec>
+        <value>1</value>
+        <spread>0</spread>
+      </particles-per-sec>
+    </counter>
+        
+    <particle>
+      <start>
+        <color>
+          <red>
+            <value>0.3</value>
+          </red>
+          <green>
+            <value>0.6</value>
+          </green>
+          <blue>
+            <value>0.3</value>
+          </blue>
+          <alpha>
+            <value>1</value>
+          </alpha>
+        </color>
+        <size>
+          <value>17</value>
+        </size>
+      </start>
+
+      <end>
+        <color>
+          <red>
+            <value>0.3</value>
+          </red>
+          <green>
+            <value>0.6</value>
+          </green>
+          <blue>
+            <value>0.3</value>
+          </blue>
+          <alpha>
+            <value>1</value>
+          </alpha>
+        </color>
+        <size>
+          <value>65</value>
+        </size>
+      </end>
+
+      <life-sec>
+        <value>5</value>
+      </life-sec>
+
+      <mass-kg>0.01</mass-kg>
+      <radius-m>0.2</radius-m>
+    </particle>
+        
+    <program>
+      <fluid>air</fluid>
+      <gravity>true</gravity>
+      <wind>true</wind>
+    </program>
+   
+
+  </particlesystem>
+
+
+</PropertyList>

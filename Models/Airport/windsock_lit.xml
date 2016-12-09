@@ -1,21 +1,37 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <PropertyList>
 
  <path>windsock_lit.ac</path>
 
- <animation>
-  <type>range</type>
-  <min-m>0</min-m>
-  <max-m>2000</max-m>
- </animation>
+ <effect>
+  <inherits-from>Effects/model-combined-deferred</inherits-from>
+  <parameters>
+   <lightmap-enabled type="int">1</lightmap-enabled>
+   <lightmap-factor><use>/sim/environment/windsock-light</use></lightmap-factor>
+   <texture n="3">
+    <image>Models/Airport/windsock-lightmap.png</image>
+   </texture>
+  </parameters>
+  <object-name>windsock</object-name>
+  <object-name>pivot_pole</object-name>
+  <object-name>frame</object-name>
+ </effect>
+
+<!--
+ <effect>
+  <inherits-from>Effects/model-wingflex-organic</inherits-from>
+  <parameters>
+    <wingflex-alpha><use>/sim/environment/windsock-pos</use></wingflex-alpha>
+  </parameters>
+  <object-name>windsock</object-name>
+ </effect>
+-->
 
  <animation>
   <type>rotate</type>
-  <object-name>wf4</object-name>
-  <object-name>wf8</object-name>
-  <object-name>wf12</object-name>
-  <object-name>wf16</object-name>
+  <object-name>windsock</object-name>
+  <object-name>frame</object-name>
   <property>/environment/wind-from-heading-deg</property>
   <offset-deg>-90</offset-deg>
   <factor>-1</factor>
@@ -32,83 +48,155 @@
  </animation>
 
  <animation>
-  <type>rotate</type>
-  <object-name>wf4</object-name>
-  <object-name>wf8</object-name>
-  <object-name>wf12</object-name>
-  <object-name>wf16</object-name>
+  <type>scale</type>
+  <object-name>5kt</object-name>
+  <object-name>7.5kt</object-name>
+  <object-name>10kt</object-name>
+  <object-name>12.5kt</object-name>
+  <object-name>15kt</object-name>
   <property>/environment/wind-speed-kt</property>
-  <factor>1.67</factor>
-  <min-deg>0</min-deg>
-  <max-deg>25</max-deg>
+  <x-factor>0.0</x-factor>
+  <y-factor>0.6</y-factor>
+  <z-factor>0.0</z-factor>
+  <x-min>1.0</x-min>
+  <y-min>0.6</y-min>
+  <z-min>1.0</z-min>
+  <x-max>1.0</x-max>
+  <y-max>1.0</y-max>
+  <z-max>1.0</z-max>
+ </animation>
+
+ <animation>
+  <type>translate</type>
+  <object-name>5kt</object-name>
+  <object-name>7.5kt</object-name>
+  <object-name>10kt</object-name>
+  <object-name>12.5kt</object-name>
+  <object-name>15kt</object-name>
+  <expression>
+   <table>
+    <property>/environment/wind-speed-kt</property>
+    <entry><ind>1.0</ind><dep>0.762</dep></entry>
+    <entry><ind>1.25</ind><dep>0.39</dep></entry>
+    <entry><ind>1.4</ind><dep>0.2</dep></entry>
+    <entry><ind>1.65</ind><dep>0.0</dep></entry>
+    <entry><ind>15</ind><dep>0.0</dep></entry>
+   </table>
+  </expression>
   <axis>
-   <x>1.0</x>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>5kt</object-name>
+  <object-name>7.5kt</object-name>
+  <object-name>10kt</object-name>
+  <object-name>12.5kt</object-name>
+  <object-name>15kt</object-name>
+  <property>/environment/wind-speed-kt</property>
+  <factor>-6</factor>
+  <offset-deg>30.0</offset-deg>
+  <min-deg>0</min-deg>
+  <max-deg>32</max-deg>
+  <axis>
+   <x>-1.0</x>
    <y>0.0</y>
    <z>0.0</z>
   </axis>
   <center>
    <x-m>0.0</x-m>
-   <y-m>0.42</y-m>
-   <z-m>8.0</z-m>
+   <y-m>1.17</y-m>
+   <z-m>6.07</z-m>
   </center>
  </animation>
 
  <animation>
   <type>rotate</type>
-  <object-name>wf8</object-name>
-  <object-name>wf12</object-name>
-  <object-name>wf16</object-name>
+  <object-name>7.5kt</object-name>
+  <object-name>10kt</object-name>
+  <object-name>12.5kt</object-name>
+  <object-name>15kt</object-name>
   <property>/environment/wind-speed-kt</property>
-  <factor>1.67</factor>
+  <factor>-6</factor>
+  <offset-deg>45.0</offset-deg>
   <min-deg>0</min-deg>
-  <max-deg>25</max-deg>
+  <max-deg>28</max-deg>
   <axis>
-   <x>1.0</x>
+   <x>-1.0</x>
    <y>0.0</y>
    <z>0.0</z>
   </axis>
   <center>
    <x-m>0.0</x-m>
-   <y-m>1.92</y-m>
-   <z-m>8.61</z-m>
+   <y-m>1.70</y-m>
+   <z-m>6.02</z-m>
   </center>
  </animation>
 
  <animation>
   <type>rotate</type>
-  <object-name>wf12</object-name>
-  <object-name>wf16</object-name>
+  <object-name>10kt</object-name>
+  <object-name>12.5kt</object-name>
+  <object-name>15kt</object-name>
   <property>/environment/wind-speed-kt</property>
-  <factor>1.67</factor>
+  <factor>-6</factor>
+  <offset-deg>60.0</offset-deg>
   <min-deg>0</min-deg>
   <max-deg>25</max-deg>
   <axis>
-   <x>1.0</x>
+   <x>-1.0</x>
    <y>0.0</y>
    <z>0.0</z>
   </axis>
   <center>
    <x-m>0.0</x-m>
-   <y-m>2.5</y-m>
-   <z-m>7.68</z-m>
+   <y-m>2.22</y-m>
+   <z-m>5.97</z-m>
   </center>
  </animation>
 
- <animation>
+  <animation>
   <type>rotate</type>
-  <object-name>wf16</object-name>
+  <object-name>12.5kt</object-name>
+  <object-name>15kt</object-name>
   <property>/environment/wind-speed-kt</property>
+  <factor>-6</factor>
+  <offset-deg>75.0</offset-deg>
   <min-deg>0</min-deg>
-  <max-deg>15</max-deg>
+  <max-deg>10</max-deg>
   <axis>
-   <x>1.0</x>
+   <x>-1.0</x>
    <y>0.0</y>
    <z>0.0</z>
   </axis>
   <center>
    <x-m>0.0</x-m>
-   <y-m>2.64</y-m>
-   <z-m>6.59</z-m>
+   <y-m>2.75</y-m>
+   <z-m>5.92</z-m>
+  </center>
+ </animation>
+
+  <animation>
+  <type>rotate</type>
+  <object-name>15kt</object-name>
+  <property>/environment/wind-speed-kt</property>
+  <factor>-6</factor>
+  <offset-deg>90.0</offset-deg>
+  <min-deg>0</min-deg>
+  <max-deg>5</max-deg>
+  <axis>
+   <x>-1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>3.28</y-m>
+   <z-m>5.87</z-m>
   </center>
  </animation>
 

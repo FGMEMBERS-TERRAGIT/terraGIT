@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+ <path>LGSM_Biglight.ac</path>
+
+ <animation>
+  <name>Pln</name>
+    <object-name>Plane</object-name>
+      <object-name>Cube.001_Cube.004</object-name>
+      <object-name>Cube.002_Cube.007</object-name>
+      <object-name>Cube.003_Cube.006</object-name>
+      <object-name>Cube.004_Cube.008</object-name>
+      <object-name>Cube.005_Cube.009</object-name>
+      <object-name>Cube.006_Cube.010</object-name>
+      <object-name>Cube_Cube.003</object-name>
+      <object-name>RedLightBase_Cube.001</object-name>
+ </animation>
+
+ <animation>
+  <name>Cn</name>
+    <enable-hot type="bool">false</enable-hot>
+    <object-name>Cone</object-name>
+    <object-name>Cone.001</object-name>
+    <object-name>Cone.002</object-name>
+    <object-name>Cone.003</object-name>
+    <object-name>Cone.005</object-name>
+ </animation>
+
+ <animation>
+  <name>Gls</name>
+    <object-name>Glass.000_Circle.008</object-name>
+    <object-name>Glass.001_Circle.011</object-name>
+    <object-name>Glass.003_Circle.017</object-name>
+    <object-name>Glass.004_Circle.019</object-name>
+    <object-name>Glass.005_Circle.006</object-name>
+ </animation>
+
+ <animation>
+  <name>Shl</name>
+    <object-name>Shell.000_Circle.009</object-name>
+    <object-name>Shell.001_Circle.010</object-name>
+    <object-name>Shell.003_Circle.018</object-name>
+    <object-name>Shell.004_Circle.020</object-name>
+    <object-name>Shell.005_Circle.004</object-name>
+ </animation>
+
+ <animation>
+  <object-name>BigLight_Circle.001</object-name>
+  <type>textranslate</type>
+    <property>/sim/time/sun-angle-rad</property>
+    <step>1.57</step>
+    <factor>0.063</factor>
+ <axis>
+   <x>1</x>
+   <y>0</y>
+  </axis>
+ </animation>
+
+ <animation>
+  <object-name>Pln</object-name>
+  <object-name>Gls</object-name>
+  <object-name>Shl</object-name>
+  <type>textranslate</type>
+    <property>/sim/time/sun-angle-rad</property>
+    <step>1.57</step>
+    <factor>0.082</factor>
+ <axis>
+   <x>1</x>
+   <y>0</y>
+  </axis>
+ </animation>
+
+  <animation>
+    <type>material</type> 
+    <object-name>Gls</object-name> 
+    <condition>		
+     <greater-than-equals>		
+      <property>/sim/time/sun-angle-rad</property>
+      <value>1.57</value>
+     </greater-than-equals>
+    </condition>
+    <emission>	
+     <red>1.0</red>	
+     <green>0.9</green>	
+     <blue>0.8</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type> 
+    <object-name>RedLight_Cube.002</object-name>
+    <object-name>RedShine_Cube.000</object-name>
+    <condition>		
+     <greater-than-equals>		
+      <property>/sim/time/sun-angle-rad</property>
+      <value>1.57</value>
+     </greater-than-equals>
+    </condition>
+    <emission>	
+     <red>0.8</red>	
+     <green>0.0</green>	
+     <blue>0.0</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type> 
+    <object-name>Cn</object-name> 
+    <condition>		
+     <greater-than-equals>		
+      <property>/sim/time/sun-angle-rad</property>
+      <value>1.57</value>
+     </greater-than-equals>
+    </condition>
+    <emission>	
+     <red>0.15</red>	
+     <green>0.14</green>	
+     <blue>0.12</blue>
+    </emission>
+  </animation>
+
+ <animation>
+    <type>select</type>
+    <object-name>Cn</object-name>
+    <object-name>RedShine_Cube.000</object-name>
+    <condition>		
+      <greater-than>		
+       <property>/sim/time/sun-angle-rad</property>
+       <value>1.57</value>
+      </greater-than>
+   </condition>
+ </animation>
+
+</PropertyList>
