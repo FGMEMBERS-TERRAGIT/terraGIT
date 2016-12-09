@@ -1,17 +1,100 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <PropertyList>
   <path>lamp10m.ac</path>
+  
+   <animation>
+    <object-name>halo</object-name>
+    <enable-hot type="bool">false</enable-hot>
+  </animation>
+  
   <animation>
     <type>select</type>
     <object-name>halo</object-name>
-    <enable-hot type="bool">false</enable-hot>
     <condition>
+	  <and>
         <greater-than>
           <property>/sim/time/sun-angle-rad</property>
           <value>1.57</value>
         </greater-than>
+           <not>
+			 <property>/sim/rendering/rembrandt/enabled</property>
+		  </not>
+       </and>
     </condition>
   </animation>
+
+<!--  Rembrandt Light  -->
+<animation>
+<type>light</type>
+<light-type>spot</light-type>
+<name>LightSource</name>
+<object-name>Cone</object-name>
+<position>
+     	<x> 0.000</x>
+      	<y> 0.000</y>
+      	<z> 9.000</z>
+</position>
+<direction>
+      <x>0</x>
+      <y>0</y>
+      <z>-1</z>
+</direction>
+<ambient>
+      <r>0.25</r>
+      <g>0.25</g>
+      <b>0.25</b>
+      <a>1.0</a>
+</ambient>
+<diffuse>
+      <r>0.5</r>
+      <g>0.404</g>
+      <b>0.2</b>
+      <a>1.0</a>
+</diffuse>
+<specular>
+      <r>0.5</r>
+      <g>0.5</g>
+      <b>0.5</b>
+      <a>1.0</a>
+</specular>
+<dim-factor>
+<property>/sim/time/sun-angle-rad</property>
+<interpolation>
+        <entry><ind>0</ind><dep>0</dep></entry>
+        <entry><ind>1.49</ind><dep>0</dep></entry>
+        <entry><ind>1.52</ind><dep>1</dep></entry>
+        <entry><ind>3.14</ind><dep>1</dep></entry>
+</interpolation>
+</dim-factor>
+<attenuation>
+      <c>1.0</c>
+      <l>0.00002</l>
+      <q>0.000000000146</q>
+</attenuation>
+<exponent>3.0</exponent>
+<cutoff>75</cutoff>
+<near-m>3.5</near-m>
+<far-m>225</far-m>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>LightSource</object-name>
+<condition>
+      <and>
+        <greater-than>
+          <property>/sim/time/sun-angle-rad</property>
+          <value>1.48</value>
+        </greater-than>
+        <property>/sim/rendering/rembrandt/enabled</property>
+        <greater-than>
+          <property>/sim/rendering/shaders/lights</property>
+          <value>0.0</value>
+        </greater-than>
+      </and>
+</condition>
+</animation>
+
 </PropertyList>
 
 
