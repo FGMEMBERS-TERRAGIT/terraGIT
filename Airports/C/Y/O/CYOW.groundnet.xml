@@ -3,8 +3,8 @@
   <version>1</version>
   <parkingList>
         <Parking index="0" type="ga" name="OAS_start" lat="N45 20.071621" lon="W75 41.298760" heading="243.21"  radius="10" pushBackRoute="192" airlineCodes="" />
-        <Parking index="1" type="gate" name="Terminal_gate_start" lat="N45 19.296604" lon="W75 40.052735" heading="38.03"  radius="44" pushBackRoute="251" airlineCodes="" />
-        <Parking index="2" type="ga" name="Helipad_start" lat="N45 19.335562" lon="W75 39.497725" heading="185.91"  radius="8" pushBackRoute="252" airlineCodes="" />
+        <Parking index="1" type="gate" name="Terminal_gate_start" lat="N45 19.289767" lon="W75 40.058082" heading="38.03"  radius="44" pushBackRoute="22" airlineCodes="" />
+        <Parking index="2" type="ga" name="Helipad_start" lat="N45 19.335562" lon="W75 39.497725" heading="185.91"  radius="8" pushBackRoute="101" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
         <node index="3" lat="N45 19.198556" lon="W75 39.742926" isOnRunway="0" holdPointType="none"  />
@@ -255,8 +255,8 @@
         <node index="248" lat="N45 19.778226" lon="W75 41.223037" isOnRunway="1" holdPointType="none"  />
         <node index="249" lat="N45 19.793834" lon="W75 41.212585" isOnRunway="1" holdPointType="none"  />
         <node index="250" lat="N45 20.083846" lon="W75 41.274546" isOnRunway="0" holdPointType="none"  />
-        <node index="251" lat="N45 19.275238" lon="W75 40.069446" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="252" lat="N45 19.362543" lon="W75 39.494932" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="251" lat="N45 19.268401" lon="W75 40.074793" isOnRunway="0" holdPointType="none"  />
+        <node index="252" lat="N45 19.362543" lon="W75 39.494932" isOnRunway="0" holdPointType="none"  />
  </TaxiNodes>
  <TaxiWaySegments>
         <arc begin="3" end="141" isPushBackRoute="0" name=""  />
@@ -835,11 +835,5 @@
         <arc begin="252" end="2" isPushBackRoute="1" name="Helipad_start"  />
         <arc begin="252" end="101" isPushBackRoute="1" name="Helipad_start"  />
         <arc begin="101" end="252" isPushBackRoute="1" name="Helipad_start"  />
-        <arc begin="0" end="192" isPushBackRoute="1" name="OAS_start"  />
-        <arc begin="192" end="0" isPushBackRoute="1" name="OAS_start"  />
-        <arc begin="1" end="251" isPushBackRoute="1" name="Terminal_gate_start"  />
-        <arc begin="251" end="1" isPushBackRoute="1" name="Terminal_gate_start"  />
-        <arc begin="2" end="252" isPushBackRoute="1" name="Helipad_start"  />
-        <arc begin="252" end="2" isPushBackRoute="1" name="Helipad_start"  />
  </TaxiWaySegments>
 </groundnet>

@@ -3,11 +3,11 @@
   <version>1</version>
   <parkingList>
         <Parking index="0" type="ga" name="Gras_start_1" lat="N53 34.167825" lon="E8 47.185778" heading="163.54"  radius="8" pushBackRoute="8" airlineCodes="" />
-        <Parking index="1" type="ga" name="Gras_start_2" lat="N53 34.169773" lon="E8 47.198649" heading="160.98"  radius="8" pushBackRoute="3" airlineCodes="" />
+        <Parking index="1" type="ga" name="Gras_start_2" lat="N53 34.169773" lon="E8 47.198649" heading="160.98"  radius="8" pushBackRoute="8" airlineCodes="" />
         <Parking index="2" type="ga" name="Ramp_start_1" lat="N53 34.169623" lon="E8 47.239531" heading="160.98"  radius="8" pushBackRoute="9" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
-        <node index="3" lat="N53 34.161098" lon="E8 47.204605" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="3" lat="N53 34.161098" lon="E8 47.204605" isOnRunway="0" holdPointType="none"  />
         <node index="4" lat="N53 34.159648" lon="E8 47.128876" isOnRunway="1" holdPointType="none"  />
         <node index="5" lat="N53 34.016933" lon="E8 47.586892" isOnRunway="1" holdPointType="none"  />
         <node index="6" lat="N53 34.025637" lon="E8 47.593303" isOnRunway="0" holdPointType="none"  />
@@ -46,11 +46,5 @@
         <arc begin="13" end="2" isPushBackRoute="1" name="Ramp_start_1"  />
         <arc begin="13" end="9" isPushBackRoute="1" name="Ramp_start_1"  />
         <arc begin="9" end="13" isPushBackRoute="1" name="Ramp_start_1"  />
-        <arc begin="0" end="8" isPushBackRoute="1" name="Gras_start_1"  />
-        <arc begin="8" end="0" isPushBackRoute="1" name="Gras_start_1"  />
-        <arc begin="1" end="3" isPushBackRoute="1" name="Gras_start_2"  />
-        <arc begin="3" end="1" isPushBackRoute="1" name="Gras_start_2"  />
-        <arc begin="2" end="9" isPushBackRoute="1" name="Ramp_start_1"  />
-        <arc begin="9" end="2" isPushBackRoute="1" name="Ramp_start_1"  />
  </TaxiWaySegments>
 </groundnet>

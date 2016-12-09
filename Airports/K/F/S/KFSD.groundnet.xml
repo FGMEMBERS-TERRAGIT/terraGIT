@@ -2,8 +2,8 @@
 <groundnet>
   <version>1</version>
   <parkingList>
-        <Parking index="0" type="gate" name="TERM" lat="N43 34.792463" lon="W96 43.976285" heading="246.37"  radius="44" pushBackRoute="113" airlineCodes="" />
-        <Parking index="1" type="ga" name="EAST_GEN_AVI" lat="N43 35.073646" lon="W96 44.079812" heading="270"  radius="10" pushBackRoute="114" airlineCodes="" />
+        <Parking index="0" type="gate" name="TERM" lat="N43 34.795942" lon="W96 43.968333" heading="246.37"  radius="44" pushBackRoute="46" airlineCodes="" />
+        <Parking index="1" type="ga" name="EAST_GEN_AVI" lat="N43 35.073646" lon="W96 44.079812" heading="270"  radius="10" pushBackRoute="19" airlineCodes="" />
         <Parking index="2" type="ga" name="WEST_GEN_AVI" lat="N43 35.456516" lon="W96 44.503660" heading="18.43"  radius="10" pushBackRoute="39" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
@@ -45,12 +45,12 @@
         <node index="38" lat="N43 35.601793" lon="W96 44.682745" isOnRunway="0" holdPointType="none"  />
         <node index="39" lat="N43 35.451795" lon="W96 44.484843" isOnRunway="0" holdPointType="PushBack"  />
         <node index="40" lat="N43 35.497759" lon="W96 44.523942" isOnRunway="0" holdPointType="none"  />
-        <node index="41" lat="N43 34.768300" lon="W96 43.951541" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="41" lat="N43 34.768300" lon="W96 43.951541" isOnRunway="0" holdPointType="none"  />
         <node index="42" lat="N43 34.823413" lon="W96 44.115605" isOnRunway="0" holdPointType="none"  />
         <node index="43" lat="N43 34.838509" lon="W96 44.093444" isOnRunway="0" holdPointType="none"  />
         <node index="44" lat="N43 34.861274" lon="W96 44.066320" isOnRunway="0" holdPointType="none"  />
         <node index="45" lat="N43 34.870859" lon="W96 44.022658" isOnRunway="0" holdPointType="none"  />
-        <node index="46" lat="N43 34.844979" lon="W96 43.936325" isOnRunway="0" holdPointType="none"  />
+        <node index="46" lat="N43 34.844979" lon="W96 43.936325" isOnRunway="0" holdPointType="PushBack"  />
         <node index="47" lat="N43 34.892913" lon="W96 44.624261" isOnRunway="0" holdPointType="none"  />
         <node index="48" lat="N43 34.860238" lon="W96 44.549357" isOnRunway="0" holdPointType="none"  />
         <node index="49" lat="N43 34.863981" lon="W96 44.560096" isOnRunway="0" holdPointType="none"  />
@@ -117,8 +117,8 @@
         <node index="110" lat="N43 34.684054" lon="W96 44.907721" isOnRunway="1" holdPointType="none"  />
         <node index="111" lat="N43 34.564357" lon="W96 44.105226" isOnRunway="1" holdPointType="none"  />
         <node index="112" lat="N43 34.552376" lon="W96 44.097465" isOnRunway="1" holdPointType="none"  />
-        <node index="113" lat="N43 34.803335" lon="W96 43.951435" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="114" lat="N43 35.073646" lon="W96 44.052688" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="113" lat="N43 34.806814" lon="W96 43.943483" isOnRunway="0" holdPointType="none"  />
+        <node index="114" lat="N43 35.073646" lon="W96 44.052688" isOnRunway="0" holdPointType="none"  />
         <node index="115" lat="N43 35.430782" lon="W96 44.512236" isOnRunway="0" holdPointType="none"  />
  </TaxiNodes>
  <TaxiWaySegments>
@@ -352,8 +352,8 @@
         <arc begin="93" end="81" isPushBackRoute="0" name="B4"  />
         <arc begin="0" end="113" isPushBackRoute="1" name="TERM"  />
         <arc begin="113" end="0" isPushBackRoute="1" name="TERM"  />
-        <arc begin="113" end="41" isPushBackRoute="1" name="TERM"  />
-        <arc begin="41" end="113" isPushBackRoute="1" name="TERM"  />
+        <arc begin="113" end="46" isPushBackRoute="1" name="TERM"  />
+        <arc begin="46" end="113" isPushBackRoute="1" name="TERM"  />
         <arc begin="1" end="114" isPushBackRoute="1" name="EAST_GEN_AVI"  />
         <arc begin="114" end="1" isPushBackRoute="1" name="EAST_GEN_AVI"  />
         <arc begin="114" end="19" isPushBackRoute="1" name="EAST_GEN_AVI"  />
@@ -362,11 +362,5 @@
         <arc begin="115" end="2" isPushBackRoute="1" name="WEST_GEN_AVI"  />
         <arc begin="115" end="39" isPushBackRoute="1" name="WEST_GEN_AVI"  />
         <arc begin="39" end="115" isPushBackRoute="1" name="WEST_GEN_AVI"  />
-        <arc begin="0" end="113" isPushBackRoute="1" name="TERM"  />
-        <arc begin="113" end="0" isPushBackRoute="1" name="TERM"  />
-        <arc begin="1" end="114" isPushBackRoute="1" name="EAST_GEN_AVI"  />
-        <arc begin="114" end="1" isPushBackRoute="1" name="EAST_GEN_AVI"  />
-        <arc begin="2" end="39" isPushBackRoute="1" name="WEST_GEN_AVI"  />
-        <arc begin="39" end="2" isPushBackRoute="1" name="WEST_GEN_AVI"  />
  </TaxiWaySegments>
 </groundnet>

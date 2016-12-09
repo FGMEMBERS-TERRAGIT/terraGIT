@@ -3,20 +3,20 @@
   <version>1</version>
   <parkingList>
         <Parking index="0" type="ga" name="Asphalt_ramp_1" lat="N49 33.770827" lon="E8 27.902764" heading="322.41"  radius="8" pushBackRoute="7" airlineCodes="" />
-        <Parking index="1" type="ga" name="Concrete_ramp_1" lat="N49 33.793001" lon="E8 28.012891" heading="322.41"  radius="8" pushBackRoute="9" airlineCodes="" />
-        <Parking index="2" type="ga" name="Concrete_ramp_2" lat="N49 33.775739" lon="E8 27.981951" heading="322.41"  radius="8" pushBackRoute="10" airlineCodes="" />
-        <Parking index="3" type="ga" name="Concrete_ramp_3" lat="N49 33.747532" lon="E8 28.040585" heading="130.68"  radius="8" pushBackRoute="42" airlineCodes="" />
-        <Parking index="4" type="ga" name="Concrete_ramp_4" lat="N49 33.814051" lon="E8 28.051186" heading="319.16"  radius="8" pushBackRoute="11" airlineCodes="" />
-        <Parking index="5" type="ga" name="Concrete_ramp_5" lat="N49 33.831874" lon="E8 28.080828" heading="319.16"  radius="8" pushBackRoute="12" airlineCodes="" />
+        <Parking index="1" type="ga" name="Concrete_ramp_1" lat="N49 33.793001" lon="E8 28.012891" heading="322.41"  radius="8" pushBackRoute="8" airlineCodes="" />
+        <Parking index="2" type="ga" name="Concrete_ramp_2" lat="N49 33.775739" lon="E8 27.981951" heading="322.41"  radius="8" pushBackRoute="8" airlineCodes="" />
+        <Parking index="3" type="ga" name="Concrete_ramp_3" lat="N49 33.747532" lon="E8 28.040585" heading="130.68"  radius="8" pushBackRoute="8" airlineCodes="" />
+        <Parking index="4" type="ga" name="Concrete_ramp_4" lat="N49 33.814051" lon="E8 28.051186" heading="319.16"  radius="8" pushBackRoute="16" airlineCodes="" />
+        <Parking index="5" type="ga" name="Concrete_ramp_5" lat="N49 33.831874" lon="E8 28.080828" heading="319.16"  radius="8" pushBackRoute="14" airlineCodes="" />
         <Parking index="6" type="ga" name="Fixed_wing_area" lat="N49 33.874518" lon="E8 28.270556" heading="93.81"  radius="10" pushBackRoute="21" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
         <node index="7" lat="N49 33.777724" lon="E8 27.892827" isOnRunway="0" holdPointType="PushBack"  />
         <node index="8" lat="N49 33.764767" lon="E8 28.011478" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="9" lat="N49 33.802244" lon="E8 28.000395" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="10" lat="N49 33.785374" lon="E8 27.968623" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="11" lat="N49 33.823842" lon="E8 28.037717" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="12" lat="N49 33.840557" lon="E8 28.069349" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="9" lat="N49 33.802244" lon="E8 28.000395" isOnRunway="0" holdPointType="none"  />
+        <node index="10" lat="N49 33.785374" lon="E8 27.968623" isOnRunway="0" holdPointType="none"  />
+        <node index="11" lat="N49 33.823842" lon="E8 28.037717" isOnRunway="0" holdPointType="none"  />
+        <node index="12" lat="N49 33.840557" lon="E8 28.069349" isOnRunway="0" holdPointType="none"  />
         <node index="13" lat="N49 33.910813" lon="E8 28.068267" isOnRunway="0" holdPointType="none"  />
         <node index="14" lat="N49 33.850702" lon="E8 28.111145" isOnRunway="0" holdPointType="PushBack"  />
         <node index="15" lat="N49 33.833171" lon="E8 28.132583" isOnRunway="0" holdPointType="none"  />
@@ -46,7 +46,7 @@
         <node index="39" lat="N49 33.939909" lon="E8 28.029282" isOnRunway="1" holdPointType="none"  />
         <node index="40" lat="N49 33.655713" lon="E8 27.517115" isOnRunway="1" holdPointType="none"  />
         <node index="41" lat="N49 33.749334" lon="E8 27.919310" isOnRunway="0" holdPointType="none"  />
-        <node index="42" lat="N49 33.771507" lon="E8 28.029437" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="42" lat="N49 33.771507" lon="E8 28.029437" isOnRunway="0" holdPointType="none"  />
         <node index="43" lat="N49 33.754246" lon="E8 27.998497" isOnRunway="0" holdPointType="none"  />
         <node index="44" lat="N49 33.765212" lon="E8 28.020014" isOnRunway="0" holdPointType="none"  />
         <node index="45" lat="N49 33.793530" lon="E8 28.068924" isOnRunway="0" holdPointType="none"  />
@@ -148,19 +148,5 @@
         <arc begin="47" end="6" isPushBackRoute="1" name="Fixed_wing_area"  />
         <arc begin="47" end="21" isPushBackRoute="1" name="Fixed_wing_area"  />
         <arc begin="21" end="47" isPushBackRoute="1" name="Fixed_wing_area"  />
-        <arc begin="0" end="7" isPushBackRoute="1" name="Asphalt_ramp_1"  />
-        <arc begin="7" end="0" isPushBackRoute="1" name="Asphalt_ramp_1"  />
-        <arc begin="1" end="9" isPushBackRoute="1" name="Concrete_ramp_1"  />
-        <arc begin="9" end="1" isPushBackRoute="1" name="Concrete_ramp_1"  />
-        <arc begin="2" end="10" isPushBackRoute="1" name="Concrete_ramp_2"  />
-        <arc begin="10" end="2" isPushBackRoute="1" name="Concrete_ramp_2"  />
-        <arc begin="3" end="42" isPushBackRoute="1" name="Concrete_ramp_3"  />
-        <arc begin="42" end="3" isPushBackRoute="1" name="Concrete_ramp_3"  />
-        <arc begin="4" end="11" isPushBackRoute="1" name="Concrete_ramp_4"  />
-        <arc begin="11" end="4" isPushBackRoute="1" name="Concrete_ramp_4"  />
-        <arc begin="5" end="12" isPushBackRoute="1" name="Concrete_ramp_5"  />
-        <arc begin="12" end="5" isPushBackRoute="1" name="Concrete_ramp_5"  />
-        <arc begin="6" end="21" isPushBackRoute="1" name="Fixed_wing_area"  />
-        <arc begin="21" end="6" isPushBackRoute="1" name="Fixed_wing_area"  />
  </TaxiWaySegments>
 </groundnet>

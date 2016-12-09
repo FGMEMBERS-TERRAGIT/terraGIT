@@ -2,8 +2,8 @@
 <groundnet>
   <version>1</version>
   <parkingList>
-        <Parking index="0" type="ga" name="Southern_ramp_start" lat="N51 6.855146" lon="E9 16.737058" heading="206.56"  radius="10" pushBackRoute="26" airlineCodes="" />
-        <Parking index="1" type="ga" name="Southern_ramp_east_start" lat="N51 6.784656" lon="E9 17.012926" heading="204.18"  radius="10" pushBackRoute="27" airlineCodes="" />
+        <Parking index="0" type="ga" name="Southern_ramp_start" lat="N51 6.855146" lon="E9 16.737058" heading="206.56"  radius="10" pushBackRoute="10" airlineCodes="" />
+        <Parking index="1" type="ga" name="Southern_ramp_east_start" lat="N51 6.784656" lon="E9 17.012926" heading="204.18"  radius="10" pushBackRoute="22" airlineCodes="" />
         <Parking index="2" type="ga" name="Northern_ramp_heli_start" lat="N51 7.039819" lon="E9 17.434360" heading="23.05"  radius="8" pushBackRoute="4" airlineCodes="" />
         <Parking index="3" type="ga" name="North_west_ramp_heli_start" lat="N51 7.086676" lon="E9 17.028340" heading="0"  radius="8" pushBackRoute="14" airlineCodes="" />
  </parkingList>
@@ -30,8 +30,8 @@
         <node index="23" lat="N51 6.745609" lon="E9 17.526468" isOnRunway="1" holdPointType="none"  />
         <node index="24" lat="N51 6.763349" lon="E9 17.530285" isOnRunway="0" holdPointType="none"  />
         <node index="25" lat="N51 6.942188" lon="E9 17.538834" isOnRunway="0" holdPointType="none"  />
-        <node index="26" lat="N51 6.879409" lon="E9 16.749187" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="27" lat="N51 6.809401" lon="E9 17.024036" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="26" lat="N51 6.879409" lon="E9 16.749187" isOnRunway="0" holdPointType="none"  />
+        <node index="27" lat="N51 6.809401" lon="E9 17.024036" isOnRunway="0" holdPointType="none"  />
         <node index="28" lat="N51 7.014859" lon="E9 17.423740" isOnRunway="0" holdPointType="none"  />
         <node index="29" lat="N51 7.059551" lon="E9 17.028340" isOnRunway="0" holdPointType="none"  />
  </TaxiNodes>
@@ -91,13 +91,5 @@
         <arc begin="29" end="3" isPushBackRoute="1" name="North_west_ramp_heli_start"  />
         <arc begin="29" end="14" isPushBackRoute="1" name="North_west_ramp_heli_start"  />
         <arc begin="14" end="29" isPushBackRoute="1" name="North_west_ramp_heli_start"  />
-        <arc begin="0" end="26" isPushBackRoute="1" name="Southern_ramp_start"  />
-        <arc begin="26" end="0" isPushBackRoute="1" name="Southern_ramp_start"  />
-        <arc begin="1" end="27" isPushBackRoute="1" name="Southern_ramp_east_start"  />
-        <arc begin="27" end="1" isPushBackRoute="1" name="Southern_ramp_east_start"  />
-        <arc begin="2" end="4" isPushBackRoute="1" name="Northern_ramp_heli_start"  />
-        <arc begin="4" end="2" isPushBackRoute="1" name="Northern_ramp_heli_start"  />
-        <arc begin="3" end="14" isPushBackRoute="1" name="North_west_ramp_heli_start"  />
-        <arc begin="14" end="3" isPushBackRoute="1" name="North_west_ramp_heli_start"  />
  </TaxiWaySegments>
 </groundnet>

@@ -3,12 +3,12 @@
   <version>1</version>
   <parkingList>
         <Parking index="0" type="ga" name="New_Ramp_Start_7" lat="N29 36.408187" lon="W97 59.459231" heading="90"  radius="10" pushBackRoute="5" airlineCodes="" />
-        <Parking index="1" type="ga" name="Veracity_Aviation_Pad" lat="N29 36.367780" lon="W97 59.442238" heading="178.84"  radius="10" pushBackRoute="4" airlineCodes="" />
+        <Parking index="1" type="ga" name="Veracity_Aviation_Pad" lat="N29 36.367780" lon="W97 59.442238" heading="178.84"  radius="10" pushBackRoute="6" airlineCodes="" />
         <Parking index="2" type="ga" name="Veracity_Aviation_Hangar_(inside)" lat="N29 36.374743" lon="W97 59.460424" heading="90"  radius="10" pushBackRoute="3" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
         <node index="3" lat="N29 36.374743" lon="W97 59.460424" isOnRunway="1" holdPointType="PushBack"  />
-        <node index="4" lat="N29 36.367780" lon="W97 59.442238" isOnRunway="1" holdPointType="PushBack"  />
+        <node index="4" lat="N29 36.367780" lon="W97 59.442238" isOnRunway="1" holdPointType="none"  />
         <node index="5" lat="N29 36.408187" lon="W97 59.459231" isOnRunway="1" holdPointType="PushBack"  />
         <node index="6" lat="N29 36.407983" lon="W97 59.435408" isOnRunway="1" holdPointType="PushBack"  />
         <node index="7" lat="N29 36.407983" lon="W97 59.427869" isOnRunway="1" holdPointType="none"  />
@@ -36,11 +36,5 @@
         <arc begin="17" end="2" isPushBackRoute="1" name="Veracity_Aviation_Hangar_(inside)"  />
         <arc begin="17" end="3" isPushBackRoute="1" name="Veracity_Aviation_Hangar_(inside)"  />
         <arc begin="3" end="17" isPushBackRoute="1" name="Veracity_Aviation_Hangar_(inside)"  />
-        <arc begin="0" end="5" isPushBackRoute="1" name="New_Ramp_Start_7"  />
-        <arc begin="5" end="0" isPushBackRoute="1" name="New_Ramp_Start_7"  />
-        <arc begin="1" end="4" isPushBackRoute="1" name="Veracity_Aviation_Pad"  />
-        <arc begin="4" end="1" isPushBackRoute="1" name="Veracity_Aviation_Pad"  />
-        <arc begin="2" end="3" isPushBackRoute="1" name="Veracity_Aviation_Hangar_(inside)"  />
-        <arc begin="3" end="2" isPushBackRoute="1" name="Veracity_Aviation_Hangar_(inside)"  />
  </TaxiWaySegments>
 </groundnet>

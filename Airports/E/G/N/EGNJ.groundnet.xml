@@ -2,11 +2,11 @@
 <groundnet>
   <version>1</version>
   <parkingList>
-        <Parking index="0" type="gate" name="GA_Apron" lat="N53 34.859772" lon="W0 21.173176" heading="70.85"  radius="19" pushBackRoute="61" airlineCodes="" />
-        <Parking index="1" type="ga" name="Grass_Parking" lat="N53 34.813484" lon="W0 21.023831" heading="200.6"  radius="10" pushBackRoute="62" airlineCodes="" />
-        <Parking index="2" type="ga" name="HeliArpon" lat="N53 35.022184" lon="W0 20.846150" heading="180"  radius="8" pushBackRoute="63" airlineCodes="" />
-        <Parking index="3" type="gate" name="Southern_Apron" lat="N53 34.889779" lon="W0 21.009325" heading="293.51"  radius="44" pushBackRoute="64" airlineCodes="" />
-        <Parking index="4" type="gate" name="Stand_1" lat="N53 34.960967" lon="W0 20.944078" heading="47.32"  radius="19" pushBackRoute="65" airlineCodes="" />
+        <Parking index="0" type="gate" name="GA_Apron" lat="N53 34.856925" lon="W0 21.181375" heading="70.85"  radius="19" pushBackRoute="43" airlineCodes="" />
+        <Parking index="1" type="ga" name="Grass_Parking" lat="N53 34.813484" lon="W0 21.023831" heading="200.6"  radius="10" pushBackRoute="29" airlineCodes="" />
+        <Parking index="2" type="ga" name="HeliArpon" lat="N53 35.022184" lon="W0 20.846150" heading="180"  radius="8" pushBackRoute="52" airlineCodes="" />
+        <Parking index="3" type="gate" name="Southern_Apron" lat="N53 34.886316" lon="W0 21.001365" heading="293.51"  radius="44" pushBackRoute="34" airlineCodes="" />
+        <Parking index="4" type="gate" name="Stand_1" lat="N53 34.955083" lon="W0 20.950459" heading="47.32"  radius="19" pushBackRoute="35" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
         <node index="5" lat="N53 35.015557" lon="W0 20.665556" isOnRunway="1" holdPointType="none"  />
@@ -39,7 +39,7 @@
         <node index="32" lat="N53 34.884921" lon="W0 20.912317" isOnRunway="0" holdPointType="none"  />
         <node index="33" lat="N53 34.902544" lon="W0 20.934769" isOnRunway="0" holdPointType="none"  />
         <node index="34" lat="N53 34.909096" lon="W0 20.957792" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="35" lat="N53 34.931011" lon="W0 20.996039" isOnRunway="0" holdPointType="none"  />
+        <node index="35" lat="N53 34.931011" lon="W0 20.996039" isOnRunway="0" holdPointType="PushBack"  />
         <node index="36" lat="N53 34.934287" lon="W0 21.019634" isOnRunway="0" holdPointType="none"  />
         <node index="37" lat="N53 34.927057" lon="W0 21.037710" isOnRunway="0" holdPointType="none"  />
         <node index="38" lat="N53 34.878369" lon="W0 21.071769" isOnRunway="0" holdPointType="none"  />
@@ -65,11 +65,11 @@
         <node index="58" lat="N53 35.009649" lon="W0 20.656995" isOnRunway="0" holdPointType="none"  />
         <node index="59" lat="N53 34.999780" lon="W0 20.648522" isOnRunway="0" holdPointType="none"  />
         <node index="60" lat="N53 34.990486" lon="W0 20.654090" isOnRunway="0" holdPointType="none"  />
-        <node index="61" lat="N53 34.850874" lon="W0 21.198799" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="62" lat="N53 34.838875" lon="W0 21.014287" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="63" lat="N53 35.049308" lon="W0 20.846150" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="64" lat="N53 34.878958" lon="W0 20.984451" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="65" lat="N53 34.942579" lon="W0 20.964019" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="61" lat="N53 34.848027" lon="W0 21.206999" isOnRunway="0" holdPointType="none"  />
+        <node index="62" lat="N53 34.838875" lon="W0 21.014287" isOnRunway="0" holdPointType="none"  />
+        <node index="63" lat="N53 35.049308" lon="W0 20.846150" isOnRunway="0" holdPointType="none"  />
+        <node index="64" lat="N53 34.875496" lon="W0 20.976492" isOnRunway="0" holdPointType="none"  />
+        <node index="65" lat="N53 34.936695" lon="W0 20.970400" isOnRunway="0" holdPointType="none"  />
  </TaxiNodes>
  <TaxiWaySegments>
         <arc begin="11" end="17" isPushBackRoute="0" name="Turn"  />
@@ -167,17 +167,7 @@
         <arc begin="34" end="64" isPushBackRoute="1" name="Southern_Apron"  />
         <arc begin="4" end="65" isPushBackRoute="1" name="Stand_1"  />
         <arc begin="65" end="4" isPushBackRoute="1" name="Stand_1"  />
-        <arc begin="65" end="34" isPushBackRoute="1" name="Stand_1"  />
-        <arc begin="34" end="65" isPushBackRoute="1" name="Stand_1"  />
-        <arc begin="0" end="61" isPushBackRoute="1" name="GA_Apron"  />
-        <arc begin="61" end="0" isPushBackRoute="1" name="GA_Apron"  />
-        <arc begin="1" end="62" isPushBackRoute="1" name="Grass_Parking"  />
-        <arc begin="62" end="1" isPushBackRoute="1" name="Grass_Parking"  />
-        <arc begin="2" end="63" isPushBackRoute="1" name="HeliArpon"  />
-        <arc begin="63" end="2" isPushBackRoute="1" name="HeliArpon"  />
-        <arc begin="3" end="64" isPushBackRoute="1" name="Southern_Apron"  />
-        <arc begin="64" end="3" isPushBackRoute="1" name="Southern_Apron"  />
-        <arc begin="4" end="65" isPushBackRoute="1" name="Stand_1"  />
-        <arc begin="65" end="4" isPushBackRoute="1" name="Stand_1"  />
+        <arc begin="65" end="35" isPushBackRoute="1" name="Stand_1"  />
+        <arc begin="35" end="65" isPushBackRoute="1" name="Stand_1"  />
  </TaxiWaySegments>
 </groundnet>

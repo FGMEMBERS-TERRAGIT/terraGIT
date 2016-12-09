@@ -2,11 +2,11 @@
 <groundnet>
   <version>1</version>
   <parkingList>
-        <Parking index="0" type="ga" name="Gras_parking_2" lat="N54 27.328399" lon="E11 6.840804" heading="193.63"  radius="10" pushBackRoute="2" airlineCodes="" />
+        <Parking index="0" type="ga" name="Gras_parking_2" lat="N54 27.328399" lon="E11 6.840804" heading="193.63"  radius="10" pushBackRoute="7" airlineCodes="" />
         <Parking index="1" type="ga" name="Gras_parking_1" lat="N54 27.326628" lon="E11 6.852988" heading="193.63"  radius="10" pushBackRoute="7" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
-        <node index="2" lat="N54 27.308446" lon="E11 6.842236" isOnRunway="1" holdPointType="PushBack"  />
+        <node index="2" lat="N54 27.308446" lon="E11 6.842236" isOnRunway="1" holdPointType="none"  />
         <node index="3" lat="N54 27.319996" lon="E11 6.864710" isOnRunway="0" holdPointType="none"  />
         <node index="4" lat="N54 27.410144" lon="E11 6.288789" isOnRunway="0" holdPointType="none"  />
         <node index="5" lat="N54 27.395423" lon="E11 6.292567" isOnRunway="1" holdPointType="none"  />
@@ -34,9 +34,5 @@
         <arc begin="9" end="1" isPushBackRoute="1" name="Gras_parking_1"  />
         <arc begin="9" end="7" isPushBackRoute="1" name="Gras_parking_1"  />
         <arc begin="7" end="9" isPushBackRoute="1" name="Gras_parking_1"  />
-        <arc begin="0" end="2" isPushBackRoute="1" name="Gras_parking_2"  />
-        <arc begin="2" end="0" isPushBackRoute="1" name="Gras_parking_2"  />
-        <arc begin="1" end="7" isPushBackRoute="1" name="Gras_parking_1"  />
-        <arc begin="7" end="1" isPushBackRoute="1" name="Gras_parking_1"  />
  </TaxiWaySegments>
 </groundnet>

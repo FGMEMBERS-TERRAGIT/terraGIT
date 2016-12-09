@@ -2,13 +2,89 @@
 <groundnet>
   <version>1</version>
   <parkingList>
-        <Parking index="0" type="gate" name="Ramp_Start_1" lat="S44 40.349908" lon="E167 55.394914" heading="66.43"  radius="44" pushBackRoute="None" airlineCodes="" />
-        <Parking index="1" type="ga" name="Helipad_1" lat="S44 40.321703" lon="E167 55.269686" heading="36.01"  radius="8" pushBackRoute="None" airlineCodes="" />
-        <Parking index="2" type="ga" name="Helipad_2" lat="S44 40.329915" lon="E167 55.285769" heading="36.01"  radius="8" pushBackRoute="None" airlineCodes="" />
-        <Parking index="3" type="ga" name="Helipad_3" lat="S44 40.338043" lon="E167 55.301911" heading="35.61"  radius="8" pushBackRoute="None" airlineCodes="" />
-        <Parking index="4" type="ga" name="Helipad_4" lat="S44 40.346338" lon="E167 55.317935" heading="35.74"  radius="8" pushBackRoute="None" airlineCodes="" />
-        <Parking index="5" type="ga" name="Helipad_5" lat="S44 40.354549" lon="E167 55.334254" heading="35.74"  radius="8" pushBackRoute="None" airlineCodes="" />
-        <Parking index="6" type="ga" name="Helipad_6" lat="S44 40.369799" lon="E167 55.364653" heading="35.74"  radius="8" pushBackRoute="None" airlineCodes="" />
-        <Parking index="7" type="ga" name="Helipad_7" lat="S44 40.399502" lon="E167 55.482832" heading="125.72"  radius="8" pushBackRoute="None" airlineCodes="" />
+        <Parking index="0" type="gate" name="Ramp_Start_1" lat="S44 40.349908" lon="E167 55.394914" heading="66.43"  radius="17" pushBackRoute="8" airlineCodes="" />
+        <Parking index="1" type="ga" name="Helipad_1" lat="S44 40.321703" lon="E167 55.269686" heading="36.01"  radius="8" pushBackRoute="8" airlineCodes="" />
+        <Parking index="2" type="ga" name="Helipad_2" lat="S44 40.329915" lon="E167 55.285769" heading="36.01"  radius="8" pushBackRoute="8" airlineCodes="" />
+        <Parking index="3" type="ga" name="Helipad_3" lat="S44 40.338043" lon="E167 55.301911" heading="35.61"  radius="8" pushBackRoute="8" airlineCodes="" />
+        <Parking index="4" type="ga" name="Helipad_4" lat="S44 40.346338" lon="E167 55.317935" heading="35.74"  radius="8" pushBackRoute="9" airlineCodes="" />
+        <Parking index="5" type="ga" name="Helipad_5" lat="S44 40.354549" lon="E167 55.334254" heading="35.74"  radius="8" pushBackRoute="9" airlineCodes="" />
+        <Parking index="6" type="ga" name="Helipad_6" lat="S44 40.369799" lon="E167 55.364653" heading="35.74"  radius="8" pushBackRoute="18" airlineCodes="" />
+        <Parking index="7" type="ga" name="Helipad_7" lat="S44 40.399502" lon="E167 55.482832" heading="125.72"  radius="8" pushBackRoute="10" airlineCodes="" />
  </parkingList>
+ <TaxiNodes>
+        <node index="8" lat="S44 40.341242" lon="E167 55.400578" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="9" lat="S44 40.369517" lon="E167 55.417132" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="10" lat="S44 40.394415" lon="E167 55.433368" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="11" lat="S44 40.503242" lon="E167 55.650733" isOnRunway="0" holdPointType="none"  />
+        <node index="12" lat="S44 40.506665" lon="E167 55.654347" isOnRunway="0" holdPointType="none"  />
+        <node index="13" lat="S44 40.510700" lon="E167 55.653037" isOnRunway="0" holdPointType="none"  />
+        <node index="14" lat="S44 40.516160" lon="E167 55.647325" isOnRunway="0" holdPointType="none"  />
+        <node index="15" lat="S44 40.523864" lon="E167 55.639871" isOnRunway="0" holdPointType="none"  />
+        <node index="16" lat="S44 40.393651" lon="E167 55.410561" isOnRunway="0" holdPointType="none"  />
+        <node index="17" lat="S44 40.288918" lon="E167 55.152374" isOnRunway="1" holdPointType="none"  />
+        <node index="18" lat="S44 40.410349" lon="E167 55.393633" isOnRunway="1" holdPointType="PushBack"  />
+        <node index="19" lat="S44 40.527164" lon="E167 55.625674" isOnRunway="1" holdPointType="none"  />
+        <node index="20" lat="S44 40.360754" lon="E167 55.370052" isOnRunway="0" holdPointType="none"  />
+        <node index="21" lat="S44 40.343645" lon="E167 55.253739" isOnRunway="0" holdPointType="none"  />
+        <node index="22" lat="S44 40.351857" lon="E167 55.269822" isOnRunway="0" holdPointType="none"  />
+        <node index="23" lat="S44 40.360095" lon="E167 55.286117" isOnRunway="0" holdPointType="none"  />
+        <node index="24" lat="S44 40.368354" lon="E167 55.302091" isOnRunway="0" holdPointType="none"  />
+        <node index="25" lat="S44 40.376566" lon="E167 55.318410" isOnRunway="0" holdPointType="none"  />
+        <node index="26" lat="S44 40.391815" lon="E167 55.348809" isOnRunway="0" holdPointType="none"  />
+        <node index="27" lat="S44 40.383666" lon="E167 55.460810" isOnRunway="0" holdPointType="none"  />
+ </TaxiNodes>
+ <TaxiWaySegments>
+        <arc begin="9" end="8" isPushBackRoute="0" name=""  />
+        <arc begin="8" end="9" isPushBackRoute="0" name=""  />
+        <arc begin="16" end="9" isPushBackRoute="0" name=""  />
+        <arc begin="9" end="16" isPushBackRoute="0" name=""  />
+        <arc begin="10" end="16" isPushBackRoute="0" name=""  />
+        <arc begin="16" end="10" isPushBackRoute="0" name=""  />
+        <arc begin="11" end="10" isPushBackRoute="0" name=""  />
+        <arc begin="10" end="11" isPushBackRoute="0" name=""  />
+        <arc begin="12" end="11" isPushBackRoute="0" name=""  />
+        <arc begin="11" end="12" isPushBackRoute="0" name=""  />
+        <arc begin="13" end="12" isPushBackRoute="0" name=""  />
+        <arc begin="12" end="13" isPushBackRoute="0" name=""  />
+        <arc begin="14" end="13" isPushBackRoute="0" name=""  />
+        <arc begin="13" end="14" isPushBackRoute="0" name=""  />
+        <arc begin="15" end="14" isPushBackRoute="0" name=""  />
+        <arc begin="14" end="15" isPushBackRoute="0" name=""  />
+        <arc begin="19" end="15" isPushBackRoute="0" name=""  />
+        <arc begin="15" end="19" isPushBackRoute="0" name=""  />
+        <arc begin="18" end="16" isPushBackRoute="0" name=""  />
+        <arc begin="16" end="18" isPushBackRoute="0" name=""  />
+        <arc begin="0" end="20" isPushBackRoute="1" name="Ramp_Start_1"  />
+        <arc begin="20" end="0" isPushBackRoute="1" name="Ramp_Start_1"  />
+        <arc begin="20" end="8" isPushBackRoute="1" name="Ramp_Start_1"  />
+        <arc begin="8" end="20" isPushBackRoute="1" name="Ramp_Start_1"  />
+        <arc begin="1" end="21" isPushBackRoute="1" name="Helipad_1"  />
+        <arc begin="21" end="1" isPushBackRoute="1" name="Helipad_1"  />
+        <arc begin="21" end="8" isPushBackRoute="1" name="Helipad_1"  />
+        <arc begin="8" end="21" isPushBackRoute="1" name="Helipad_1"  />
+        <arc begin="2" end="22" isPushBackRoute="1" name="Helipad_2"  />
+        <arc begin="22" end="2" isPushBackRoute="1" name="Helipad_2"  />
+        <arc begin="22" end="8" isPushBackRoute="1" name="Helipad_2"  />
+        <arc begin="8" end="22" isPushBackRoute="1" name="Helipad_2"  />
+        <arc begin="3" end="23" isPushBackRoute="1" name="Helipad_3"  />
+        <arc begin="23" end="3" isPushBackRoute="1" name="Helipad_3"  />
+        <arc begin="23" end="8" isPushBackRoute="1" name="Helipad_3"  />
+        <arc begin="8" end="23" isPushBackRoute="1" name="Helipad_3"  />
+        <arc begin="4" end="24" isPushBackRoute="1" name="Helipad_4"  />
+        <arc begin="24" end="4" isPushBackRoute="1" name="Helipad_4"  />
+        <arc begin="24" end="9" isPushBackRoute="1" name="Helipad_4"  />
+        <arc begin="9" end="24" isPushBackRoute="1" name="Helipad_4"  />
+        <arc begin="5" end="25" isPushBackRoute="1" name="Helipad_5"  />
+        <arc begin="25" end="5" isPushBackRoute="1" name="Helipad_5"  />
+        <arc begin="25" end="9" isPushBackRoute="1" name="Helipad_5"  />
+        <arc begin="9" end="25" isPushBackRoute="1" name="Helipad_5"  />
+        <arc begin="6" end="26" isPushBackRoute="1" name="Helipad_6"  />
+        <arc begin="26" end="6" isPushBackRoute="1" name="Helipad_6"  />
+        <arc begin="26" end="18" isPushBackRoute="1" name="Helipad_6"  />
+        <arc begin="18" end="26" isPushBackRoute="1" name="Helipad_6"  />
+        <arc begin="7" end="27" isPushBackRoute="1" name="Helipad_7"  />
+        <arc begin="27" end="7" isPushBackRoute="1" name="Helipad_7"  />
+        <arc begin="27" end="10" isPushBackRoute="1" name="Helipad_7"  />
+        <arc begin="10" end="27" isPushBackRoute="1" name="Helipad_7"  />
+ </TaxiWaySegments>
 </groundnet>

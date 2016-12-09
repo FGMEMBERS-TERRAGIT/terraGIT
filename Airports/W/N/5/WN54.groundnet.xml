@@ -2,8 +2,8 @@
 <groundnet>
   <version>1</version>
   <parkingList>
-        <Parking index="0" type="gate" name="New_Ramp_Start_1" lat="N47 43.937764" lon="W117 4.418345" heading="206.4"  radius="19" pushBackRoute="35" airlineCodes="" />
-        <Parking index="1" type="gate" name="New_Ramp_Start_2" lat="N47 43.954726" lon="W117 4.356478" heading="287.35"  radius="19" pushBackRoute="17" airlineCodes="" />
+        <Parking index="0" type="gate" name="New_Ramp_Start_1" lat="N47 43.945538" lon="W117 4.414486" heading="206.4"  radius="19" pushBackRoute="29" airlineCodes="" />
+        <Parking index="1" type="gate" name="New_Ramp_Start_2" lat="N47 43.952137" lon="W117 4.348193" heading="287.35"  radius="19" pushBackRoute="28" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
         <node index="2" lat="N47 44.092814" lon="W117 4.316021" isOnRunway="0" holdPointType="none"  />
@@ -21,7 +21,7 @@
         <node index="14" lat="N47 43.996282" lon="W117 4.264690" isOnRunway="0" holdPointType="none"  />
         <node index="15" lat="N47 44.000677" lon="W117 4.272463" isOnRunway="0" holdPointType="none"  />
         <node index="16" lat="N47 43.997873" lon="W117 4.279165" isOnRunway="0" holdPointType="none"  />
-        <node index="17" lat="N47 43.954747" lon="W117 4.354171" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="17" lat="N47 43.954747" lon="W117 4.354171" isOnRunway="0" holdPointType="none"  />
         <node index="18" lat="N47 43.956666" lon="W117 4.365476" isOnRunway="0" holdPointType="none"  />
         <node index="19" lat="N47 43.961908" lon="W117 4.370416" isOnRunway="0" holdPointType="none"  />
         <node index="20" lat="N47 44.038371" lon="W117 4.358875" isOnRunway="0" holdPointType="none"  />
@@ -32,14 +32,14 @@
         <node index="25" lat="N47 43.995030" lon="W117 4.258465" isOnRunway="0" holdPointType="none"  />
         <node index="26" lat="N47 44.016044" lon="W117 4.237673" isOnRunway="0" holdPointType="none"  />
         <node index="27" lat="N47 43.991350" lon="W117 4.263180" isOnRunway="0" holdPointType="none"  />
-        <node index="28" lat="N47 43.968940" lon="W117 4.311944" isOnRunway="0" holdPointType="none"  />
+        <node index="28" lat="N47 43.968940" lon="W117 4.311944" isOnRunway="0" holdPointType="PushBack"  />
         <node index="29" lat="N47 43.964960" lon="W117 4.411703" isOnRunway="0" holdPointType="PushBack"  />
         <node index="30" lat="N47 43.966632" lon="W117 4.370525" isOnRunway="0" holdPointType="none"  />
         <node index="31" lat="N47 43.964828" lon="W117 4.419609" isOnRunway="0" holdPointType="none"  />
         <node index="32" lat="N47 43.927690" lon="W117 4.442356" isOnRunway="0" holdPointType="none"  />
         <node index="33" lat="N47 43.924864" lon="W117 4.431032" isOnRunway="0" holdPointType="none"  />
         <node index="34" lat="N47 43.927688" lon="W117 4.425259" isOnRunway="0" holdPointType="none"  />
-        <node index="35" lat="N47 43.937066" lon="W117 4.418512" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="35" lat="N47 43.937066" lon="W117 4.418512" isOnRunway="0" holdPointType="none"  />
         <node index="36" lat="N47 44.361362" lon="W117 4.078703" isOnRunway="0" holdPointType="none"  />
         <node index="37" lat="N47 44.368406" lon="W117 4.098332" isOnRunway="0" holdPointType="none"  />
         <node index="38" lat="N47 44.466522" lon="W117 4.043989" isOnRunway="1" holdPointType="none"  />
@@ -51,8 +51,8 @@
         <node index="44" lat="N47 44.093206" lon="W117 4.330681" isOnRunway="1" holdPointType="none"  />
         <node index="45" lat="N47 44.107235" lon="W117 4.320070" isOnRunway="1" holdPointType="none"  />
         <node index="46" lat="N47 44.374084" lon="W117 4.115180" isOnRunway="1" holdPointType="none"  />
-        <node index="47" lat="N47 43.962060" lon="W117 4.406285" isOnRunway="0" holdPointType="none"  />
-        <node index="48" lat="N47 43.946637" lon="W117 4.330588" isOnRunway="0" holdPointType="none"  />
+        <node index="47" lat="N47 43.969834" lon="W117 4.402425" isOnRunway="0" holdPointType="none"  />
+        <node index="48" lat="N47 43.944048" lon="W117 4.322303" isOnRunway="0" holdPointType="none"  />
  </TaxiNodes>
  <TaxiWaySegments>
         <arc begin="2" end="7" isPushBackRoute="0" name="S5"  />
@@ -137,11 +137,7 @@
         <arc begin="29" end="47" isPushBackRoute="1" name="New_Ramp_Start_1"  />
         <arc begin="1" end="48" isPushBackRoute="1" name="New_Ramp_Start_2"  />
         <arc begin="48" end="1" isPushBackRoute="1" name="New_Ramp_Start_2"  />
-        <arc begin="48" end="17" isPushBackRoute="1" name="New_Ramp_Start_2"  />
-        <arc begin="17" end="48" isPushBackRoute="1" name="New_Ramp_Start_2"  />
-        <arc begin="0" end="35" isPushBackRoute="1" name="New_Ramp_Start_1"  />
-        <arc begin="35" end="0" isPushBackRoute="1" name="New_Ramp_Start_1"  />
-        <arc begin="1" end="17" isPushBackRoute="1" name="New_Ramp_Start_2"  />
-        <arc begin="17" end="1" isPushBackRoute="1" name="New_Ramp_Start_2"  />
+        <arc begin="48" end="28" isPushBackRoute="1" name="New_Ramp_Start_2"  />
+        <arc begin="28" end="48" isPushBackRoute="1" name="New_Ramp_Start_2"  />
  </TaxiWaySegments>
 </groundnet>

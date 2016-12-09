@@ -2,22 +2,22 @@
 <groundnet>
   <version>1</version>
   <parkingList>
-        <Parking index="0" type="gate" name="GA_parking_2" lat="N35 8.135295" lon="W111 40.626952" heading="39.94"  radius="19" pushBackRoute="7" airlineCodes="" />
-        <Parking index="1" type="gate" name="GA_parking_1" lat="N35 8.199184" lon="W111 40.564378" heading="217.87"  radius="19" pushBackRoute="6" airlineCodes="" />
-        <Parking index="2" type="gate" name="Main_terminal_2" lat="N35 8.319476" lon="W111 40.455400" heading="350.25"  radius="19" pushBackRoute="27" airlineCodes="" />
-        <Parking index="3" type="gate" name="Main_terminal_1" lat="N35 8.318698" lon="W111 40.477666" heading="350.25"  radius="19" pushBackRoute="5" airlineCodes="" />
+        <Parking index="0" type="gate" name="GA_parking_2" lat="N35 8.128640" lon="W111 40.632524" heading="39.94"  radius="19" pushBackRoute="7" airlineCodes="" />
+        <Parking index="1" type="gate" name="GA_parking_1" lat="N35 8.206036" lon="W111 40.559049" heading="217.87"  radius="19" pushBackRoute="13" airlineCodes="" />
+        <Parking index="2" type="gate" name="Main_terminal_2" lat="N35 8.310922" lon="W111 40.453930" heading="350.25"  radius="19" pushBackRoute="4" airlineCodes="" />
+        <Parking index="3" type="gate" name="Main_terminal_1" lat="N35 8.310144" lon="W111 40.476196" heading="350.25"  radius="19" pushBackRoute="4" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
         <node index="4" lat="N35 8.289394" lon="W111 40.466267" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="5" lat="N35 8.305653" lon="W111 40.489111" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="6" lat="N35 8.190772" lon="W111 40.574357" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="5" lat="N35 8.305653" lon="W111 40.489111" isOnRunway="0" holdPointType="none"  />
+        <node index="6" lat="N35 8.190772" lon="W111 40.574357" isOnRunway="0" holdPointType="none"  />
         <node index="7" lat="N35 8.142708" lon="W111 40.617596" isOnRunway="0" holdPointType="PushBack"  />
         <node index="8" lat="N35 9.005807" lon="W111 39.634094" isOnRunway="0" holdPointType="none"  />
         <node index="9" lat="N35 9.002701" lon="W111 39.644515" isOnRunway="0" holdPointType="none"  />
         <node index="10" lat="N35 8.978203" lon="W111 39.672957" isOnRunway="0" holdPointType="none"  />
         <node index="11" lat="N35 7.947306" lon="W111 40.770302" isOnRunway="0" holdPointType="none"  />
         <node index="12" lat="N35 8.120044" lon="W111 40.586390" isOnRunway="0" holdPointType="none"  />
-        <node index="13" lat="N35 8.164936" lon="W111 40.538552" isOnRunway="0" holdPointType="none"  />
+        <node index="13" lat="N35 8.164936" lon="W111 40.538552" isOnRunway="0" holdPointType="PushBack"  />
         <node index="14" lat="N35 8.264326" lon="W111 40.432763" isOnRunway="0" holdPointType="none"  />
         <node index="15" lat="N35 7.942935" lon="W111 40.776225" isOnRunway="0" holdPointType="none"  />
         <node index="16" lat="N35 7.933956" lon="W111 40.781859" isOnRunway="0" holdPointType="none"  />
@@ -29,10 +29,10 @@
         <node index="22" lat="N35 8.994850" lon="W111 39.614604" isOnRunway="0" holdPointType="none"  />
         <node index="23" lat="N35 8.966176" lon="W111 39.579347" isOnRunway="1" holdPointType="none"  />
         <node index="24" lat="N35 7.890136" lon="W111 40.724828" isOnRunway="1" holdPointType="none"  />
-        <node index="25" lat="N35 8.114498" lon="W111 40.644365" isOnRunway="0" holdPointType="none"  />
-        <node index="26" lat="N35 8.220596" lon="W111 40.547726" isOnRunway="0" holdPointType="none"  />
-        <node index="27" lat="N35 8.292743" lon="W111 40.450807" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="28" lat="N35 8.291965" lon="W111 40.473073" isOnRunway="0" holdPointType="none"  />
+        <node index="25" lat="N35 8.107843" lon="W111 40.649938" isOnRunway="0" holdPointType="none"  />
+        <node index="26" lat="N35 8.227448" lon="W111 40.542398" isOnRunway="0" holdPointType="none"  />
+        <node index="27" lat="N35 8.284189" lon="W111 40.449337" isOnRunway="0" holdPointType="none"  />
+        <node index="28" lat="N35 8.283411" lon="W111 40.471603" isOnRunway="0" holdPointType="none"  />
  </TaxiNodes>
  <TaxiWaySegments>
         <arc begin="4" end="14" isPushBackRoute="0" name=""  />
@@ -81,8 +81,8 @@
         <arc begin="7" end="25" isPushBackRoute="1" name="GA_parking_2"  />
         <arc begin="1" end="26" isPushBackRoute="1" name="GA_parking_1"  />
         <arc begin="26" end="1" isPushBackRoute="1" name="GA_parking_1"  />
-        <arc begin="26" end="6" isPushBackRoute="1" name="GA_parking_1"  />
-        <arc begin="6" end="26" isPushBackRoute="1" name="GA_parking_1"  />
+        <arc begin="26" end="13" isPushBackRoute="1" name="GA_parking_1"  />
+        <arc begin="13" end="26" isPushBackRoute="1" name="GA_parking_1"  />
         <arc begin="2" end="27" isPushBackRoute="1" name="Main_terminal_2"  />
         <arc begin="27" end="2" isPushBackRoute="1" name="Main_terminal_2"  />
         <arc begin="27" end="4" isPushBackRoute="1" name="Main_terminal_2"  />
@@ -91,13 +91,5 @@
         <arc begin="28" end="3" isPushBackRoute="1" name="Main_terminal_1"  />
         <arc begin="28" end="4" isPushBackRoute="1" name="Main_terminal_1"  />
         <arc begin="4" end="28" isPushBackRoute="1" name="Main_terminal_1"  />
-        <arc begin="0" end="7" isPushBackRoute="1" name="GA_parking_2"  />
-        <arc begin="7" end="0" isPushBackRoute="1" name="GA_parking_2"  />
-        <arc begin="1" end="6" isPushBackRoute="1" name="GA_parking_1"  />
-        <arc begin="6" end="1" isPushBackRoute="1" name="GA_parking_1"  />
-        <arc begin="2" end="27" isPushBackRoute="1" name="Main_terminal_2"  />
-        <arc begin="27" end="2" isPushBackRoute="1" name="Main_terminal_2"  />
-        <arc begin="3" end="5" isPushBackRoute="1" name="Main_terminal_1"  />
-        <arc begin="5" end="3" isPushBackRoute="1" name="Main_terminal_1"  />
  </TaxiWaySegments>
 </groundnet>

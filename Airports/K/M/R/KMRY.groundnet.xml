@@ -2,10 +2,10 @@
 <groundnet>
   <version>1</version>
   <parkingList>
-        <Parking index="0" type="ga" name="N.E._Tiedown" lat="N36 35.268215" lon="W121 50.321053" heading="292.25"  radius="10" pushBackRoute="63" airlineCodes="" />
-        <Parking index="1" type="gate" name="Terminal" lat="N36 35.226808" lon="W121 50.904019" heading="69.44"  radius="44" pushBackRoute="66" airlineCodes="" />
-        <Parking index="2" type="gate" name="GA_Terminal" lat="N36 35.329742" lon="W121 51.417350" heading="0"  radius="44" pushBackRoute="74" airlineCodes="" />
-        <Parking index="3" type="ga" name="N.W._Apron" lat="N36 35.512600" lon="W121 50.992520" heading="255.65"  radius="10" pushBackRoute="75" airlineCodes="" />
+        <Parking index="0" type="ga" name="N.E._Tiedown" lat="N36 35.268215" lon="W121 50.321053" heading="292.25"  radius="10" pushBackRoute="65" airlineCodes="" />
+        <Parking index="1" type="gate" name="Terminal" lat="N36 35.223759" lon="W121 50.912146" heading="69.44"  radius="44" pushBackRoute="66" airlineCodes="" />
+        <Parking index="2" type="gate" name="GA_Terminal" lat="N36 35.321062" lon="W121 51.417350" heading="0"  radius="44" pushBackRoute="13" airlineCodes="" />
+        <Parking index="3" type="ga" name="N.W._Apron" lat="N36 35.512600" lon="W121 50.992520" heading="255.65"  radius="10" pushBackRoute="37" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
         <node index="4" lat="N36 35.308531" lon="W121 50.677664" isOnRunway="0" holdPointType="none"  />
@@ -67,7 +67,7 @@
         <node index="60" lat="N36 35.149152" lon="W121 50.112905" isOnRunway="0" holdPointType="none"  />
         <node index="61" lat="N36 35.114899" lon="W121 50.012330" isOnRunway="0" holdPointType="none"  />
         <node index="62" lat="N36 35.093278" lon="W121 50.023169" isOnRunway="1" holdPointType="none"  />
-        <node index="63" lat="N36 35.276747" lon="W121 50.326187" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="63" lat="N36 35.276747" lon="W121 50.326187" isOnRunway="0" holdPointType="none"  />
         <node index="64" lat="N36 35.242996" lon="W121 50.343999" isOnRunway="0" holdPointType="none"  />
         <node index="65" lat="N36 35.235061" lon="W121 50.320539" isOnRunway="0" holdPointType="PushBack"  />
         <node index="66" lat="N36 35.226595" lon="W121 50.895209" isOnRunway="0" holdPointType="PushBack"  />
@@ -77,9 +77,9 @@
         <node index="70" lat="N36 35.300239" lon="W121 50.703291" isOnRunway="0" holdPointType="none"  />
         <node index="71" lat="N36 35.313667" lon="W121 50.674905" isOnRunway="1" holdPointType="none"  />
         <node index="72" lat="N36 35.257945" lon="W121 50.295948" isOnRunway="0" holdPointType="none"  />
-        <node index="73" lat="N36 35.217282" lon="W121 50.929416" isOnRunway="0" holdPointType="none"  />
-        <node index="74" lat="N36 35.302618" lon="W121 51.417350" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="75" lat="N36 35.519323" lon="W121 50.966241" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="73" lat="N36 35.214233" lon="W121 50.937543" isOnRunway="0" holdPointType="none"  />
+        <node index="74" lat="N36 35.293938" lon="W121 51.417350" isOnRunway="0" holdPointType="none"  />
+        <node index="75" lat="N36 35.519323" lon="W121 50.966241" isOnRunway="0" holdPointType="none"  />
  </TaxiNodes>
  <TaxiWaySegments>
         <arc begin="6" end="71" isPushBackRoute="0" name="C"  />
@@ -234,13 +234,5 @@
         <arc begin="75" end="3" isPushBackRoute="1" name="N.W._Apron"  />
         <arc begin="75" end="37" isPushBackRoute="1" name="N.W._Apron"  />
         <arc begin="37" end="75" isPushBackRoute="1" name="N.W._Apron"  />
-        <arc begin="0" end="63" isPushBackRoute="1" name="N.E._Tiedown"  />
-        <arc begin="63" end="0" isPushBackRoute="1" name="N.E._Tiedown"  />
-        <arc begin="1" end="66" isPushBackRoute="1" name="Terminal"  />
-        <arc begin="66" end="1" isPushBackRoute="1" name="Terminal"  />
-        <arc begin="2" end="74" isPushBackRoute="1" name="GA_Terminal"  />
-        <arc begin="74" end="2" isPushBackRoute="1" name="GA_Terminal"  />
-        <arc begin="3" end="75" isPushBackRoute="1" name="N.W._Apron"  />
-        <arc begin="75" end="3" isPushBackRoute="1" name="N.W._Apron"  />
  </TaxiWaySegments>
 </groundnet>

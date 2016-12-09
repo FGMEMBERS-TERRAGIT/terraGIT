@@ -2,10 +2,10 @@
 <groundnet>
   <version>1</version>
   <parkingList>
-        <Parking index="0" type="gate" name="GA_parking" lat="N35 57.578388" lon="W112 8.184841" heading="220.6"  radius="44" pushBackRoute="51" airlineCodes="" />
-        <Parking index="1" type="gate" name="South_GA_ramp" lat="N35 57.214507" lon="W112 8.569451" heading="40.6"  radius="44" pushBackRoute="52" airlineCodes="" />
-        <Parking index="2" type="gate" name="Terminal" lat="N35 57.654043" lon="W112 8.098408" heading="220.6"  radius="44" pushBackRoute="47" airlineCodes="" />
-        <Parking index="3" type="gate" name="Transient_Parking" lat="N35 57.712814" lon="W112 8.063168" heading="220.6"  radius="44" pushBackRoute="45" airlineCodes="" />
+        <Parking index="0" type="gate" name="GA_parking" lat="N35 57.578388" lon="W112 8.184841" heading="220.6"  radius="17" pushBackRoute="51" airlineCodes="" />
+        <Parking index="1" type="gate" name="South_GA_ramp" lat="N35 57.214507" lon="W112 8.569451" heading="40.6"  radius="17" pushBackRoute="52" airlineCodes="" />
+        <Parking index="2" type="gate" name="Terminal" lat="N35 57.654043" lon="W112 8.098408" heading="220.6"  radius="17" pushBackRoute="47" airlineCodes="" />
+        <Parking index="3" type="gate" name="Transient_Parking" lat="N35 57.712814" lon="W112 8.063168" heading="220.6"  radius="17" pushBackRoute="45" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
         <node index="4" lat="N35 57.288760" lon="W112 8.653255" isOnRunway="0" holdPointType="none"  />
@@ -222,13 +222,5 @@
         <arc begin="71" end="3" isPushBackRoute="1" name="Transient_Parking"  />
         <arc begin="71" end="45" isPushBackRoute="1" name="Transient_Parking"  />
         <arc begin="45" end="71" isPushBackRoute="1" name="Transient_Parking"  />
-        <arc begin="0" end="51" isPushBackRoute="1" name="GA_parking"  />
-        <arc begin="51" end="0" isPushBackRoute="1" name="GA_parking"  />
-        <arc begin="1" end="52" isPushBackRoute="1" name="South_GA_ramp"  />
-        <arc begin="52" end="1" isPushBackRoute="1" name="South_GA_ramp"  />
-        <arc begin="2" end="47" isPushBackRoute="1" name="Terminal"  />
-        <arc begin="47" end="2" isPushBackRoute="1" name="Terminal"  />
-        <arc begin="3" end="45" isPushBackRoute="1" name="Transient_Parking"  />
-        <arc begin="45" end="3" isPushBackRoute="1" name="Transient_Parking"  />
  </TaxiWaySegments>
 </groundnet>

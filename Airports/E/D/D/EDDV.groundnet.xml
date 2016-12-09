@@ -2,12 +2,12 @@
 <groundnet>
   <version>1</version>
   <parkingList>
-        <Parking index="0" type="gate" name="Hapag_Base" lat="N52 27.416201" lon="E9 42.383977" heading="210.07"  radius="44" pushBackRoute="67" airlineCodes="" />
-        <Parking index="1" type="gate" name="Terminal_B_Gate_9" lat="N52 27.449482" lon="E9 41.783915" heading="29.29"  radius="44" pushBackRoute="68" airlineCodes="" />
-        <Parking index="2" type="gate" name="Terminal_A_Gate_5" lat="N52 27.499271" lon="E9 41.631905" heading="29.29"  radius="44" pushBackRoute="69" airlineCodes="" />
+        <Parking index="0" type="gate" name="Hapag_Base" lat="N52 27.423713" lon="E9 42.388326" heading="210.07"  radius="44" pushBackRoute="46" airlineCodes="" />
+        <Parking index="1" type="gate" name="Terminal_B_Gate_9" lat="N52 27.441911" lon="E9 41.779669" heading="29.29"  radius="44" pushBackRoute="44" airlineCodes="" />
+        <Parking index="2" type="gate" name="Terminal_A_Gate_5" lat="N52 27.491701" lon="E9 41.627658" heading="29.29"  radius="44" pushBackRoute="39" airlineCodes="" />
         <Parking index="3" type="ga" name="General_aviation_ramp_1_East" lat="N52 27.767418" lon="E9 41.542316" heading="342.47"  radius="10" pushBackRoute="34" airlineCodes="" />
-        <Parking index="4" type="gate" name="General_aviation_ramp_1_west" lat="N52 27.776825" lon="E9 41.596999" heading="342.47"  radius="19" pushBackRoute="35" airlineCodes="" />
-        <Parking index="5" type="ga" name="Police_helicopter_base" lat="N52 27.790116" lon="E9 40.974266" heading="239.74"  radius="8" pushBackRoute="72" airlineCodes="" />
+        <Parking index="4" type="gate" name="General_aviation_ramp_1_west" lat="N52 27.768549" lon="E9 41.599613" heading="342.47"  radius="19" pushBackRoute="35" airlineCodes="" />
+        <Parking index="5" type="ga" name="Police_helicopter_base" lat="N52 27.790116" lon="E9 40.974266" heading="239.74"  radius="8" pushBackRoute="25" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
         <node index="6" lat="N52 27.475055" lon="E9 41.029835" isOnRunway="0" holdPointType="none"  />
@@ -71,12 +71,12 @@
         <node index="64" lat="N52 27.243250" lon="E9 42.625004" isOnRunway="1" holdPointType="none"  />
         <node index="65" lat="N52 27.326965" lon="E9 40.626620" isOnRunway="0" holdPointType="none"  />
         <node index="66" lat="N52 27.296430" lon="E9 40.651492" isOnRunway="1" holdPointType="none"  />
-        <node index="67" lat="N52 27.439676" lon="E9 42.397568" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="68" lat="N52 27.425825" lon="E9 41.770645" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="69" lat="N52 27.475614" lon="E9 41.618635" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="67" lat="N52 27.447187" lon="E9 42.401917" isOnRunway="0" holdPointType="none"  />
+        <node index="68" lat="N52 27.418254" lon="E9 41.766399" isOnRunway="0" holdPointType="none"  />
+        <node index="69" lat="N52 27.468044" lon="E9 41.614388" isOnRunway="0" holdPointType="none"  />
         <node index="70" lat="N52 27.741553" lon="E9 41.550486" isOnRunway="0" holdPointType="none"  />
-        <node index="71" lat="N52 27.750960" lon="E9 41.605169" isOnRunway="0" holdPointType="none"  />
-        <node index="72" lat="N52 27.803785" lon="E9 40.997695" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="71" lat="N52 27.742683" lon="E9 41.607783" isOnRunway="0" holdPointType="none"  />
+        <node index="72" lat="N52 27.803785" lon="E9 40.997695" isOnRunway="0" holdPointType="none"  />
  </TaxiNodes>
  <TaxiWaySegments>
         <arc begin="11" end="12" isPushBackRoute="0" name="L"  />
@@ -225,17 +225,5 @@
         <arc begin="72" end="5" isPushBackRoute="1" name="Police_helicopter_base"  />
         <arc begin="72" end="25" isPushBackRoute="1" name="Police_helicopter_base"  />
         <arc begin="25" end="72" isPushBackRoute="1" name="Police_helicopter_base"  />
-        <arc begin="0" end="67" isPushBackRoute="1" name="Hapag_Base"  />
-        <arc begin="67" end="0" isPushBackRoute="1" name="Hapag_Base"  />
-        <arc begin="1" end="68" isPushBackRoute="1" name="Terminal_B_Gate_9"  />
-        <arc begin="68" end="1" isPushBackRoute="1" name="Terminal_B_Gate_9"  />
-        <arc begin="2" end="69" isPushBackRoute="1" name="Terminal_A_Gate_5"  />
-        <arc begin="69" end="2" isPushBackRoute="1" name="Terminal_A_Gate_5"  />
-        <arc begin="3" end="34" isPushBackRoute="1" name="General_aviation_ramp_1_East"  />
-        <arc begin="34" end="3" isPushBackRoute="1" name="General_aviation_ramp_1_East"  />
-        <arc begin="4" end="35" isPushBackRoute="1" name="General_aviation_ramp_1_west"  />
-        <arc begin="35" end="4" isPushBackRoute="1" name="General_aviation_ramp_1_west"  />
-        <arc begin="5" end="72" isPushBackRoute="1" name="Police_helicopter_base"  />
-        <arc begin="72" end="5" isPushBackRoute="1" name="Police_helicopter_base"  />
  </TaxiWaySegments>
 </groundnet>

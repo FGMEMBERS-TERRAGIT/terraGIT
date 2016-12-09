@@ -2,13 +2,13 @@
 <groundnet>
   <version>1</version>
   <parkingList>
-        <Parking index="0" type="gate" name="K1_Gate" lat="N42 56.156626" lon="W78 43.785785" heading="-27.41"  radius="19" pushBackRoute="128" airlineCodes="" />
-        <Parking index="1" type="gate" name="Gate_A1" lat="N42 56.168743" lon="W78 43.859338" heading="0"  radius="44" pushBackRoute="129" airlineCodes="" />
-        <Parking index="2" type="gate" name="Air_Cargo" lat="N42 56.321053" lon="W78 44.415251" heading="153.42"  radius="19" pushBackRoute="130" airlineCodes="" />
-        <Parking index="3" type="ga" name="Term_GA_Start" lat="N42 56.072520" lon="W78 43.986482" heading="240"  radius="10" pushBackRoute="132" airlineCodes="" />
-        <Parking index="4" type="gate" name="Chtr_Term_Start" lat="N42 56.048825" lon="W78 44.021110" heading="240"  radius="19" pushBackRoute="132" airlineCodes="" />
-        <Parking index="5" type="gate" name="Exec_AirShare" lat="N42 56.646248" lon="W78 44.371273" heading="0"  radius="19" pushBackRoute="72" airlineCodes="" />
-        <Parking index="6" type="ga" name="GA__Hngr" lat="N42 56.820045" lon="W78 44.062943" heading="210"  radius="10" pushBackRoute="134" airlineCodes="" />
+        <Parking index="0" type="gate" name="K1_Gate" lat="N42 56.148921" lon="W78 43.781789" heading="-27.41"  radius="19" pushBackRoute="88" airlineCodes="" />
+        <Parking index="1" type="gate" name="Gate_A1" lat="N42 56.160063" lon="W78 43.859338" heading="0"  radius="44" pushBackRoute="91" airlineCodes="" />
+        <Parking index="2" type="gate" name="Air_Cargo" lat="N42 56.328816" lon="W78 44.419135" heading="153.42"  radius="19" pushBackRoute="104" airlineCodes="" />
+        <Parking index="3" type="ga" name="Term_GA_Start" lat="N42 56.072520" lon="W78 43.986482" heading="240"  radius="10" pushBackRoute="38" airlineCodes="" />
+        <Parking index="4" type="gate" name="Chtr_Term_Start" lat="N42 56.053165" lon="W78 44.013593" heading="240"  radius="19" pushBackRoute="49" airlineCodes="" />
+        <Parking index="5" type="gate" name="Exec_AirShare" lat="N42 56.637568" lon="W78 44.371273" heading="0"  radius="19" pushBackRoute="72" airlineCodes="" />
+        <Parking index="6" type="ga" name="GA__Hngr" lat="N42 56.820045" lon="W78 44.062943" heading="210"  radius="10" pushBackRoute="106" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
         <node index="7" lat="N42 56.803946" lon="W78 43.279321" isOnRunway="1" holdPointType="none"  />
@@ -132,13 +132,13 @@
         <node index="125" lat="N42 56.659384" lon="W78 44.287827" isOnRunway="0" holdPointType="none"  />
         <node index="126" lat="N42 56.197820" lon="W78 43.462536" isOnRunway="0" holdPointType="none"  />
         <node index="127" lat="N42 56.783382" lon="W78 43.233667" isOnRunway="0" holdPointType="none"  />
-        <node index="128" lat="N42 56.132547" lon="W78 43.773298" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="129" lat="N42 56.141618" lon="W78 43.859338" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="130" lat="N42 56.345311" lon="W78 44.427388" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="128" lat="N42 56.124841" lon="W78 43.769302" isOnRunway="0" holdPointType="none"  />
+        <node index="129" lat="N42 56.132938" lon="W78 43.859338" isOnRunway="0" holdPointType="none"  />
+        <node index="130" lat="N42 56.353074" lon="W78 44.431272" isOnRunway="0" holdPointType="none"  />
         <node index="131" lat="N42 56.086082" lon="W78 43.962992" isOnRunway="0" holdPointType="none"  />
-        <node index="132" lat="N42 56.062388" lon="W78 43.997619" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="133" lat="N42 56.619124" lon="W78 44.371273" isOnRunway="0" holdPointType="none"  />
-        <node index="134" lat="N42 56.843536" lon="W78 44.049381" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="132" lat="N42 56.066728" lon="W78 43.990102" isOnRunway="0" holdPointType="none"  />
+        <node index="133" lat="N42 56.610444" lon="W78 44.371273" isOnRunway="0" holdPointType="none"  />
+        <node index="134" lat="N42 56.843536" lon="W78 44.049381" isOnRunway="0" holdPointType="none"  />
  </TaxiNodes>
  <TaxiWaySegments>
         <arc begin="17" end="34" isPushBackRoute="0" name="A"  />
@@ -421,19 +421,5 @@
         <arc begin="134" end="6" isPushBackRoute="1" name="GA__Hngr"  />
         <arc begin="134" end="106" isPushBackRoute="1" name="GA__Hngr"  />
         <arc begin="106" end="134" isPushBackRoute="1" name="GA__Hngr"  />
-        <arc begin="0" end="128" isPushBackRoute="1" name="K1_Gate"  />
-        <arc begin="128" end="0" isPushBackRoute="1" name="K1_Gate"  />
-        <arc begin="1" end="129" isPushBackRoute="1" name="Gate_A1"  />
-        <arc begin="129" end="1" isPushBackRoute="1" name="Gate_A1"  />
-        <arc begin="2" end="130" isPushBackRoute="1" name="Air_Cargo"  />
-        <arc begin="130" end="2" isPushBackRoute="1" name="Air_Cargo"  />
-        <arc begin="3" end="132" isPushBackRoute="1" name="Term_GA_Start"  />
-        <arc begin="132" end="3" isPushBackRoute="1" name="Term_GA_Start"  />
-        <arc begin="4" end="132" isPushBackRoute="1" name="Chtr_Term_Start"  />
-        <arc begin="132" end="4" isPushBackRoute="1" name="Chtr_Term_Start"  />
-        <arc begin="5" end="72" isPushBackRoute="1" name="Exec_AirShare"  />
-        <arc begin="72" end="5" isPushBackRoute="1" name="Exec_AirShare"  />
-        <arc begin="6" end="134" isPushBackRoute="1" name="GA__Hngr"  />
-        <arc begin="134" end="6" isPushBackRoute="1" name="GA__Hngr"  />
  </TaxiWaySegments>
 </groundnet>

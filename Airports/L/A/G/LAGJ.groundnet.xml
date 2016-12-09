@@ -2,8 +2,8 @@
 <groundnet>
   <version>1</version>
   <parkingList>
-        <Parking index="0" type="gate" name="Ramp_16" lat="N41 54.281709" lon="E19 35.426220" heading="65.88"  radius="44" pushBackRoute="11" airlineCodes="" />
-        <Parking index="1" type="gate" name="Ramp_34" lat="N41 53.073754" lon="E19 36.207794" heading="63.37"  radius="44" pushBackRoute="24" airlineCodes="" />
+        <Parking index="0" type="gate" name="Ramp_16" lat="N41 54.281709" lon="E19 35.426220" heading="65.88"  radius="17" pushBackRoute="11" airlineCodes="" />
+        <Parking index="1" type="gate" name="Ramp_34" lat="N41 53.073754" lon="E19 36.207794" heading="63.37"  radius="17" pushBackRoute="6" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
         <node index="2" lat="N41 54.221133" lon="E19 35.524329" isOnRunway="0" holdPointType="none"  />
@@ -28,7 +28,7 @@
         <node index="21" lat="N41 53.193517" lon="E19 36.245924" isOnRunway="1" holdPointType="none"  />
         <node index="22" lat="N41 53.043626" lon="E19 36.343126" isOnRunway="1" holdPointType="none"  />
         <node index="23" lat="N41 54.270624" lon="E19 35.401463" isOnRunway="0" holdPointType="none"  />
-        <node index="24" lat="N41 53.061596" lon="E19 36.183547" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="24" lat="N41 53.061596" lon="E19 36.183547" isOnRunway="0" holdPointType="none"  />
  </TaxiNodes>
  <TaxiWaySegments>
         <arc begin="2" end="15" isPushBackRoute="0" name=""  />
@@ -75,9 +75,5 @@
         <arc begin="24" end="1" isPushBackRoute="1" name="Ramp_34"  />
         <arc begin="24" end="6" isPushBackRoute="1" name="Ramp_34"  />
         <arc begin="6" end="24" isPushBackRoute="1" name="Ramp_34"  />
-        <arc begin="0" end="11" isPushBackRoute="1" name="Ramp_16"  />
-        <arc begin="11" end="0" isPushBackRoute="1" name="Ramp_16"  />
-        <arc begin="1" end="24" isPushBackRoute="1" name="Ramp_34"  />
-        <arc begin="24" end="1" isPushBackRoute="1" name="Ramp_34"  />
  </TaxiWaySegments>
 </groundnet>

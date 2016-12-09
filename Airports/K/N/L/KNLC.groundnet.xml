@@ -2,12 +2,12 @@
 <groundnet>
   <version>1</version>
   <parkingList>
-        <Parking index="0" type="gate" name="CALA_3" lat="N36 20.247985" lon="W119 56.524458" heading="201.19"  radius="10" pushBackRoute="77" airlineCodes="" />
-        <Parking index="1" type="gate" name="CALA_2" lat="N36 20.249866" lon="W119 56.489129" heading="201.19"  radius="10" pushBackRoute="77" airlineCodes="" />
-        <Parking index="2" type="gate" name="CALA_1" lat="N36 20.225742" lon="W119 56.512068" heading="201.19"  radius="10" pushBackRoute="10" airlineCodes="" />
-        <Parking index="3" type="gate" name="ANG_RAMP" lat="N36 19.639463" lon="W119 56.657802" heading="65.74"  radius="44" pushBackRoute="46" airlineCodes="" />
-        <Parking index="4" type="gate" name="CARGO_RAMP" lat="N36 19.570111" lon="W119 56.729405" heading="-23.79"  radius="44" pushBackRoute="79" airlineCodes="" />
-        <Parking index="5" type="gate" name="VFA-122_RAMP" lat="N36 19.695084" lon="W119 57.084635" heading="111.04"  radius="44" pushBackRoute="80" airlineCodes="" />
+        <Parking index="0" type="gate" name="CALA_3" lat="N36 20.256078" lon="W119 56.521321" heading="201.19"  radius="10" pushBackRoute="10" airlineCodes="" />
+        <Parking index="1" type="gate" name="CALA_2" lat="N36 20.257959" lon="W119 56.485992" heading="201.19"  radius="10" pushBackRoute="10" airlineCodes="" />
+        <Parking index="2" type="gate" name="CALA_1" lat="N36 20.233835" lon="W119 56.508931" heading="201.19"  radius="10" pushBackRoute="10" airlineCodes="" />
+        <Parking index="3" type="gate" name="ANG_RAMP" lat="N36 19.639463" lon="W119 56.657802" heading="65.74"  radius="17" pushBackRoute="46" airlineCodes="" />
+        <Parking index="4" type="gate" name="CARGO_RAMP" lat="N36 19.570111" lon="W119 56.729405" heading="-23.79"  radius="17" pushBackRoute="46" airlineCodes="" />
+        <Parking index="5" type="gate" name="VFA-122_RAMP" lat="N36 19.695084" lon="W119 57.084635" heading="111.04"  radius="17" pushBackRoute="55" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
         <node index="6" lat="N36 20.352586" lon="W119 56.748736" isOnRunway="1" holdPointType="none"  />
@@ -79,12 +79,12 @@
         <node index="72" lat="N36 19.388924" lon="W119 57.313073" isOnRunway="1" holdPointType="none"  />
         <node index="73" lat="N36 19.605457" lon="W119 57.432151" isOnRunway="1" holdPointType="none"  />
         <node index="74" lat="N36 19.817513" lon="W119 57.548809" isOnRunway="1" holdPointType="none"  />
-        <node index="75" lat="N36 20.273275" lon="W119 56.514653" isOnRunway="0" holdPointType="none"  />
-        <node index="76" lat="N36 20.275157" lon="W119 56.479325" isOnRunway="0" holdPointType="none"  />
-        <node index="77" lat="N36 20.251033" lon="W119 56.502263" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="75" lat="N36 20.281368" lon="W119 56.511516" isOnRunway="0" holdPointType="none"  />
+        <node index="76" lat="N36 20.283250" lon="W119 56.476187" isOnRunway="0" holdPointType="none"  />
+        <node index="77" lat="N36 20.259126" lon="W119 56.499126" isOnRunway="0" holdPointType="none"  />
         <node index="78" lat="N36 19.628318" lon="W119 56.682531" isOnRunway="0" holdPointType="none"  />
-        <node index="79" lat="N36 19.545291" lon="W119 56.718463" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="80" lat="N36 19.704822" lon="W119 57.109952" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="79" lat="N36 19.545291" lon="W119 56.718463" isOnRunway="0" holdPointType="none"  />
+        <node index="80" lat="N36 19.704822" lon="W119 57.109952" isOnRunway="0" holdPointType="none"  />
  </TaxiNodes>
  <TaxiWaySegments>
         <arc begin="9" end="10" isPushBackRoute="0" name=""  />
@@ -225,17 +225,5 @@
         <arc begin="80" end="5" isPushBackRoute="1" name="VFA-122_RAMP"  />
         <arc begin="80" end="55" isPushBackRoute="1" name="VFA-122_RAMP"  />
         <arc begin="55" end="80" isPushBackRoute="1" name="VFA-122_RAMP"  />
-        <arc begin="0" end="77" isPushBackRoute="1" name="CALA_3"  />
-        <arc begin="77" end="0" isPushBackRoute="1" name="CALA_3"  />
-        <arc begin="1" end="77" isPushBackRoute="1" name="CALA_2"  />
-        <arc begin="77" end="1" isPushBackRoute="1" name="CALA_2"  />
-        <arc begin="2" end="10" isPushBackRoute="1" name="CALA_1"  />
-        <arc begin="10" end="2" isPushBackRoute="1" name="CALA_1"  />
-        <arc begin="3" end="46" isPushBackRoute="1" name="ANG_RAMP"  />
-        <arc begin="46" end="3" isPushBackRoute="1" name="ANG_RAMP"  />
-        <arc begin="4" end="79" isPushBackRoute="1" name="CARGO_RAMP"  />
-        <arc begin="79" end="4" isPushBackRoute="1" name="CARGO_RAMP"  />
-        <arc begin="5" end="80" isPushBackRoute="1" name="VFA-122_RAMP"  />
-        <arc begin="80" end="5" isPushBackRoute="1" name="VFA-122_RAMP"  />
  </TaxiWaySegments>
 </groundnet>

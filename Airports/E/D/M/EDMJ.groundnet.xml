@@ -4,7 +4,7 @@
   <parkingList>
         <Parking index="0" type="ga" name="Tower" lat="N48 10.422117" lon="E11 7.466807" heading="71.31"  radius="10" pushBackRoute="11" airlineCodes="" />
         <Parking index="1" type="ga" name="Flugschule" lat="N48 10.465145" lon="E11 7.418462" heading="102.89"  radius="10" pushBackRoute="10" airlineCodes="" />
-        <Parking index="2" type="ga" name="Parkplatz" lat="N48 10.433812" lon="E11 7.564591" heading="168.45"  radius="10" pushBackRoute="13" airlineCodes="" />
+        <Parking index="2" type="ga" name="Parkplatz" lat="N48 10.433812" lon="E11 7.564591" heading="168.45"  radius="10" pushBackRoute="22" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
         <node index="3" lat="N48 10.491932" lon="E11 7.712671" isOnRunway="0" holdPointType="none"  />
@@ -17,7 +17,7 @@
         <node index="10" lat="N48 10.463863" lon="E11 7.425928" isOnRunway="0" holdPointType="PushBack"  />
         <node index="11" lat="N48 10.423678" lon="E11 7.474426" isOnRunway="0" holdPointType="PushBack"  />
         <node index="12" lat="N48 10.431444" lon="E11 7.574009" isOnRunway="0" holdPointType="none"  />
-        <node index="13" lat="N48 10.430815" lon="E11 7.565002" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="13" lat="N48 10.430815" lon="E11 7.565002" isOnRunway="0" holdPointType="none"  />
         <node index="14" lat="N48 10.411659" lon="E11 7.372857" isOnRunway="0" holdPointType="none"  />
         <node index="15" lat="N48 10.411827" lon="E11 7.367455" isOnRunway="0" holdPointType="none"  />
         <node index="16" lat="N48 10.417022" lon="E11 7.359924" isOnRunway="0" holdPointType="none"  />
@@ -103,11 +103,5 @@
         <arc begin="32" end="2" isPushBackRoute="1" name="Parkplatz"  />
         <arc begin="32" end="22" isPushBackRoute="1" name="Parkplatz"  />
         <arc begin="22" end="32" isPushBackRoute="1" name="Parkplatz"  />
-        <arc begin="0" end="11" isPushBackRoute="1" name="Tower"  />
-        <arc begin="11" end="0" isPushBackRoute="1" name="Tower"  />
-        <arc begin="1" end="10" isPushBackRoute="1" name="Flugschule"  />
-        <arc begin="10" end="1" isPushBackRoute="1" name="Flugschule"  />
-        <arc begin="2" end="13" isPushBackRoute="1" name="Parkplatz"  />
-        <arc begin="13" end="2" isPushBackRoute="1" name="Parkplatz"  />
  </TaxiWaySegments>
 </groundnet>

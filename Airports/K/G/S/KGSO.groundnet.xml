@@ -2,12 +2,12 @@
 <groundnet>
   <version>1</version>
   <parkingList>
-        <Parking index="0" type="ga" name="CARGO_1" lat="N36 6.845030" lon="W79 55.282187" heading="228.33"  radius="10" pushBackRoute="327" airlineCodes="" />
-        <Parking index="1" type="gate" name="Air_Cargo" lat="N36 5.375182" lon="W79 56.617355" heading="45.97"  radius="44" pushBackRoute="233" airlineCodes="" />
-        <Parking index="2" type="gate" name="GATE_23" lat="N36 6.355159" lon="W79 56.087616" heading="227.12"  radius="44" pushBackRoute="329" airlineCodes="" />
-        <Parking index="3" type="gate" name="GATE_48" lat="N36 6.181747" lon="W79 56.172352" heading="45.48"  radius="44" pushBackRoute="330" airlineCodes="" />
-        <Parking index="4" type="gate" name="Terminal" lat="N36 6.290134" lon="W79 56.150658" heading="137.85"  radius="44" pushBackRoute="28" airlineCodes="" />
-        <Parking index="5" type="ga" name="CARGO_2" lat="N36 6.698288" lon="W79 55.428947" heading="138.28"  radius="10" pushBackRoute="332" airlineCodes="" />
+        <Parking index="0" type="ga" name="CARGO_1" lat="N36 6.845030" lon="W79 55.282187" heading="228.33"  radius="10" pushBackRoute="251" airlineCodes="" />
+        <Parking index="1" type="gate" name="Air_Cargo" lat="N36 5.375182" lon="W79 56.617355" heading="45.97"  radius="17" pushBackRoute="233" airlineCodes="" />
+        <Parking index="2" type="gate" name="GATE_23" lat="N36 6.355159" lon="W79 56.087616" heading="227.12"  radius="17" pushBackRoute="104" airlineCodes="" />
+        <Parking index="3" type="gate" name="GATE_48" lat="N36 6.181747" lon="W79 56.172352" heading="45.48"  radius="17" pushBackRoute="110" airlineCodes="" />
+        <Parking index="4" type="gate" name="Terminal" lat="N36 6.290134" lon="W79 56.150658" heading="137.85"  radius="17" pushBackRoute="28" airlineCodes="" />
+        <Parking index="5" type="ga" name="CARGO_2" lat="N36 6.698288" lon="W79 55.428947" heading="138.28"  radius="10" pushBackRoute="152" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
         <node index="6" lat="N36 5.447852" lon="W79 56.530291" isOnRunway="0" holdPointType="none"  />
@@ -331,12 +331,12 @@
         <node index="324" lat="N36 6.904526" lon="W79 56.332298" isOnRunway="1" holdPointType="none"  />
         <node index="325" lat="N36 5.990684" lon="W79 57.498037" isOnRunway="1" holdPointType="none"  />
         <node index="326" lat="N36 6.344020" lon="W79 57.047793" isOnRunway="1" holdPointType="none"  />
-        <node index="327" lat="N36 6.863063" lon="W79 55.261926" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="327" lat="N36 6.863063" lon="W79 55.261926" isOnRunway="0" holdPointType="none"  />
         <node index="328" lat="N36 5.356329" lon="W79 56.636857" isOnRunway="0" holdPointType="none"  />
-        <node index="329" lat="N36 6.373617" lon="W79 56.067739" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="330" lat="N36 6.162728" lon="W79 56.191692" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="329" lat="N36 6.373617" lon="W79 56.067739" isOnRunway="0" holdPointType="none"  />
+        <node index="330" lat="N36 6.162728" lon="W79 56.191692" isOnRunway="0" holdPointType="none"  />
         <node index="331" lat="N36 6.310244" lon="W79 56.168861" isOnRunway="0" holdPointType="none"  />
-        <node index="332" lat="N36 6.718534" lon="W79 55.446999" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="332" lat="N36 6.718534" lon="W79 55.446999" isOnRunway="0" holdPointType="none"  />
  </TaxiNodes>
  <TaxiWaySegments>
         <arc begin="6" end="236" isPushBackRoute="0" name="M"  />
@@ -1062,17 +1062,5 @@
         <arc begin="332" end="5" isPushBackRoute="1" name="CARGO_2"  />
         <arc begin="332" end="152" isPushBackRoute="1" name="CARGO_2"  />
         <arc begin="152" end="332" isPushBackRoute="1" name="CARGO_2"  />
-        <arc begin="0" end="327" isPushBackRoute="1" name="CARGO_1"  />
-        <arc begin="327" end="0" isPushBackRoute="1" name="CARGO_1"  />
-        <arc begin="1" end="233" isPushBackRoute="1" name="Air_Cargo"  />
-        <arc begin="233" end="1" isPushBackRoute="1" name="Air_Cargo"  />
-        <arc begin="2" end="329" isPushBackRoute="1" name="GATE_23"  />
-        <arc begin="329" end="2" isPushBackRoute="1" name="GATE_23"  />
-        <arc begin="3" end="330" isPushBackRoute="1" name="GATE_48"  />
-        <arc begin="330" end="3" isPushBackRoute="1" name="GATE_48"  />
-        <arc begin="4" end="28" isPushBackRoute="1" name="Terminal"  />
-        <arc begin="28" end="4" isPushBackRoute="1" name="Terminal"  />
-        <arc begin="5" end="332" isPushBackRoute="1" name="CARGO_2"  />
-        <arc begin="332" end="5" isPushBackRoute="1" name="CARGO_2"  />
  </TaxiWaySegments>
 </groundnet>

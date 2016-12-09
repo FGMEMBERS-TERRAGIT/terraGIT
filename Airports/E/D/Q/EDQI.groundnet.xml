@@ -3,12 +3,12 @@
   <version>1</version>
   <parkingList>
         <Parking index="0" type="ga" name="Parking_1" lat="N49 36.280787" lon="E11 17.057444" heading="344.52"  radius="10" pushBackRoute="5" airlineCodes="" />
-        <Parking index="1" type="ga" name="Parking_2" lat="N49 36.281629" lon="E11 17.073416" heading="344.3"  radius="10" pushBackRoute="4" airlineCodes="" />
+        <Parking index="1" type="ga" name="Parking_2" lat="N49 36.281629" lon="E11 17.073416" heading="344.3"  radius="10" pushBackRoute="3" airlineCodes="" />
         <Parking index="2" type="ga" name="Parking_3" lat="N49 36.284154" lon="E11 17.087425" heading="345.62"  radius="10" pushBackRoute="3" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
         <node index="3" lat="N49 36.285375" lon="E11 17.086881" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="4" lat="N49 36.284209" lon="E11 17.072270" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="4" lat="N49 36.284209" lon="E11 17.072270" isOnRunway="0" holdPointType="none"  />
         <node index="5" lat="N49 36.282634" lon="E11 17.056174" isOnRunway="0" holdPointType="PushBack"  />
         <node index="6" lat="N49 36.319088" lon="E11 17.215520" isOnRunway="0" holdPointType="none"  />
         <node index="7" lat="N49 36.288844" lon="E11 17.053510" isOnRunway="0" holdPointType="none"  />
@@ -88,11 +88,5 @@
         <arc begin="27" end="2" isPushBackRoute="1" name="Parking_3"  />
         <arc begin="27" end="3" isPushBackRoute="1" name="Parking_3"  />
         <arc begin="3" end="27" isPushBackRoute="1" name="Parking_3"  />
-        <arc begin="0" end="5" isPushBackRoute="1" name="Parking_1"  />
-        <arc begin="5" end="0" isPushBackRoute="1" name="Parking_1"  />
-        <arc begin="1" end="4" isPushBackRoute="1" name="Parking_2"  />
-        <arc begin="4" end="1" isPushBackRoute="1" name="Parking_2"  />
-        <arc begin="2" end="3" isPushBackRoute="1" name="Parking_3"  />
-        <arc begin="3" end="2" isPushBackRoute="1" name="Parking_3"  />
  </TaxiWaySegments>
 </groundnet>

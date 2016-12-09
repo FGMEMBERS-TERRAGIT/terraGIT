@@ -2,9 +2,9 @@
 <groundnet>
   <version>1</version>
   <parkingList>
-        <Parking index="0" type="ga" name="GA1_Ramp_Start" lat="N37 30.142162" lon="W77 7.489226" heading="184.25"  radius="10" pushBackRoute="25" airlineCodes="" />
-        <Parking index="1" type="ga" name="GA2_Ramp_Start" lat="N37 30.134735" lon="W77 7.565471" heading="4.09"  radius="10" pushBackRoute="26" airlineCodes="" />
-        <Parking index="2" type="ga" name="GA3_Ramp_Start" lat="N37 30.147072" lon="W77 7.544763" heading="182.12"  radius="10" pushBackRoute="27" airlineCodes="" />
+        <Parking index="0" type="ga" name="GA1_Ramp_Start" lat="N37 30.142162" lon="W77 7.489226" heading="184.25"  radius="10" pushBackRoute="15" airlineCodes="" />
+        <Parking index="1" type="ga" name="GA2_Ramp_Start" lat="N37 30.134735" lon="W77 7.565471" heading="4.09"  radius="10" pushBackRoute="5" airlineCodes="" />
+        <Parking index="2" type="ga" name="GA3_Ramp_Start" lat="N37 30.147072" lon="W77 7.544763" heading="182.12"  radius="10" pushBackRoute="7" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
         <node index="3" lat="N37 30.203880" lon="W77 7.802897" isOnRunway="0" holdPointType="none"  />
@@ -29,9 +29,9 @@
         <node index="22" lat="N37 30.223578" lon="W77 7.800286" isOnRunway="1" holdPointType="none"  />
         <node index="23" lat="N37 30.207824" lon="W77 7.614130" isOnRunway="1" holdPointType="none"  />
         <node index="24" lat="N37 30.194636" lon="W77 7.459950" isOnRunway="1" holdPointType="none"  />
-        <node index="25" lat="N37 30.169212" lon="W77 7.487216" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="26" lat="N37 30.107680" lon="W77 7.567405" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="27" lat="N37 30.174178" lon="W77 7.543760" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="25" lat="N37 30.169212" lon="W77 7.487216" isOnRunway="0" holdPointType="none"  />
+        <node index="26" lat="N37 30.107680" lon="W77 7.567405" isOnRunway="0" holdPointType="none"  />
+        <node index="27" lat="N37 30.174178" lon="W77 7.543760" isOnRunway="0" holdPointType="none"  />
  </TaxiNodes>
  <TaxiWaySegments>
         <arc begin="3" end="22" isPushBackRoute="0" name=""  />
@@ -90,11 +90,5 @@
         <arc begin="27" end="2" isPushBackRoute="1" name="GA3_Ramp_Start"  />
         <arc begin="27" end="7" isPushBackRoute="1" name="GA3_Ramp_Start"  />
         <arc begin="7" end="27" isPushBackRoute="1" name="GA3_Ramp_Start"  />
-        <arc begin="0" end="25" isPushBackRoute="1" name="GA1_Ramp_Start"  />
-        <arc begin="25" end="0" isPushBackRoute="1" name="GA1_Ramp_Start"  />
-        <arc begin="1" end="26" isPushBackRoute="1" name="GA2_Ramp_Start"  />
-        <arc begin="26" end="1" isPushBackRoute="1" name="GA2_Ramp_Start"  />
-        <arc begin="2" end="27" isPushBackRoute="1" name="GA3_Ramp_Start"  />
-        <arc begin="27" end="2" isPushBackRoute="1" name="GA3_Ramp_Start"  />
  </TaxiWaySegments>
 </groundnet>

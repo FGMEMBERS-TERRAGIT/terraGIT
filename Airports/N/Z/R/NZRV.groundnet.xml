@@ -2,9 +2,9 @@
 <groundnet>
   <version>1</version>
   <parkingList>
-        <Parking index="0" type="ga" name="H0" lat="S36 48.743771" lon="E175 5.041506" heading="282.53"  radius="8" pushBackRoute="14" airlineCodes="" />
-        <Parking index="1" type="gate" name="South_Hangar" lat="S36 48.771872" lon="E175 5.079413" heading="303.21"  radius="19" pushBackRoute="3" airlineCodes="" />
-        <Parking index="2" type="gate" name="North_Hangar" lat="S36 48.729065" lon="E175 5.041038" heading="208.84"  radius="19" pushBackRoute="14" airlineCodes="" />
+        <Parking index="0" type="ga" name="H0" lat="S36 48.743771" lon="E175 5.041506" heading="282.53"  radius="8" pushBackRoute="5" airlineCodes="" />
+        <Parking index="1" type="gate" name="South_Hangar" lat="S36 48.776626" lon="E175 5.086675" heading="303.21"  radius="19" pushBackRoute="3" airlineCodes="" />
+        <Parking index="2" type="gate" name="North_Hangar" lat="S36 48.721462" lon="E175 5.045225" heading="208.84"  radius="19" pushBackRoute="12" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
         <node index="3" lat="S36 48.772111" lon="E175 5.076435" isOnRunway="1" holdPointType="PushBack"  />
@@ -16,12 +16,12 @@
         <node index="9" lat="S36 48.725653" lon="E175 5.095454" isOnRunway="0" holdPointType="none"  />
         <node index="10" lat="S36 48.719623" lon="E175 5.107304" isOnRunway="1" holdPointType="none"  />
         <node index="11" lat="S36 48.732589" lon="E175 5.077215" isOnRunway="0" holdPointType="none"  />
-        <node index="12" lat="S36 48.735327" lon="E175 5.059660" isOnRunway="0" holdPointType="none"  />
-        <node index="13" lat="S36 48.734232" lon="E175 5.047576" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="14" lat="S36 48.729065" lon="E175 5.041038" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="12" lat="S36 48.735327" lon="E175 5.059660" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="13" lat="S36 48.734232" lon="E175 5.047576" isOnRunway="0" holdPointType="none"  />
+        <node index="14" lat="S36 48.729065" lon="E175 5.041038" isOnRunway="0" holdPointType="none"  />
         <node index="15" lat="S36 48.749656" lon="E175 5.067985" isOnRunway="0" holdPointType="none"  />
-        <node index="16" lat="S36 48.786728" lon="E175 5.102107" isOnRunway="0" holdPointType="none"  />
-        <node index="17" lat="S36 48.705305" lon="E175 5.054122" isOnRunway="0" holdPointType="none"  />
+        <node index="16" lat="S36 48.791482" lon="E175 5.109369" isOnRunway="0" holdPointType="none"  />
+        <node index="17" lat="S36 48.697702" lon="E175 5.058309" isOnRunway="0" holdPointType="none"  />
  </TaxiNodes>
  <TaxiWaySegments>
         <arc begin="8" end="7" isPushBackRoute="0" name="NorthTaxiway"  />
@@ -48,13 +48,7 @@
         <arc begin="3" end="16" isPushBackRoute="1" name="South_Hangar"  />
         <arc begin="2" end="17" isPushBackRoute="1" name="North_Hangar"  />
         <arc begin="17" end="2" isPushBackRoute="1" name="North_Hangar"  />
-        <arc begin="17" end="13" isPushBackRoute="1" name="North_Hangar"  />
-        <arc begin="13" end="17" isPushBackRoute="1" name="North_Hangar"  />
-        <arc begin="0" end="14" isPushBackRoute="1" name="H0"  />
-        <arc begin="14" end="0" isPushBackRoute="1" name="H0"  />
-        <arc begin="1" end="3" isPushBackRoute="1" name="South_Hangar"  />
-        <arc begin="3" end="1" isPushBackRoute="1" name="South_Hangar"  />
-        <arc begin="2" end="14" isPushBackRoute="1" name="North_Hangar"  />
-        <arc begin="14" end="2" isPushBackRoute="1" name="North_Hangar"  />
+        <arc begin="17" end="12" isPushBackRoute="1" name="North_Hangar"  />
+        <arc begin="12" end="17" isPushBackRoute="1" name="North_Hangar"  />
  </TaxiWaySegments>
 </groundnet>

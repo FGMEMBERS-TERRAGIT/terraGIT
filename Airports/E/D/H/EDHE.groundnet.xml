@@ -2,9 +2,9 @@
 <groundnet>
   <version>1</version>
   <parkingList>
-        <Parking index="0" type="ga" name="West_apron_parking" lat="N53 38.721544" lon="E9 41.533196" heading="107.35"  radius="10" pushBackRoute="20" airlineCodes="" />
+        <Parking index="0" type="ga" name="West_apron_parking" lat="N53 38.721544" lon="E9 41.533196" heading="107.35"  radius="10" pushBackRoute="7" airlineCodes="" />
         <Parking index="1" type="ga" name="Gras_parking_3" lat="N53 38.666325" lon="E9 42.116902" heading="0.63"  radius="10" pushBackRoute="15" airlineCodes="" />
-        <Parking index="2" type="ga" name="Gras_parking_2" lat="N53 38.713205" lon="E9 42.169621" heading="0.63"  radius="10" pushBackRoute="22" airlineCodes="" />
+        <Parking index="2" type="ga" name="Gras_parking_2" lat="N53 38.713205" lon="E9 42.169621" heading="0.63"  radius="10" pushBackRoute="12" airlineCodes="" />
         <Parking index="3" type="ga" name="Gras_parking_1" lat="N53 38.706748" lon="E9 42.237080" heading="283.5"  radius="10" pushBackRoute="12" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
@@ -24,9 +24,9 @@
         <node index="17" lat="N53 38.794356" lon="E9 42.214308" isOnRunway="1" holdPointType="none"  />
         <node index="18" lat="N53 38.765882" lon="E9 42.208972" isOnRunway="0" holdPointType="none"  />
         <node index="19" lat="N53 38.765974" lon="E9 42.221300" isOnRunway="0" holdPointType="none"  />
-        <node index="20" lat="N53 38.729633" lon="E9 41.507306" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="20" lat="N53 38.729633" lon="E9 41.507306" isOnRunway="0" holdPointType="none"  />
         <node index="21" lat="N53 38.639202" lon="E9 42.116604" isOnRunway="0" holdPointType="none"  />
-        <node index="22" lat="N53 38.686082" lon="E9 42.169323" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="22" lat="N53 38.686082" lon="E9 42.169323" isOnRunway="0" holdPointType="none"  />
         <node index="23" lat="N53 38.700415" lon="E9 42.263455" isOnRunway="0" holdPointType="none"  />
  </TaxiNodes>
  <TaxiWaySegments>
@@ -76,13 +76,5 @@
         <arc begin="23" end="3" isPushBackRoute="1" name="Gras_parking_1"  />
         <arc begin="23" end="12" isPushBackRoute="1" name="Gras_parking_1"  />
         <arc begin="12" end="23" isPushBackRoute="1" name="Gras_parking_1"  />
-        <arc begin="0" end="20" isPushBackRoute="1" name="West_apron_parking"  />
-        <arc begin="20" end="0" isPushBackRoute="1" name="West_apron_parking"  />
-        <arc begin="1" end="15" isPushBackRoute="1" name="Gras_parking_3"  />
-        <arc begin="15" end="1" isPushBackRoute="1" name="Gras_parking_3"  />
-        <arc begin="2" end="22" isPushBackRoute="1" name="Gras_parking_2"  />
-        <arc begin="22" end="2" isPushBackRoute="1" name="Gras_parking_2"  />
-        <arc begin="3" end="12" isPushBackRoute="1" name="Gras_parking_1"  />
-        <arc begin="12" end="3" isPushBackRoute="1" name="Gras_parking_1"  />
  </TaxiWaySegments>
 </groundnet>

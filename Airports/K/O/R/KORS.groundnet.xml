@@ -2,9 +2,9 @@
 <groundnet>
   <version>1</version>
   <parkingList>
-        <Parking index="0" type="gate" name="Fed_Ex_Ramp" lat="N48 42.296264" lon="W122 54.574077" heading="311.64"  radius="44" pushBackRoute="27" airlineCodes="" />
-        <Parking index="1" type="gate" name="NorthApron" lat="N48 42.582388" lon="W122 54.562057" heading="233.05"  radius="44" pushBackRoute="28" airlineCodes="" />
-        <Parking index="2" type="gate" name="Transient_ramp_South" lat="N48 42.236345" lon="W122 54.579403" heading="0"  radius="44" pushBackRoute="29" airlineCodes="" />
+        <Parking index="0" type="gate" name="Fed_Ex_Ramp" lat="N48 42.296264" lon="W122 54.574077" heading="311.64"  radius="17" pushBackRoute="9" airlineCodes="" />
+        <Parking index="1" type="gate" name="NorthApron" lat="N48 42.582388" lon="W122 54.562057" heading="233.05"  radius="17" pushBackRoute="4" airlineCodes="" />
+        <Parking index="2" type="gate" name="Transient_ramp_South" lat="N48 42.236345" lon="W122 54.579403" heading="0"  radius="17" pushBackRoute="10" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
         <node index="3" lat="N48 42.727076" lon="W122 54.598558" isOnRunway="0" holdPointType="none"  />
@@ -31,9 +31,9 @@
         <node index="24" lat="N48 42.584666" lon="W122 54.635935" isOnRunway="1" holdPointType="none"  />
         <node index="25" lat="N48 42.438494" lon="W122 54.636886" isOnRunway="1" holdPointType="none"  />
         <node index="26" lat="N48 42.265708" lon="W122 54.637859" isOnRunway="1" holdPointType="none"  />
-        <node index="27" lat="N48 42.278241" lon="W122 54.553806" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="28" lat="N48 42.598693" lon="W122 54.540380" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="29" lat="N48 42.209221" lon="W122 54.579403" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="27" lat="N48 42.278241" lon="W122 54.553806" isOnRunway="0" holdPointType="none"  />
+        <node index="28" lat="N48 42.598693" lon="W122 54.540380" isOnRunway="0" holdPointType="none"  />
+        <node index="29" lat="N48 42.209221" lon="W122 54.579403" isOnRunway="0" holdPointType="none"  />
  </TaxiNodes>
  <TaxiWaySegments>
         <arc begin="4" end="3" isPushBackRoute="0" name="A"  />
@@ -92,11 +92,5 @@
         <arc begin="29" end="2" isPushBackRoute="1" name="Transient_ramp_South"  />
         <arc begin="29" end="10" isPushBackRoute="1" name="Transient_ramp_South"  />
         <arc begin="10" end="29" isPushBackRoute="1" name="Transient_ramp_South"  />
-        <arc begin="0" end="27" isPushBackRoute="1" name="Fed_Ex_Ramp"  />
-        <arc begin="27" end="0" isPushBackRoute="1" name="Fed_Ex_Ramp"  />
-        <arc begin="1" end="28" isPushBackRoute="1" name="NorthApron"  />
-        <arc begin="28" end="1" isPushBackRoute="1" name="NorthApron"  />
-        <arc begin="2" end="29" isPushBackRoute="1" name="Transient_ramp_South"  />
-        <arc begin="29" end="2" isPushBackRoute="1" name="Transient_ramp_South"  />
  </TaxiWaySegments>
 </groundnet>

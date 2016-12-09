@@ -2,16 +2,16 @@
 <groundnet>
   <version>1</version>
   <parkingList>
-        <Parking index="0" type="gate" name="KCOU_JET1" lat="N38 49.056675" lon="W92 13.247078" heading="333.44"  radius="44" pushBackRoute="50" airlineCodes="" />
-        <Parking index="1" type="gate" name="KCOU_JET2" lat="N38 49.022677" lon="W92 13.265299" heading="333.44"  radius="44" pushBackRoute="51" airlineCodes="" />
-        <Parking index="2" type="ga" name="Central_Missouri_Aviation" lat="N38 48.937607" lon="W92 13.315273" heading="122.91"  radius="10" pushBackRoute="52" airlineCodes="" />
+        <Parking index="0" type="gate" name="KCOU_JET1" lat="N38 49.048911" lon="W92 13.243197" heading="333.44"  radius="44" pushBackRoute="6" airlineCodes="" />
+        <Parking index="1" type="gate" name="KCOU_JET2" lat="N38 49.014913" lon="W92 13.261418" heading="333.44"  radius="44" pushBackRoute="6" airlineCodes="" />
+        <Parking index="2" type="ga" name="Central_Missouri_Aviation" lat="N38 48.937607" lon="W92 13.315273" heading="122.91"  radius="10" pushBackRoute="6" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
         <node index="3" lat="N38 48.790598" lon="W92 13.342519" isOnRunway="0" holdPointType="none"  />
         <node index="4" lat="N38 48.648726" lon="W92 13.312322" isOnRunway="0" holdPointType="none"  />
         <node index="5" lat="N38 48.963123" lon="W92 13.154918" isOnRunway="0" holdPointType="none"  />
         <node index="6" lat="N38 48.991381" lon="W92 13.242539" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="7" lat="N38 49.055201" lon="W92 13.210583" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="7" lat="N38 49.055201" lon="W92 13.210583" isOnRunway="0" holdPointType="none"  />
         <node index="8" lat="N38 49.134124" lon="W92 13.170962" isOnRunway="0" holdPointType="none"  />
         <node index="9" lat="N38 49.213350" lon="W92 13.132043" isOnRunway="0" holdPointType="none"  />
         <node index="10" lat="N38 49.266689" lon="W92 13.105795" isOnRunway="0" holdPointType="none"  />
@@ -54,9 +54,9 @@
         <node index="47" lat="N38 48.632933" lon="W92 13.263013" isOnRunway="1" holdPointType="none"  />
         <node index="48" lat="N38 48.946762" lon="W92 13.105644" isOnRunway="1" holdPointType="none"  />
         <node index="49" lat="N38 49.223273" lon="W92 12.966793" isOnRunway="1" holdPointType="none"  />
-        <node index="50" lat="N38 49.032413" lon="W92 13.234950" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="51" lat="N38 48.998414" lon="W92 13.253171" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="52" lat="N38 48.952344" lon="W92 13.338045" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="50" lat="N38 49.024649" lon="W92 13.231069" isOnRunway="0" holdPointType="none"  />
+        <node index="51" lat="N38 48.990650" lon="W92 13.249290" isOnRunway="0" holdPointType="none"  />
+        <node index="52" lat="N38 48.952344" lon="W92 13.338045" isOnRunway="0" holdPointType="none"  />
  </TaxiNodes>
  <TaxiWaySegments>
         <arc begin="45" end="42" isPushBackRoute="0" name=""  />
@@ -161,8 +161,8 @@
         <arc begin="39" end="46" isPushBackRoute="0" name="A"  />
         <arc begin="0" end="50" isPushBackRoute="1" name="KCOU_JET1"  />
         <arc begin="50" end="0" isPushBackRoute="1" name="KCOU_JET1"  />
-        <arc begin="50" end="7" isPushBackRoute="1" name="KCOU_JET1"  />
-        <arc begin="7" end="50" isPushBackRoute="1" name="KCOU_JET1"  />
+        <arc begin="50" end="6" isPushBackRoute="1" name="KCOU_JET1"  />
+        <arc begin="6" end="50" isPushBackRoute="1" name="KCOU_JET1"  />
         <arc begin="1" end="51" isPushBackRoute="1" name="KCOU_JET2"  />
         <arc begin="51" end="1" isPushBackRoute="1" name="KCOU_JET2"  />
         <arc begin="51" end="6" isPushBackRoute="1" name="KCOU_JET2"  />
@@ -171,11 +171,5 @@
         <arc begin="52" end="2" isPushBackRoute="1" name="Central_Missouri_Aviation"  />
         <arc begin="52" end="6" isPushBackRoute="1" name="Central_Missouri_Aviation"  />
         <arc begin="6" end="52" isPushBackRoute="1" name="Central_Missouri_Aviation"  />
-        <arc begin="0" end="50" isPushBackRoute="1" name="KCOU_JET1"  />
-        <arc begin="50" end="0" isPushBackRoute="1" name="KCOU_JET1"  />
-        <arc begin="1" end="51" isPushBackRoute="1" name="KCOU_JET2"  />
-        <arc begin="51" end="1" isPushBackRoute="1" name="KCOU_JET2"  />
-        <arc begin="2" end="52" isPushBackRoute="1" name="Central_Missouri_Aviation"  />
-        <arc begin="52" end="2" isPushBackRoute="1" name="Central_Missouri_Aviation"  />
  </TaxiWaySegments>
 </groundnet>

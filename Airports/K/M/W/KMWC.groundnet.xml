@@ -3,8 +3,8 @@
   <version>1</version>
   <parkingList>
         <Parking index="0" type="ga" name="North_GA_Ramp" lat="N43 6.862931" lon="W88 2.013611" heading="360"  radius="10" pushBackRoute="90" airlineCodes="" />
-        <Parking index="1" type="ga" name="North_GA_Hangars" lat="N43 6.973920" lon="W88 2.067019" heading="90"  radius="10" pushBackRoute="118" airlineCodes="" />
-        <Parking index="2" type="ga" name="North_Helicopers" lat="N43 6.850034" lon="W88 2.036923" heading="0"  radius="8" pushBackRoute="119" airlineCodes="" />
+        <Parking index="1" type="ga" name="North_GA_Hangars" lat="N43 6.973920" lon="W88 2.067019" heading="90"  radius="10" pushBackRoute="100" airlineCodes="" />
+        <Parking index="2" type="ga" name="North_Helicopers" lat="N43 6.850034" lon="W88 2.036923" heading="0"  radius="8" pushBackRoute="104" airlineCodes="" />
         <Parking index="3" type="ga" name="North_GA_Transient_Parking" lat="N43 6.947438" lon="W88 1.917715" heading="144.72"  radius="10" pushBackRoute="115" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
@@ -122,8 +122,8 @@
         <node index="115" lat="N43 6.944603" lon="W88 1.916975" isOnRunway="0" holdPointType="PushBack"  />
         <node index="116" lat="N43 6.914677" lon="W88 1.916267" isOnRunway="0" holdPointType="none"  />
         <node index="117" lat="N43 6.835807" lon="W88 2.013611" isOnRunway="0" holdPointType="none"  />
-        <node index="118" lat="N43 6.973920" lon="W88 2.094144" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="119" lat="N43 6.822910" lon="W88 2.036923" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="118" lat="N43 6.973920" lon="W88 2.094144" isOnRunway="0" holdPointType="none"  />
+        <node index="119" lat="N43 6.822910" lon="W88 2.036923" isOnRunway="0" holdPointType="none"  />
         <node index="120" lat="N43 6.969581" lon="W88 1.933381" isOnRunway="0" holdPointType="none"  />
  </TaxiNodes>
  <TaxiWaySegments>
@@ -381,13 +381,5 @@
         <arc begin="120" end="3" isPushBackRoute="1" name="North_GA_Transient_Parking"  />
         <arc begin="120" end="115" isPushBackRoute="1" name="North_GA_Transient_Parking"  />
         <arc begin="115" end="120" isPushBackRoute="1" name="North_GA_Transient_Parking"  />
-        <arc begin="0" end="90" isPushBackRoute="1" name="North_GA_Ramp"  />
-        <arc begin="90" end="0" isPushBackRoute="1" name="North_GA_Ramp"  />
-        <arc begin="1" end="118" isPushBackRoute="1" name="North_GA_Hangars"  />
-        <arc begin="118" end="1" isPushBackRoute="1" name="North_GA_Hangars"  />
-        <arc begin="2" end="119" isPushBackRoute="1" name="North_Helicopers"  />
-        <arc begin="119" end="2" isPushBackRoute="1" name="North_Helicopers"  />
-        <arc begin="3" end="115" isPushBackRoute="1" name="North_GA_Transient_Parking"  />
-        <arc begin="115" end="3" isPushBackRoute="1" name="North_GA_Transient_Parking"  />
  </TaxiWaySegments>
 </groundnet>

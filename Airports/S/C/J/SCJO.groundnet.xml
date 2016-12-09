@@ -3,8 +3,8 @@
   <version>1</version>
   <parkingList>
         <Parking index="0" type="ga" name="Aeroclub_1" lat="S40 36.840845" lon="W73 3.720875" heading="-21.72"  radius="10" pushBackRoute="7" airlineCodes="" />
-        <Parking index="1" type="gate" name="Apron" lat="S40 36.281713" lon="W73 3.705038" heading="46.47"  radius="44" pushBackRoute="9" airlineCodes="" />
-        <Parking index="2" type="gate" name="Gate" lat="S40 36.304016" lon="W73 3.684404" heading="61.23"  radius="44" pushBackRoute="10" airlineCodes="" />
+        <Parking index="1" type="gate" name="Apron" lat="S40 36.287691" lon="W73 3.711331" heading="46.47"  radius="44" pushBackRoute="10" airlineCodes="" />
+        <Parking index="2" type="gate" name="Gate" lat="S40 36.308194" lon="W73 3.692013" heading="61.23"  radius="44" pushBackRoute="10" airlineCodes="" />
         <Parking index="3" type="ga" name="Aeroclub_2" lat="S40 36.840000" lon="W73 3.739661" heading="36.25"  radius="10" pushBackRoute="19" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
@@ -13,7 +13,7 @@
         <node index="6" lat="S40 36.825884" lon="W73 3.729983" isOnRunway="0" holdPointType="none"  />
         <node index="7" lat="S40 36.840845" lon="W73 3.720875" isOnRunway="0" holdPointType="PushBack"  />
         <node index="8" lat="S40 36.351038" lon="W73 3.695705" isOnRunway="0" holdPointType="none"  />
-        <node index="9" lat="S40 36.263299" lon="W73 3.718144" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="9" lat="S40 36.263299" lon="W73 3.718144" isOnRunway="0" holdPointType="none"  />
         <node index="10" lat="S40 36.316361" lon="W73 3.693967" isOnRunway="0" holdPointType="PushBack"  />
         <node index="11" lat="S40 37.093390" lon="W73 3.385372" isOnRunway="1" holdPointType="none"  />
         <node index="12" lat="S40 36.259330" lon="W73 3.890710" isOnRunway="1" holdPointType="none"  />
@@ -27,8 +27,8 @@
         <node index="20" lat="S40 36.777877" lon="W73 3.612496" isOnRunway="0" holdPointType="none"  />
         <node index="21" lat="S40 36.466973" lon="W73 3.714034" isOnRunway="0" holdPointType="none"  />
         <node index="22" lat="S40 36.866044" lon="W73 3.710837" isOnRunway="0" holdPointType="none"  />
-        <node index="23" lat="S40 36.300394" lon="W73 3.724704" isOnRunway="0" holdPointType="none"  />
-        <node index="24" lat="S40 36.317071" lon="W73 3.708181" isOnRunway="0" holdPointType="none"  />
+        <node index="23" lat="S40 36.306373" lon="W73 3.730997" isOnRunway="0" holdPointType="none"  />
+        <node index="24" lat="S40 36.321249" lon="W73 3.715789" isOnRunway="0" holdPointType="none"  />
         <node index="25" lat="S40 36.861875" lon="W73 3.755700" isOnRunway="0" holdPointType="none"  />
  </TaxiNodes>
  <TaxiWaySegments>
@@ -60,8 +60,8 @@
         <arc begin="7" end="22" isPushBackRoute="1" name="Aeroclub_1"  />
         <arc begin="1" end="23" isPushBackRoute="1" name="Apron"  />
         <arc begin="23" end="1" isPushBackRoute="1" name="Apron"  />
-        <arc begin="23" end="9" isPushBackRoute="1" name="Apron"  />
-        <arc begin="9" end="23" isPushBackRoute="1" name="Apron"  />
+        <arc begin="23" end="10" isPushBackRoute="1" name="Apron"  />
+        <arc begin="10" end="23" isPushBackRoute="1" name="Apron"  />
         <arc begin="2" end="24" isPushBackRoute="1" name="Gate"  />
         <arc begin="24" end="2" isPushBackRoute="1" name="Gate"  />
         <arc begin="24" end="10" isPushBackRoute="1" name="Gate"  />
@@ -70,13 +70,5 @@
         <arc begin="25" end="3" isPushBackRoute="1" name="Aeroclub_2"  />
         <arc begin="25" end="19" isPushBackRoute="1" name="Aeroclub_2"  />
         <arc begin="19" end="25" isPushBackRoute="1" name="Aeroclub_2"  />
-        <arc begin="0" end="7" isPushBackRoute="1" name="Aeroclub_1"  />
-        <arc begin="7" end="0" isPushBackRoute="1" name="Aeroclub_1"  />
-        <arc begin="1" end="9" isPushBackRoute="1" name="Apron"  />
-        <arc begin="9" end="1" isPushBackRoute="1" name="Apron"  />
-        <arc begin="2" end="10" isPushBackRoute="1" name="Gate"  />
-        <arc begin="10" end="2" isPushBackRoute="1" name="Gate"  />
-        <arc begin="3" end="19" isPushBackRoute="1" name="Aeroclub_2"  />
-        <arc begin="19" end="3" isPushBackRoute="1" name="Aeroclub_2"  />
  </TaxiWaySegments>
 </groundnet>

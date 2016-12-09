@@ -2,10 +2,10 @@
 <groundnet>
   <version>1</version>
   <parkingList>
-        <Parking index="0" type="ga" name="Ramp_Start_1" lat="N41 44.551096" lon="W72 39.035491" heading="8.97"  radius="10" pushBackRoute="55" airlineCodes="" />
-        <Parking index="1" type="gate" name="Ramp_Start_2" lat="N41 44.498152" lon="W72 39.005227" heading="99.69"  radius="19" pushBackRoute="56" airlineCodes="" />
-        <Parking index="2" type="gate" name="North_GA_Tiedown" lat="N41 44.652426" lon="W72 39.039329" heading="163.89"  radius="19" pushBackRoute="57" airlineCodes="" />
-        <Parking index="3" type="ga" name="Helo_Parking" lat="N41 44.631271" lon="W72 38.989615" heading="72.65"  radius="8" pushBackRoute="58" airlineCodes="" />
+        <Parking index="0" type="ga" name="Ramp_Start_1" lat="N41 44.551096" lon="W72 39.035491" heading="8.97"  radius="10" pushBackRoute="24" airlineCodes="" />
+        <Parking index="1" type="gate" name="Ramp_Start_2" lat="N41 44.499613" lon="W72 39.013783" heading="99.69"  radius="19" pushBackRoute="24" airlineCodes="" />
+        <Parking index="2" type="gate" name="North_GA_Tiedown" lat="N41 44.660765" lon="W72 39.041737" heading="163.89"  radius="19" pushBackRoute="20" airlineCodes="" />
+        <Parking index="3" type="ga" name="Helo_Parking" lat="N41 44.631271" lon="W72 38.989615" heading="72.65"  radius="8" pushBackRoute="24" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
         <node index="4" lat="N41 43.935583" lon="W72 38.981428" isOnRunway="1" holdPointType="none"  />
@@ -59,10 +59,10 @@
         <node index="52" lat="N41 44.023977" lon="W72 39.035890" isOnRunway="0" holdPointType="none"  />
         <node index="53" lat="N41 44.030186" lon="W72 39.063644" isOnRunway="0" holdPointType="none"  />
         <node index="54" lat="N41 44.600166" lon="W72 38.938169" isOnRunway="0" holdPointType="none"  />
-        <node index="55" lat="N41 44.524303" lon="W72 39.039720" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="56" lat="N41 44.502717" lon="W72 39.031965" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="57" lat="N41 44.678486" lon="W72 39.046855" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="58" lat="N41 44.623182" lon="W72 39.015506" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="55" lat="N41 44.524303" lon="W72 39.039720" isOnRunway="0" holdPointType="none"  />
+        <node index="56" lat="N41 44.504178" lon="W72 39.040521" isOnRunway="0" holdPointType="none"  />
+        <node index="57" lat="N41 44.686825" lon="W72 39.049264" isOnRunway="0" holdPointType="none"  />
+        <node index="58" lat="N41 44.623182" lon="W72 39.015506" isOnRunway="0" holdPointType="none"  />
  </TaxiNodes>
  <TaxiWaySegments>
         <arc begin="4" end="8" isPushBackRoute="0" name="A"  />
@@ -187,13 +187,5 @@
         <arc begin="58" end="3" isPushBackRoute="1" name="Helo_Parking"  />
         <arc begin="58" end="24" isPushBackRoute="1" name="Helo_Parking"  />
         <arc begin="24" end="58" isPushBackRoute="1" name="Helo_Parking"  />
-        <arc begin="0" end="55" isPushBackRoute="1" name="Ramp_Start_1"  />
-        <arc begin="55" end="0" isPushBackRoute="1" name="Ramp_Start_1"  />
-        <arc begin="1" end="56" isPushBackRoute="1" name="Ramp_Start_2"  />
-        <arc begin="56" end="1" isPushBackRoute="1" name="Ramp_Start_2"  />
-        <arc begin="2" end="57" isPushBackRoute="1" name="North_GA_Tiedown"  />
-        <arc begin="57" end="2" isPushBackRoute="1" name="North_GA_Tiedown"  />
-        <arc begin="3" end="58" isPushBackRoute="1" name="Helo_Parking"  />
-        <arc begin="58" end="3" isPushBackRoute="1" name="Helo_Parking"  />
  </TaxiWaySegments>
 </groundnet>

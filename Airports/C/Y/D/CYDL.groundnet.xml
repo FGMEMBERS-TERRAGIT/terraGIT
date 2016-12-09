@@ -2,9 +2,9 @@
 <groundnet>
   <version>1</version>
   <parkingList>
-        <Parking index="0" type="gate" name="Gate" lat="N58 25.525486" lon="W130 1.272002" heading="0"  radius="19" pushBackRoute="30" airlineCodes="" />
+        <Parking index="0" type="gate" name="Gate" lat="N58 25.516806" lon="W130 1.272002" heading="0"  radius="19" pushBackRoute="24" airlineCodes="" />
         <Parking index="1" type="ga" name="Hangar_1_(Small_Prop)" lat="N58 25.441282" lon="W130 1.451527" heading="-66.43"  radius="10" pushBackRoute="28" airlineCodes="" />
-        <Parking index="2" type="ga" name="Fuel_Station_(Prop)" lat="N58 25.619335" lon="W130 1.015828" heading="-128.53"  radius="10" pushBackRoute="14" airlineCodes="" />
+        <Parking index="2" type="ga" name="Fuel_Station_(Prop)" lat="N58 25.619335" lon="W130 1.015828" heading="-128.53"  radius="10" pushBackRoute="17" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
         <node index="3" lat="N58 25.487347" lon="W130 1.532456" isOnRunway="0" holdPointType="none"  />
@@ -18,7 +18,7 @@
         <node index="11" lat="N58 25.630476" lon="W130 1.149551" isOnRunway="0" holdPointType="none"  />
         <node index="12" lat="N58 25.601502" lon="W130 1.058324" isOnRunway="0" holdPointType="none"  />
         <node index="13" lat="N58 25.602495" lon="W130 1.044733" isOnRunway="0" holdPointType="none"  />
-        <node index="14" lat="N58 25.611928" lon="W130 1.021186" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="14" lat="N58 25.611928" lon="W130 1.021186" isOnRunway="0" holdPointType="none"  />
         <node index="15" lat="N58 25.460102" lon="W130 1.505425" isOnRunway="0" holdPointType="none"  />
         <node index="16" lat="N58 25.617221" lon="W130 1.128804" isOnRunway="0" holdPointType="none"  />
         <node index="17" lat="N58 25.644110" lon="W130 1.018729" isOnRunway="0" holdPointType="PushBack"  />
@@ -34,7 +34,7 @@
         <node index="27" lat="N58 25.441781" lon="W130 1.473044" isOnRunway="0" holdPointType="none"  />
         <node index="28" lat="N58 25.440515" lon="W130 1.458935" isOnRunway="0" holdPointType="PushBack"  />
         <node index="29" lat="N58 25.653535" lon="W130 0.935359" isOnRunway="0" holdPointType="none"  />
-        <node index="30" lat="N58 25.498361" lon="W130 1.272002" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="30" lat="N58 25.489681" lon="W130 1.272002" isOnRunway="0" holdPointType="none"  />
         <node index="31" lat="N58 25.430435" lon="W130 1.426665" isOnRunway="0" holdPointType="none"  />
         <node index="32" lat="N58 25.636232" lon="W130 0.994609" isOnRunway="0" holdPointType="none"  />
  </TaxiNodes>
@@ -101,11 +101,5 @@
         <arc begin="32" end="2" isPushBackRoute="1" name="Fuel_Station_(Prop)"  />
         <arc begin="32" end="17" isPushBackRoute="1" name="Fuel_Station_(Prop)"  />
         <arc begin="17" end="32" isPushBackRoute="1" name="Fuel_Station_(Prop)"  />
-        <arc begin="0" end="30" isPushBackRoute="1" name="Gate"  />
-        <arc begin="30" end="0" isPushBackRoute="1" name="Gate"  />
-        <arc begin="1" end="28" isPushBackRoute="1" name="Hangar_1_(Small_Prop)"  />
-        <arc begin="28" end="1" isPushBackRoute="1" name="Hangar_1_(Small_Prop)"  />
-        <arc begin="2" end="14" isPushBackRoute="1" name="Fuel_Station_(Prop)"  />
-        <arc begin="14" end="2" isPushBackRoute="1" name="Fuel_Station_(Prop)"  />
  </TaxiWaySegments>
 </groundnet>
