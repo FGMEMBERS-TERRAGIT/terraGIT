@@ -57,7 +57,7 @@ These allows you to install all tiles corresponding to an identical latitude, ex
        
 This script installs any tile for North 30 degrees.
 
-** Installing for Geographic region**
+**Installing for Geographic region**
 
 Some geographic regions have specific installation scripts that allow you to easily install them 
 
@@ -65,7 +65,7 @@ Some geographic regions have specific installation scripts that allow you to eas
        install/Europe
        install/Australia
        
-** Installing the World **
+**Installing the World**
 
 If you are interested in cloning locally a WorldWide TerraGIT scenery, you can use the script
 
