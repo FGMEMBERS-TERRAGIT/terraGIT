@@ -140,7 +140,14 @@ Immediately after pulling, to get all your tracked content updated.
 
 ****
 
-:copyright: 2016, IH-COL
+:copyright: 2016, Israel Hernandez (IAHM-COL) <br>
+:copyright: 2016, Peter Brendt (Jabberwocky)  <br>
+:copyright: 2016, Sharath Mahadevan (SHM)<br>
+:copyright: 2016, J. Maverick<br>
+:copyright: 2016, Martin Herweg (D-LASER)<br>
+:copyright: 2016, Terrasync's FlightGear Scenery Database objects authors <br>
+:copyright: 2016, John Statto (Custom Landclasses)
+
 License: GPL 2+
 
 This program is free software; you can redistribute it and/or
