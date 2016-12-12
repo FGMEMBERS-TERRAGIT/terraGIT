@@ -100,20 +100,25 @@ example
 
 
 Initializing the Tile w080n00
+
      git submodule init Objects/w080n00
      git submodule init Terrain/w080n00
 
 Initializing the Objects for all Tiles south of Lat 60
+
      git submodule init Objects/*s[6-9]0
      
 Initializing any Tile WestHemiphere
+
      git submodule init */*w*
      
 De-initializign any Object North of Equator
+
      git submodule deinit Object/n*
      
 Updating the content initialized/deinitialized
-     git submodule update
+
+    git submodule update
      
 
 
