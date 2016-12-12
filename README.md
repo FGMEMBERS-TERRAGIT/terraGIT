@@ -17,6 +17,8 @@ this creates a directory terraGIT which contains the custom scenery structure. U
 configuration of Flightgear as an --fg-scenery path. You can use any method, including FG Launchers, or 
 command line.
 
+     cd terraGIT
+
 ### installing a tile
 
 Each tile contains the scenery for a 10x10 degree of scenery as indicated in the FlightGear scenery map:
