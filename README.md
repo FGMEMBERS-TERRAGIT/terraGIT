@@ -7,7 +7,7 @@ scenery by tiles of 10x10 degrees.
 
 The user can install or deinstall as needed any tile using git and a git bash terminal.
 
-feddback & support:
+Feedback & community support:
 http://www.thejabberwocky.net/viewforum.php?f=51
 
 
