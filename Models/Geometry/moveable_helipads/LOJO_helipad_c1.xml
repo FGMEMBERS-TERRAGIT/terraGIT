@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+ <path>helipad_small_wood.ac</path>
+
+
+ <animation>
+  <type>pick</type>
+  <visible>true</visible>
+    <object-name>backward</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>property-adjust</command>
+    <property>/models/LOWI/model[1]/controls/tgt-speed-kts</property>
+        <step type="double">0.1</step>
+   <max>1.0</max> 
+     </binding>
+    </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <visible>true</visible>
+   <object-name>forward</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>property-adjust</command>
+    <property>/models/LOWI/model[1]/controls/tgt-speed-kts</property>
+     <step type="double">-0.1</step>
+   <min>-1.0</min> 
+     </binding>
+    </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <visible>true</visible>
+   <object-name>stop</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>property-assign</command>
+    <property>/models/LOWI/model[1]/velocities/speed-kts</property>
+        <value>0</value> 
+     </binding>
+      <binding>
+    <command>property-assign</command>
+    <property>models/LOWI/model[1]/controls/tgt-speed-kts</property>
+        <value>0</value> 
+     </binding>
+    </action>
+ </animation>
+ 
+ 
+
+
+
+</PropertyList>

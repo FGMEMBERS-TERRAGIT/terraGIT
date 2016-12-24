@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PropertyList>
+
+<!-- Tow tracktor with 2 baggage trailers      -->
+<!-- 1 loaded / 1 party loaded                 -->
+<!-- trailers in a LEFT wide curve - 90deg     -->
+
+<path>DFZ30.ac</path>
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>front_win</object-name>
+		<object-name>door_win_left</object-name>
+		<object-name>door_win_right</object-name>
+	</effect>
+	
+	<animation>
+		<name>Lights_front_All</name>
+		<object-name>Light_front</object-name>
+		<object-name>Light_signal_fr</object-name>
+	</animation>
+
+	<animation>
+		<name>Lights_All</name>
+		<object-name>Lights_front_All</object-name>
+		<object-name>Light_rear</object-name>
+		<object-name>Light_rear_top</object-name>
+	</animation>
+
+<!-- front wheels turn animation -->
+	<animation>
+		<type>rotate</type>
+		<object-name>fr_wheel_left</object-name>
+			<property>/sim/signals/fdm-initialized</property>
+			<factor>-20</factor>
+			<axis>
+				<x1-m> -0.713 </x1-m>
+				<y1-m> -0.412 </y1-m>
+				<z1-m>  0.100 </z1-m>
+				<x2-m> -0.713 </x2-m>
+				<y2-m> -0.412 </y2-m>
+				<z2-m> -0.100 </z2-m>
+			</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>fr_wheel_right</object-name>
+			<property>/sim/signals/fdm-initialized</property>
+			<factor>-20</factor>
+			<axis>
+				<x1-m> -0.713 </x1-m>
+				<y1-m>  0.412 </y1-m>
+				<z1-m>  0.100 </z1-m>
+				<x2-m> -0.713 </x2-m>
+				<y2-m>  0.412 </y2-m>
+				<z2-m> -0.100 </z2-m>
+			</axis>
+	</animation>
+	
+<!-- baggade trailer model groups -->	
+	<animation>
+		<name>Atrailer_01</name>
+		<object-name>front_01</object-name>
+		<object-name>Bar_down_bgt_01</object-name>
+	</animation>
+	
+	<animation>
+		<name>Btrailer_01</name>
+		<object-name>trailer_01</object-name>
+		<object-name>rails_01</object-name>
+		<object-name>raincoat_01</object-name>
+		<object-name>sign_01</object-name>
+		<object-name>Reflectors_01</object-name>
+		<object-name>Bag_01_01</object-name>
+		<object-name>Bag_01_02</object-name>
+		<object-name>Bag_01_03</object-name>
+	</animation>
+	
+	<animation>
+		<name>Atrailer_02</name>
+		<object-name>front_02</object-name>
+		<object-name>Bar_down_bgt_02</object-name>
+	</animation>
+	
+	<animation>
+		<name>Btrailer_02</name>
+		<object-name>trailer_02</object-name>
+		<object-name>rails_02</object-name>
+		<object-name>raincoat_02</object-name>
+		<object-name>sign_02</object-name>
+		<object-name>Reflectors_02</object-name>
+		<object-name>Bag_02_01</object-name>
+		<object-name>Bag_02_02</object-name>
+		<object-name>Bag_02_03</object-name>
+	</animation>
+	
+	<animation>
+		<name>Atrailer_03</name>
+		<object-name>front_03</object-name>
+		<object-name>Bar_down_bgt_03</object-name>
+	</animation>
+	
+	<animation>
+		<name>Btrailer_03</name>
+		<object-name>trailer_03</object-name>
+		<object-name>rails_03</object-name>
+		<object-name>raincoat_03</object-name>
+		<object-name>sign_03</object-name>
+		<object-name>Reflectors_03</object-name>
+		<object-name>Bag_03_01</object-name>
+		<object-name>Bag_03_02</object-name>
+		<object-name>Bag_03_03</object-name>
+	</animation>
+	
+	<animation>
+		<name>Atrailer_04</name>
+		<object-name>front_04</object-name>
+		<object-name>Bar_down_bgt_04</object-name>
+	</animation>
+	
+	<animation>
+		<name>Btrailer_04</name>
+		<object-name>trailer_04</object-name>
+		<object-name>rails_04</object-name>
+		<object-name>raincoat_04</object-name>
+		<object-name>sign_04</object-name>
+		<object-name>Reflectors_04</object-name>
+		<object-name>Bag_04_01</object-name>
+		<object-name>Bag_04_02</object-name>
+		<object-name>Bag_04_03</object-name>
+	</animation>
+	
+<!-- baggade trailer model animations -->	
+	<animation>
+		<type>rotate</type>
+		<object-name>Atrailer_01</object-name>
+		<object-name>Atrailer_02</object-name>
+		<object-name>Atrailer_03</object-name>
+		<object-name>Atrailer_04</object-name>
+		<object-name>Btrailer_01</object-name>
+		<object-name>Btrailer_02</object-name>
+		<object-name>Btrailer_03</object-name>
+		<object-name>Btrailer_04</object-name>
+			<property>/sim/signals/fdm-initialized</property>
+			<factor>10</factor>
+			<axis>
+				<x1-m>  0.000 </x1-m>
+				<y1-m>  0.000 </y1-m>
+				<z1-m>  0.100 </z1-m>
+				<x2-m>  0.000 </x2-m>
+				<y2-m>  0.000 </y2-m>
+				<z2-m> -0.100 </z2-m>
+			</axis>
+	</animation>
+	
+		<animation>
+			<type>rotate</type>
+			<object-name>Atrailer_02</object-name>
+			<object-name>Atrailer_03</object-name>
+			<object-name>Atrailer_04</object-name>
+			<object-name>Btrailer_01</object-name>
+			<object-name>Btrailer_02</object-name>
+			<object-name>Btrailer_03</object-name>
+			<object-name>Btrailer_04</object-name>
+				<property>/sim/signals/fdm-initialized</property>
+				<factor>10</factor>
+				<axis>
+					<x1-m>  1.590 </x1-m>
+					<y1-m>  0.000 </y1-m>
+					<z1-m>  0.100 </z1-m>
+					<x2-m>  1.590 </x2-m>
+					<y2-m>  0.000 </y2-m>
+					<z2-m> -0.100 </z2-m>
+				</axis>
+		</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Atrailer_02</object-name>
+		<object-name>Atrailer_03</object-name>
+		<object-name>Atrailer_04</object-name>
+		<object-name>Btrailer_02</object-name>
+		<object-name>Btrailer_03</object-name>
+		<object-name>Btrailer_04</object-name>
+			<property>/sim/signals/fdm-initialized</property>
+			<factor>10</factor>
+			<axis>
+				<x1-m>  3.720 </x1-m>
+				<y1-m>  0.000 </y1-m>
+				<z1-m>  0.100 </z1-m>
+				<x2-m>  3.720 </x2-m>
+				<y2-m>  0.000 </y2-m>
+				<z2-m> -0.100 </z2-m>
+			</axis>
+	</animation>
+	
+		<animation>
+			<type>rotate</type>
+			<object-name>Atrailer_03</object-name>
+			<object-name>Atrailer_04</object-name>
+			<object-name>Btrailer_02</object-name>
+			<object-name>Btrailer_03</object-name>
+			<object-name>Btrailer_04</object-name>
+				<property>/sim/signals/fdm-initialized</property>
+				<factor>10</factor>
+				<axis>
+					<x1-m>  5.340 </x1-m>
+					<y1-m>  0.000 </y1-m>
+					<z1-m>  0.100 </z1-m>
+					<x2-m>  5.340 </x2-m>
+					<y2-m>  0.000 </y2-m>
+					<z2-m> -0.100 </z2-m>
+				</axis>
+		</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Atrailer_03</object-name>
+		<object-name>Atrailer_04</object-name>
+		<object-name>Btrailer_03</object-name>
+		<object-name>Btrailer_04</object-name>
+			<property>/sim/signals/fdm-initialized</property>
+			<factor>10</factor>
+			<axis>
+				<x1-m>  7.470 </x1-m>
+				<y1-m>  0.000 </y1-m>
+				<z1-m>  0.100 </z1-m>
+				<x2-m>  7.470 </x2-m>
+				<y2-m>  0.000 </y2-m>
+				<z2-m> -0.100 </z2-m>
+			</axis>
+	</animation>
+	
+		<animation>
+			<type>rotate</type>
+			<object-name>Atrailer_04</object-name>
+			<object-name>Btrailer_03</object-name>
+			<object-name>Btrailer_04</object-name>
+				<property>/sim/signals/fdm-initialized</property>
+				<factor>10</factor>
+				<axis>
+					<x1-m>  9.090 </x1-m>
+					<y1-m>  0.000 </y1-m>
+					<z1-m>  0.100 </z1-m>
+					<x2-m>  9.090 </x2-m>
+					<y2-m>  0.000 </y2-m>
+					<z2-m> -0.100 </z2-m>
+				</axis>
+		</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Atrailer_04</object-name>
+		<object-name>Btrailer_04</object-name>
+			<property>/sim/signals/fdm-initialized</property>
+			<factor>10</factor>
+			<axis>
+				<x1-m> 11.220 </x1-m>
+				<y1-m>  0.000 </y1-m>
+				<z1-m>  0.100 </z1-m>
+				<x2-m> 11.220 </x2-m>
+				<y2-m>  0.000 </y2-m>
+				<z2-m> -0.100 </z2-m>
+			</axis>
+	</animation>
+	
+		<animation>
+			<type>rotate</type>
+			<object-name>Btrailer_04</object-name>
+				<property>/sim/signals/fdm-initialized</property>
+				<factor>10</factor>
+				<axis>
+					<x1-m> 12.840 </x1-m>
+					<y1-m>  0.000 </y1-m>
+					<z1-m>  0.100 </z1-m>
+					<x2-m> 12.840 </x2-m>
+					<y2-m>  0.000 </y2-m>
+					<z2-m> -0.100 </z2-m>
+				</axis>
+		</animation>
+
+<!-- dont show the trailers 3 + 4 and 2 bags on trailer 2-->
+	<animation>
+		<type>select</type>
+		<object-name>Bag_02_02</object-name>
+		<object-name>Bag_02_03</object-name>
+		<!--
+		<object-name>Atrailer_01</object-name>
+		<object-name>Btrailer_01</object-name>
+		<object-name>Atrailer_02</object-name>
+		<object-name>Btrailer_02</object-name>
+		-->
+		<object-name>Atrailer_03</object-name>
+		<object-name>Btrailer_03</object-name>
+		<object-name>Atrailer_04</object-name>
+		<object-name>Btrailer_04</object-name>
+			<condition>		
+				<greater-than>		
+					<property>/sim/time/sun-angle-rad</property>
+					<value>10.56</value>
+				</greater-than>
+			</condition>
+	</animation>
+		
+<!-- rotate bags -->
+	<!--
+	<animation>
+		<type>rotate</type>
+		<object-name>Bag_01_01</object-name>
+		<object-name>Bag_01_02</object-name>
+		<object-name>Bag_01_03</object-name>
+			<property>/sim/signals/fdm-initialized</property>
+			<factor>180</factor>
+			<axis>
+				<x1-m>  2.441 </x1-m>
+				<y1-m>  0.000 </y1-m>
+				<z1-m>  0.100 </z1-m>
+				<x2-m>  2.441 </x2-m>
+				<y2-m>  0.000 </y2-m>
+				<z2-m> -0.100 </z2-m>
+			</axis>
+	</animation>
+	-->
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Bag_02_01</object-name>
+		<object-name>Bag_02_02</object-name>
+		<object-name>Bag_02_03</object-name>
+			<property>/sim/signals/fdm-initialized</property>
+			<factor>180</factor>
+			<axis>
+				<x1-m>  6.191 </x1-m>
+				<y1-m>  0.000 </y1-m>
+				<z1-m>  0.100 </z1-m>
+				<x2-m>  6.191 </x2-m>
+				<y2-m>  0.000 </y2-m>
+				<z2-m> -0.100 </z2-m>
+			</axis>
+	</animation>
+	
+	<!--
+	<animation>
+		<type>rotate</type>
+		<object-name>Bag_03_01</object-name>
+		<object-name>Bag_03_02</object-name>
+		<object-name>Bag_03_03</object-name>
+			<property>/sim/signals/fdm-initialized</property>
+			<factor>180</factor>
+			<axis>
+				<x1-m>  9.941 </x1-m>
+				<y1-m>  0.000 </y1-m>
+				<z1-m>  0.100 </z1-m>
+				<x2-m>  9.941 </x2-m>
+				<y2-m>  0.000 </y2-m>
+				<z2-m> -0.100 </z2-m>
+			</axis>
+	</animation>
+	-->
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Bag_04_01</object-name>
+		<object-name>Bag_04_02</object-name>
+		<object-name>Bag_04_03</object-name>
+			<property>/sim/signals/fdm-initialized</property>
+			<factor>180</factor>
+			<axis>
+				<x1-m> 13.691 </x1-m>
+				<y1-m>  0.000 </y1-m>
+				<z1-m>  0.100 </z1-m>
+				<x2-m> 13.691 </x2-m>
+				<y2-m>  0.000 </y2-m>
+				<z2-m> -0.100 </z2-m>
+			</axis>
+	</animation>
+	
+<!-- baggade trailer models -->
+	<model>
+		<path>../trailer/baggage_trailer_4line_hooked_loaded.ac</path>
+		<offsets>
+			<x-m> 1.820 </x-m>
+			<y-m> 0.000 </y-m>
+			<z-m> 0.000 </z-m>
+			<pitch-deg> 0.00</pitch-deg>
+			<heading-deg>0.0 </heading-deg>
+		</offsets>
+	</model>
+	
+<!-- Engine Test night window illumination -->
+	<animation>
+		<type>material</type> 
+		<object-name>Lights_All</object-name>
+		<condition>		
+			<greater-than>		
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.56</value>
+			</greater-than>
+		</condition>
+		<emission>	
+			<red>0.7</red>	
+			<green>0.7</green>	
+			<blue>0.7</blue>
+		</emission>
+	</animation>
+
+<!-- dont show the front light model during day-->
+	<animation>
+		<type>select</type> 
+		<object-name>Lights_front_All</object-name>
+			<condition>		
+				<greater-than>		
+					<property>/sim/time/sun-angle-rad</property>
+					<value>1.56</value>
+				</greater-than>
+			</condition>
+	</animation>
+
+<!-- LOD 
+	<animation>
+	<type>range</type>
+		<min-m>0</min-m>
+		<max-m>15000</max-m>
+	</animation>-->
+	
+</PropertyList>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+ <path>helicarrier_v1000.ac</path>
+
+
+<!--this one is steerable-->
+
+<animation>
+  <type>pick</type>
+  <visible>true</visible>
+    <object-name>left</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>property-adjust</command>
+    <property>/models/LOWI/model[3]/surface-positions/rudder-pos-deg</property>
+        <step type="double">1</step>
+   <max>10.0</max> 
+     </binding>
+    </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <visible>true</visible>
+    <object-name>right</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>property-adjust</command>
+    <property>/models/LOWI/model[3]/surface-positions/rudder-pos-deg</property>
+        <step type="double">-1</step>
+   <min>-10.0</min> 
+     </binding>
+    </action>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+  <visible>true</visible>
+    <object-name>backward</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>property-adjust</command>
+    <property>/models/LOWI/model[3]/controls/tgt-speed-kts</property>
+        <step type="double">0.1</step>
+   <max>1.0</max> 
+     </binding>
+    </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <visible>true</visible>
+   <object-name>forward</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>property-adjust</command>
+    <property>/models/LOWI/model[3]/controls/tgt-speed-kts</property>
+     <step type="double">-0.1</step>
+   <min>-1.0</min> 
+     </binding>
+    </action>
+ </animation>
+ 
+<animation>
+  <type>pick</type>
+  <visible>true</visible>
+   <object-name>stop</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>property-assign</command>
+    <property>/models/LOWI/model[3]/velocities/speed-kts</property>
+        <value>0</value> 
+     </binding>
+      <binding>
+    <command>property-assign</command>
+    <property>/models/LOWI/model[3]/controls/tgt-speed-kts</property>
+        <value>0</value> 
+     </binding>
+    </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <visible>true</visible>
+   <object-name>up</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>property-adjust</command>
+    <property>/models/LOWI/model[3]/position/lift-ft</property>
+       <step type="double">0.5</step>
+   </binding>
+    </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <visible>true</visible>
+   <object-name>down</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+   <command>property-adjust</command>
+    <property>/models/LOWI/model[3]/position/lift-ft</property>
+       <step type="double">-0.5</step>
+  </binding>
+    </action>
+ </animation>
+   
+  <animation>
+    <type>rotate</type>
+    <object-name>rod</object-name>
+      <property>/models/LOWI/model[3]/surface-positions/rudder-pos-deg</property>
+    <factor>2.5</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>2.098</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y> 0.0</y>
+      <z>1.0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+  <object-name>v1000</object-name>
+  <object-name>rod</object-name>
+  <enable-hot type="bool">false</enable-hot>
+  </animation>
+
+
+
+</PropertyList>

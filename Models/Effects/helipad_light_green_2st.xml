@@ -1,11 +1,18 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <PropertyList>
 
 <!-- Generic green helipad light with 2 stage light -->
 <!-- with switch based on environment visibility    -->
-<!-- v1.1 - 2011.02.21                              -->
+<!-- v1.4 - 2012.11.26                              -->
 
-	<path>helipad_light_green_2st.ac</path>
+<path>helipad_light_green_2st.ac</path>
+
+<!-- Rembrandt -->
+<effect>
+	<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>Hpad_GreenLight_01</object-name>
+		<object-name>Hpad_GreenLight_02</object-name>
+</effect>
 	
 	<animation>
 		<name>Hpad_GreenLight</name>
@@ -64,7 +71,7 @@
 		</condition>
 	</animation>
 	
-	<!-- green helipad lights forh LOW environment visibility - CAT-I minimum -->
+	<!-- green helipad lights for LOW environment visibility - CAT-I minimum -->
 	<animation>
 		<type>select</type>
 		<object-name>Hpad_GreenLight_02</object-name>

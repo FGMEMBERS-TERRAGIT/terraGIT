@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+<!-- 10m Windsock lit                                  -->
+<!-- displays the windspeed on strg-c / panel-hotspots -->
+
+<path>windsock_10m.ac</path>
+
+<!-- disable obstuction light -->
+	<animation>
+		<name>notlit</name>
+			<object-name>ws_lamp_housing</object-name>
+			<object-name>ws_osbt_lamp</object-name>
+	</animation>
+	
+	<animation>
+		<type>select</type> 
+		<object-name>notlit</object-name>
+			<condition>
+				<equals>
+					<property>/sim/signals/fdm-initialized</property>
+					<value>0</value>
+				</equals>
+			</condition>
+	</animation>
+ 
+<!-- Texture illuminate -->
+	<animation>
+	<type>material</type> 
+		<object-name>wf4</object-name>
+		<condition>
+			<or>
+				<greater-than>
+					<property>/sim/time/sun-angle-rad</property>
+					<value>1.57</value>
+				</greater-than>
+				<less-than>
+					<property>environment/visibility-m</property>
+					<value>4500.00</value>
+				</less-than>
+			</or>
+		</condition>
+		<emission>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.5</blue>
+		</emission>
+	</animation>
+	
+	<animation>
+	<type>material</type> 
+		<object-name>wf8</object-name>
+		<condition>
+			<or>
+				<greater-than>
+					<property>/sim/time/sun-angle-rad</property>
+					<value>1.57</value>
+				</greater-than>
+				<less-than>
+					<property>environment/visibility-m</property>
+					<value>4500.00</value>
+				</less-than>
+			</or>
+		</condition>
+		<emission>
+			<red>0.42</red>
+			<green>0.42</green>
+			<blue>0.42</blue>
+		</emission>
+	</animation>
+	
+	<animation>
+	<type>material</type> 
+		<object-name>wf12</object-name>
+		<condition>
+			<or>
+				<greater-than>
+					<property>/sim/time/sun-angle-rad</property>
+					<value>1.57</value>
+				</greater-than>
+				<less-than>
+					<property>environment/visibility-m</property>
+					<value>4500.00</value>
+				</less-than>
+			</or>
+		</condition>
+		<emission>
+			<red>0.37</red>
+			<green>0.37</green>
+			<blue>0.37</blue>
+		</emission>
+	</animation>
+	
+	<animation>
+	<type>material</type> 
+		<object-name>wf16</object-name>
+		<condition>
+			<or>
+				<greater-than>
+					<property>/sim/time/sun-angle-rad</property>
+					<value>1.57</value>
+				</greater-than>
+				<less-than>
+					<property>environment/visibility-m</property>
+					<value>4500.00</value>
+				</less-than>
+			</or>
+		</condition>
+		<emission>
+			<red>0.31</red>
+			<green>0.31</green>
+			<blue>0.31</blue>
+		</emission>
+	</animation>
+
+<!-- Windsock animation -->
+	<animation>
+		<type>rotate</type>
+		<object-name>w_hinge</object-name>
+		<object-name>wf4</object-name>
+		<object-name>wf8</object-name>
+		<object-name>wf12</object-name>
+		<object-name>wf16</object-name>
+			<property>/environment/wind-from-heading-deg</property>
+			<offset-deg>-90</offset-deg>
+			<factor>-1</factor>
+			<axis>
+				<x>0.0</x>
+				<y>0.0</y>
+				<z>1.0</z>
+			</axis>
+			<center>
+				<x-m>0.0</x-m>
+				<y-m>0.0</y-m>
+				<z-m>0.0</z-m>
+			</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>wf4</object-name>
+		<object-name>wf8</object-name>
+		<object-name>wf12</object-name>
+		<object-name>wf16</object-name>
+			<property>/environment/wind-speed-kt</property>
+			<factor>1.67</factor>
+			<min-deg>0</min-deg>
+			<max-deg>25</max-deg>
+			<axis>
+				<x>1.0</x>
+				<y>0.0</y>
+				<z>0.0</z>
+			</axis>
+			<center>
+				<x-m>0.0</x-m>
+				<y-m>0.42</y-m>
+				<z-m>8.0</z-m>
+			</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>wf8</object-name>
+		<object-name>wf12</object-name>
+		<object-name>wf16</object-name>
+			<property>/environment/wind-speed-kt</property>
+			<factor>1.67</factor>
+			<min-deg>0</min-deg>
+			<max-deg>25</max-deg>
+			<axis>
+				<x>1.0</x>
+				<y>0.0</y>
+				<z>0.0</z>
+			</axis>
+			<center>
+				<x-m>0.0</x-m>
+				<y-m>1.92</y-m>
+				<z-m>8.61</z-m>
+			</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>wf12</object-name>
+		<object-name>wf16</object-name>
+			<property>/environment/wind-speed-kt</property>
+			<factor>1.67</factor>
+			<min-deg>0</min-deg>
+			<max-deg>25</max-deg>
+			<axis>
+				<x>1.0</x>
+				<y>0.0</y>
+				<z>0.0</z>
+			</axis>
+			<center>
+				<x-m>0.0</x-m>
+				<y-m>2.5</y-m>
+				<z-m>7.68</z-m>
+			</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>wf16</object-name>
+			<property>/environment/wind-speed-kt</property>
+			<min-deg>0</min-deg>
+			<max-deg>15</max-deg>
+			<axis>
+				<x>1.0</x>
+				<y>0.0</y>
+				<z>0.0</z>
+			</axis>
+			<center>
+				<x-m>0.0</x-m>
+				<y-m>2.64</y-m>
+				<z-m>6.59</z-m>
+			</center>
+	</animation>
+
+<!-- Label Text -->
+<text>
+	<name>LabelText_01</name>
+	<type type="string">literal</type>
+		<text type="string">Windspeed:</text>
+	<draw-text type="bool">true</draw-text>
+	<font>Helvetica.txf</font>
+		<character-size type="double">2.0</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+	<axis-alignment>xz-plane</axis-alignment>
+	<font-resolution>
+		<width type="int">32</width>
+		<height type="int">32</height>
+	</font-resolution>
+	<alignment>center-center</alignment>
+	<offsets>
+		<x-m>-3.0 </x-m>
+		<y-m> 0.0 </y-m>
+		<z-m> 12.0 </z-m>
+	</offsets>
+</text>
+
+<text>
+	<name>LabelText_02</name>
+	<type type="string">number-value</type>
+		<property type="string">/environment/wind-speed-kt</property>
+		<factor type="double">1.0</factor>
+		<offset type="double">0.0</offset>
+		<format type="string">%5.2lf</format>
+		<truncate type="bool">false</truncate>
+	
+	<draw-text type="bool">true</draw-text>
+	<font>Helvetica.txf</font>
+		<character-size type="double">2.0</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+	<axis-alignment>xz-plane</axis-alignment>
+	<font-resolution>
+		<width type="int">32</width>
+		<height type="int">32</height>
+	</font-resolution>
+	<alignment>center-center</alignment>
+	<offsets>
+		<x-m> 3.5 </x-m>
+		<y-m> 0.0 </y-m>
+		<z-m> 12.0 </z-m>
+	</offsets>
+</text>
+
+<text>
+	<name>LabelText_03</name>
+	<type type="string">literal</type>
+		<text type="string">kt</text>
+	<draw-text type="bool">true</draw-text>
+	<font>Helvetica.txf</font>
+		<character-size type="double">2.0</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+	<axis-alignment>xz-plane</axis-alignment>
+	<font-resolution>
+		<width type="int">32</width>
+		<height type="int">32</height>
+	</font-resolution>
+	<alignment>center-center</alignment>
+	<offsets>
+		<x-m> 6.5 </x-m>
+		<y-m> 0.0 </y-m>
+		<z-m> 12.0 </z-m>
+	</offsets>
+</text>
+
+<animation>
+	<name>LabelText</name>
+		<object-name>LabelText_01</object-name>
+		<object-name>LabelText_02</object-name>
+		<object-name>LabelText_03</object-name>
+</animation>
+
+<animation>
+	<type>billboard</type>
+	<object-name>LabelText</object-name>
+	<spherical type="bool">true</spherical>
+</animation>
+
+<animation>
+	<type>dist-scale</type>
+	<object-name>LabelText</object-name>
+		<interpolation>
+		<entry>
+			<ind>0</ind>
+			<dep>1.0</dep>
+		</entry>
+		<entry>
+			<ind>100</ind>
+			<dep>1.0</dep>
+		</entry>
+		<entry>
+			<ind>1000</ind>
+			<dep>5.0</dep>
+		</entry>
+		</interpolation>
+		<center>
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>12.00</z-m>
+		</center>
+</animation>
+
+<animation>
+	<type>material</type>
+		<object-name>LabelText</object-name>
+	<emission>
+		<red>1.0</red>
+		<green>0.8</green>
+		<blue>0.0</blue>
+	</emission>
+</animation>
+
+<animation>
+	<type>select</type>
+		<object-name>LabelText</object-name>
+	<condition>
+		<property>/sim/panel-hotspots</property>
+	</condition>
+</animation>
+
+<!-- LOD Label Text -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>1000</max-m>
+	</animation>
+	
+<!-- LOD -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>10000</max-m>
+	</animation>
+
+</PropertyList>

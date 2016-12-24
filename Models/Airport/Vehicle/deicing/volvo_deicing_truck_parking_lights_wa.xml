@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<!-- Volvo Deicing Truck                   -->
+	<!-- lift in parking position              -->
+	<!-- truck lights and warning light active -->
+	<!-- 2012.11.18 -   by Oliver Thurau       -->
+
+	<path>volvo_deicing_truck.ac</path>
+	<texture-path>aas</texture-path>
+	
+	<animation>
+		<name>Lights_all</name>
+		<object-name>Lights_front</object-name>
+		<object-name>Lights_rear</object-name>
+		<object-name>Lights_side</object-name>
+	</animation>
+	
+	<animation>
+		<name>Lights_deicing</name>
+		<object-name>arm_light_01on</object-name>
+		<object-name>arm_light_02on</object-name>
+	</animation>
+	
+	<animation>
+		<name>lift_all</name>
+		<object-name>lift_02</object-name>
+		<object-name>lift_03</object-name>
+		<object-name>lift_04</object-name>
+		<object-name>lift_05</object-name>
+		<object-name>lift_06</object-name>
+		<object-name>lift_07</object-name>
+		<object-name>lift_08</object-name>		
+		<object-name>lift_arm_01</object-name>
+		<object-name>lift_arm_02</object-name>
+		<object-name>lift_arm_03</object-name>
+		<object-name>lift_arm_04</object-name>
+		<object-name>lift_arm_05</object-name>
+		<object-name>lift_05_siren</object-name>
+		<object-name>warning</object-name>
+		<object-name>Lights_deicing</object-name>
+	</animation>
+	
+	<animation>
+		<name>lift_cabin_all</name>
+		<object-name>lift_03</object-name>
+		<object-name>lift_04</object-name>
+		<object-name>lift_05</object-name>
+		<object-name>lift_06</object-name>
+		<object-name>lift_07</object-name>
+		<object-name>lift_08</object-name>
+		<object-name>lift_arm_01</object-name>
+		<object-name>lift_arm_02</object-name>
+		<object-name>lift_arm_03</object-name>
+		<object-name>lift_arm_04</object-name>
+		<object-name>lift_arm_05</object-name>
+		<object-name>lift_05_siren</object-name>
+		<object-name>warning</object-name>
+		<object-name>Lights_deicing</object-name>
+	</animation>
+	
+	<animation>
+		<name>lift_cabin_turn</name>
+		<object-name>lift_05</object-name>
+		<object-name>lift_06</object-name>
+		<object-name>lift_07</object-name>
+		<object-name>lift_08</object-name>
+		<object-name>lift_arm_01</object-name>
+		<object-name>lift_arm_02</object-name>
+		<object-name>lift_arm_03</object-name>
+		<object-name>lift_arm_04</object-name>
+		<object-name>lift_arm_05</object-name>
+		<object-name>lift_05_siren</object-name>
+		<object-name>warning</object-name>
+		<object-name>Lights_deicing</object-name>
+	</animation>
+	
+	<animation>
+		<name>lift_arm_all_02</name>
+		<object-name>lift_arm_03</object-name>
+		<object-name>lift_arm_04</object-name>
+		<object-name>lift_arm_05</object-name>
+		<object-name>arm_light_02on</object-name>
+	</animation>
+	
+	<animation>
+		<name>lift_arm_all_01</name>
+		<object-name>lift_arm_02</object-name>
+		<object-name>lift_arm_all_02</object-name>
+	</animation>
+
+
+	<animation>
+		<name>lift_all_01</name>
+		<object-name>lift_all</object-name>
+		<object-name>lift_01</object-name>
+		<object-name>lift_09</object-name>
+	</animation>
+	
+	<animation>
+		<name>lift_nozle</name>
+		<object-name>lift_arm_05</object-name>
+		<object-name>arm_light_02on</object-name>
+	</animation>
+	
+<!-- De-Icing Lift parking position animation -->
+	<animation>
+		<type>translate</type>
+		<object-name>lift_all</object-name>
+		<property>/sim/signals/fdm-initialized</property>
+		<factor>1</factor>
+			<interpolation>
+				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
+				<entry><ind> 1.0 </ind><dep> -1.50 </dep></entry>
+			</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>lift_06</object-name>
+		<property>/sim/signals/fdm-initialized</property>
+		<factor>1</factor>
+			<interpolation>
+				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
+				<entry><ind> 1.0 </ind><dep> 90.00 </dep></entry>
+			</interpolation>
+		<axis>
+			<x1-m> -3.089 </x1-m>
+			<y1-m> -0.740 </y1-m>
+			<z1-m>  3.740 </z1-m>
+			<x2-m> -3.089 </x2-m>
+			<y2-m>  0.000 </y2-m>
+			<z2-m>  3.740 </z2-m>
+		</axis>
+	</animation>
+	
+<!-- Lights night illumination -->
+<animation>
+	<type>material</type> 
+	<object-name>Lights_all</object-name>
+		<condition>
+				<or>
+					<greater-than>
+						<property>/sim/time/sun-angle-rad</property>
+						<value>1.45</value>
+					</greater-than>
+					<less-than>
+						<property>environment/visibility-m</property>
+						<value>4500.00</value>
+					</less-than>
+				</or>
+		</condition>
+	<emission>	
+		<red>0.7</red>	
+		<green>0.7</green>	
+		<blue>0.5</blue>
+	</emission>
+</animation>
+
+<!-- Siren lamp glass illumination if truck active -->
+<animation>
+	<type>material</type> 
+	<object-name>lift_05_siren</object-name>
+		<condition>
+				<or>
+					<greater-than>
+						<property>/sim/time/sun-angle-rad</property>
+						<value>1.45</value>
+					</greater-than>
+					<less-than>
+						<property>environment/visibility-m</property>
+						<value>4500.00</value>
+					</less-than>
+				</or>
+		</condition>
+	<emission>	
+		<red>0.7</red>	
+		<green>0.7</green>	
+		<blue>0.7</blue>
+	</emission>
+</animation>
+
+<!-- activate siren flash if truck active -->
+<animation>
+	<type>select</type> 
+	<object-name>warning</object-name>
+		<condition>
+				<or>
+					<greater-than>
+						<property>/sim/time/sun-angle-rad</property>
+						<value>1.45</value>
+					</greater-than>
+					<less-than>
+						<property>environment/visibility-m</property>
+						<value>4500.00</value>
+					</less-than>
+				</or>
+		</condition>
+</animation>
+
+<!-- dont show the light model during day-->
+<animation>
+	<type>select</type> 
+	<object-name>Lights_all</object-name>
+	<object-name>Lights_deicing</object-name>
+		<condition>
+				<or>
+					<greater-than>
+						<property>/sim/time/sun-angle-rad</property>
+						<value>1.45</value>
+					</greater-than>
+					<less-than>
+						<property>environment/visibility-m</property>
+						<value>4500.00</value>
+					</less-than>
+				</or>
+		</condition>
+</animation>
+
+<model>
+	<name>warning</name>
+	<path>deicing_warning_light.xml</path>
+		<offsets>
+			<x-m>-3.729</x-m>
+			<y-m>0.000</y-m>
+			<z-m>3.914</z-m>
+			<heading-deg>90</heading-deg>
+		</offsets>
+</model>
+
+<!-- LOD -->
+<animation>
+	<type>range</type>
+	<min-m>0</min-m>
+	<max-m>5500</max-m>
+</animation>
+
+</PropertyList>

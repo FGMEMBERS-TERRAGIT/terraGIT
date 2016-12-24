@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+<!-- Fuel Truck - short version parking with lights OFF -->
+
+	<path>Fuel_Truck_Short_VolvoFM.ac</path>
+		
+	<!-- dont show the light model -->
+	<animation>
+		<type>select</type> 
+		<object-name>Lights_front</object-name>
+			<condition>
+				<equals>
+					<property>/sim/signals/fdm-initialized</property>
+					<value>2</value>
+				</equals>
+			</condition>
+	</animation>
+	
+	<!-- LOD -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>3500</max-m>
+	</animation>
+	
+</PropertyList>

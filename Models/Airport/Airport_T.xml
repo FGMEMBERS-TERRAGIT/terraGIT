@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+<!-- Airport T iluminated with flurecent lights -->
+<!-- Generic version - fixed direction          -->
+<!-- example for simple animation               -->
+
+<path>Airport_T.ac</path>
+
+<!-- T animation 
+	<animation>
+		<type>rotate</type>
+		<object-name>airport_t</object-name>
+		<object-name>lamp_light</object-name>
+			<property>/environment/wind-from-heading-deg</property>
+			<interpolation>
+				<entry><ind>   0.00 </ind><dep>  0.00 </dep></entry>
+				<entry><ind> 171.03 </ind><dep>  0.00 </dep></entry>
+				<entry><ind> 171.04 </ind><dep>180.00 </dep></entry>
+				<entry><ind> 351.03 </ind><dep>180.00 </dep></entry>
+				<entry><ind> 351.04 </ind><dep>  0.00 </dep></entry>
+				<entry><ind> 360.00 </ind><dep>  0.00 </dep></entry>
+			</interpolation>
+			<axis>
+				<x>0.0</x>
+				<y>0.0</y>
+				<z>-1.0</z>
+			</axis>
+			<center>
+				<x-m> 0.000</x-m>
+				<y-m> 0.000</y-m>
+				<z-m> 0.000</z-m>
+			</center>
+	</animation>
+	-->
+
+<!-- Lamp glass illumination -->
+	<animation>
+		<type>material</type> 
+		<object-name>lamp_light</object-name>
+		<condition>
+			<or>
+				<greater-than>
+					<property>/sim/time/sun-angle-rad</property>
+					<value>1.57</value>
+				</greater-than>
+				<less-than>
+					<property>environment/visibility-m</property>
+					<value>4500.00</value>
+				</less-than>
+			</or>
+		</condition>
+		<emission>	
+			<red>0.8</red>	
+			<green>0.8</green>	
+			<blue>0.8</blue>
+		</emission>
+	</animation>
+
+<!-- LOD -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>5000</max-m>
+	</animation>
+
+</PropertyList>

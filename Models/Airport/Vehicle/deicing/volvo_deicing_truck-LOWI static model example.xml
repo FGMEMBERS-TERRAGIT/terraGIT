@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<!-- Volvo Deicing Truck - LOWI Version   -->
+	<!-- 2012.11.04 - V0.85a by Oliver Thurau -->
+	<!-- Automatic act. based on SP-distance  -->
+	<!-- and MP-distance of Aircrafts.        -->
+
+	<!-- <path>Models/Airport/Vehicle/deicing/volvo_deicing_truck.ac</path> -->
+	<path>../../../Models/Airport/Vehicle/deicing/volvo_deicing_truck.ac</path>
+	<texture-path>../../../Models/Airport/Vehicle/deicing/lowi</texture-path>
+		
+	<nasal>
+		<load>
+			print("loading De-Iceing Truck");
+
+			
+			#Ground Marker Position Center is target area
+			#11.34868206 47.25826578
+			var truck_lon = 11.34868206;
+			var truck_lat = 47.25826578;
+			var truck_alt = 575.7249;
+			
+			var act_time = 0;
+			
+			var door = aircraft.door.new("/scenery/LOWI/LOJO_deicing_truck/crane", 30);
+			var door2 = aircraft.door.new("/scenery/LOWI/LOJO_deicing_truck/truck", 15);
+			var door3 = aircraft.door.new("/scenery/LOWI/LOJO_deicing_truck/deicing", 27);
+			
+			#MP distance check
+			var register = func {
+				#print("register() called");
+				foreach (var mp_aircraft; props.globals.getNode("/ai/models").getChildren("multiplayer")) {
+					var callsign = mp_aircraft.getNode("callsign").getValue() or 0;
+					if (callsign != nil) {
+						var custo_id = mp_aircraft.getNode("id").getValue() or -1;
+						if (custo_id != nil) {
+						#var n = mp_aircraft.getIndex();
+						#print ("customer callsign  ", callsign);
+							if (custo_id &lt; 0){
+								#print ("customer ", callsign, "position not available or mp inactive");
+							} else {
+								#print ("customer position available");
+								var custo_lat = mp_aircraft.getNode("position/latitude-deg").getValue() or 0;
+								if (custo_lat != nil) {
+									var custo_long = mp_aircraft.getNode("position/longitude-deg").getValue() or 0;
+									if (custo_long != nil) {
+										#var custo_trueair = mp_aircraft.getNode("velocities/true-airspeed-kt").getValue();
+										
+										var custo_mp = geo.Coord.new();
+											custo_mp.set_latlon( custo_lat, custo_long);
+										var truck_pos_mp = geo.Coord.new();
+											truck_pos_mp.set_latlon( truck_lat, truck_lon, truck_alt);
+										
+										var mp_distance = truck_pos_mp.distance_to(custo_mp);
+										#print ("Customer:  ", callsign, " distance to truck: ", mp_distance, " meter");
+											
+										door2.move(5.00 &gt; mp_distance);
+											if (5.00 &gt; mp_distance){
+												act_time = 120;
+												print ("MP customer activated the de-iceing truck");
+											}
+									}
+								}
+							}	
+							#setprop("/scenery/LOWI/LOJO_deicing_truck/customer["~n~"]/callsign", callsign);
+							#setprop("/scenery/LOWI/LOJO_deicing_truck/customer["~n~"]/index", n);
+						}
+					}
+				}
+			}
+			
+			
+			#SP distance check
+			var self_register = func {
+				#print ("self register called");
+				var ac_pos = geo.aircraft_position();
+						var truck_pos_self = geo.Coord.new();
+						truck_pos_self.set_latlon( truck_lat, truck_lon, truck_alt);
+						var self_distance = truck_pos_self.distance_to(ac_pos);
+						#print ("Customer: USER distance to truck: ", self_distance);
+							
+				#door.move(25.00 &gt; self_distance);
+				door2.move(5.00 &gt; self_distance);
+				if (5.00 &gt; self_distance){
+					act_time = 120;
+					print ("SP customer activated the de-iceing truck");
+				}
+			
+			
+			}
+			
+			var loop_id = 0;
+			#main loop
+			var loop = func(id) {
+				id == loop_id or return;
+								
+				var simtime = props.globals.getNode("/sim/time/elapsed-sec").getValue() or 0;
+				#print ("simtime", simtime);
+				
+				#checking for customers
+				if ((simtime > 15) and (act_time &lt; 0 )){
+					self_register();
+					register();
+				}
+				
+				#activate lift move
+				if (act_time == 100){
+					door.move(1);
+					print ("activate lift");
+				}
+				
+				#activate de-icing move
+				if (act_time == 85){
+					door3.move(1);
+					print ("activate de-icing move");
+				}
+				
+				#deactivate de-icing move
+				if (act_time == 73){
+					door3.move(0);
+					print ("deactivate de-icing move");
+				}
+				
+				#deactivate crane move
+				if (act_time == 58){
+					door.move(0);
+					print ("deactivate lift");
+				}
+				
+				#deactivate truck move
+				if (act_time == 42){
+					door2.move(0);
+					print ("driveback de-icing truck");
+				}
+				
+				act_time -= 1;
+				#print ("truck active counter: ", act_time);
+				settimer(func { loop(id) }, 2);
+			}
+			loop(loop_id += 1);
+		</load>
+		<unload>loop_id += 1</unload>
+	</nasal>
+
+	
+	<animation>
+		<name>Lights_all</name>
+		<object-name>Lights_front</object-name>
+		<object-name>Lights_rear</object-name>
+		<object-name>Lights_side</object-name>
+	</animation>
+	
+	<animation>
+		<name>Lights_deicing</name>
+		<object-name>arm_light_01on</object-name>
+		<object-name>arm_light_02on</object-name>
+	</animation>
+	
+	<animation>
+		<name>lift_all</name>
+		<object-name>lift_02</object-name>
+		<object-name>lift_03</object-name>
+		<object-name>lift_04</object-name>
+		<object-name>lift_05</object-name>
+		<object-name>lift_06</object-name>
+		<object-name>lift_07</object-name>
+		<object-name>lift_08</object-name>		
+		<object-name>lift_arm_01</object-name>
+		<object-name>lift_arm_02</object-name>
+		<object-name>lift_arm_03</object-name>
+		<object-name>lift_arm_04</object-name>
+		<object-name>lift_arm_05</object-name>
+		<object-name>lift_05_siren</object-name>
+		<object-name>warning</object-name>
+		<object-name>Lights_deicing</object-name>
+		<object-name>deicing_water</object-name>
+	</animation>
+	
+	<animation>
+		<name>lift_cabin_all</name>
+		<object-name>lift_03</object-name>
+		<object-name>lift_04</object-name>
+		<object-name>lift_05</object-name>
+		<object-name>lift_06</object-name>
+		<object-name>lift_07</object-name>
+		<object-name>lift_08</object-name>
+		<object-name>lift_arm_01</object-name>
+		<object-name>lift_arm_02</object-name>
+		<object-name>lift_arm_03</object-name>
+		<object-name>lift_arm_04</object-name>
+		<object-name>lift_arm_05</object-name>
+		<object-name>lift_05_siren</object-name>
+		<object-name>warning</object-name>
+		<object-name>Lights_deicing</object-name>
+		<object-name>deicing_water</object-name>
+	</animation>
+	
+	<animation>
+		<name>lift_cabin_turn</name>
+		<object-name>lift_05</object-name>
+		<object-name>lift_06</object-name>
+		<object-name>lift_07</object-name>
+		<object-name>lift_08</object-name>
+		<object-name>lift_arm_01</object-name>
+		<object-name>lift_arm_02</object-name>
+		<object-name>lift_arm_03</object-name>
+		<object-name>lift_arm_04</object-name>
+		<object-name>lift_arm_05</object-name>
+		<object-name>lift_05_siren</object-name>
+		<object-name>warning</object-name>
+		<object-name>Lights_deicing</object-name>
+		<object-name>deicing_water</object-name>
+	</animation>
+	
+	<animation>
+		<name>lift_arm_all_02</name>
+		<object-name>lift_arm_03</object-name>
+		<object-name>lift_arm_04</object-name>
+		<object-name>lift_arm_05</object-name>
+		<object-name>arm_light_02on</object-name>
+		<object-name>deicing_water</object-name>
+	</animation>
+	
+	<animation>
+		<name>lift_arm_all_01</name>
+		<object-name>lift_arm_02</object-name>
+		<object-name>lift_arm_all_02</object-name>
+	</animation>
+
+
+	<animation>
+		<name>lift_all_01</name>
+		<object-name>lift_all</object-name>
+		<object-name>lift_01</object-name>
+		<object-name>lift_09</object-name>
+	</animation>
+	
+	<animation>
+		<name>lift_nozle</name>
+		<object-name>deicing_water</object-name>
+		<object-name>lift_arm_05</object-name>
+		<object-name>arm_light_02on</object-name>
+	</animation>
+	
+			<!-- Truck movement 20 forward -->
+			<animation>
+				<type>translate</type>
+				<property>/scenery/LOWI/LOJO_deicing_truck/truck/position-norm</property>
+				<factor>1</factor>
+					<interpolation>
+						<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
+						<entry><ind> 0.01 </ind><dep> 0.00 </dep></entry>
+						<entry><ind> 0.40 </ind><dep> -18.00 </dep></entry>
+						<entry><ind> 1.0 </ind><dep> -18.00 </dep></entry>
+					</interpolation>
+				<axis>
+					<x1-m> -5.000 </x1-m>
+					<y1-m>  0.000 </y1-m>
+					<z1-m>  0.000 </z1-m>
+					<x2-m>  5.000 </x2-m>
+					<y2-m>  0.000 </y2-m>
+					<z2-m>  0.000 </z2-m>
+				</axis>
+			</animation>
+	
+			<!-- Truck movement turn-->
+			<animation>
+				<type>rotate</type>
+				<property>/scenery/LOWI/LOJO_deicing_truck/truck/position-norm</property>
+				<factor>1</factor>
+					<interpolation>
+						<entry><ind> 0.00 </ind><dep>  0.00 </dep></entry>
+						<entry><ind> 0.28 </ind><dep>  0.00 </dep></entry>
+						<entry><ind> 0.45 </ind><dep> 42.00 </dep></entry>
+						<entry><ind> 1.00 </ind><dep> 42.00 </dep></entry>
+					</interpolation>
+				<axis>
+					<x1-m> -15.000 </x1-m>
+					<y1-m>  0.000 </y1-m>
+					<z1-m>  5.000 </z1-m>
+					<x2-m> -15.000 </x2-m>
+					<y2-m>  0.000 </y2-m>
+					<z2-m> -5.000 </z2-m>
+				</axis>
+			</animation>
+			
+			<!-- Truck movement 20m forward after turn-->
+			<animation>
+				<type>translate</type>
+				<property>/scenery/LOWI/LOJO_deicing_truck/truck/position-norm</property>
+				<factor>1</factor>
+					<interpolation>
+						<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
+						<entry><ind> 0.35 </ind><dep> 0.00 </dep></entry>
+						<entry><ind> 0.75 </ind><dep> -25.00 </dep></entry>
+						<entry><ind> 1.0 </ind><dep> -25.00 </dep></entry>
+					</interpolation>
+				<axis>
+					<x1-m> -5.000 </x1-m>
+					<y1-m>  5.000 </y1-m>
+					<z1-m>  0.000 </z1-m>
+					<x2-m>  5.000 </x2-m>
+					<y2-m> -5.000 </y2-m>
+					<z2-m>  0.000 </z2-m>
+				</axis>
+			</animation>
+
+			
+<!-- De-Icing Lift animations -->
+	<animation>
+		<type>translate</type>
+		<object-name>lift_arm_all_01</object-name>
+		<property>/scenery/LOWI/LOJO_deicing_truck/crane/position-norm</property>
+		<factor>1</factor>
+			<interpolation>
+				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
+				<entry><ind> 0.5 </ind><dep>  0.00 </dep></entry>
+				<entry><ind> 1.0 </ind><dep>  1.50 </dep></entry>
+			</interpolation>
+		<axis>
+			<x1-m> -3.224 </x1-m>
+			<y1-m>  0.433 </y1-m>
+			<z1-m>  3.785 </z1-m>
+			<x2-m> -0.805 </x2-m>
+			<y2-m>  0.433 </y2-m>
+			<z2-m>  3.785 </z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>lift_arm_all_02</object-name>
+		<property>/scenery/LOWI/LOJO_deicing_truck/crane/position-norm</property>
+		<factor>1</factor>
+			<interpolation>
+				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
+				<entry><ind> 0.5 </ind><dep>  0.00 </dep></entry>
+				<entry><ind> 1.0 </ind><dep>  1.50 </dep></entry>
+			</interpolation>
+		<axis>
+			<x1-m> -3.224 </x1-m>
+			<y1-m>  0.433 </y1-m>
+			<z1-m>  3.785 </z1-m>
+			<x2-m> -0.805 </x2-m>
+			<y2-m>  0.433 </y2-m>
+			<z2-m>  3.785 </z2-m>
+		</axis>
+	</animation>	
+	
+	
+	<animation>
+		<type>translate</type>
+		<object-name>lift_all</object-name>
+		<property>/scenery/LOWI/LOJO_deicing_truck/crane/position-norm</property>
+		<factor>1</factor>
+			<interpolation>
+				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
+				<entry><ind> 1.0 </ind><dep> -3.00 </dep></entry>
+			</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>lift_all_01</object-name>
+		<property>/scenery/LOWI/LOJO_deicing_truck/crane/position-norm</property>
+		<factor>1</factor>
+			<interpolation>
+				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
+				<entry><ind> 1.0 </ind><dep> 30.00 </dep></entry>
+			</interpolation>
+		<axis>
+			<x1-m>  3.800 </x1-m>
+			<y1-m> -0.240 </y1-m>
+			<z1-m>  3.429 </z1-m>
+			<x2-m>  3.800 </x2-m>
+			<y2-m>  0.240 </y2-m>
+			<z2-m>  3.429 </z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>lift_cabin_all</object-name>
+		<property>/scenery/LOWI/LOJO_deicing_truck/crane/position-norm</property>
+		<factor>1</factor>
+			<interpolation>
+				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
+				<entry><ind> 1.0 </ind><dep>-30.00 </dep></entry>
+			</interpolation>
+		<axis>
+			<x1-m> -2.541 </x1-m>
+			<y1-m> -0.240 </y1-m>
+			<z1-m>  3.429 </z1-m>
+			<x2-m> -2.541 </x2-m>
+			<y2-m>  0.240 </y2-m>
+			<z2-m>  3.429 </z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>lift_cabin_turn</object-name>
+		<property>/scenery/LOWI/LOJO_deicing_truck/crane/position-norm</property>
+		<factor>1</factor>
+			<interpolation>
+				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
+				<entry><ind> 0.2 </ind><dep>  0.00 </dep></entry>
+				<entry><ind> 1.0 </ind><dep>-180.00 </dep></entry>
+			</interpolation>
+		<axis>
+			<x1-m> -2.916 </x1-m>
+			<y1-m>  0.000 </y1-m>
+			<z1-m>  3.600 </z1-m>
+			<x2-m> -2.916 </x2-m>
+			<y2-m>  0.000 </y2-m>
+			<z2-m>  3.400 </z2-m>
+		</axis>
+	</animation>
+	
+<!-- De-Icing Movements -->
+
+<!-- De-Icing Nozle Movements up / down -->
+	<animation>
+		<type>rotate</type>
+		<object-name>lift_nozle</object-name>
+		<property>/scenery/LOWI/LOJO_deicing_truck/deicing/position-norm</property>
+		<factor>1</factor>
+			<interpolation>
+				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
+				<entry><ind> 0.1 </ind><dep> 20.00 </dep></entry>
+				<entry><ind> 0.2 </ind><dep>  5.00 </dep></entry>
+				<entry><ind> 0.3 </ind><dep> -2.00 </dep></entry>
+				<entry><ind> 0.4 </ind><dep> 20.00 </dep></entry>
+				<entry><ind> 0.5 </ind><dep> 15.00 </dep></entry>
+				<entry><ind> 0.6 </ind><dep>  5.00 </dep></entry>
+				<entry><ind> 0.7 </ind><dep> 15.00 </dep></entry>
+				<entry><ind> 0.8 </ind><dep> 10.00 </dep></entry>
+				<entry><ind> 0.9 </ind><dep> -5.00 </dep></entry>
+				<entry><ind> 1.0 </ind><dep> 25.00 </dep></entry>
+			</interpolation>
+		<axis>
+			<x1-m>  0.096 </x1-m>
+			<y1-m>  0.414 </y1-m>
+			<z1-m>  3.692 </z1-m>
+			<x2-m>  0.096 </x2-m>
+			<y2-m>  0.452 </y2-m>
+			<z2-m>  3.692 </z2-m>
+		</axis>
+	</animation>
+
+<!-- De-Icing arm Movements left / right -->	
+	<animation>
+		<type>rotate</type>
+		<object-name>lift_cabin_turn</object-name>
+		<property>/scenery/LOWI/LOJO_deicing_truck/deicing/position-norm</property>
+		<factor>1</factor>
+			<interpolation>
+				<entry><ind> 0.0 </ind><dep>   0.00 </dep></entry>
+				<entry><ind> 0.5 </ind><dep>  40.00 </dep></entry>
+				<entry><ind> 1.0 </ind><dep> -20.00 </dep></entry>
+			</interpolation>
+		<axis>
+			<x1-m> -2.916 </x1-m>
+			<y1-m>  0.000 </y1-m>
+			<z1-m>  3.600 </z1-m>
+			<x2-m> -2.916 </x2-m>
+			<y2-m>  0.000 </y2-m>
+			<z2-m>  3.400 </z2-m>
+		</axis>
+	</animation>
+
+<model>
+	<name>deicing_water</name>
+	<path>../../../Models/Airport/Vehicle/deicing/deicing_water.xml</path>
+	<condition>
+		<equals>
+			<property>/scenery/LOWI/LOJO_deicing_truck/crane/position-norm</property>
+			<value>1.00</value>
+		</equals>
+	</condition>
+	<offsets>
+		<x-m>0.647</x-m>
+		<y-m>0.433</y-m>
+		<z-m>3.642</z-m>
+	</offsets>
+</model>
+
+<!-- Lights night illumination -->
+<animation>
+	<type>material</type> 
+	<object-name>Lights_all</object-name>
+		<condition>
+			<or>
+				<greater-than>
+					<property>/sim/time/sun-angle-rad</property>
+					<value>1.45</value>
+				</greater-than>
+				<less-than>
+					<property>environment/visibility-m</property>
+					<value>4500.00</value>
+				</less-than>
+			</or>
+		</condition>
+	<emission>	
+		<red>0.7</red>	
+		<green>0.7</green>	
+		<blue>0.5</blue>
+	</emission>
+</animation>
+
+<!-- Lights_deicing lamp glass illumination -->
+<animation>
+	<type>material</type> 
+	<object-name>Lights_deicing</object-name>
+	<condition>
+		<and>
+			<or>
+				<greater-than>
+					<property>/sim/time/sun-angle-rad</property>
+					<value>1.45</value>
+				</greater-than>
+				<less-than>
+					<property>environment/visibility-m</property>
+					<value>4500.00</value>
+				</less-than>
+			</or>
+			<greater-than>		
+				<property>/scenery/LOWI/LOJO_deicing_truck/crane/position-norm</property>
+				<value>0.30</value>
+			</greater-than>
+		</and>
+	</condition>
+	<emission>	
+		<red>0.8</red>	
+		<green>0.8</green>	
+		<blue>0.8</blue>
+	</emission>
+</animation>
+
+<!-- Siren lamp glass illumination if truck active -->
+<animation>
+	<type>material</type> 
+	<object-name>lift_05_siren</object-name>
+		<condition>
+			<or>
+			<greater-than>		
+				<property>/scenery/LOWI/LOJO_deicing_truck/crane/position-norm</property>
+				<value>0.1</value>
+			</greater-than>
+			<greater-than>		
+				<property>/scenery/LOWI/LOJO_deicing_truck/truck/position-norm</property>
+				<value>0.1</value>
+			</greater-than>
+			</or>
+		</condition>
+	<emission>	
+		<red>0.7</red>	
+		<green>0.7</green>	
+		<blue>0.7</blue>
+	</emission>
+</animation>
+
+<!-- activate siren flash if truck active -->
+<animation>
+	<type>select</type> 
+	<object-name>warning</object-name>
+		<condition>
+			<or>
+			<greater-than>		
+				<property>/scenery/LOWI/LOJO_deicing_truck/crane/position-norm</property>
+				<value>0.1</value>
+			</greater-than>
+			<greater-than>		
+				<property>/scenery/LOWI/LOJO_deicing_truck/truck/position-norm</property>
+				<value>0.1</value>
+			</greater-than>
+			</or>
+		</condition>
+</animation>
+
+<!-- dont show the light model during day-->
+<animation>
+	<type>select</type> 
+	<object-name>Lights_all</object-name>
+	<object-name>Lights_deicing</object-name>
+		<condition>
+				<or>
+					<greater-than>
+						<property>/sim/time/sun-angle-rad</property>
+						<value>1.45</value>
+					</greater-than>
+					<less-than>
+						<property>environment/visibility-m</property>
+						<value>4500.00</value>
+					</less-than>
+				</or>
+		</condition>
+</animation>
+
+<!-- Sounds
+<fx>
+	<door>
+		<name>arm-move</name>
+		<mode>in-transit</mode>
+		<path>Sounds/gear.wav</path>
+		
+			<property>/scenery/LOWI/LOJO_deicing_truck/crane/position-norm</property>
+		
+		<volume>
+			<property>/scenery/LOWI/LOJO_deicing_truck/crane/position-norm</property>
+			<factor>1.5</factor>
+		</volume>
+		<reference-dist>100</reference-dist>
+		<max-dist>500</max-dist>
+	</door>
+</fx>
+-->
+
+<model>
+	<name>warning</name>
+	<path>../../../Models/Airport/Vehicle/deicing/deicing_warning_light.xml</path>
+	<offsets>
+		<x-m>-3.729</x-m>
+		<y-m>0.000</y-m>
+		<z-m>3.914</z-m>
+		<heading-deg>90</heading-deg>
+	</offsets>
+</model>
+
+<!-- LOD-->
+<animation>
+	<type>range</type>
+	<min-m>0</min-m>
+	<max-m>5500</max-m>
+</animation>
+
+</PropertyList>

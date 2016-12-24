@@ -1,0 +1,58 @@
+AC3Db
+MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
+MATERIAL "Material" rgb 0.8 0.8 0.8 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+OBJECT world
+kids 2
+OBJECT poly
+name "deice_marking"
+data 4
+Cube
+texture "deicing_marking.png"
+texrep 1 1
+crease 30.000000
+numvert 4
+20 1 -0.2
+20 1 0.2
+-20 1 0.2
+-20 1 -0.2
+numsurf 1
+SURF 0x00
+mat 1
+refs 4
+0 0.988578438759 -48.3582687378
+3 0.988578438759 49.3582687378
+2 0.0114214420319 49.3582687378
+1 0.0114214420319 -48.3582687378
+kids 0
+OBJECT poly
+name "deice_marking.001"
+data 8
+Cube.001
+texture "deicing_marking.png"
+texrep 1 1
+crease 30.000000
+numvert 8
+-0.2 1 1
+-0.2 1 -1
+0.2 1 1
+0.2 1 -1
+0.2 1 4
+0.2 1 -4
+-0.2 1 4
+-0.2 1 -4
+numsurf 2
+SURF 0x00
+mat 1
+refs 4
+0 0.0203246474266 4.04826164246
+6 0.0203246474266 -3.14686441422
+4 0.979675114155 -3.14686441422
+2 0.979675114155 4.04826164246
+SURF 0x00
+mat 1
+refs 4
+5 0.979675114155 -3.14686441422
+7 0.0203246474266 -3.14686441422
+1 0.0203246474266 4.04826164246
+3 0.979675114155 4.04826164246
+kids 0

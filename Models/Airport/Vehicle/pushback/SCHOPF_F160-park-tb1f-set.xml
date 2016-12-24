@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+<!-- Schopf Pushback truck - parking with towbar type-1 at front-->
+
+<path>SCHOPF_F160.ac</path>
+	
+	<!-- dont show the light model 
+	<animation>
+		<type>select</type> 
+		<object-name>Lights_front</object-name>
+			<condition>
+				<equals>
+					<property>/sim/signals/fdm-initialized</property>
+					<value>2</value>
+				</equals>
+			</condition>
+	</animation>
+	-->
+	
+<model>
+	<path>../towbar/towbar.ac</path>
+	<offsets>
+		<x-m>-0.280 </x-m>
+		<y-m> 0.000 </y-m>
+		<z-m>-0.170 </z-m>
+		<pitch-deg>-3.00</pitch-deg>
+		<heading-deg> 180.0 </heading-deg>
+	</offsets>
+</model>
+
+<!-- LOD -->
+<animation>
+	<type>range</type>
+	<min-m>0</min-m>
+	<max-m>3500</max-m>
+</animation>
+
+</PropertyList>

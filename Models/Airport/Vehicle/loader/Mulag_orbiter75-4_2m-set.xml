@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+<!-- Mulag loader with ramp at 4.2m -->
+
+	<path>loader_Mulag_orbiter75.ac</path>
+
+	<animation>
+		<name>ramp_all</name>
+		<object-name>loader_arm</object-name>
+		<object-name>mirror_right</object-name>
+	</animation>
+	
+	<animation>
+		<name>Lights_all</name>
+		<object-name>Light_signal_fr</object-name>
+		<object-name>Light_front</object-name>
+		<object-name>Light_rear</object-name>
+	</animation>
+	
+	<animation>
+		<name>hyd1_all</name>
+		<object-name>hyd1_01-1</object-name>
+		<object-name>hyd1_01</object-name>
+		<object-name>hyd1_02</object-name>
+		<object-name>hyd1_03</object-name>
+		<object-name>hyd1_04</object-name>
+	</animation>
+	
+
+<!-- front hyd arm rotate -->
+	<animation>
+		<type>rotate</type>
+		<object-name>hyd1_all</object-name>
+		<expression>
+			<product>
+				<property>/sim/signals/fdm-initialized</property>
+				<value>2.0</value>
+			</product>
+		</expression>
+			<interpolation>
+				<entry><ind> 0.00 </ind><dep>  0.00 </dep></entry>
+				<entry><ind> 1.00 </ind><dep> 60.00 </dep></entry>
+			</interpolation>
+		<axis>
+			<x1-m> -0.800 </x1-m>
+			<y1-m> -0.100 </y1-m>
+			<z1-m>  0.495 </z1-m>
+			<x2-m> -0.800 </x2-m>
+			<y2-m>  0.100 </y2-m>
+			<z2-m>  0.495 </z2-m>
+		</axis>
+	</animation>
+	
+<!-- front hyd arm translate -->
+	<animation>
+		<type>translate</type>
+		<object-name>hyd1_02</object-name>
+		<object-name>hyd1_03</object-name>
+		<object-name>hyd1_04</object-name>
+		<property>/sim/signals/fdm-initialized</property>
+			<interpolation>
+				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
+				<entry><ind> 1.00 </ind><dep> 0.50 </dep></entry>
+			</interpolation>
+		<axis>
+			<x1-m> -0.577 </x1-m>
+			<y1-m>  0.300 </y1-m>
+			<z1-m>  0.395 </z1-m>
+			<x2-m> -1.125 </x2-m>
+			<y2-m>  0.300 </y2-m>
+			<z2-m>  0.639 </z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>hyd1_03</object-name>
+		<object-name>hyd1_04</object-name>
+		<property>/sim/signals/fdm-initialized</property>
+			<interpolation>
+				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
+				<entry><ind> 1.00 </ind><dep> 0.50 </dep></entry>
+			</interpolation>
+		<axis>
+			<x1-m> -0.577 </x1-m>
+			<y1-m>  0.300 </y1-m>
+			<z1-m>  0.395 </z1-m>
+			<x2-m> -1.125 </x2-m>
+			<y2-m>  0.300 </y2-m>
+			<z2-m>  0.639 </z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>hyd1_04</object-name>
+		<property>/sim/signals/fdm-initialized</property>
+			<interpolation>
+				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
+				<entry><ind> 1.00 </ind><dep> 0.50 </dep></entry>
+			</interpolation>
+		<axis>
+			<x1-m> -0.577 </x1-m>
+			<y1-m>  0.300 </y1-m>
+			<z1-m>  0.395 </z1-m>
+			<x2-m> -1.125 </x2-m>
+			<y2-m>  0.300 </y2-m>
+			<z2-m>  0.639 </z2-m>
+		</axis>
+	</animation>
+	
+<!-- back hyd arm rotate-->
+	<animation>
+		<type>rotate</type>
+		<object-name>hyd2_01</object-name>
+		<object-name>ramp_all</object-name>
+		<property>/sim/signals/fdm-initialized</property>
+			<interpolation>
+				<entry><ind> 0.00 </ind><dep>   0.00 </dep></entry>
+				<entry><ind> 1.00 </ind><dep>  -10.50 </dep></entry>
+			</interpolation>
+		<axis>
+			<x1-m>  0.000 </x1-m>
+			<y1-m> -0.100 </y1-m>
+			<z1-m>  0.495 </z1-m>
+			<x2-m>  0.000 </x2-m>
+			<y2-m>  0.100 </y2-m>
+			<z2-m>  0.495 </z2-m>
+		</axis>
+	</animation>
+
+<!-- ramp rotate -->
+	<animation>
+		<type>rotate</type>
+		<object-name>ramp_all</object-name>
+		<property>/sim/signals/fdm-initialized</property>
+			<interpolation>
+				<entry><ind> 0.00 </ind><dep>   0.00 </dep></entry>
+				<entry><ind> 1.00 </ind><dep>   31.00 </dep></entry>
+			</interpolation>
+		<axis>
+			<x1-m>  2.498 </x1-m>
+			<y1-m> -0.100 </y1-m>
+			<z1-m>  0.560 </z1-m>
+			<x2-m>  2.498 </x2-m>
+			<y2-m>  0.100 </y2-m>
+			<z2-m>  0.560 </z2-m>
+		</axis>
+	</animation>
+	
+<!-- Lights night illumination -->
+	<animation>
+		<type>material</type> 
+		<object-name>Lights_all</object-name>
+			<condition>
+				<or>
+					<greater-than>
+						<property>/sim/time/sun-angle-rad</property>
+						<value>1.45</value>
+					</greater-than>
+					<less-than>
+						<property>environment/visibility-m</property>
+						<value>4500.00</value>
+					</less-than>
+				</or>
+			</condition>
+		<emission>	
+			<red>0.7</red>	
+			<green>0.7</green>	
+			<blue>0.5</blue>
+		</emission>
+	</animation>
+	
+	<!-- dont show the light model during day-->
+	<animation>
+		<type>select</type> 
+		<object-name>Light_signal_fr</object-name>
+		<object-name>Light_front</object-name>
+		<!--<object-name>warning</object-name>-->
+		<condition>
+				<or>
+					<greater-than>
+						<property>/sim/time/sun-angle-rad</property>
+						<value>1.45</value>
+					</greater-than>
+					<less-than>
+						<property>environment/visibility-m</property>
+						<value>4500.00</value>
+					</less-than>
+				</or>
+			</condition>
+	</animation>
+	
+<!--
+	<model>
+	<name>warning</name>
+	<path>warning-light.xml</path>
+		<offsets>
+			<x-m>-2.025</x-m>
+			<y-m>0.000</y-m>
+			<z-m>4.085</z-m>
+			<heading-deg>90</heading-deg>
+		</offsets>
+	</model>
+	-->
+	
+<!-- LOD -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>2500</max-m>
+	</animation>
+	
+</PropertyList>

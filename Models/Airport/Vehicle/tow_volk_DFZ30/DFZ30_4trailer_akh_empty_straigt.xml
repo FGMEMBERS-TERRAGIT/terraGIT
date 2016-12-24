@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PropertyList>
+
+<!-- Tow tracktor with 4 contaier trailers -->
+
+<path>DFZ30.ac</path>
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>front_win</object-name>
+		<object-name>door_win_left</object-name>
+		<object-name>door_win_right</object-name>
+	</effect>
+	
+	<animation>
+		<name>Lights_front_All</name>
+		<object-name>Light_front</object-name>
+		<object-name>Light_signal_fr</object-name>
+	</animation>
+
+	<animation>
+		<name>Lights_All</name>
+		<object-name>Lights_front_All</object-name>
+		<object-name>Light_rear</object-name>
+		<object-name>Light_rear_top</object-name>
+	</animation>
+	
+<!-- dont show containers on trailer 1 - 4 -->
+	<animation>
+		<type>select</type>
+		<object-name>container_01</object-name>
+		<object-name>container_02</object-name>
+		<object-name>container_03</object-name>
+		<object-name>container_04</object-name>
+			<condition>		
+				<greater-than>		
+					<property>/sim/time/sun-angle-rad</property>
+					<value>10.56</value>
+				</greater-than>
+			</condition>
+	</animation>
+	
+<!-- container trailer models -->
+	<model>
+		<path>../trailer/container_trailer_4line_AKH_hooked.ac</path>
+		<offsets>
+			<x-m> 1.820 </x-m>
+			<y-m> 0.000 </y-m>
+			<z-m> 0.000 </z-m>
+			<pitch-deg> 0.00</pitch-deg>
+			<heading-deg>0.0 </heading-deg>
+		</offsets>
+	</model>
+	
+<!--light model illumination -->
+<animation>
+	<type>material</type> 
+	<object-name>Lights_All</object-name>
+	<condition>		
+		<greater-than>		
+			<property>/sim/time/sun-angle-rad</property>
+			<value>1.57</value>
+		</greater-than>
+	</condition>
+	<emission>	
+		<red>0.7</red>	
+		<green>0.7</green>	
+		<blue>0.7</blue>
+	</emission>
+</animation>
+
+<!-- dont show the front light model during day-->
+<animation>
+	<type>select</type> 
+	<object-name>Lights_front_All</object-name>
+	<condition>		
+	<greater-than>		
+	<property>/sim/time/sun-angle-rad</property>
+	<value>1.57</value>
+	</greater-than>
+	</condition>
+</animation>
+
+<!-- LOD 
+	<animation>
+	<type>range</type>
+		<min-m>0</min-m>
+		<max-m>15000</max-m>
+	</animation>-->
+	
+</PropertyList>

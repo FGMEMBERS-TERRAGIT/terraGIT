@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+<!-- Fuel Truck - short version with lights during night and low vis -->
+
+	<path>Fuel_Truck_Short_VolvoFM.ac</path>
+	
+	<animation>
+		<name>Lights_all</name>
+		<object-name>Lights_front</object-name>
+		<object-name>Lights_rear</object-name>
+		<object-name>Lights_side</object-name>
+		<object-name>warning_light_glass</object-name>
+	</animation>
+	
+	<!-- Lights night illumination -->
+	<animation>
+		<type>material</type> 
+		<object-name>Lights_all</object-name>
+			<condition>
+				<or>
+					<greater-than>
+						<property>/sim/time/sun-angle-rad</property>
+						<value>1.45</value>
+					</greater-than>
+					<less-than>
+						<property>environment/visibility-m</property>
+						<value>4500.00</value>
+					</less-than>
+				</or>
+			</condition>
+		<emission>	
+			<red>0.7</red>	
+			<green>0.7</green>	
+			<blue>0.5</blue>
+		</emission>
+	</animation>
+	
+	<!-- dont show the light model during day-->
+	<animation>
+		<type>select</type> 
+		<object-name>Lights_front</object-name>
+		<!--<object-name>warning</object-name>-->
+		<condition>
+				<or>
+					<greater-than>
+						<property>/sim/time/sun-angle-rad</property>
+						<value>1.45</value>
+					</greater-than>
+					<less-than>
+						<property>environment/visibility-m</property>
+						<value>4500.00</value>
+					</less-than>
+				</or>
+			</condition>
+	</animation>
+	
+	<!--
+	<model>
+	<name>warning</name>
+	<path>warning-light.xml</path>
+		<offsets>
+			<x-m>-2.025</x-m>
+			<y-m>0.000</y-m>
+			<z-m>4.085</z-m>
+			<heading-deg>90</heading-deg>
+		</offsets>
+	</model>
+	-->
+	
+	<!-- LOD -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>3500</max-m>
+	</animation>
+	
+</PropertyList>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+<!-- 10m Windsock lit with obstruction light -->
+
+<path>windsock_10m.ac</path>
+
+<!-- Obstruction lamp effect -->
+	<model>
+		<!-- <path>Models/Effects/pos_lamp_red_light_2st.xml</path> -->
+		<path>../../Effects/pos_lamp_red_light_2st.xml</path>
+		<offsets>
+			<x-m>  0.000 </x-m>
+			<y-m>  0.000 </y-m>
+			<z-m> 10.334 </z-m>
+			<pitch-deg> 0.00 </pitch-deg>
+			<heading-deg> 0.00 </heading-deg>
+		</offsets>
+	</model>
+
+<!-- Obstruction lamp glass illumination -->
+	<animation>
+		<type>material</type> 
+		<object-name>ws_osbt_lamp</object-name>
+		<condition>
+			<or>
+				<greater-than>
+					<property>/sim/time/sun-angle-rad</property>
+					<value>1.57</value>
+				</greater-than>
+				<less-than>
+					<property>environment/visibility-m</property>
+					<value>4500.00</value>
+				</less-than>
+			</or>
+		</condition>
+		<emission>	
+			<red>0.8</red>	
+			<green>0.8</green>	
+			<blue>0.8</blue>
+		</emission>
+	</animation>
+ 
+<!-- Texture illuminate -->
+	<animation>
+	<type>material</type> 
+		<object-name>wf4</object-name>
+		<condition>
+			<or>
+				<greater-than>
+					<property>/sim/time/sun-angle-rad</property>
+					<value>1.57</value>
+				</greater-than>
+				<less-than>
+					<property>environment/visibility-m</property>
+					<value>4500.00</value>
+				</less-than>
+			</or>
+		</condition>
+		<emission>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.5</blue>
+		</emission>
+	</animation>
+	
+	<animation>
+	<type>material</type> 
+		<object-name>wf8</object-name>
+		<condition>
+			<or>
+				<greater-than>
+					<property>/sim/time/sun-angle-rad</property>
+					<value>1.57</value>
+				</greater-than>
+				<less-than>
+					<property>environment/visibility-m</property>
+					<value>4500.00</value>
+				</less-than>
+			</or>
+		</condition>
+		<emission>
+			<red>0.42</red>
+			<green>0.42</green>
+			<blue>0.42</blue>
+		</emission>
+	</animation>
+	
+	<animation>
+	<type>material</type> 
+		<object-name>wf12</object-name>
+		<condition>
+			<or>
+				<greater-than>
+					<property>/sim/time/sun-angle-rad</property>
+					<value>1.57</value>
+				</greater-than>
+				<less-than>
+					<property>environment/visibility-m</property>
+					<value>4500.00</value>
+				</less-than>
+			</or>
+		</condition>
+		<emission>
+			<red>0.37</red>
+			<green>0.37</green>
+			<blue>0.37</blue>
+		</emission>
+	</animation>
+	
+	<animation>
+	<type>material</type> 
+		<object-name>wf16</object-name>
+		<condition>
+			<or>
+				<greater-than>
+					<property>/sim/time/sun-angle-rad</property>
+					<value>1.57</value>
+				</greater-than>
+				<less-than>
+					<property>environment/visibility-m</property>
+					<value>4500.00</value>
+				</less-than>
+			</or>
+		</condition>
+		<emission>
+			<red>0.31</red>
+			<green>0.31</green>
+			<blue>0.31</blue>
+		</emission>
+	</animation>
+
+<!-- Windsock animation -->
+	<animation>
+		<type>rotate</type>
+		<object-name>w_hinge</object-name>
+		<object-name>wf4</object-name>
+		<object-name>wf8</object-name>
+		<object-name>wf12</object-name>
+		<object-name>wf16</object-name>
+			<property>/environment/wind-from-heading-deg</property>
+			<offset-deg>-90</offset-deg>
+			<factor>-1</factor>
+			<axis>
+				<x>0.0</x>
+				<y>0.0</y>
+				<z>1.0</z>
+			</axis>
+			<center>
+				<x-m>0.0</x-m>
+				<y-m>0.0</y-m>
+				<z-m>0.0</z-m>
+			</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>wf4</object-name>
+		<object-name>wf8</object-name>
+		<object-name>wf12</object-name>
+		<object-name>wf16</object-name>
+			<property>/environment/wind-speed-kt</property>
+			<factor>1.67</factor>
+			<min-deg>0</min-deg>
+			<max-deg>25</max-deg>
+			<axis>
+				<x>1.0</x>
+				<y>0.0</y>
+				<z>0.0</z>
+			</axis>
+			<center>
+				<x-m>0.0</x-m>
+				<y-m>0.42</y-m>
+				<z-m>8.0</z-m>
+			</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>wf8</object-name>
+		<object-name>wf12</object-name>
+		<object-name>wf16</object-name>
+			<property>/environment/wind-speed-kt</property>
+			<factor>1.67</factor>
+			<min-deg>0</min-deg>
+			<max-deg>25</max-deg>
+			<axis>
+				<x>1.0</x>
+				<y>0.0</y>
+				<z>0.0</z>
+			</axis>
+			<center>
+				<x-m>0.0</x-m>
+				<y-m>1.92</y-m>
+				<z-m>8.61</z-m>
+			</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>wf12</object-name>
+		<object-name>wf16</object-name>
+			<property>/environment/wind-speed-kt</property>
+			<factor>1.67</factor>
+			<min-deg>0</min-deg>
+			<max-deg>25</max-deg>
+			<axis>
+				<x>1.0</x>
+				<y>0.0</y>
+				<z>0.0</z>
+			</axis>
+			<center>
+				<x-m>0.0</x-m>
+				<y-m>2.5</y-m>
+				<z-m>7.68</z-m>
+			</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>wf16</object-name>
+			<property>/environment/wind-speed-kt</property>
+			<min-deg>0</min-deg>
+			<max-deg>15</max-deg>
+			<axis>
+				<x>1.0</x>
+				<y>0.0</y>
+				<z>0.0</z>
+			</axis>
+			<center>
+				<x-m>0.0</x-m>
+				<y-m>2.64</y-m>
+				<z-m>6.59</z-m>
+			</center>
+	</animation>
+	
+<!-- LOD -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>10000</max-m>
+	</animation>
+
+</PropertyList>

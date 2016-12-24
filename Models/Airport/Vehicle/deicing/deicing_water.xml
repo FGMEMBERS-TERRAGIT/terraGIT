@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+<!-- Particle Effects                                                          -->
+<!-- Anti-ice - water spray 20 meters - daytime switched - moved by door value -->
+
+	<particlesystem>
+		<name>deicing_water_particle</name>
+		
+		<texture>deicing_water.png</texture>
+		<emissive>false</emissive>
+		<lighting>true</lighting>
+		
+		<!-- 
+		<offsets>
+			<x-m>0.647</x-m>
+			<y-m>0.433</y-m>
+			<z-m>3.642</z-m>
+		</offsets>
+		-->
+		
+		<attach>local</attach>
+		   
+		<placer>
+			<type>point</type>
+		</placer>
+		
+		<shooter>
+			<theta-min-deg>85</theta-min-deg>
+			<theta-max-deg>90</theta-max-deg>
+			<phi-min-deg>0</phi-min-deg>
+			<phi-max-deg>2</phi-max-deg>
+			<speed-mps>
+				<value>170</value>
+				<spread>100</spread>
+			</speed-mps>
+			<rotation-speed>
+				<x-max-deg-sec>15</x-max-deg-sec>
+				<x-min-deg-sec>-15</x-min-deg-sec>
+				<y-max-deg-sec>15</y-max-deg-sec>
+				<y-min-deg-sec>-15</y-min-deg-sec>
+				<z-max-deg-sec>15</z-max-deg-sec>
+				<z-min-deg-sec>-15</z-min-deg-sec>
+			</rotation-speed>
+		</shooter>
+		
+		<counter>
+			<particles-per-sec>
+				<!--<value>120</value>-->
+				<value>60</value>
+				<spread>100</spread>
+			</particles-per-sec>
+		</counter>
+		
+		<align>billboard</align>
+		
+		<particle>
+			<start>
+				<color>
+					<red><value>0.9</value></red>
+					<green><value>0.9</value></green>
+					<blue><value>0.9</value></blue>
+					<alpha><value>0.2</value></alpha>
+				</color>
+				<size>
+					<value>0.35</value>
+				</size>
+			</start>
+			
+			<end>
+				<color>
+					<red><value>1.0</value></red>
+					<green><value>1.0</value></green>
+					<blue><value>1.0</value></blue>
+					<alpha><value>0.0</value></alpha>
+				</color>
+				<size>
+					<value>5</value>
+					<spread>2.2</spread>
+				</size>
+			</end>
+			
+			<life-sec>
+				<value>3</value>
+			</life-sec>
+			
+			<mass-kg>1.1</mass-kg>
+			<radius-m>0.22</radius-m>
+		</particle>
+		
+		<program>
+			<fluid>air</fluid>
+			<gravity>true</gravity>
+			<wind>true</wind>
+		</program>
+		
+	</particlesystem>
+
+</PropertyList>
