@@ -23,10 +23,8 @@
 
 ## Install any tile listed completely (initializing and updating both Terrain and Objects)
 
-git submodule init Objects/e100n00
-git submodule init Terrain/e100n00
+git submodule update --depth=1 --init Objects/e100n00
+git submodule update --depth=1 --init Terrain/e100n00
 
-git submodule update Objects/e100n00
-git submodule update Terrain/e100n00
 
 
