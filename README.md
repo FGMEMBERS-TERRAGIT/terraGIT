@@ -144,13 +144,15 @@ Immediately after pulling, to get all your tracked content updated.
 
 ****
 
-:copyright: 2016, Israel Hernandez (IAHM-COL) <br>
-:copyright: 2016, Peter Brendt (Jabberwocky)  <br>
-:copyright: 2016, Sharath Mahadevan (SHM)<br>
-:copyright: 2016, J. Maverick<br>
-:copyright: 2016, Martin Herweg (D-LASER)<br>
-:copyright: 2016, Terrasync's FlightGear Scenery Database objects authors <br>
-:copyright: 2016, John Statto (Custom Landclasses)
+
+:copyright: 2017-2016, Israel Hernandez (IAHM-COL) <br>
+:copyright: 2017-2016, Peter Brendt (Jabberwocky)  <br>
+:copyright: 2017-2016, Sharath Mahadevan (SHM)<br>
+:copyright: 2017 Glen D'souza <br>
+:copyright: 2017-2016, J. Maverick<br>
+:copyright: 2017-2016, Martin Herweg (D-LASER)<br>
+:copyright: 2017-2016, Terrasync's FlightGear Scenery Database objects authors <br>
+:copyright: 2016, John Statto (Custom Landclasses)<br>
 
 License: GPL 2+
 
