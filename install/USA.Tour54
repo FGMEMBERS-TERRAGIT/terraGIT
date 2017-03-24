@@ -1,0 +1,64 @@
+#!/bin/sh
+
+## USAGE EXAMPLE
+##
+## install/USA.Tour54
+## installs tiles covering PGSN-PAJN-KPWM
+
+# Copyright (C) 2016 IAHM-COL
+
+#This program is free software; you can redistribute it and/or
+#modify it under the terms of the GNU General Public License
+#as published by the Free Software Foundation; either version 2
+#of the License, or (at your option) any later version.
+
+#This program is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+
+#You should have received a copy of the GNU General Public License
+#along with this program; if not, write to the Free Software
+#Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+## Install any tile listed completely (initializing and updating both Terrain and Objects)
+
+git submodule update --depth=1 --init Objects/e140n10
+git submodule update --depth=1 --init Objects/e140n20
+git submodule update --depth=1 --init Objects/e140n30
+git submodule update --depth=1 --init Objects/e150n40
+git submodule update --depth=1 --init Objects/e150n50
+git submodule update --depth=1 --init Objects/e160n50
+git submodule update --depth=1 --init Objects/e170n50
+git submodule update --depth=1 --init Objects/w180n50
+git submodule update --depth=1 --init Objects/w170n50
+git submodule update --depth=1 --init Objects/w160n50
+git submodule update --depth=1 --init Objects/w150n50
+git submodule update --depth=1 --init Objects/w140n50
+git submodule update --depth=1 --init Objects/w130n50
+git submodule update --depth=1 --init Objects/w120n50
+git submodule update --depth=1 --init Objects/w110n50
+git submodule update --depth=1 --init Objects/w110n40
+git submodule update --depth=1 --init Objects/w100n40
+git submodule update --depth=1 --init Objects/w090n40
+git submodule update --depth=1 --init Objects/w080n40
+git submodule update --depth=1 --init Terrain/e140n10
+git submodule update --depth=1 --init Terrain/e140n20
+git submodule update --depth=1 --init Terrain/e140n30
+git submodule update --depth=1 --init Terrain/e150n40
+git submodule update --depth=1 --init Terrain/e150n50
+git submodule update --depth=1 --init Terrain/e160n50
+git submodule update --depth=1 --init Terrain/e170n50
+git submodule update --depth=1 --init Terrain/w180n50
+git submodule update --depth=1 --init Terrain/w170n50
+git submodule update --depth=1 --init Terrain/w160n50
+git submodule update --depth=1 --init Terrain/w150n50
+git submodule update --depth=1 --init Terrain/w140n50
+git submodule update --depth=1 --init Terrain/w130n50
+git submodule update --depth=1 --init Terrain/w120n50
+git submodule update --depth=1 --init Terrain/w110n50
+git submodule update --depth=1 --init Terrain/w110n40
+git submodule update --depth=1 --init Terrain/w100n40
+git submodule update --depth=1 --init Terrain/w090n40
+git submodule update --depth=1 --init Terrain/w080n40
+
