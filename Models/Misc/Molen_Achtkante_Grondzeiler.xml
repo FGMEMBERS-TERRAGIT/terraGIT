@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+ <path>Molen_Achtkante_Grondzeiler.ac</path>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Kap</object-name>
+  <object-name>AchterkantKap</object-name>
+  <object-name>VoorkantKap</object-name>
+  <object-name>Staart</object-name>
+  <object-name>Kruiwiel</object-name>
+  <object-name>Roeden</object-name>
+  <object-name>Wieken</object-name>
+  <object-name>As</object-name>
+  <object-name>Stormborden</object-name>
+  <object-name>Overig</object-name>
+  <property>/environment/wind-from-heading-deg</property>
+  <offset-deg>-90</offset-deg>
+  <factor>-1</factor>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>
+ </animation>
+ 
+  <animation>
+  <type>rotate</type>
+  <object-name>Kruiwiel</object-name>
+  <property>/environment/wind-from-heading-deg</property>
+  <offset-deg>-90</offset-deg>
+  <factor>-5</factor>
+  <axis>
+   <x1-m>0.0</x1-m>
+   <y1-m>8.40321</y1-m>
+   <z1-m>2.48594</z1-m>
+   <x2-m>0.0</x2-m>
+   <y2-m>6.42195</y2-m>
+   <z2-m>2.21276</z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>Roeden</object-name>
+  <object-name>Wieken</object-name>
+  <object-name>As</object-name>
+  <object-name>Stormborden</object-name>
+  <use-personality type="bool">true</use-personality>
+  <property>/environment/wind-speed-kt</property>
+  <factor>
+   <random>
+    <min>0.4</min>
+    <max>0.6</max>
+   </random>
+  </factor>
+  <starting-pos-deg>
+   <random>
+    <min>0</min>
+    <max>360</max>
+   </random>
+  </starting-pos-deg>
+  <axis>
+   <x1-m>0.0</x1-m>
+   <y1-m>-3.58627</y1-m>
+   <z1-m>14.48188</z1-m>
+   <x2-m>0.0</x2-m>
+   <y2-m>-4.86652</y2-m>
+   <z2-m>14.70762</z2-m>
+  </axis>
+ </animation>
+      
+</PropertyList>

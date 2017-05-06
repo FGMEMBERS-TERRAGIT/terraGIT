@@ -1,35 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0"?>
 <PropertyList>
 
 <!-- Generic red pos - obstruction light with 2 stage light -->
 <!-- with switch based on environment visibility            -->
-<!-- v1.4 - 2012.11.26                                      -->
-
-<path>pos_lamp_red_light_2st.ac</path>
-
-	<!-- Rembrandt 
-	<effect>
-		<inherits-from>Effects/model-transparent</inherits-from>
-		<object-name>osbt_red_light_01</object-name>
-		<object-name>osbt_red_light_02</object-name>
-	</effect>
-	-->
+<!-- v1.1 - 2011.02.21                                      -->
 	
-	<!-- Rembrandt 
-	<effect>
-			<inherits-from>Effects/model-transparent</inherits-from>
-			<object-name>osbt_red_light_01</object-name>
-			<object-name>osbt_red_light_02</object-name>
-			<technique n="11">
-				<pass>
-				  <render-bin>
-					<bin-number>99</bin-number>
-					<bin-name>DepthSortedBin</bin-name>
-				  </render-bin>
-				</pass>
-			 </technique>
-	</effect>
-	-->
+	<path>pos_lamp_red_light_2st.ac</path>
 	
 	<animation>
 		<name>osbt_red_light</name>
@@ -51,13 +27,6 @@
 		<type>alpha-test</type>
 		<alpha-factor>0.01</alpha-factor>
 	</animation>
-	
-	<animation>
-		<type>billboard</type>
-		<object-name>osbt_red_light</object-name>
-		<spherical type="bool">true</spherical>
-	</animation>
-	
 	
 	<animation>
 		<type>billboard</type>
@@ -95,7 +64,7 @@
 		</condition>
 	</animation>
 	
-	<!-- red obstruction light for LOW environment visibility - CAT-I minimum -->
+	<!-- red obstruction light forh LOW environment visibility - CAT-I minimum -->
 	<animation>
 		<type>select</type>
 		<object-name>osbt_red_light_02</object-name>
@@ -174,14 +143,13 @@
 			</entry>
 		</interpolation>
 	</animation>
-
-	<!-- HARD LOD 
+	
+	<!-- HARD LOD -->
 	<animation>
 		<type>range</type>
 		<object-name>osbt_red_light</object-name>
 		<min-m>0</min-m>
 		<max-m>10000</max-m>
 	</animation>
-	-->
        
 </PropertyList>

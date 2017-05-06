@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+  <path>clockdigital.ac</path>
+
+    <animation>
+    <type>material</type>
+    <object-name>Hor1</object-name>
+    <object-name>hor2</object-name>
+    <object-name>Min1</object-name>
+    <object-name>Min2</object-name>
+    <object-name>TwoP</object-name>
+    <emission>
+      <red>   1</red>
+      <green> 1</green>
+      <blue>  1</blue>
+    </emission>
+  </animation>
+
+<animation>
+    <type>material</type>
+    <object-name>block</object-name>
+
+
+    <emission>
+      <red> 0.2</red>
+      <green> 0.2</green>
+      <blue> 0.2</blue>
+    </emission>
+  </animation>
+
+<animation>
+    <type>material</type>
+    <object-name>LCD</object-name>
+    <emission>
+      <red> 0.15</red>
+      <green> 0.15</green>
+      <blue> 0.15</blue>
+    </emission>
+  </animation>
+
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>Hor1</object-name>
+<property>sim/time/utc/hour</property>    <factor>0.01</factor>
+    <step>10</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>hor2</object-name>
+<property>sim/time/utc/hour</property>
+        <factor>0.1</factor>
+    <step>1</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>Min1</object-name>
+<property>sim/time/utc/minute</property>
+        <factor>0.01</factor>
+    <step>10</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>Min2</object-name>
+<property>sim/time/utc/minute</property>    <factor>0.1</factor>
+    <step>1</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
