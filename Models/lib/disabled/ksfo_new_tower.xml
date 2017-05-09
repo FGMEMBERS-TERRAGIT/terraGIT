@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+        <path>ksfo_new_tower.ac</path>
+
+        <model>
+                <name>obst_top_red01</name>
+                <path>Models/Effects/pos_lamp_red_light_2st.xml</path>
+                <offsets>
+                  <x-m>5.63</x-m>
+                  <y-m>-6.06</y-m>
+                  <z-m>64.02</z-m>
+                  <pitch-deg> 0.00</pitch-deg>
+                  <heading-deg>0.0 </heading-deg>
+                </offsets>
+        </model>
+
+    <model>
+                <name>obst_top_red02</name>
+                <path>Models/Effects/pos_lamp_red_light_2st.xml</path>
+                <offsets>
+                  <x-m>11.82</x-m>
+                  <y-m>0.07</y-m>
+                  <z-m>64.59</z-m>
+                  <pitch-deg> 0.00</pitch-deg>
+                  <heading-deg>0.0 </heading-deg>
+                </offsets>
+        </model>
+
+    <model>
+                <name>obst_top_red03</name>
+                <path>Models/Effects/pos_lamp_red_light_2st.xml</path>
+                <offsets>
+                  <x-m>5.63</x-m>
+                  <y-m>6.15</y-m>
+                  <z-m>64.02</z-m>
+                  <pitch-deg> 0.00</pitch-deg>
+                  <heading-deg>0.0 </heading-deg>
+                </offsets>
+        </model>
+
+    <model>
+                <name>obst_top_red01</name>
+                <path>Models/Effects/pos_lamp_red_light_2st.xml</path>
+                <offsets>
+                  <x-m>-0.39</x-m>
+                  <y-m>0.07</y-m>
+                  <z-m>63.51</z-m>
+                  <pitch-deg> 0.00</pitch-deg>
+                  <heading-deg>0.0 </heading-deg>
+                </offsets>
+        </model>
+
+
+  <animation>
+                <type>material</type>
+
+                <name>lichtImTower</name>
+                <object-name>textured-windows</object-name>
+                <condition>
+                        <greater-than>
+                                <property>/sim/time/sun-angle-rad</property>
+                                <value>1.58</value>
+                        </greater-than>
+                </condition>
+
+                 <emission>
+                        <red>0.4</red>
+                        <green>0.4</green>
+                        <blue>0.6</blue>
+                </emission>
+
+        </animation>
+
+
+
+
+
+
+
+
+
+</PropertyList>
+

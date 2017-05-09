@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+    <path>hatchback_random.ac</path>
+
+    <animation>
+		<type>textranslate</type>
+        <object-name>body</object-name>
+        
+        
+      <binding>
+			<command>nasal</command>
+				<script>
+						
+						var r = int(rand()*5);
+				#print (r);
+				setprop("scenery/car[r]", r )	;
+						print ("hallo");
+				</script>
+      </binding>
+       <property>scenery/car[r]</property>
+        <factor>0.2</factor>
+     
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+
+    </animation>
+    
+    
+<nasal>
+	<load>
+		carcounter = getprop("/scenery/carcounter");
+		
+		if ( carcounter == nil)	{
+			setprop("/scenery/carcounter", 1)	;
+			}
+		else
+		{	
+			carcounter=carcounter+1;
+			setprop("/scenery/carcounter", carcounter)	;
+		}
+		
+		var r = int(rand()*5);
+		#print (r);
+		setprop("scenery/car", r )	;
+		
+		#setprop("/scenery/car", r)	;
+    </load>  
+</nasal>	 
+    
+    
+</PropertyList>

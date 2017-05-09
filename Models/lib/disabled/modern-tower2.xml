@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+        <path>Models/Airport/atc-tower-100m.ac</path>
+        
+<offsets>
+                  <x-m>-63</x-m>
+                  <y-m>8</y-m>
+                  <z-m>-30</z-m>
+    </offsets>
+
+
+  <animation>
+                <type>material</type>
+
+                <name>lichtImTower</name>
+                <object-name>windows</object-name>
+                <condition>
+                        <greater-than>
+                                <property>/sim/time/sun-angle-rad</property>
+                                <value>1.57</value>
+                        </greater-than>
+                </condition>
+
+                 <emission>
+                        <red>0.4</red>
+                        <green>0.4</green>
+                        <blue>0.6</blue>
+                </emission>
+
+        </animation>
+
+
+
+
+
+
+
+
+
+</PropertyList>
+
