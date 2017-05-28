@@ -2,14 +2,70 @@
 <groundnet>
   <version>1</version>
   <parkingList>
-        <Parking index="0" type="gate" name="GA_Ramp_1" lat="N48 0.050880" lon="W2 22.743778" heading="0"  radius="17" airlineCodes="" />
-        <Parking index="1" type="gate" name="GA_Ramp_10" lat="N48 0.062820" lon="W2 22.747138" heading="222.93"  radius="17" airlineCodes="" />
-        <Parking index="2" type="gate" name="GA_Ramp_11" lat="N48 0.063300" lon="W2 22.759498" heading="239.82"  radius="17" airlineCodes="" />
-        <Parking index="3" type="gate" name="GA_Ramp_2" lat="N48 0.051720" lon="W2 22.756078" heading="4.37"  radius="17" airlineCodes="" />
-        <Parking index="4" type="gate" name="GA_Ramp_3" lat="N48 0.052260" lon="W2 22.769338" heading="2.9"  radius="17" airlineCodes="" />
-        <Parking index="5" type="gate" name="GA_Ramp_4" lat="N48 0.052920" lon="W2 22.781638" heading="8.53"  radius="17" airlineCodes="" />
-        <Parking index="6" type="gate" name="GA_Ramp_6" lat="N48 0.056940" lon="W2 22.800358" heading="33.17"  radius="17" airlineCodes="" />
-        <Parking index="7" type="gate" name="GA_Ramp_8" lat="N48 0.056700" lon="W2 22.722778" heading="263.48"  radius="17" airlineCodes="" />
-        <Parking index="8" type="gate" name="GA_Ramp_9" lat="N48 0.061560" lon="W2 22.736938" heading="233.24"  radius="17" airlineCodes="" />
+        <Parking index="0" type="gate" name="GA_Ramp_7" lat="N48 0.073901" lon="W2 22.763567" heading="219.28"  radius="10" pushBackRoute="11" airlineCodes="" />
+        <Parking index="1" type="gate" name="GA_Ramp_6" lat="N48 0.072677" lon="W2 22.747286" heading="219.28"  radius="10" pushBackRoute="7" airlineCodes="" />
+        <Parking index="2" type="gate" name="GA_Ramp_5" lat="N48 0.071330" lon="W2 22.730915" heading="219.28"  radius="10" pushBackRoute="7" airlineCodes="" />
+        <Parking index="3" type="gate" name="GA_Ramp_4" lat="N48 0.048156" lon="W2 22.713143" heading="325.31"  radius="10" pushBackRoute="7" airlineCodes="" />
+        <Parking index="4" type="gate" name="GA_Ramp_3" lat="N48 0.043711" lon="W2 22.737771" heading="325.31"  radius="10" pushBackRoute="7" airlineCodes="" />
+        <Parking index="5" type="gate" name="GA_Ramp_2" lat="N48 0.044824" lon="W2 22.756562" heading="325.31"  radius="10" pushBackRoute="7" airlineCodes="" />
+        <Parking index="6" type="gate" name="GA_Ramp_1" lat="N48 0.045880" lon="W2 22.775103" heading="325.31"  radius="10" pushBackRoute="7" airlineCodes="" />
  </parkingList>
+ <TaxiNodes>
+        <node index="7" lat="N48 0.056699" lon="W2 22.740092" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="8" lat="N48 0.060042" lon="W2 22.784009" isOnRunway="0" holdPointType="none"  />
+        <node index="9" lat="N48 0.069865" lon="W2 22.396789" isOnRunway="0" holdPointType="none"  />
+        <node index="10" lat="N48 0.108188" lon="W2 23.052327" isOnRunway="0" holdPointType="none"  />
+        <node index="11" lat="N48 0.092255" lon="W2 22.780749" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="12" lat="N48 0.092062" lon="W2 22.392127" isOnRunway="1" holdPointType="none"  />
+        <node index="13" lat="N48 0.130477" lon="W2 23.053787" isOnRunway="1" holdPointType="none"  />
+        <node index="14" lat="N48 0.094897" lon="W2 22.746394" isOnRunway="0" holdPointType="none"  />
+        <node index="15" lat="N48 0.093673" lon="W2 22.730113" isOnRunway="0" holdPointType="none"  />
+        <node index="16" lat="N48 0.092327" lon="W2 22.713742" isOnRunway="0" holdPointType="none"  />
+        <node index="17" lat="N48 0.025853" lon="W2 22.697705" isOnRunway="0" holdPointType="none"  />
+        <node index="18" lat="N48 0.021407" lon="W2 22.722333" isOnRunway="0" holdPointType="none"  />
+        <node index="19" lat="N48 0.022520" lon="W2 22.741124" isOnRunway="0" holdPointType="none"  />
+        <node index="20" lat="N48 0.023577" lon="W2 22.759666" isOnRunway="0" holdPointType="none"  />
+ </TaxiNodes>
+ <TaxiWaySegments>
+        <arc begin="8" end="7" isPushBackRoute="0" name=""  />
+        <arc begin="7" end="8" isPushBackRoute="0" name=""  />
+        <arc begin="11" end="8" isPushBackRoute="0" name=""  />
+        <arc begin="8" end="11" isPushBackRoute="0" name=""  />
+        <arc begin="10" end="11" isPushBackRoute="0" name=""  />
+        <arc begin="11" end="10" isPushBackRoute="0" name=""  />
+        <arc begin="11" end="9" isPushBackRoute="0" name=""  />
+        <arc begin="9" end="11" isPushBackRoute="0" name=""  />
+        <arc begin="12" end="9" isPushBackRoute="0" name=""  />
+        <arc begin="9" end="12" isPushBackRoute="0" name=""  />
+        <arc begin="13" end="10" isPushBackRoute="0" name=""  />
+        <arc begin="10" end="13" isPushBackRoute="0" name=""  />
+        <arc begin="0" end="14" isPushBackRoute="1" name="GA_Ramp_7"  />
+        <arc begin="14" end="0" isPushBackRoute="1" name="GA_Ramp_7"  />
+        <arc begin="14" end="11" isPushBackRoute="1" name="GA_Ramp_7"  />
+        <arc begin="11" end="14" isPushBackRoute="1" name="GA_Ramp_7"  />
+        <arc begin="1" end="15" isPushBackRoute="1" name="GA_Ramp_6"  />
+        <arc begin="15" end="1" isPushBackRoute="1" name="GA_Ramp_6"  />
+        <arc begin="15" end="7" isPushBackRoute="1" name="GA_Ramp_6"  />
+        <arc begin="7" end="15" isPushBackRoute="1" name="GA_Ramp_6"  />
+        <arc begin="2" end="16" isPushBackRoute="1" name="GA_Ramp_5"  />
+        <arc begin="16" end="2" isPushBackRoute="1" name="GA_Ramp_5"  />
+        <arc begin="16" end="7" isPushBackRoute="1" name="GA_Ramp_5"  />
+        <arc begin="7" end="16" isPushBackRoute="1" name="GA_Ramp_5"  />
+        <arc begin="3" end="17" isPushBackRoute="1" name="GA_Ramp_4"  />
+        <arc begin="17" end="3" isPushBackRoute="1" name="GA_Ramp_4"  />
+        <arc begin="17" end="7" isPushBackRoute="1" name="GA_Ramp_4"  />
+        <arc begin="7" end="17" isPushBackRoute="1" name="GA_Ramp_4"  />
+        <arc begin="4" end="18" isPushBackRoute="1" name="GA_Ramp_3"  />
+        <arc begin="18" end="4" isPushBackRoute="1" name="GA_Ramp_3"  />
+        <arc begin="18" end="7" isPushBackRoute="1" name="GA_Ramp_3"  />
+        <arc begin="7" end="18" isPushBackRoute="1" name="GA_Ramp_3"  />
+        <arc begin="5" end="19" isPushBackRoute="1" name="GA_Ramp_2"  />
+        <arc begin="19" end="5" isPushBackRoute="1" name="GA_Ramp_2"  />
+        <arc begin="19" end="7" isPushBackRoute="1" name="GA_Ramp_2"  />
+        <arc begin="7" end="19" isPushBackRoute="1" name="GA_Ramp_2"  />
+        <arc begin="6" end="20" isPushBackRoute="1" name="GA_Ramp_1"  />
+        <arc begin="20" end="6" isPushBackRoute="1" name="GA_Ramp_1"  />
+        <arc begin="20" end="7" isPushBackRoute="1" name="GA_Ramp_1"  />
+        <arc begin="7" end="20" isPushBackRoute="1" name="GA_Ramp_1"  />
+ </TaxiWaySegments>
 </groundnet>

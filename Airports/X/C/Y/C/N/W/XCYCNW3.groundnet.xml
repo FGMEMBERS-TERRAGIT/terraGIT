@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<groundnet>
+  <version>1</version>
+  <parkingList>
+        <Parking index="0" type="ga" name="GA_ramp_start" lat="N45 4.322801" lon="W77 52.828985" heading="108.21"  radius="20" pushBackRoute="2" airlineCodes="" />
+        <Parking index="1" type="ga" name="helo_ramp_start" lat="N45 4.311945" lon="W77 52.742919" heading="-7.39"  radius="36" pushBackRoute="3" airlineCodes="" />
+ </parkingList>
+ <TaxiNodes>
+        <node index="2" lat="N45 4.322800" lon="W77 52.829003" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="3" lat="N45 4.318998" lon="W77 52.800212" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="4" lat="N45 4.311896" lon="W77 52.582128" isOnRunway="1" holdPointType="none"  />
+        <node index="5" lat="N45 4.414694" lon="W77 53.109701" isOnRunway="1" holdPointType="none"  />
+        <node index="6" lat="N45 4.350652" lon="W77 52.783244" isOnRunway="1" holdPointType="none"  />
+        <node index="7" lat="N45 4.335865" lon="W77 52.791017" isOnRunway="0" holdPointType="none"  />
+        <node index="8" lat="N45 4.331278" lon="W77 52.854751" isOnRunway="0" holdPointType="none"  />
+        <node index="9" lat="N45 4.285046" lon="W77 52.739430" isOnRunway="0" holdPointType="none"  />
+ </TaxiNodes>
+ <TaxiWaySegments>
+        <arc begin="3" end="2" isPushBackRoute="0" name=""  />
+        <arc begin="2" end="3" isPushBackRoute="0" name=""  />
+        <arc begin="7" end="3" isPushBackRoute="0" name=""  />
+        <arc begin="3" end="7" isPushBackRoute="0" name=""  />
+        <arc begin="7" end="6" isPushBackRoute="0" name=""  />
+        <arc begin="6" end="7" isPushBackRoute="0" name=""  />
+        <arc begin="0" end="8" isPushBackRoute="1" name="GA_ramp_start"  />
+        <arc begin="8" end="0" isPushBackRoute="1" name="GA_ramp_start"  />
+        <arc begin="8" end="2" isPushBackRoute="1" name="GA_ramp_start"  />
+        <arc begin="2" end="8" isPushBackRoute="1" name="GA_ramp_start"  />
+        <arc begin="1" end="9" isPushBackRoute="1" name="helo_ramp_start"  />
+        <arc begin="9" end="1" isPushBackRoute="1" name="helo_ramp_start"  />
+        <arc begin="9" end="3" isPushBackRoute="1" name="helo_ramp_start"  />
+        <arc begin="3" end="9" isPushBackRoute="1" name="helo_ramp_start"  />
+ </TaxiWaySegments>
+</groundnet>

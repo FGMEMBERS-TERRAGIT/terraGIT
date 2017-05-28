@@ -2,11 +2,11 @@
 <groundnet>
   <version>1</version>
   <parkingList>
-        <Parking index="0" type="gate" name="Apron_Hold" lat="N34 34.313246" lon="W98 24.868380" heading="357.61"  radius="19" pushBackRoute="20" airlineCodes="" />
-        <Parking index="1" type="ga" name="GA_Hanger" lat="N34 34.620214" lon="W98 24.675220" heading="138.37"  radius="10" pushBackRoute="9" airlineCodes="" />
-        <Parking index="2" type="ga" name="GA_North" lat="N34 34.547640" lon="W98 24.629996" heading="46.55"  radius="10" pushBackRoute="21" airlineCodes="" />
-        <Parking index="3" type="gate" name="Gate2" lat="N34 34.385260" lon="W98 24.878075" heading="104.62"  radius="19" pushBackRoute="53" airlineCodes="" />
-        <Parking index="4" type="ga" name="Maint" lat="N34 34.573216" lon="W98 24.782988" heading="135"  radius="10" pushBackRoute="31" airlineCodes="" />
+        <Parking index="0" type="gate" name="Apron_Hold" lat="N34 34.313246" lon="W98 24.868380" heading="357.61"  radius="20" pushBackRoute="20" airlineCodes="" />
+        <Parking index="1" type="ga" name="GA_Hanger" lat="N34 34.620214" lon="W98 24.675220" heading="138.37"  radius="18" pushBackRoute="9" airlineCodes="" />
+        <Parking index="2" type="ga" name="GA_North" lat="N34 34.567557" lon="W98 24.613932" heading="-41.43"  radius="18" pushBackRoute="24" airlineCodes="" />
+        <Parking index="3" type="gate" name="Gate2" lat="N34 34.385260" lon="W98 24.878075" heading="104.62"  radius="20" pushBackRoute="53" airlineCodes="" />
+        <Parking index="4" type="ga" name="Maint" lat="N34 34.562846" lon="W98 24.774352" heading="135"  radius="18" pushBackRoute="31" airlineCodes="" />
  </parkingList>
  <TaxiNodes>
         <node index="5" lat="N34 34.648414" lon="W98 24.606414" isOnRunway="0" holdPointType="none"  />
@@ -25,10 +25,10 @@
         <node index="18" lat="N34 34.568894" lon="W98 24.702118" isOnRunway="0" holdPointType="none"  />
         <node index="19" lat="N34 34.555403" lon="W98 24.718883" isOnRunway="0" holdPointType="none"  />
         <node index="20" lat="N34 34.318964" lon="W98 24.871672" isOnRunway="0" holdPointType="PushBack"  />
-        <node index="21" lat="N34 34.516499" lon="W98 24.641535" isOnRunway="0" holdPointType="PushBack"  />
+        <node index="21" lat="N34 34.516499" lon="W98 24.641535" isOnRunway="0" holdPointType="none"  />
         <node index="22" lat="N34 34.585208" lon="W98 24.638105" isOnRunway="0" holdPointType="none"  />
         <node index="23" lat="N34 34.555717" lon="W98 24.630866" isOnRunway="0" holdPointType="none"  />
-        <node index="24" lat="N34 34.548814" lon="W98 24.604194" isOnRunway="0" holdPointType="none"  />
+        <node index="24" lat="N34 34.548814" lon="W98 24.604194" isOnRunway="0" holdPointType="PushBack"  />
         <node index="25" lat="N34 34.571404" lon="W98 24.603432" isOnRunway="0" holdPointType="none"  />
         <node index="26" lat="N34 34.522867" lon="W98 24.794055" isOnRunway="0" holdPointType="none"  />
         <node index="27" lat="N34 34.554760" lon="W98 24.752803" isOnRunway="0" holdPointType="none"  />
@@ -66,9 +66,9 @@
         <node index="59" lat="N34 34.434499" lon="W98 24.865727" isOnRunway="0" holdPointType="none"  />
         <node index="60" lat="N34 34.286145" lon="W98 24.867249" isOnRunway="0" holdPointType="none"  />
         <node index="61" lat="N34 34.640489" lon="W98 24.693240" isOnRunway="0" holdPointType="none"  />
-        <node index="62" lat="N34 34.528986" lon="W98 24.649688" isOnRunway="0" holdPointType="none"  />
+        <node index="62" lat="N34 34.547220" lon="W98 24.595983" isOnRunway="0" holdPointType="none"  />
         <node index="63" lat="N34 34.392106" lon="W98 24.904322" isOnRunway="0" holdPointType="none"  />
-        <node index="64" lat="N34 34.592396" lon="W98 24.802168" isOnRunway="0" holdPointType="none"  />
+        <node index="64" lat="N34 34.582027" lon="W98 24.793532" isOnRunway="0" holdPointType="none"  />
  </TaxiNodes>
  <TaxiWaySegments>
         <arc begin="39" end="40" isPushBackRoute="0" name=""  />
@@ -197,8 +197,8 @@
         <arc begin="9" end="61" isPushBackRoute="1" name="GA_Hanger"  />
         <arc begin="2" end="62" isPushBackRoute="1" name="GA_North"  />
         <arc begin="62" end="2" isPushBackRoute="1" name="GA_North"  />
-        <arc begin="62" end="21" isPushBackRoute="1" name="GA_North"  />
-        <arc begin="21" end="62" isPushBackRoute="1" name="GA_North"  />
+        <arc begin="62" end="24" isPushBackRoute="1" name="GA_North"  />
+        <arc begin="24" end="62" isPushBackRoute="1" name="GA_North"  />
         <arc begin="3" end="63" isPushBackRoute="1" name="Gate2"  />
         <arc begin="63" end="3" isPushBackRoute="1" name="Gate2"  />
         <arc begin="63" end="53" isPushBackRoute="1" name="Gate2"  />

@@ -2,6 +2,65 @@
 <groundnet>
   <version>1</version>
   <parkingList>
-        <Parking index="0" type="gate" name="LOC" lat="N34 51.058980" lon="W111 47.262720" heading="150"  radius="17" airlineCodes="" />
+        <Parking index="0" type="gate" name="GA_Ramp_Start" lat="N34 50.976773" lon="W111 47.477532" heading="224.27"  radius="20" pushBackRoute="9" airlineCodes="" />
+        <Parking index="1" type="ga" name="Ramp_Start_North" lat="N34 51.231220" lon="W111 47.088421" heading="264.81"  radius="20" pushBackRoute="10" airlineCodes="" />
+        <Parking index="2" type="ga" name="Helicopter_Tour_Start" lat="N34 51.054180" lon="W111 47.274778" heading="138.01"  radius="20" pushBackRoute="10" airlineCodes="" />
+        <Parking index="3" type="ga" name="Helicopter_Start" lat="N34 50.867617" lon="W111 47.531648" heading="224.14"  radius="20" pushBackRoute="9" airlineCodes="" />
+        <Parking index="4" type="ga" name="Large_Helicopter_Pad" lat="N34 50.818513" lon="W111 47.549423" heading="136.1"  radius="20" pushBackRoute="9" airlineCodes="" />
+        <Parking index="5" type="gate" name="GA_Ramp_Start" lat="N34 51.070120" lon="W111 47.198212" heading="-44.18"  radius="20" pushBackRoute="10" airlineCodes="" />
+        <Parking index="6" type="gate" name="Corp_Jet_Start" lat="N34 50.986768" lon="W111 47.318639" heading="247.31"  radius="20" pushBackRoute="10" airlineCodes="" />
+        <Parking index="7" type="gate" name="Terminal_Ramp_Start" lat="N34 50.942859" lon="W111 47.388177" heading="-42.28"  radius="20" pushBackRoute="9" airlineCodes="" />
+        <Parking index="8" type="ga" name="GA_South_Ramp" lat="N34 50.919147" lon="W111 47.533862" heading="135.63"  radius="20" pushBackRoute="9" airlineCodes="" />
  </parkingList>
+ <TaxiNodes>
+        <node index="9" lat="N34 50.635227" lon="W111 47.660536" isOnRunway="1" holdPointType="PushBack"  />
+        <node index="10" lat="N34 51.203302" lon="W111 46.951107" isOnRunway="1" holdPointType="PushBack"  />
+        <node index="11" lat="N34 50.996196" lon="W111 47.458598" isOnRunway="0" holdPointType="none"  />
+        <node index="12" lat="N34 51.233673" lon="W111 47.061407" isOnRunway="0" holdPointType="none"  />
+        <node index="13" lat="N34 51.074341" lon="W111 47.292925" isOnRunway="0" holdPointType="none"  />
+        <node index="14" lat="N34 50.887083" lon="W111 47.512758" isOnRunway="0" holdPointType="none"  />
+        <node index="15" lat="N34 50.838057" lon="W111 47.568232" isOnRunway="0" holdPointType="none"  />
+        <node index="16" lat="N34 51.050668" lon="W111 47.179308" isOnRunway="0" holdPointType="none"  />
+        <node index="17" lat="N34 50.997232" lon="W111 47.293613" isOnRunway="0" holdPointType="none"  />
+        <node index="18" lat="N34 50.922791" lon="W111 47.369928" isOnRunway="0" holdPointType="none"  />
+        <node index="19" lat="N34 50.938537" lon="W111 47.552830" isOnRunway="0" holdPointType="none"  />
+ </TaxiNodes>
+ <TaxiWaySegments>
+        <arc begin="0" end="11" isPushBackRoute="1" name="GA_Ramp_Start"  />
+        <arc begin="11" end="0" isPushBackRoute="1" name="GA_Ramp_Start"  />
+        <arc begin="11" end="9" isPushBackRoute="1" name="GA_Ramp_Start"  />
+        <arc begin="9" end="11" isPushBackRoute="1" name="GA_Ramp_Start"  />
+        <arc begin="1" end="12" isPushBackRoute="1" name="Ramp_Start_North"  />
+        <arc begin="12" end="1" isPushBackRoute="1" name="Ramp_Start_North"  />
+        <arc begin="12" end="10" isPushBackRoute="1" name="Ramp_Start_North"  />
+        <arc begin="10" end="12" isPushBackRoute="1" name="Ramp_Start_North"  />
+        <arc begin="2" end="13" isPushBackRoute="1" name="Helicopter_Tour_Start"  />
+        <arc begin="13" end="2" isPushBackRoute="1" name="Helicopter_Tour_Start"  />
+        <arc begin="13" end="10" isPushBackRoute="1" name="Helicopter_Tour_Start"  />
+        <arc begin="10" end="13" isPushBackRoute="1" name="Helicopter_Tour_Start"  />
+        <arc begin="3" end="14" isPushBackRoute="1" name="Helicopter_Start"  />
+        <arc begin="14" end="3" isPushBackRoute="1" name="Helicopter_Start"  />
+        <arc begin="14" end="9" isPushBackRoute="1" name="Helicopter_Start"  />
+        <arc begin="9" end="14" isPushBackRoute="1" name="Helicopter_Start"  />
+        <arc begin="4" end="15" isPushBackRoute="1" name="Large_Helicopter_Pad"  />
+        <arc begin="15" end="4" isPushBackRoute="1" name="Large_Helicopter_Pad"  />
+        <arc begin="15" end="9" isPushBackRoute="1" name="Large_Helicopter_Pad"  />
+        <arc begin="9" end="15" isPushBackRoute="1" name="Large_Helicopter_Pad"  />
+        <arc begin="5" end="16" isPushBackRoute="1" name="GA_Ramp_Start"  />
+        <arc begin="16" end="5" isPushBackRoute="1" name="GA_Ramp_Start"  />
+        <arc begin="16" end="10" isPushBackRoute="1" name="GA_Ramp_Start"  />
+        <arc begin="10" end="16" isPushBackRoute="1" name="GA_Ramp_Start"  />
+        <arc begin="6" end="17" isPushBackRoute="1" name="Corp_Jet_Start"  />
+        <arc begin="17" end="6" isPushBackRoute="1" name="Corp_Jet_Start"  />
+        <arc begin="17" end="10" isPushBackRoute="1" name="Corp_Jet_Start"  />
+        <arc begin="10" end="17" isPushBackRoute="1" name="Corp_Jet_Start"  />
+        <arc begin="7" end="18" isPushBackRoute="1" name="Terminal_Ramp_Start"  />
+        <arc begin="18" end="7" isPushBackRoute="1" name="Terminal_Ramp_Start"  />
+        <arc begin="18" end="9" isPushBackRoute="1" name="Terminal_Ramp_Start"  />
+        <arc begin="9" end="18" isPushBackRoute="1" name="Terminal_Ramp_Start"  />
+        <arc begin="8" end="19" isPushBackRoute="1" name="GA_South_Ramp"  />
+        <arc begin="19" end="8" isPushBackRoute="1" name="GA_South_Ramp"  />
+        <arc begin="19" end="9" isPushBackRoute="1" name="GA_South_Ramp"  />
+        <arc begin="9" end="19" isPushBackRoute="1" name="GA_South_Ramp"  />
+ </TaxiWaySegments>
 </groundnet>
