@@ -147,7 +147,7 @@ Immediately after pulling, to get all your tracked content updated.
 
 :copyright: 2020-2016, Israel Hernandez (IAHM-COL) <br>
 :copyright: 2020-2016, Peter Brendt (Jabberwocky)  <br>
-:copyright: 2020-2016, David Waggoner (Skyboat)  <br>
+:copyright: 2020, David Waggoner (Skyboat)  <br>
 :copyright: 2017-2016, Sharath Mahadevan (SHM)<br>
 :copyright: 2017 Glen D'souza <br>
 :copyright: 2017-2016, J. Maverick<br>
