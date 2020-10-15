@@ -1,32 +1,11 @@
-<?xml version="1.0"?>
-
+<?xml version="1.0" encoding="UTF-8" ?>
 <PropertyList>
-
  <path>WaterWorks50m.ac</path>
- 
  <animation>
-  <type>range</type>
-  <min-m>0</min-m>
-  <max-m>25000</max-m>
- </animation>
-
- <animation>
-  <type>spin</type>
+  <type>rotate</type>
   <object-name>Spray</object-name>
-  <use-personality type="bool">true</use-personality>
   <property>/sim/time/elapsed-sec</property>
-  <factor>
-   <random>
-    <min>0.01</min>
-    <max>0.02</max>
-   </random>
-  </factor>
-  <starting-pos-deg>
-   <random>
-    <min>0</min>
-    <max>360</max>
-   </random>
-  </starting-pos-deg>                                               
+  <factor>10</factor>
   <axis>
    <x>0.0</x>
    <y>0.0</y>
@@ -38,6 +17,4 @@
    <z-m>0.0</z-m>
   </center>
  </animation>
-                                           
 </PropertyList>
-         

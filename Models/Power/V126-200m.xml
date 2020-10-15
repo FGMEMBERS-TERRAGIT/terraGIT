@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+    
+    <!-- Vestas V126 (wing span 63 m, 126 m rotor circle diameter) tower 
+         extended to 200m. Model origin is the hub, so simply set offset to hub height and rest
+         of the tower is then hidden below ground level 
+         Variation of windturbine_V112_onshore by Ludger Dreier-->
+
+    <path>V126-200m.ac</path>
+    
+    <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>20000</max-m>
+    </animation>
+    
+    <!-- rotate upper part (nacelle+rotor and attached lights) into wind -->
+    <animation>
+        <type>rotate</type>
+        <object-name>Nacelle</object-name>
+        <!-- since we have an arhythmic flash sequence, we need multiple
+             on/off instances of the flash lights for the timed animation -->
+        <object-name>Red_flash_day_off</object-name>
+        <object-name>Red_flash_night_on1</object-name>
+        <object-name>Red_flash_night_off1</object-name>
+        <object-name>Red_flash_night_on2</object-name>
+        <object-name>Red_flash_night_off2</object-name>
+        <object-name>Rotor</object-name>
+        <property>/environment/wind-from-heading-deg</property>
+        <offset-deg>-90</offset-deg>
+        <factor>-1</factor>
+        <axis>
+            <x>0.0</x>
+            <y>0.0</y>
+            <z>1.0</z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+    </animation>
+    
+    <!-- rotate blades & hub (i.e. Rotor) -->
+    <animation>
+        <type>spin</type>
+        <object-name>Rotor</object-name>
+        <use-personality type="bool">true</use-personality>
+        <property>/environment/wind-speed-kt</property>
+        <factor>
+            <random>
+                <min>0.4</min>
+                <max>0.6</max>
+            </random>
+        </factor>
+        <starting-pos-deg>
+            <random>
+                <min>0</min>
+                <max>360</max>
+            </random>
+        </starting-pos-deg>
+        <axis>
+            <!-- rotation axis is slightly inclined upward like in reality -->
+            <x>0.0</x>
+            <y>0.9981</y>
+            <z>-0.06</z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+    </animation>
+    
+    <!-- activate lights for nighttime -->
+    <animation>
+        <type>select</type>
+        <object-name>Red_light_night_on</object-name>
+        <object-name>Red_flash_night_on1</object-name> 
+        <object-name>Red_flash_night_off1</object-name> 
+        <object-name>Red_flash_night_on2</object-name> 
+        <object-name>Red_flash_night_off2</object-name> 
+        <condition>
+            <greater-than>
+                <property>/sim/time/sun-angle-rad</property>
+                <value>1.57</value>
+            </greater-than>
+        </condition>
+    </animation>
+    
+    <!-- deactivated lights for daytime -->
+    <animation>
+        <type>select</type>
+        <object-name>Red_light_day_off</object-name>
+        <object-name>Red_flash_day_off</object-name>
+        <condition>
+            <less-than-equals>
+                <property>/sim/time/sun-angle-rad</property>
+                <value>1.57</value>
+            </less-than-equals>
+        </condition>
+    </animation>
+    
+    <!-- Observed from reality: period approx. 3.5s, approx. 0.8s on, 0.2s off, 0.8s on, 1.7s off  -->
+    <animation>
+        <type>timed</type>
+        <object-name>Red_flash_night_on1</object-name> 
+        <object-name>Red_flash_night_off1</object-name> 
+        <object-name>Red_flash_night_on2</object-name> 
+        <object-name>Red_flash_night_off2</object-name> 
+        <branch-duration-sec>0.8</branch-duration-sec>
+        <branch-duration-sec>0.2</branch-duration-sec>
+        <branch-duration-sec>0.8</branch-duration-sec>
+        <branch-duration-sec>1.7</branch-duration-sec>
+    </animation>
+</PropertyList>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PropertyList>
+
+ <path>TAB-VEE-C_Shelter.ac</path>
+ 
+ <!-- NASAL -->
+
+ <nasal>
+  <load>
+   if (!contains(globals, "scenery")) globals["scenery"] = {};
+   if (!contains(scenery, "TABVEE")) scenery["TABVEE"] = {};
+   if (!contains(scenery.TABVEE, "hangar")) scenery.TABVEE["hangar"] = {};
+   if (contains(scenery, "sharedDoor")) {
+     scenery.TABVEE.hangar[0] =
+       { door :
+         [scenery.sharedDoor.new("/scenery/TABVEE/hangar[0]/door[0]", 50),
+          scenery.sharedDoor.new("/scenery/TABVEE/hangar[0]/door[1]", 50)
+         ]
+       };
+   } else {
+     scenery.TABVEE.hangar[0] =
+       { door :
+         [aircraft.door.new("/scenery/TABVEE/hangar[0]/door[0]", 50),
+          aircraft.door.new("/scenery/TABVEE/hangar[0]/door[1]", 50)
+         ]
+       };
+   }
+  </load>
+  <unload>
+   if (contains(scenery, "sharedDoor")) {
+     scenery.TABVEE.hangar[0].door[0].destroy();
+     scenery.TABVEE.hangar[0].door[1].destroy();
+   }
+  </unload>
+ </nasal>
+ 
+ <!-- DOORS -->
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>doorleft</object-name>
+  <property>/scenery/TABVEE/hangar[0]/door[0]/position-norm</property>
+  <factor>-14</factor>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>doorright</object-name>
+  <property>/scenery/TABVEE/hangar[0]/door[1]/position-norm</property>
+  <factor>14</factor>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+ 
+ <animation>
+ <type>pick</type>
+ <object-name>doorleft</object-name>
+ <visible>true</visible>
+ <action>
+  <name>click</name>
+  <button>0</button>
+  <repeatable>false</repeatable>
+  <binding>
+   <command>nasal</command>
+   <script>scenery.TABVEE.hangar[0].door[0].toggle();</script>
+  </binding>
+ </action>
+</animation>
+
+<animation>
+ <type>pick</type>
+ <object-name>doorright</object-name>
+ <visible>true</visible>
+ <action>
+  <name>click</name>
+  <button>0</button>
+  <repeatable>false</repeatable>
+  <binding>
+   <command>nasal</command>
+   <script>scenery.TABVEE.hangar[0].door[1].toggle();</script>
+  </binding>
+ </action>
+</animation>
+  
+  <!--  enable-hot  -->
+ <animation>
+    <object-name>doorright</object-name>
+    <object-name>doorleft</object-name>
+	  <object-name>pole</object-name>
+	  <object-name>pipe</object-name>
+	  <object-name>hanger</object-name>
+	  <object-name>hanger2</object-name>
+    <object-name>lightfitting</object-name>
+	  <enable-hot type="bool">false</enable-hot>
+  </animation>
+  
+  <!-- RANGE -->
+ <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-property>sim/rendering/static-lod/bare</max-property>
+ </animation>
+ 
+</PropertyList>

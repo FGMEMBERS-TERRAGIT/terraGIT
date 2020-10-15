@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+    <path>CYYT_Hangar_6.ac</path>
+
+    <nasal>
+        <load>
+            setprop("airport/cyyt_hangar6/door_open", 0);
+            setprop("airport/cyyt_hangar6/door_position", 0);
+        </load>
+    </nasal>
+
+    <!-- Animations -->
+    <!-- Click action -->
+    <animation>
+        <type>pick</type>
+        <object-name>Hangar_Door.1</object-name>
+        <object-name>Hangar_Door.2</object-name>
+        <object-name>Hangar_Door.3</object-name>
+        <object-name>Hangar_Door.4</object-name>
+        <object-name>Hangar_Door.5</object-name>
+
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>
+                <![CDATA[
+                    fgcommand("property-toggle", { "property": "airport/cyyt_hangar6/door_open" });
+
+                    fgcommand("property-interpolate", {
+                        "property[0]": "airport/cyyt_hangar6/door_position",
+                        "property[1]": "airport/cyyt_hangar6/door_open",
+                        "time": 40
+                    });
+                ]]>
+                </script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>Hangar_Door.1</object-name>
+        <property>airport/cyyt_hangar6/door_position</property>
+        <factor>34.95035</factor>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>Hangar_Door.2</object-name>
+        <property>airport/cyyt_hangar6/door_position</property>
+        <factor>27.96535</factor>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>Hangar_Door.3</object-name>
+        <property>airport/cyyt_hangar6/door_position</property>
+        <factor>20.98035</factor>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>Hangar_Door.4</object-name>
+        <property>airport/cyyt_hangar6/door_position</property>
+        <factor>13.99535</factor>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>Hangar_Door.5</object-name>
+        <property>airport/cyyt_hangar6/door_position</property>
+        <factor>7.01035</factor>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+</PropertyList>
