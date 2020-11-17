@@ -23,8 +23,8 @@
 
 ## Install any tile listed completely (initializing and updating both Terrain and Objects)
 
-git submodule update --progress --depth=1 --init Objects/w180s20
-git submodule update --progress --depth=1 --init Objects/w170s20
-git submodule update --progress --depth=1 --init Terrain/w180s20
-git submodule update --progress --depth=1 --init Terrain/w170s20
+git submodule update --progress --init Objects/w180s20
+git submodule update --progress --init Objects/w170s20
+git submodule update --progress --init Terrain/w180s20
+git submodule update --progress --init Terrain/w170s20
 

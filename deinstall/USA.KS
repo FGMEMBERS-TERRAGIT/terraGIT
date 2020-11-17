@@ -33,13 +33,13 @@ git submodule deinit Terrain/w100n40
 git submodule deinit Terrain/w110n30
 git submodule deinit Terrain/w110n40
 
-git submodule update Objects/w100n30
-git submodule update Objects/w100n40
-git submodule update Objects/w110n30
-git submodule update Objects/w110n40
-git submodule update Terrain/w100n30
-git submodule update Terrain/w100n40
-git submodule update Terrain/w110n30
-git submodule update Terrain/w110n40
+git submodule update --progress Objects/w100n30
+git submodule update --progress Objects/w100n40
+git submodule update --progress Objects/w110n30
+git submodule update --progress Objects/w110n40
+git submodule update --progress Terrain/w100n30
+git submodule update --progress Terrain/w100n40
+git submodule update --progress Terrain/w110n30
+git submodule update --progress Terrain/w110n40
 
 

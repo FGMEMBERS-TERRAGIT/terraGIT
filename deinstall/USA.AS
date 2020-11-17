@@ -28,7 +28,7 @@ git submodule deinit Objects/w170s20
 git submodule deinit Terrain/w180s20
 git submodule deinit Terrain/w170s20
 
-git submodule update Objects/w180s20
-git submodule update Objects/w170s20
-git submodule update Terrain/w180s20
-git submodule update Terrain/w170s20
+git submodule update --progress Objects/w180s20
+git submodule update --progress Objects/w170s20
+git submodule update --progress Terrain/w180s20
+git submodule update --progress Terrain/w170s20

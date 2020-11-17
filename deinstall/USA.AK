@@ -64,43 +64,43 @@ git submodule deinit Terrain/w140n70
 git submodule deinit Terrain/w140n60
 git submodule deinit Terrain/w140n50
 
-git submodule update Objects/w180n80
-git submodule update Objects/w180n70
-git submodule update Objects/w180n60
-git submodule update Objects/w180n50
-git submodule update Objects/w170n80
-git submodule update Objects/w170n70
-git submodule update Objects/w170n60
-git submodule update Objects/w170n50
-git submodule update Objects/w160n80
-git submodule update Objects/w160n70
-git submodule update Objects/w160n60
-git submodule update Objects/w160n50
-git submodule update Objects/w150n80
-git submodule update Objects/w150n70
-git submodule update Objects/w150n60
-git submodule update Objects/w150n50
-git submodule update Objects/w140n80
-git submodule update Objects/w140n70
-git submodule update Objects/w140n60
-git submodule update Objects/w140n50
-git submodule update Terrain/w180n80
-git submodule update Terrain/w180n70
-git submodule update Terrain/w180n60
-git submodule update Terrain/w180n50
-git submodule update Terrain/w170n80
-git submodule update Terrain/w170n70
-git submodule update Terrain/w170n60
-git submodule update Terrain/w170n50
-git submodule update Terrain/w160n80
-git submodule update Terrain/w160n70
-git submodule update Terrain/w160n60
-git submodule update Terrain/w160n50
-git submodule update Terrain/w150n80
-git submodule update Terrain/w150n70
-git submodule update Terrain/w150n60
-git submodule update Terrain/w150n50
-git submodule update Terrain/w140n80
-git submodule update Terrain/w140n70
-git submodule update Terrain/w140n60
-git submodule update Terrain/w140n50
+git submodule update --progress Objects/w180n80
+git submodule update --progress Objects/w180n70
+git submodule update --progress Objects/w180n60
+git submodule update --progress Objects/w180n50
+git submodule update --progress Objects/w170n80
+git submodule update --progress Objects/w170n70
+git submodule update --progress Objects/w170n60
+git submodule update --progress Objects/w170n50
+git submodule update --progress Objects/w160n80
+git submodule update --progress Objects/w160n70
+git submodule update --progress Objects/w160n60
+git submodule update --progress Objects/w160n50
+git submodule update --progress Objects/w150n80
+git submodule update --progress Objects/w150n70
+git submodule update --progress Objects/w150n60
+git submodule update --progress Objects/w150n50
+git submodule update --progress Objects/w140n80
+git submodule update --progress Objects/w140n70
+git submodule update --progress Objects/w140n60
+git submodule update --progress Objects/w140n50
+git submodule update --progress Terrain/w180n80
+git submodule update --progress Terrain/w180n70
+git submodule update --progress Terrain/w180n60
+git submodule update --progress Terrain/w180n50
+git submodule update --progress Terrain/w170n80
+git submodule update --progress Terrain/w170n70
+git submodule update --progress Terrain/w170n60
+git submodule update --progress Terrain/w170n50
+git submodule update --progress Terrain/w160n80
+git submodule update --progress Terrain/w160n70
+git submodule update --progress Terrain/w160n60
+git submodule update --progress Terrain/w160n50
+git submodule update --progress Terrain/w150n80
+git submodule update --progress Terrain/w150n70
+git submodule update --progress Terrain/w150n60
+git submodule update --progress Terrain/w150n50
+git submodule update --progress Terrain/w140n80
+git submodule update --progress Terrain/w140n70
+git submodule update --progress Terrain/w140n60
+git submodule update --progress Terrain/w140n50
